@@ -1,0 +1,47 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usepackage{xcolor}
+%
+\definecolor{earth}{HTML}{0089FA}
+%
+\usepackage[defaultfam,tabular,lining]{montserrat}
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+%
+\title{Equinozi e solstizi}
+\begin{document}
+	\tikzset{partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}}}
+	\begin{tikzpicture}%[background rectangle/.style={fill=space},show background rectangle]
+		\begin{scope}
+			%eclittica retro
+			\draw[rotate=22] (0,0) [color=blue,dashed,partial ellipse=0:180:7.5 and 1.9];
+			%retro
+			\draw (0,0) [color=red,dashed,partial ellipse=0:180:7.5 and 1.9];
+			%terra
+			\shade [ball color=earth] (0,0) circle (1.5);
+			%fronte
+			\draw (0,0) [color=red,partial ellipse=180:360:7.5 and 1.9];
+			%eclittica fronte
+			\draw (0,0)[rotate=22] [color=blue,partial ellipse=180:360:7.5 and 1.9] node [midway, above, sloped,opacity=1,rotate=22] (TextNode) {\textcolor{earth}{\fontsize{20}{21}\selectfont $\qquad\qquad\;$ Eclittica}};
+			%
+			\draw (0,0) circle (7.5);
+			%
+			\draw[fill] (6.9,3) circle (0.2);
+			\draw[fill] (-6.9,-3) circle (0.2);
+			\draw[fill] (0.3,-1.9) circle (0.2);
+			\draw[fill] (-0.3,1.9) circle (0.2);
+			%
+			\node at (9,3.5) {\textcolor{black}{\fontsize{20}{21}\selectfont Solstizio}};
+			\node at (9,2.5) {\textcolor{black}{\fontsize{20}{21}\selectfont d'estate}};
+			\node at (-9,-2.5) {\textcolor{black}{\fontsize{20}{21}\selectfont Solstizio}};
+			\node at (-9,-3.5) {\textcolor{black}{\fontsize{20}{21}\selectfont d'inverno}};
+			%
+			\node at (2.3,-2.7) {\textcolor{black}{\fontsize{20}{21}\selectfont Equinozio}};
+			\node at (2.3,-3.7) {\textcolor{black}{\fontsize{20}{21}\selectfont d'inverno}};
+			\node at (-2.3,3.7) {\textcolor{black}{\fontsize{20}{21}\selectfont Equinozio}};
+			\node at (-2.3,2.7) {\textcolor{black}{\fontsize{20}{21}\selectfont d'autunno}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
