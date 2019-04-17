@@ -12,6 +12,9 @@
 * Eratosthenes method for determining the size of the Earth:
   * italian language: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/eratosthenes-it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/eratosthenes-it.pdf)
   * english language: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/eratosthenes-en.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/eratosthenes-en.pdf)
+  * with title and background
+    * italian language [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/eratosthenes-infographic-it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/eratosthenes-infographic-it.pdf)
+    * english language [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/eratosthenes-infographic-en.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/eratosthenes-infographic-en.pdf)
 
 ## Graphics
 
