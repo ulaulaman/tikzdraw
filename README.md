@@ -19,3 +19,7 @@
 ## Graphics
 
 * A rocket: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/rocket.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/rocket.pdf)
+
+## Physics
+
+* Risposta relativa dei coni dell'occhio: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/risposta_coni.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/risposta_coni.pdf)
