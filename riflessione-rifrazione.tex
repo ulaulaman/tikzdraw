@@ -1,0 +1,35 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usepackage{xcolor}
+\definecolor{earth}{HTML}{0089FA}
+%
+\usepackage{mathptmx}
+\usepackage{fontspec}
+\setmainfont{Montserrat}
+%
+\title{Rifrazione e riflessione}
+\begin{document}
+	\tikzset{partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}}}
+	\begin{tikzpicture}%[y=.2cm, x=.7cm,font=\sffamily]%[background rectangle/.style={fill=space},show background rectangle]
+		%
+		\draw (-8,8) -- (8,8) -- (8,-8) -- (-8,-8) -- (-8,8);
+		\draw[fill=earth, opacity=0.7] (-8,0) -- (8,0) -- (8,-8) -- (-8,-8) -- (-8,0);
+		\draw (-8,0) -- (8,0);
+		\draw (0,0) [partial ellipse=180:135:1.3 and 1.3];
+		\node at (-1.8,0.6) {\textcolor{black}{\fontsize{18}{19}\selectfont $\vartheta_1$}};
+		\draw (0,0) [partial ellipse=330:360:1.3 and 1.3];
+		\node at (1.8,-0.4) {\textcolor{black}{\fontsize{18}{19}\selectfont $\vartheta_2$}};
+		\draw (0,0) [partial ellipse=45:0:1.3 and 1.3];
+		\node at (2.4,0.6) {\textcolor{black}{\fontsize{18}{19}\selectfont $\vartheta_3 = \vartheta_1$}};
+		\draw[color=red,ultra thick] (-7,7) -- (0,0) -- (7,-4);
+		\draw[color=red,ultra thick] (0,0) -- (7,7);
+		\node at (-0.3,-0.3) () {\textcolor{black}{\fontsize{18}{19}\selectfont $O$}};
+		\node at (-7.5,0.3) () {\textcolor{black}{\fontsize{18}{19}\selectfont $n_1$}};
+		\node at (-7.5,-0.4) () {\textcolor{black}{\fontsize{18}{19}\selectfont $n_2$}};
+		\node at (6.2,0.4) () {\textcolor{black}{\fontsize{18}{19}\selectfont interfaccia}};
+		\node at (0,7.5) () {\textcolor{black}{\fontsize{18}{19}\selectfont perpendicolare}};
+		\draw[dashed,thick] (0,7) -- (0,-7);
+	\end{tikzpicture}
+%
+\end{document}
