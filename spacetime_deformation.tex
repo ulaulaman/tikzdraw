@@ -1,0 +1,66 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usepackage{xcolor}
+\definecolor{space}{HTML}{0A2543}
+%
+\title{Table}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle]
+		%flamm paraboloid with black hole
+		\begin{scope}[shift={(16,-17)}]
+			%
+			\draw [fill=space, ultra thick] (-13,9) rectangle (13,-5);
+			%
+			\draw [color=white] (-0.1,-2.9) to[out=90,in=275] (-0.9,8.3);
+			\draw [color=white] (-0.6,-3) to[out=98,in=300] (-5.1,7.8);
+			\draw [color=white] (-1.1,-3.2) to[out=100,in=314] (-8.7,6.7);
+			\draw [color=white] (-1.3,-3.4) to[out=100,in=325] (-5.9,1.9) to[out=148,in=335] (-11.2,4.9);
+			\draw [color=white] (-1.4,-3.6) to[out=100,in=330] (-4.9,0.1) to[out=150,in=340] (-12,2.9);
+			%
+			\draw [color=white] (0.3,-2.9) to[out=81,in=250] (3.5,8.1);
+			\draw [color=white] (0.8,-3) to[out=76,in=231] (7.4,7.2);
+			\draw [color=white] (1.2,-3.2) to[out=73,in=214] (10.5,5.6);
+			\draw [color=white] (1.4,-3.6) to[out=80,in=214] (4.85,0.5) to[out=30,in=200] (11.9,3.6);
+			%
+			\draw (0,-3.6) [color=white,partial ellipse=0:180:1.4 and 0.7];
+			\draw (0,-1.8) [color=white,partial ellipse=0:180:2.1 and 1];
+			\draw (0,-1.2) [color=white,partial ellipse=0:180:2.8 and 1.3];
+			\draw (0,-0.6) [color=white,partial ellipse=0:180:3.5 and 1.6];
+			\draw (0,0) [color=white,partial ellipse=0:180:4.2 and 1.8];
+			\draw (0,0.3) [color=white,partial ellipse=0:180:4.9 and 2.1];
+			%
+			\draw[fill=black] (0,0) circle (2.9cm);
+			%
+			\draw [color=white] (-1.4,-3.6) to[out=100,in=330] (-3.5,-1) to[out=160,in=350] (-10.8,0.7);
+			\draw [color=white] (-1.3,-3.8) to[out=95,in=330] (-2.9,-1.3) to[out=160,in=360] (-7.8,-1);
+			\draw [color=white] (-1,-4.1) to[out=90,in=320] (-2,-1.6) to[out=160,in=30] (-4.6,-1.9);
+			\draw [color=white] (-0.5,-4.25) to[out=90,in=300] (-1.2,-1.75) to[out=160,in=40] (-1.8,-2.25);
+			%
+			\draw [color=white] (1.05,-4.05) to[out=80,in=214] (3.5,-1) to[out=20,in=180] (9,-0.5);
+			\draw [color=white] (0.65,-4.2) to[out=80,in=214] (1.7,-1.7) to[out=20,in=170] (5.2,-1.8);
+			\draw [color=white] (0.1,-4.3) to [out=88,in=250] (0.4,-1.8) to[out=20,in=140] (1,-2.3);
+			%
+			\draw (0,-3.6) [color=white,partial ellipse=180:360:1.4 and 0.7];
+			\draw (0,-1.8) [color=white,partial ellipse=180:360:2.1 and 1];
+			\draw (0,-1.2) [color=white,partial ellipse=180:360:2.8 and 1.3];
+			\draw (0,-0.6) [color=white,partial ellipse=180:360:3.5 and 1.6];
+			\draw (0,0) [color=white,partial ellipse=180:360:4.2 and 1.8];
+			\draw (0,0.3) [color=white,partial ellipse=180:360:4.9 and 2.1];
+			\draw [color=white] (0,0.6) ellipse (5.6cm and 2.4cm);
+			\draw [color=white] (0,0.9) ellipse (6.3cm and 2.7cm);
+			\draw [color=white] (0,1.2) ellipse (7cm and 3cm);
+			\draw [color=white] (0,1.5) ellipse (7.7cm and 3.3cm);
+			\draw [color=white] (0,1.8) ellipse (8.5cm and 3.7cm);
+			\draw [color=white] (0,2.1) ellipse (9.3cm and 4.1cm);
+			\draw [color=white] (0,2.4) ellipse (10.2cm and 4.5cm);
+			\draw [color=white] (0,2.7) ellipse (11.1cm and 4.9cm);
+			\draw [color=white] (0,3) ellipse (12cm and 5.3cm);
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
