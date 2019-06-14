@@ -16,6 +16,8 @@
     * italian language [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/eratosthenes-infographic-it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/eratosthenes-infographic-it.pdf)
     * english language [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/eratosthenes-infographic-en.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/eratosthenes-infographic-en.pdf)
 
+* Spacetime deformation by a black hole: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/spacetime_deformation.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/spacetime_deformation.pdf)
+
 ## Graphics
 
 * A rocket: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/rocket.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/rocket.pdf)
