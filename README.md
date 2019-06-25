@@ -18,6 +18,10 @@
 
 * Spacetime deformation by a black hole: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/spacetime_deformation.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/spacetime_deformation.pdf)
 
+* Percorso del Sole nel cielo:
+  * dall'equatore: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/crepuscolo_equatore.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/crepuscolo01_equatore.pdf)
+  * dal circolo artico [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/crepuscolo_circolo_artico.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/crepuscolo02_circolo_artico.pdf)
+
 ## Graphics
 
 * A rocket: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/rocket.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/rocket.pdf)
