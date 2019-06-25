@@ -1,0 +1,46 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usepackage{xcolor}
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+%
+\usepackage{mathptmx}
+\usepackage{fontspec}
+\setmainfont{Montserrat}
+%
+\title{Percorso diurno del sole dal circolo artico}
+\begin{document}
+	\tikzset{partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}}}
+	\begin{tikzpicture}
+		%
+		\begin{scope}[xshift={(0.8cm)},yshift={(-0.9cm)},rotate around={-23:(0,0)}]
+			\draw [color=space, ultra thick] (0,0) circle (7.6cm);
+			\draw (0,2.8) [color=space, ultra thick, partial ellipse=0:180:7 and 2.3];%solstizio estate
+			\draw (0,0) [color=space, dashed, ultra thick, partial ellipse=93:-87:7.6 and 2.3];%equinozio
+			\draw (0,-2.8) [color=space, ultra thick, dashed, partial ellipse=0:180:7 and 2.3];%solstizio inverno
+			%asse poli
+			\draw [color=black, ultra thick, dashed] (0,-8.5) -- (0,0);
+			\draw [fill=earth, opacity=0.4, ultra thick, rotate around={23:(0,0)}] (0,0) ellipse (7.6cm and 2.3cm);
+			\draw [->,color=space, ultra thick] (0,0) -- (0,9);
+			%
+			\draw (0,2.8) [color=space, ultra thick, partial ellipse=180:226:7 and 2.3];%solstizio estate
+			\draw (0,2.8) [latex-,color=space, ultra thick, partial ellipse=225:360:7 and 2.3];%solstizio estate
+			\draw (0,0) [-latex,color=space, ultra thick, partial ellipse=273:224:7.6 and 2.3];%equinozio
+			\draw (0,0) [color=space, ultra thick, partial ellipse=225:113:7.6 and 2.3];%equinozio
+			\draw (0,0) [-latex,color=red, ultra thick, partial ellipse=113:93:7.6 and 2.3];%linea rossa
+			\draw (0,-2.8) [color=space, ultra thick, dashed, partial ellipse=180:226:7 and 2.3];%solstizio inverno
+			\draw (0,-2.8) [latex-,color=space, ultra thick, dashed, partial ellipse=225:360:7 and 2.3];%solstizio inverno
+			\draw [color=space, ultra thick,rotate around={23:(0,0)}] (0,7.6) -- (0,7.9);
+		\end{scope}
+		\begin{scope}
+			\node at (0.75,7.4) () {\textcolor{black}{\fontsize{20}{21}\selectfont Zenit}};
+			\node at (7.2,7.9) () {\textcolor{black}{\fontsize{20}{21}\selectfont Polo nord celeste}};
+			\node at (-7.4,4.9) () {\textcolor{black}{\fontsize{20}{21}\selectfont Solstizio d'estate}};
+			\node at (-8,2.3) () {\textcolor{black}{\fontsize{20}{21}\selectfont Equinozio}};
+			\node at (-8.4,-0.6) () {\textcolor{black}{\fontsize{20}{21}\selectfont Solstizio}};
+			\node at (-8.6,-1.3) () {\textcolor{black}{\fontsize{20}{21}\selectfont d'inverno}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
