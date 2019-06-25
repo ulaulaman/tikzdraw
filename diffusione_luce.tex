@@ -1,0 +1,45 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usepackage{xcolor}
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+%
+\usepackage{mathptmx}
+\usepackage{fontspec}
+\setmainfont{Montserrat}
+%
+\title{Diffusione della luce in atmosfera}
+\begin{document}
+	\tikzset{partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}}}
+	\begin{tikzpicture}
+		%
+		\draw [fill=space] (-14,9) rectangle (14,-7.1);
+		%
+		\coordinate (B') at (-14,9);
+		\coordinate (D') at (14,9);
+		\coordinate (S') at (14,-7.1);
+		\draw [use as bounding box] (B') -| (D') |- (S') -| (B');
+		\begin{scope}
+			%
+			\draw (-14,2) [fill=white, partial ellipse=90:-90:3 and 3];
+			%
+			\draw [fill=white!50!earth, opacity=0.4](-14,-3.44) -- (-14,-7.2) -- (14,-7.2) -- (14,6.25);
+			\draw (10,-27.5) [fill=white!50!earth, opacity=0.4, partial ellipse=83.2:135:34 and 34];
+			\draw [color=earth, fill=earth] (14,-2.8) -- (14,-7.2) -- (-4.7,-7.2);
+			\draw (10,-27.5) [color=earth, fill=earth, partial ellipse=80.8:126:25 and 25];
+			%
+			\draw [color=white, ultra thick] (-11,2) -- (-6.9,2);
+			\draw [color=blue, ultra thick] (-6.9,2) -- (-1.7,-5.4);
+			\draw [color=red, ultra thick] (-6.9,2) -- (14,2);
+			%
+			\draw [<-, color=white, ultra thick] (-6.9,2) -- (-5.9,5);
+			\node at (-5.9,6.4) {\textcolor{white}{\fontsize{20}{21}\selectfont La luce del Sole viene diffusa}};
+			\node at (-5.9,5.5) {\textcolor{white}{\fontsize{20}{21}\selectfont dall'atmosfera terrestre}};
+			%
+			\draw [fill=white] (-14,-7.1) rectangle (14,-7.3);
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
