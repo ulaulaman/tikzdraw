@@ -32,3 +32,7 @@
 
 * Risposta relativa dei coni dell'occhio: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/risposta_coni.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/risposta_coni.pdf)
 * Riflessione e rifrazione: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/riflessione-rifrazione.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/riflessione-rifrazione.pdf)
+
+## Infographics
+
+* *Fatti e misfatti di un buvo nero*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/buco_nero.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/buco_nero.pdf)
