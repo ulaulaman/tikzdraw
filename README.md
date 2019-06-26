@@ -35,4 +35,4 @@
 
 ## Infographics
 
-* *Fatti e misfatti di un buvo nero*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/buco_nero.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/buco_nero.pdf)
+* *Fatti e misfatti di un buco nero*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/buco_nero.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/buco_nero.pdf)
