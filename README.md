@@ -32,6 +32,7 @@
 
 * Risposta relativa dei coni dell'occhio: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/risposta_coni.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/risposta_coni.pdf)
 * Riflessione e rifrazione: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/riflessione-rifrazione.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/riflessione-rifrazione.pdf)
+* Convection in a glass of water: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/convezione.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/ghiaccio.pdf)
 
 ## Infographics
 
