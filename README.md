@@ -24,6 +24,8 @@
 
 * Diffusione della luce da parte dell'atmosfera: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/diffusione_luce.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/diffusione_luce.pdf)
 
+* Meteore: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/meteore.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/meteore.pdf)
+
 ## Graphics
 
 * A rocket: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/rocket.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/rocket.pdf)
