@@ -1,0 +1,177 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{bending,arrows.meta}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{craterm}{HTML}{616060}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Meteore}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\draw [black,ultra thick,fill=title] (0,12.8) rectangle (30,16.8);
+		\node at (15,14.8) {\textcolor{black}{\fontsize{90}{91}\selectfont Meteore}};
+		%
+		\draw [fill=dida, ultra thick] (2,12.2) rectangle (28,8.8);
+		\node at (15,11.5) {\textcolor{black}{\fontsize{23}{24}\selectfont Le stelle cadenti sono in realtà sciami meteorici,}};
+		\node at (15,10.5) {\textcolor{black}{\fontsize{23}{24}\selectfont ovvero fenomeni astronomici che consistono nella caduta}};
+		\node at (15,9.5) {\textcolor{black}{\fontsize{23}{24}\selectfont di un gran numero di meteore sulla Terra}};
+		%
+		\begin{scope}[shift={(0,-2.7)}]
+			\draw [fill=space, ultra thick] (1.5,11) rectangle (28.5,-12);
+			%
+			\begin{scope}[rotate around={45:(15,0)}]
+				\foreach \x in {0,1,...,7}
+					\draw [rotate around={45*\x:(6,0)}, color=radiation, ->, thick] (6,0.8) -- (6,2.3);
+				% comet orbit
+				\draw [color=white, ultra thick] (15,0) ellipse (12cm and 6cm);
+				\draw (15,0) [->,color=white, ultra thick, partial ellipse=260:280:13 and 7];
+				% sun
+				\draw [fill=white] (6,0) circle (0.8cm);
+				%
+				% comets
+				%
+				\begin{scope}[rotate around={-12:(6.8,4.4)}]
+					\fill [white, opacity=0.8] (6.4,4.4) to[out=270, in=180] (6.8,4) to[out=0,in=270] (7.2,4.4) to[out=90, in=270] (6.9,6.1) to[out=90,in=180] (6.8,6.2) to[out=180,in=90] (6.7,6.1) to[out=270,in=90] (6.4,4.4);
+				\end{scope}
+				\fill [white, opacity=0.6] (6.8,4.4) circle (0.45cm);
+				\draw [fill=earth] (6.8,4.4) circle (0.2cm);
+				%
+				\begin{scope}[rotate around={30:(3.8,2.2)}]
+				\foreach \i in {1,2,...,20}{
+					\pgfmathsetmacro{\x}{3.9-0.4*rand}
+					\pgfmathsetmacro{\y}{4-1.9*rand}
+					\pgfmathsetmacro{\opacVal}{rand*0.5+1}
+					\draw [color=craterm, fill=moon] (\x,\y) circle (0.05cm);
+				}
+				\end{scope}
+				\begin{scope}[rotate around={40:(3.8,2.2)}]
+					\fill [white, opacity=0.8] (3.4,2.2) to[out=270, in=180] (3.8,1.8) to[out=0,in=270] (4.2,2.2) to[out=90, in=270] (3.9,4.1) to[out=90,in=180] (3.8,4.2) to[out=180,in=90] (3.7,4.1) to[out=270,in=90] (3.4,2.2);
+				\end{scope}
+				\fill [white, opacity=0.8] (3.8,2.2) circle (0.4cm);
+				\draw [fill=earth] (3.8,2.2) circle (0.2cm);
+				%
+				\begin{scope}[rotate around={110:(4.5,-2.9)}]
+				\foreach \i in {1,2,...,20}{
+					\pgfmathsetmacro{\x}{4.7-0.4*rand}
+					\pgfmathsetmacro{\y}{-1.9-1.3*rand}
+					\pgfmathsetmacro{\opacVal}{rand*0.5+1}
+					\draw [color=craterm, fill=moon] (\x,\y) circle (0.05cm);
+				}
+				\end{scope}
+				\begin{scope}[rotate around={140:(4.5,-2.9)}]
+					\fill [white, opacity=0.8] (4.1,-2.9) to[out=270, in=180] (4.5,-3.3) to[out=0,in=270] (4.9,-2.9) to[out=90, in=270] (4.6,-0.9) to[out=90,in=180] (4.5,-0.8) to[out=180,in=90] (4.4,-0.9) to[out=270,in=90] (4.1,-2.9);
+				\end{scope}
+				\fill [white, opacity=0.8] (4.5,-2.9) circle (0.4cm);
+				\draw [fill=earth] (4.5,-2.9) circle (0.2cm);
+				%
+				\begin{scope}[rotate around={-140:(8.3,-5)}]
+					\fill [white, opacity=0.8] (7.9,-5) to[out=270, in=180] (8.3,-5.4) to[out=0,in=270] (8.7,-5) to[out=90, in=270] (8.4,-4.1) to[out=90,in=180] (8.3,-4) to[out=180,in=90] (8.2,-4.1) to[out=270,in=90] (7.9,-5);
+				\end{scope}
+				\fill [white, opacity=0.8] (8.3,-5) circle (0.4cm);
+				\draw [fill=earth] (8.3,-5) circle (0.2cm);
+				%
+				\fill [white, opacity=0.8] (15,-6) circle (0.4cm);
+				\draw [fill=earth] (15,-6) circle (0.2cm);
+				%
+				\draw [fill=earth] (22,-4.9) circle (0.2cm);
+				\draw [fill=earth] (22,4.9) circle (0.2cm);
+				%
+				\fill [white, opacity=0.8] (15,6) circle (0.4cm);
+				\draw [fill=earth] (15,6) circle (0.2cm);
+				%earth orbit
+				\draw [color=earth, ultra thick] (6,0) circle (4cm);
+			\end{scope}
+			%text
+			\node at (19.9,7.5) {\textcolor{white}{\fontsize{15}{16}\selectfont Il nucleo si riscalda. Il ghiaccio}};
+			\node at (19.3,6.8) {\textcolor{white}{\fontsize{15}{16}\selectfont inizia a trasformarsi in gas}};
+			%
+			\node at (16.7,3.5) {\textcolor{white}{\fontsize{15}{16}\selectfont La corona inizia a formarsi quando la cometa}};
+			\node at (15.7,2.8) {\textcolor{white}{\fontsize{15}{16}\selectfont si trova a una distanza dal Sole che è}};
+			\node at (14.7,2) {\textcolor{white}{\fontsize{15}{16}\selectfont cinque volte quella dalla Terra}};
+			%
+			\node at (5.9,2) {\textcolor{mars}{\fontsize{15}{16}\selectfont Quando la cometa si trova dal}};
+			\node at (5.3,1.3) {\textcolor{mars}{\fontsize{15}{16}\selectfont Sole all'incirca alla stessa}};
+			\node at (5.7,0.6) {\textcolor{mars}{\fontsize{15}{16}\selectfont distanza della Terra si forma}};
+			\node at (6.2,-0.1) {\textcolor{mars}{\fontsize{15}{16}\selectfont la coda che viene spinta lontano}};
+			\node at (5.5,-0.8) {\textcolor{mars}{\fontsize{15}{16}\selectfont da vento e radiazione solari}};
+			%
+			\draw [->, ultra thick, white] (3,-6.2) -- (3,-7.7);
+			\node at (4,-8.4) {\textcolor{mars}{\fontsize{15}{16}\selectfont Coda di polvere}};
+			%
+			\draw [->, ultra thick, white] (10.2,-11) -- (11.7,-11);
+			\node at (13.5,-11) {\textcolor{white}{\fontsize{15}{16}\selectfont Coda ionica}};
+			%
+			\node at (18.2,-8.3) {\textcolor{white}{\fontsize{15}{16}\selectfont La coda punta sempre}};
+			\node at (17.4,-9) {\textcolor{white}{\fontsize{15}{16}\selectfont lontano dal Sole}};
+			%
+			\node at (23.7,-4.8) {\textcolor{white}{\fontsize{15}{16}\selectfont Coda e corona iniziano}};
+			\node at (24.5,-5.5) {\textcolor{white}{\fontsize{15}{16}\selectfont a scomparire all'allontanarsi}};
+			\node at (23.6,-6.2) {\textcolor{white}{\fontsize{15}{16}\selectfont della cometa dal Sole}};
+		\end{scope}
+		%
+		% meteor shower
+		%
+		\begin{scope}[shift={(0,-23.5)}]
+			\draw[fill=space,ultra thick] (0.5,7.5) rectangle (29.5,-7.5);
+			%
+			\begin{scope}[fill=space]
+				\fill[clip] (15,7) rectangle (28.5,-7);
+				\draw (15,0) [->,ultra thick, color=white, partial ellipse=-40:90:13 and 5];
+				\draw [fill=earth] (24.7,-3) circle (1cm);
+				\draw (15,0) [ultra thick, color=white, partial ellipse=268:317:13 and 5];
+				\fill[moon, opacity=0.5,even odd rule] (14,0) ellipse (10cm and 8cm) (15.5,0) ellipse (10 cm and 8cm);
+			\end{scope}
+			% sun & earth orbit
+			\draw (15,0) [ultra thick, color=white, partial ellipse=88:180:13 and 5];
+			\draw [fill=white] (15,0) circle (3.5cm);
+			\draw (15,0) [->,ultra thick, color=white, partial ellipse=180:272:13 and 5];
+			%dida
+			\draw[fill=dida,thick] (0.5,-7.7) rectangle (29.5,-10.7);
+			\node at (15,-8.7) {\textcolor{black}{\fontsize{23}{24}\selectfont Quindi uno sciame meteorico avviene quando la Terra attraversa}};
+			\node at (15,-9.7) {\textcolor{black}{\fontsize{23}{24}\selectfont i detriti lasciati da una cometa lungo la sua orbita intorno al Sole}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-40)}]
+			\draw [fill=space, ultra thick] (1,5) rectangle (29,-7);
+			\foreach \i in {1,2,...,10}{
+				\pgfmathsetmacro{\x}{-10*rand}
+				\pgfmathsetmacro{\y}{2*rand}
+				\pgfmathsetmacro{\a}{45*rand}
+				\pgfmathsetmacro{\opacVal}{rand*0.5+1}
+				\begin{scope}[shift={(\x,-\y)}]
+					\draw [rotate around={45:(14.8,-0.8)}, fill=white] (15,-1) to[out=180,in=270] (14.8,-0.8) to[out=90,in=180] (15,-0.6) -- (18,-0.6) -- (16,-0.8) -- (18,-1) -- (15,-1);
+				\end{scope}
+			}
+			\draw (15,-7) [fill=earth, partial ellipse=0:180:13 and 1.5];
+			%
+			\draw[fill=dida,thick] (0.5,-7.7) rectangle (29.5,-11.7);
+			\node at (15,-8.7) {\textcolor{black}{\fontsize{23}{24}\selectfont Gli sciami più noti sono quelli delle Leonidi (picco: 17 novembre),}};
+			\node at (15,-9.7) {\textcolor{black}{\fontsize{23}{24}\selectfont Geminidi (picco: 13-14 dicembre), Perseidi (picco: 12 agosto)}};
+			\node at (15,-10.7) {\textcolor{black}{\fontsize{23}{24}\selectfont e Quadrantidi (picco: 3 gennaio).}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-53)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,0.3) {\textcolor{black}{\fontsize{14}{15}\selectfont Fonte del testo: sciame meteorico e cometa su it.wiki}};
+			\node at (18,-0.4) {\textcolor{black}{\fontsize{14}{15}\selectfont Grafica e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
