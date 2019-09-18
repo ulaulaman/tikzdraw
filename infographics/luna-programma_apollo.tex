@@ -1,0 +1,246 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{bending,arrows.meta}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{craterm}{HTML}{616060}
+\definecolor{linem}{HTML}{DBDBDB}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Programma Apollo}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\draw [black,ultra thick,fill=title] (0,9.8) rectangle (30,16.8);
+		\node at (15,14.8) {\textcolor{black}{\fontsize{90}{91}\selectfont Programma}};
+		\node at (15,11.8) {\textcolor{black}{\fontsize{90}{91}\selectfont Apollo}};
+		%
+		% intro
+		%
+		\begin{scope}[shift={(0,4)}]
+			%logo apollo
+			\begin{scope}
+				\node at (4.5,-1) () {\includegraphics[width=8cm]{img/apollo_program}};
+			\end{scope}
+			%text
+			\begin{scope}
+				\node at (19,4) {\textcolor{black}{\fontsize{23}{24}\selectfont Il \textbf{programma Apollo} della NASA, l'agenzia spaziale}};
+				\node at (19,3) {\textcolor{black}{\fontsize{23}{24}\selectfont statunitense, venne concepito sotto}};
+				\node at (19,2) {\textcolor{black}{\fontsize{23}{24}\selectfont l'amministrazione di \textbf{Dwight Eisenhower} e}};
+				\node at (19,1) {\textcolor{black}{\fontsize{23}{24}\selectfont prevedeva la costruzione di una capsula spaziale}};
+				\node at (19,0) {\textcolor{black}{\fontsize{23}{24}\selectfont in grado di ospitare tre astronauti.}};
+				\node at (19,-1) {\textcolor{black}{\fontsize{23}{24}\selectfont Era l'evoluzione del \textbf{programma Mercury}, che}};
+				\node at (19,-2) {\textcolor{black}{\fontsize{23}{24}\selectfont al contrario prevedeva la presenza di un solo}};
+				\node at (19,-3) {\textcolor{black}{\fontsize{23}{24}\selectfont astronauta all'interno della navicella. Prima di}};
+				\node at (19,-4) {\textcolor{black}{\fontsize{23}{24}\selectfont arrivare al programma Apollo, la Nasa passò per}};
+				\node at (19,-5) {\textcolor{black}{\fontsize{23}{24}\selectfont l'intermedio \textbf{progetto Gemini}, con capsule}};
+				\node at (19,-6) {\textcolor{black}{\fontsize{23}{24}\selectfont ospitanti due astronauti.}};
+			\end{scope}
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-8)}]
+			%text
+			\begin{scope}
+				\node at(10,4) {\textcolor{black}{\fontsize{23}{24}\selectfont L'obiettivo del programma Apollo era quello}};
+				\node at(10,3) {\textcolor{black}{\fontsize{23}{24}\selectfont di portare per la prima volta l'uomo}};
+				\node at(10,2) {\textcolor{black}{\fontsize{23}{24}\selectfont sulla Luna. Tale onore toccò a \textbf{Neil Armstrong}}};
+				\node at(10,1) {\textcolor{black}{\fontsize{23}{24}\selectfont e \textbf{Buzz Aldrin}, primo e secondo uomo}};
+				\node at(10,0) {\textcolor{black}{\fontsize{23}{24}\selectfont a mettere piede sul nostro satellite,}};
+				\node at(10,-1) {\textcolor{black}{\fontsize{23}{24}\selectfont componenti dell'equipaggio dell'\textbf{Apollo 11}.}};
+				\node at(10,-2) {\textcolor{black}{\fontsize{23}{24}\selectfont La prima missione del programma fu la AS-204}};
+				\node at(10,-3) {\textcolor{black}{\fontsize{23}{24}\selectfont del 21 febbraio 1967, denominata \textbf{Apollo 1}.}};
+				\node at(10,-4) {\textcolor{black}{\fontsize{23}{24}\selectfont Finì in tragedia. L'equipaggio, costituito da}};
+				\node at(10,-5) {\textcolor{black}{\fontsize{23}{24}\selectfont \textbf{Gus Grissom}, \textbf{Ed White} e \textbf{Roger B. Chaffee},}};
+				\node at(10,-6) {\textcolor{black}{\fontsize{23}{24}\selectfont fu completamente carbonizzato a causa di}};
+				\node at(10,-7) {\textcolor{black}{\fontsize{23}{24}\selectfont un incendio avvenuto a bordo della navicella}};
+				\node at(10,-8) {\textcolor{black}{\fontsize{23}{24}\selectfont prima del lancio.}};
+			\end{scope}
+			%moon
+			\begin{scope}[shift={(18.5,-2)}]
+				\draw[color=craterm, fill=moon, ultra thick] (6.5,0) circle (4.5cm);
+				\foreach \x in {1,...,5}
+				\draw [color=craterm, ultra thick, rotate around={72*\x:(6.5,0)}] (6.5,0) -- (6.5,2);
+				\foreach \x in {1,3,...,20}
+				\draw [color=craterm, ultra thick, rotate around={18*\x:(6.5,0)}] (6.5,0) -- (6.5,1.2);
+				\foreach \x in {2,6,...,18}
+				\draw [color=craterm, ultra thick, rotate around={18*\x:(6.5,0)}] (6.5,0) -- (6.5,0.9);
+				\draw[fill=craterm, ultra thick] (6.5,0) circle (0.5cm);
+				%down-sx
+				\draw (3.3,-2.5) [rotate around={-45:(3.3,-2.5)}, color=linem,ultra thick,partial ellipse=20:160:1.5 and 0.5];
+				\foreach \x in {0.01,0.02,...,0.1}
+				\draw (3.3+\x,-2.5-\x) [rotate around={-45:(3.3,-2.5)}, color=craterm,ultra thick,partial ellipse=20:160:1.5 and 0.5];
+				%down-dx
+				\draw (9.7,-2.5) [rotate around={45:(9.7,-2.5)}, color=linem,ultra thick,partial ellipse=20:160:1 and 0.3];
+				\foreach \x in {0.01,0.02,...,0.1}
+				\draw (9.7+\x,-2.5-\x) [rotate around={45:(9.7,-2.5)}, color=craterm,ultra thick,partial ellipse=20:160:1 and 0.3];
+				%up-sx
+				\draw (3.5,3.2) [rotate around={45:(3.5,3.2)}, color=linem,ultra thick,partial ellipse=180:360:0.5 and 0.3];
+				\foreach \x in {0.01,0.02,...,0.1}
+				\draw (3.5+\x,3.2-\x) [rotate around={45:(3.5,3.2)}, color=craterm,ultra thick,partial ellipse=180:360:0.5 and 0.3];
+				%up-dx shadow
+				\draw (9.5,3) [rotate around={-50:(9.5,3)}, color=linem,ultra thick,partial ellipse=180:360:0.9 and 0.7];
+				\foreach \x in {0.01,0.02,...,0.1}
+				\draw (9.5+\x,3-\x) [rotate around={-50:(9.5,3)}, color=craterm,ultra thick,partial ellipse=180:360:0.9 and 0.7];
+				\end{scope}
+			\end{scope}
+		%
+		% Apollo 4-10
+		%
+		\begin{scope}[shift={(0,-31)}]
+			\begin{scope}
+				\draw (0.5,-0.3) [fill=moon, partial ellipse=-90:90:12.4 and 12.4];
+				\draw (0.5,7.4) [fill=craterm, partial ellipse=-90:90:3.7 and 2.7];
+				\draw (2.6,10) [fill=craterm] ellipse (0.24 and 0.15);
+				\draw (11.7,1) [fill=craterm] ellipse (0.6 and 1.2);
+				\draw (6.3,4.5) [fill=craterm, rotate around={30:(6.3,4.5)}] ellipse (1.5 and 2);
+				\draw (10.2,-3.4) [fill=craterm, rotate around={-20:(10.2,-3.4)}] ellipse (1.2 and 2);
+				\draw (10.9,-4.6) [fill=linem, rotate around={-25:(10.9,-4.6)}] ellipse (0.2 and 0.4);
+				\draw (0.5,12.1) -- (0.5,-12.7);
+			\end{scope}
+			%
+			\begin{scope}
+				%Apollo 4
+				\draw [fill=dida] (7.4,11.6) rectangle (29.5,8.4);
+				\draw (7.4,10) [fill=earth] circle (0.5cm);
+				\node at (18.5,10.8) {\textcolor{black}{\fontsize{17}{18}\selectfont 9 novembre 1967 - Apollo 4: Primo test per il Saturn V, che porta}};
+				\node at (18.4,10) {\textcolor{black}{\fontsize{17}{18}\selectfont in orbita alta intorno alla Terra un modulo di comando e servizio}};
+				\node at (14,9.2) {\textcolor{black}{\fontsize{17}{18}\selectfont (\emph{command and service module}, CSM).}};
+				%Apollo 5
+				\draw [fill=dida] (10.8,7.8) rectangle (29,5.6);
+				\draw (10.8,6.6) [fill=earth] circle (0.5cm);
+				\node at (19.7,7) {\textcolor{black}{\fontsize{17}{18}\selectfont 22-23 gennaio 1968 - Apollo 5: Lancio del Saturn IB}};
+				\node at (20,6.2) {\textcolor{black}{\fontsize{17}{18}\selectfont con test orbitale per il modulo lunare (\emph{lunar module}).}};
+				%Apollo 6
+				\draw [fill=dida] (12.2,5) rectangle (29,2.6);
+				\draw (12.2,3.8) [fill=earth] circle (0.5cm);
+				\node at (20.7,4.2) {\textcolor{black}{\fontsize{17}{18}\selectfont 4 aprile 1968 - Apollo 6: test per l'immissione su}};
+				\node at (20.7,3.4) {\textcolor{black}{\fontsize{17}{18}\selectfont una traiettoria trans-lunare; problemi a tre motori.}};
+				%Apollo 7
+				\draw [fill=dida] (12.9,2) rectangle (29.8,-2);
+				\draw (12.9,0) [fill=earth] circle (0.5cm);
+				\node at (21.5,1.2) {\textcolor{black}{\fontsize{17}{18}\selectfont 11-12 ottobre 1968 - Apollo 7: prima missione con}};
+				\node at (19.7,0.4) {\textcolor{black}{\fontsize{17}{18}\selectfont equipaggio umano: Wally Schirra, Walt}};
+				\node at (20.9,-0.4) {\textcolor{black}{\fontsize{17}{18}\selectfont Cunningham e Donn Eisele. Prima trasmissione}};
+				\node at (20.5,-1.2) {\textcolor{black}{\fontsize{17}{18}\selectfont televisiva pubblica di una missione spaziale.}};
+				%Apollo 8
+				\draw [fill=dida] (12.3,-2.6) rectangle (29.5,-5.8);
+				\draw (12.3,-4.2) [fill=earth] circle (0.5cm);
+				\node at (21.1,-3.4) {\textcolor{black}{\fontsize{17}{18}\selectfont 21-27 dicembre 1968 - Apollo 8. Equipaggio: Frank}};
+				\node at (19.3,-4.2) {\textcolor{black}{\fontsize{17}{18}\selectfont Borman, James Lovell, William Anders.}};
+				\node at (19,-5) {\textcolor{black}{\fontsize{17}{18}\selectfont Prima orbita umana intorno alla Luna.}};
+				%Apollo 9
+				\draw [fill=dida] (10.2,-6.4) rectangle (29.5,-9.6);
+				\draw (10.2,-8) [fill=earth] circle (0.5cm);
+				\node at (19.9,-7.2) {\textcolor{black}{\fontsize{17}{18}\selectfont 3-13 marzo 1969 - Apollo 9. Equipaggio: James McDivitt,}};
+				\node at (19.4,-8) {\textcolor{black}{\fontsize{17}{18}\selectfont David Scott, Russell Schweickart. Test del sistema di}};
+				\node at (20.1,-8.8) {\textcolor{black}{\fontsize{17}{18}\selectfont supporto vitale portatile per l'uso sulla superficie lunare.}};
+				%Apollo 10
+				\draw [fill=dida] (5.2,-10.2) rectangle (28.7,-13.4);
+				\draw (5.2,-11.8) [fill=earth] circle (0.5cm);
+				\node at (17,-11) {\textcolor{black}{\fontsize{17}{18}\selectfont 18-26 maggio - Apollo 10. Equipaggio: Thomas Stafford, John Young,}};
+				\node at (17.2,-11.8) {\textcolor{black}{\fontsize{17}{18}\selectfont Eugene Cernan. Prova generale per l'allunaggio: il modulo lunare volò}};
+				\node at (13.5,-12.6) {\textcolor{black}{\fontsize{17}{18}\selectfont fino a 15 chilometri dalla superficie della Luna.}};
+			\end{scope}
+		\end{scope}
+		%
+		% Apollo 11-16
+		%
+		\begin{scope}[shift={(0,-59)}]
+			%\draw [fill=space, ultra thick] (0.5,7) rectangle (29.2,-5);
+			\draw (29.5,0) [fill=earth, partial ellipse=90:270:12.4 and 12.4];
+			\draw (29.5,12.4) -- (29.5,-12.4);
+			%Apollo 11
+			\draw [fill=dida] (23.7,12.6) rectangle (1,9.4);
+			\draw (23.7,11) [fill=craterm] circle (0.5cm);
+			\node at (12.3,11.8) {\textcolor{black}{\fontsize{17}{18}\selectfont 16-25 luglio 1969 - Apollo 11. Equipaggio: Neil Armstrong, Michael}};
+			\node at (12.1,11) {\textcolor{black}{\fontsize{17}{18}\selectfont Collins, Buzz Aldrin. Per la prima volta degli esseri umani scendono}};
+			\node at (13,10.2) {\textcolor{black}{\fontsize{17}{18}\selectfont su un corpo extraterrestre. Riportati campioni di suolo lunare.}};
+			%Apollo 12
+			\draw [fill=dida] (19.7,8.8) rectangle (1.1,6.4);
+			\draw (19.7,7.6) [fill=craterm] circle (0.5cm);
+			\node at (10.2,8) {\textcolor{black}{\fontsize{17}{18}\selectfont 14-24 novembre 1969 - Apollo 12. Equipaggio: Charles}};
+			\node at (10.2,7.2) {\textcolor{black}{\fontsize{17}{18}\selectfont "Pete" Conrad, Richard Gordon, Alan Bean. Allunaggio.}};
+			%Apollo 13
+			\draw [fill=dida] (17.3,5.8) rectangle (0.1,-1.4);
+			\draw (17.3,2.2) [fill=craterm] circle (0.5cm);
+			\node at (8.8,5) {\textcolor{black}{\fontsize{17}{18}\selectfont 11-17 aprile 1970 - Apollo 13. Equipaggio: James}};
+			\node at (8.6,4.2) {\textcolor{black}{\fontsize{17}{18}\selectfont Lovell, Jack Swigert, Fred Haise. Missione famosa}};
+			\node at (9.5,3.4) {\textcolor{black}{\fontsize{17}{18}\selectfont per la frase "\emph{Houston, we have a problem}",}};
+			\node at (9,2.6) {\textcolor{black}{\fontsize{17}{18}\selectfont che riporta in maniera erronea quanto detto da}};
+			\node at (9.1,1.8) {\textcolor{black}{\fontsize{17}{18}\selectfont Lovell: "\emph{I believe we've had a problem here.}"}};
+			\node at (8.8,1) {\textcolor{black}{\fontsize{17}{18}\selectfont La missione venne abortita per problemi al CSM.}};
+			\node at (9.6,0.2) {\textcolor{black}{\fontsize{17}{18}\selectfont L'equipaggio utilizzò il modulo lunare come}};
+			\node at (8.4,-0.6) {\textcolor{black}{\fontsize{17}{18}\selectfont "scialuppa di salvataggio" per rientrare sulla Terra.}};
+			%Apollo 14
+			\draw [fill=dida] (17.6,-2) rectangle (0.3,-5.2);
+			\draw (17.6,-3.6) [fill=craterm] circle (0.5cm);
+			\node at (8.8,-2.8) {\textcolor{black}{\fontsize{17}{18}\selectfont 31 gennaio-9 febbraio 1971 - Apollo 14. Equipaggio:}};
+			\node at (10,-3.6) {\textcolor{black}{\fontsize{17}{18}\selectfont Alan Shepard, Stuart Roosa, Edgar Mitchell.}};
+			\node at (15.2,-4.4) {\textcolor{black}{\fontsize{17}{18}\selectfont Allunaggio.}};
+			%Apollo 15
+			\draw [fill=dida] (19.5,-5.8) rectangle (1,-9);
+			\draw (19.5,-7.4) [fill=craterm] circle (0.5cm);
+			\node at (10,-6.6) {\textcolor{black}{\fontsize{17}{18}\selectfont 26 luglio-7 agosto 1971 - Apollo 15. Equipaggio: David}};
+			\node at (11.3,-7.4) {\textcolor{black}{\fontsize{17}{18}\selectfont Scott, Alfred Worden, James Irwin. Allunaggio.}};
+			\node at (12.1,-8.2) {\textcolor{black}{\fontsize{17}{18}\selectfont Usato per la prima volta un rover lunare.}};
+			%Apollo 16
+			\draw [fill=dida] (23.4,-9.6) rectangle (1.2,-12);
+			\draw (23.4,-10.8) [fill=craterm] circle (0.5cm);
+			\node at (12.2,-10.4) {\textcolor{black}{\fontsize{17}{18}\selectfont 16-27 aprile 1972 - Apollo 16. Equipaggio: John Young, T. Kenneth}};
+			\node at (16.9,-11.2) {\textcolor{black}{\fontsize{17}{18}\selectfont Mattingly, Charles Duke. Allunaggio.}};
+			%16-27 aprile 1972 - Apollo 16. Equipaggio: John Young, T. Kenneth Mattingly, Charles Duke. Allunaggio.
+		\end{scope}
+		%
+		% Saturn V + Apollo 17
+		%
+		\begin{scope}[shift={(0,-75.5)},decoration=zigzag]
+			\draw [fill=space, ultra thick] (1.9,3.2) rectangle (29.1,-3.2);
+			%
+			\draw [fill=white, ultra thick] (2.9,0) -- (3,0.1) -- (4.4,0.1) -- (4.4,-0.1) -- (3,-0.1) -- (2.9,0);
+			%
+			\draw [fill=white, ultra thick] (27,1.3) -- (27,2.2) -- (26.7,2.2) -- (26.2,1.3) -- (27,1.3);
+			\draw [fill=white, ultra thick] (27,-1.3) -- (27,-2.2) -- (26.7,-2.2) -- (26.2,-1.3) -- (27,-1.3);
+			%
+			\foreach \i in {1.1,0,-1.1}
+				\draw [fill=white, ultra thick, shift={(0,\i)}] (27.1,0.1) -- (28.1,0.4) -- (28.3,0.4) -- (28.3,-0.4) -- (28.1,-0.4) -- (27.1,-0.1) -- (27.1,0.1);
+			%
+			\draw [fill=white, ultra thick] (4.4,0.1) -- (5.1,0.2) -- (5.6,0.5) -- (6.7,0.5) -- (8.5,0.8) -- (11.6,0.8) -- (12.8,1.2) -- (20,1.2) -- (25.4,1.1) -- (27.1,1.6) -- (27.1,-1.6) -- (25.4,-1.1) -- (20,-1.2) -- (12.8,-1.2) -- (11.6,-0.8) -- (8.5,-0.8) -- (6.7,-0.5) -- (5.6,-0.5) -- (5.1,-0.2) -- (4.4,-0.1) -- (4.4,0.1);
+			%
+			\draw [thick] (5.6,0.5) -- (5.6,-0.5);
+			\draw [thick] (6.7,0.5) -- (6.7,-0.5);
+			\draw [thick] (8.5,0.8) -- (8.5,-0.8);
+			\draw [thick] (11.6,0.8) -- (11.6,-0.8);
+			\draw [thick] (12.8,1.2) -- (12.8,-1.2);
+			\draw [thick] (25.4,1.1) -- (25.4,-1.1);
+			\draw [thick] (27.1,0.5) -- (25.6,0) -- (27.1,-0.5);
+			\draw [thick] (27.1,1) -- (25.6,1.12);
+			\draw [thick] (27.1,-1) -- (25.6,-1.12);
+			%Apollo 17
+			\draw [fill=dida] (0,-3.8) rectangle (30,-7);
+			\node at (15,-4.6) {\textcolor{black}{\fontsize{17}{18}\selectfont 7-19 dicembre 1972 - Apollo 17. Equipaggio: Eugene Cernan, Ronald Evans, Harrison Schmitt.}};
+			\node at (15,-5.4) {\textcolor{black}{\fontsize{17}{18}\selectfont Allunaggio. Ultima missione del programma, ma anche prima missione che portò}};
+			\node at (15,-6.2) {\textcolor{black}{\fontsize{17}{18}\selectfont uno scienziato nello spazio: il geologo Harrison Schmitt.}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-84)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,0.2) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+			\node at (18,-0.4) {\textcolor{black}{\fontsize{14}{15}\selectfont Il logo del programma Apollo è in pubblico dominio}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
