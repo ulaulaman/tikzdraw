@@ -41,3 +41,4 @@
 
 * *Fatti e misfatti di un buco nero*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/buco_nero.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/buco_nero.pdf)
 * *Programma Apollo*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna-programma_apollo.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/luna-programma_apollo.pdf)
+* *Come scoprire nuovi pianeti*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/esopianeti.pdf)
