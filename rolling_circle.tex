@@ -1,0 +1,55 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{bending,arrows.meta}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{xcolor}
+\definecolor{earth}{HTML}{0089FA}
+%
+\title{Rolling circle squares itself}
+\begin{document}
+	\begin{tikzpicture}[>={[inset=0,angle'=27]Stealth}]
+		\begin{scope}[decoration={markings,mark=at position 0 with {\arrow[scale=2]{<}};}]
+			\tkzDefPoint(0,0){A} \tkzDefPoint(0,5){B} \tkzDefPoint(0,5.5){f}
+			\tkzCalcLength[cm](A,B) \tkzGetLength{rAB}
+			\tkzDrawCircle[R,ultra thick](A,\rAB cm)
+			\tkzDrawArc[rotate,postaction={decorate},color=black,ultra thick](A,f)(-30)
+			\tkzDrawPoints[fill=black](B)
+			\tkzDrawSegment[style=dashed,ultra thick](A,B)
+			%
+			\tkzInterLC(A,B)(A,B) \tkzGetPoints{D}{E}
+			%
+			\tkzDefLine[orthogonal=through A](B,A) \tkzGetPoint{F}
+			\tkzInterLC(A,F)(A,B) \tkzGetPoints{G}{H}
+			\tkzDrawSegment[style=dashed,ultra thick](A,G)			
+			%translation
+			\pgfmathsetmacro{\tkzCirc}{3.14 * \rAB}
+			\tkzDefPoint(\tkzCirc,0){A'}
+			\tkzDefPointsBy[translation= from A to A'](B){B1}
+			\tkzDefPointBy[rotation= center A' angle -180](B1)
+			\tkzGetPoint{B2}
+			\tkzCalcLength[cm](A',B2) \tkzGetLength{rABt}
+			\tkzDrawCircle[R,ultra thick](A',\rABt cm)
+			\tkzDrawPoints[fill=black](B2)
+			\tkzDrawSegment[style=dashed,ultra thick](A',B2)
+			%
+			\tkzDefPointsBy[translation= from A to A'](G){G1}
+			\tkzDefPointBy[rotation= center A' angle -180](G1)
+			\tkzGetPoint{G2}
+			\tkzDrawSegment[style=dashed,ultra thick](A',G2)
+			%
+			\tkzDrawLine[color=earth,add = 0.4 and 0.7,ultra thick](D,B2)
+			%
+			\tkzTangent[at=G2](A') \tkzGetPoint{t}
+			\tkzInterLL(G2,t)(D,B2) \tkzGetPoint{I}
+			\tkzDrawSegment[style=dashed,ultra thick](G2,I)
+			%
+			\tkzDefMidPoint(D,I) \tkzGetPoint{O}
+			\tkzDrawArc[style=dashed,color=black,ultra thick](O,D)(I)
+			\tkzInterLC(A',B2)(O,I) \tkzGetPoints{a}{b}
+			\tkzDefSquare(B2,b) \tkzGetPoints{c}{d}
+			\tkzDrawPolygon[ultra thick](B2,b,c,d)
+		\end{scope}
+	\end{tikzpicture}
+\end{document}
