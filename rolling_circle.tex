@@ -11,44 +11,66 @@
 \begin{document}
 	\begin{tikzpicture}[>={[inset=0,angle'=27]Stealth}]
 		\begin{scope}[decoration={markings,mark=at position 0 with {\arrow[scale=2]{<}};}]
+			%it: definizione dei punti: A, centro della prima circonferenza; B, punto passante per la prima circonferenza; F, punto passante per la freccia che indica la rotazione della prima circonferenza
 			\tkzDefPoint(0,0){A} \tkzDefPoint(0,5){B} \tkzDefPoint(0,5.5){f}
+			%it: Calcolo del raggio
 			\tkzCalcLength[cm](A,B) \tkzGetLength{rAB}
+			%it: disegno della prima circonferenza
 			\tkzDrawCircle[R,ultra thick](A,\rAB cm)
+			%it: disegno della direzione di rotazione
 			\tkzDrawArc[rotate,postaction={decorate},color=black,ultra thick](A,f)(-30)
 			\tkzDrawPoints[fill=black](B)
+			%it: segmento AB
 			\tkzDrawSegment[style=dashed,ultra thick](A,B)
-			%
+			%it: intersezione tra il segmento AB e la circonferenza di centro A e passante per B; si memorizzano i due punti di intersezione. Quello che servirà dopo è D
 			\tkzInterLC(A,B)(A,B) \tkzGetPoints{D}{E}
-			%
+			%it: determinazione della retta ortogonale ad AB passante per A
 			\tkzDefLine[orthogonal=through A](B,A) \tkzGetPoint{F}
+			%it: intersenzione tra la retta AF e la circonferenza di centro A e passante per B; si memorizzano i due punti di intersezione. Quello che servirà dopo è G
 			\tkzInterLC(A,F)(A,B) \tkzGetPoints{G}{H}
+			%it: segmento AG
 			\tkzDrawSegment[style=dashed,ultra thick](A,G)			
-			%translation
+		%en: translation
+		%it: traslazione
+			%it: calcolo della circonferenza
 			\pgfmathsetmacro{\tkzCirc}{3.14 * \rAB}
+			%it: definizione del centro del secondo cerchio
 			\tkzDefPoint(\tkzCirc,0){A'}
+			%it: traslazione da A ad A' del punto B in B1
 			\tkzDefPointsBy[translation= from A to A'](B){B1}
+			%it: rotazione intorno ad A' verso il basso di 180° di B1 che diventa così B2
 			\tkzDefPointBy[rotation= center A' angle -180](B1)
 			\tkzGetPoint{B2}
+			%it: calcolo del raggio del secondo cerchio
 			\tkzCalcLength[cm](A',B2) \tkzGetLength{rABt}
+			%it: secondo cerchio
 			\tkzDrawCircle[R,ultra thick](A',\rABt cm)
 			\tkzDrawPoints[fill=black](B2)
+			%it: segmento A'B2
 			\tkzDrawSegment[style=dashed,ultra thick](A',B2)
-			%
+			%it: traslazione e rotazione di G in G2
 			\tkzDefPointsBy[translation= from A to A'](G){G1}
 			\tkzDefPointBy[rotation= center A' angle -180](G1)
 			\tkzGetPoint{G2}
+			%it: segmento A'G2
 			\tkzDrawSegment[style=dashed,ultra thick](A',G2)
-			%
+			%it: retta di rotazione
 			\tkzDrawLine[color=earth,add = 0.4 and 0.7,ultra thick](D,B2)
-			%
+			%it: tangente alla seconda circonferenza in G2
 			\tkzTangent[at=G2](A') \tkzGetPoint{t}
+			%it: intersezione tra la tangente in G2 e la retta di rotazione; si prende il punto di intersezione
 			\tkzInterLL(G2,t)(D,B2) \tkzGetPoint{I}
+			%it: segmento G2I
 			\tkzDrawSegment[style=dashed,ultra thick](G2,I)
-			%
+			%it: determinazione del centro della circonferenza di quadratura
 			\tkzDefMidPoint(D,I) \tkzGetPoint{O}
+			%it: arco della circonferenza di quadratura di centro O e passante per D e I
 			\tkzDrawArc[style=dashed,color=black,ultra thick](O,D)(I)
+			%it: intersezione tra la retta A'B2 e la circonferenza di quadratura; si memorizzano i punti di intersezione, per poi utilizzare b
 			\tkzInterLC(A',B2)(O,I) \tkzGetPoints{a}{b}
+			%it: definizione del quadrato a partire dal lato B2b
 			\tkzDefSquare(B2,b) \tkzGetPoints{c}{d}
+			%it: disegno del quadrato che quadra il primo cerchio
 			\tkzDrawPolygon[ultra thick](B2,b,c,d)
 		\end{scope}
 	\end{tikzpicture}
