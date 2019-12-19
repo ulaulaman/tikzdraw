@@ -1,0 +1,170 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{bending,arrows.meta}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{mercury}{HTML}{846549}
+\definecolor{venus}{HTML}{BB9765}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{jupiter}{HTML}{A79476}
+\definecolor{saturn}{HTML}{DBBD9B}
+\definecolor{saturnring}{HTML}{857C73}
+\definecolor{uranus}{HTML}{b1d8dd}
+\definecolor{neptune}{HTML}{799bc1}
+\definecolor{pluto}{HTML}{ceaa8a}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%\setmainfont{Montserrat Medium}
+%
+\title{Sistema Solare}
+\begin{document}
+	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		\def\rsun{15}
+		%
+		\def\uam{0.387}
+		\def\rmer{0.2}
+		%
+		\def\uav{0.723}
+		\def\rven{0.5}
+		%
+		\def\uaet{1}
+		\def\ret{0.53}
+		%
+		\def\uams{1.52}
+		\def\rms{0.28}
+		%
+		\def\uaj{5.203}
+		\def\rj{5.91}
+		%
+		\def\uasat{9.582}
+		\def\rsat{4.98}
+		%
+		\def\uaur{19.191}
+		\def\rur{2.11}
+		%
+		\def\uanp{30.069}
+		\def\rnp{2.04}
+		%
+		\def\uap{39.48}
+		\def\rp{0.1}
+		%
+		\begin{scope}[rotate around={-90:(0,0)}]
+			\tkzDefPoint(0,0){S1}% \tkzDefPoint(0,15){S2}
+			\tkzDrawSector[R,fill=white,ultra thick](S1,\rsun cm)(270,450)
+			%
+			\tkzDefShiftPoint[S1](0:\rsun+\uam+\rmer){M1}
+			\tkzDrawCircle[fill=mercury,R,ultra thick](M1,\rmer cm)
+			%
+			\tkzDefShiftPoint[M1](0:\rmer+\uav-\uam+\rven){V1}
+			\tkzDrawCircle[fill=venus,R,ultra thick](V1,\rven cm)
+			%
+			\tkzDefShiftPoint[V1](0:\rven+\uaet-\uav+\ret){E1}
+			\tkzDrawCircle[fill=earth,R,ultra thick](E1,\ret cm)
+			%
+			\tkzDefShiftPoint[E1](0:\ret+\uams-\uaet+\rms){M2}
+			\tkzDrawCircle[fill=mars,R,ultra thick](M2,\rms cm)
+			%
+			\tkzDefShiftPoint[M2](0:\rms+\uaj-\uams+\rj){J1}
+			\tkzDrawCircle[fill=jupiter,R,ultra thick](J1,\rj cm)
+			%
+			\tkzDefShiftPoint[J1](0:\rj+\uasat-\uaj+\rsat){S2}
+			\tkzDrawCircle[fill=saturn,R,ultra thick](S2,\rsat cm)
+			%
+			\tkzDefShiftPoint[S2](0:\rsat+\uaur-\uasat+\rur){U1}
+			\tkzDrawCircle[fill=uranus,R,ultra thick](U1,\rur cm)
+			%
+			\tkzDefShiftPoint[U1](0:\rur+\uanp-\uaur+\rnp){N1}
+			\tkzDrawCircle[fill=neptune,R,ultra thick](N1,\rnp cm)
+			%
+			\tkzDefShiftPoint[N1](0:\rnp+\uap-\uanp+\rp){P1}
+			\tkzDrawCircle[fill=pluto,R,ultra thick](P1,\rp cm)
+			%
+		\end{scope}
+		%title
+		\begin{scope}
+			\draw [black,ultra thick,fill=title] (-20,4) rectangle (20,-3);
+			\node at (0,2) {\textcolor{black}{\fontsize{90}{91}\selectfont I numeri del}};
+			\node at (0,-1) {\textcolor{black}{\fontsize{90}{91}\selectfont Sistema Solare}};
+			%
+			\draw [black,ultra thick,fill=dida] (9.2,-2.5) rectangle (19,-3.5);
+			\node at (14.2,-3) {\textcolor{black}{\fontsize{20}{21}\selectfont 1 UA = 149597887.5 km}};
+			\node at (0,-7.5) {\textcolor{black}{\fontsize{24}{25}\selectfont Sole}};
+			\node at (0,-9) {\textcolor{black}{\fontsize{24}{25}\selectfont raggio = 1.39095 $\cdot$ 10}};
+			\node at (4.8,-8.5) {\textcolor{black}{\fontsize{12}{13}\selectfont 9}};
+			\node at (5.4,-9) {\textcolor{black}{\fontsize{24}{25}\selectfont m}};
+		\end{scope}
+		%
+		\begin{scope}
+			\draw[->,color=white,ultra thick] (0.5,-\rsun-\uam/2) -- (8.5,-\rsun-\uam/2);
+			\node[right] at (8.5,-\rsun-\uam/2) {\textcolor{white}{\fontsize{24}{25}\selectfont Mercurio}};
+			\node[right] at (8.5,-\rsun-\uam/2-1) {\textcolor{white}{\fontsize{24}{25}\selectfont distanza = 0.387 UA}};
+			\node[right] at (8.5,-\rsun-\uam/2-2) {\textcolor{white}{\fontsize{24}{25}\selectfont raggio = 2439.7 km}};
+			%
+			\draw[->,color=white,ultra thick] (-0.5,-\rsun-\uav-\rmer) -- (-8.5,-\rsun-\uav-\rmer);
+			\node[left] at (-8.5,-\rsun-\uav-\rmer) {\textcolor{white}{\fontsize{24}{25}\selectfont Venere}};
+			\node[left] at (-8.5,-\rsun-\uav-\rmer-1) {\textcolor{white}{\fontsize{24}{25}\selectfont distanza = 0.723 UA}};
+			\node[left] at (-8.5,-\rsun-\uav-\rmer-2) {\textcolor{white}{\fontsize{24}{25}\selectfont raggio = 6051.8 km}};
+			%
+			\draw[->,color=white,ultra thick] (0.5,-\rsun-\uaet-\rmer-\rven-\ret) -- (2.5,-\rsun-\uaet-\rmer-\rven-\ret);
+			\node[right] at (2.5,-\rsun-\uaet-\rmer-\rven-\ret) {\textcolor{white}{\fontsize{24}{25}\selectfont Terra}};
+			\node[right] at (2.5,-\rsun-\uaet-\rmer-\rven-\ret-1) {\textcolor{white}{\fontsize{24}{25}\selectfont distanza = 1 UA}};
+			\node[right] at (2.5,-\rsun-\uaet-\rmer-\rven-\ret-2) {\textcolor{white}{\fontsize{24}{25}\selectfont raggio = 6372.8 km}};
+			%
+			\draw[->,color=white,ultra thick] (-0.5,-\rsun-3/2*\uams-2*\rmer-2*\rven-\ret+0.5*\uaet) -- (-2.5,-\rsun-3/2*\uams-2*\rmer-2*\rven-\ret+0.5*\uaet);
+			\node[left] at (-2.5,-\rsun-3/2*\uams-2*\rmer-2*\rven-\ret+0.5*\uaet) {\textcolor{white}{\fontsize{24}{25}\selectfont Marte}};
+			\node[left] at (-2.5,-\rsun-3/2*\uams-2*\rmer-2*\rven-\ret+0.5*\uaet-1) {\textcolor{white}{\fontsize{24}{25}\selectfont distanza = 1.52 UA}};
+			\node[left] at (-2.5,-\rsun-3/2*\uams-2*\rmer-2*\rven-\ret+0.5*\uaet-2) {\textcolor{white}{\fontsize{24}{25}\selectfont raggio = 3402.45 km}};
+			%
+			\draw[->,color=white,ultra thick] (0.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-0.5*\uaj-0.5*\uams) -- (8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-0.5*\uaj-0.5*\uams);
+			\node[right] at (8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-0.5*\uaj-0.5*\uams) {\textcolor{white}{\fontsize{24}{25}\selectfont Giove}};
+			\node[right] at (8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-0.5*\uaj-0.5*\uams-1) {\textcolor{white}{\fontsize{24}{25}\selectfont distanza = 5.203 UA}};
+			\node[right] at (8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-0.5*\uaj-0.5*\uams-2) {\textcolor{white}{\fontsize{24}{25}\selectfont raggio = 71492 km}};
+			%
+			\draw[->,color=white,ultra thick] (-0.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-0.5*\uasat-0.5*\uaj) -- (-8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-0.5*\uasat-0.5*\uaj);
+			\node[left] at (-8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-0.5*\uasat-0.5*\uaj) {\textcolor{white}{\fontsize{24}{25}\selectfont Saturno}};
+			\node[left] at (-8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-0.5*\uasat-0.5*\uaj-1) {\textcolor{white}{\fontsize{24}{25}\selectfont distanza = 9.582 UA}};
+			\node[left] at (-8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-0.5*\uasat-0.5*\uaj-2) {\textcolor{white}{\fontsize{24}{25}\selectfont raggio = 60268 km}};
+			%
+			\draw[->,color=white,ultra thick] (0.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-0.5*\uaur-0.5*\uasat) -- (8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-0.5*\uaur-0.5*\uasat);
+			\node[right] at (8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-0.5*\uaur-0.5*\uasat) {\textcolor{white}{\fontsize{24}{25}\selectfont Urano}};
+			\node[right] at (8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-0.5*\uaur-0.5*\uasat-1) {\textcolor{white}{\fontsize{24}{25}\selectfont distanza = 19.191 UA}};
+			\node[right] at (8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-0.5*\uaur-0.5*\uasat-2) {\textcolor{white}{\fontsize{24}{25}\selectfont raggio = 25559 km}};
+			%
+			\draw[->,color=white,ultra thick] (-0.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-2*\rur-0.5*\uanp-0.5*\uaur) -- (-8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-2*\rur-0.5*\uanp-0.5*\uaur);
+			\node[left] at (-8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-2*\rur-0.5*\uanp-0.5*\uaur) {\textcolor{white}{\fontsize{24}{25}\selectfont Nettuno}};
+			\node[left] at (-8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-2*\rur-0.5*\uanp-0.5*\uaur-1) {\textcolor{white}{\fontsize{24}{25}\selectfont distanza = 30.069 UA}};
+			\node[left] at (-8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-2*\rur-0.5*\uanp-0.5*\uaur-2) {\textcolor{white}{\fontsize{24}{25}\selectfont raggio = 24764 km}};
+			%
+			\draw[->,color=white,ultra thick] (0.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-2*\rur-2*\rnp-0.5*\uap-0.5*\uanp) -- (8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-2*\rur-2*\rnp-0.5*\uap-0.5*\uanp);
+			\node[right] at (8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-2*\rur-2*\rnp-0.5*\uap-0.5*\uanp) {\textcolor{white}{\fontsize{24}{25}\selectfont Plutone}};
+			\node[right] at (8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-2*\rur-2*\rnp-0.5*\uap-0.5*\uanp-1) {\textcolor{white}{\fontsize{24}{25}\selectfont distanza = 39.48 UA}};
+			\node[right] at (8.5,-\rsun-2*\rmer-2*\rven-2*\ret-2*\rms-2*\rj-2*\rsat-2*\rur-2*\rnp-0.5*\uap-0.5*\uanp-2) {\textcolor{white}{\fontsize{24}{25}\selectfont raggio = 1188.3 km}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-90)}]
+			\draw[black,ultra thick,fill=dida] (-17,0) rectangle (17,-6);
+			\node at (0,-1) {\textcolor{black}{\fontsize{24}{25}\selectfont Fissato il raggio di Plutone a 0.1, i raggi degli altri pianeti sono in scala,}};
+			\node at (0,-2) {\textcolor{black}{\fontsize{24}{25}\selectfont tranne quello del Sole.}};
+			\node at (0,-3) {\textcolor{black}{\fontsize{24}{25}\selectfont La distanza indicata per ciascun pianeta è quella dal Sole.}};
+			\node at (0,-4) {\textcolor{black}{\fontsize{24}{25}\selectfont Le distanze tra i pianeti, in proporzione una con l'altra, non sono in scala}};
+			\node at (0,-5) {\textcolor{black}{\fontsize{24}{25}\selectfont con le loro dimensioni.}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-97)}]
+			\node at (17,0) () {\includegraphics[width=3.7cm]{licenza_free_c}};
+			\node[left] at (15,0) {\textcolor{white}{\fontsize{14}{15}\selectfont Grafica: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
