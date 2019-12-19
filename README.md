@@ -45,3 +45,5 @@
 * *Come scoprire nuovi pianeti*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/esopianeti.pdf)
 * *Il messaggio di Arecibo*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/messaggio_arecibo.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/arecibo.pdf)
 * *Fatti mercuriali*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercury_facts.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/mercury_facts.pdf)
+* *I numeri del sistema solare*:
+  * *Distanze e dimensioni*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare-distanze_dimensioni.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/sistema_solare_info.pdf)
