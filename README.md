@@ -47,3 +47,4 @@
 * *Fatti mercuriali*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercury_facts.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/mercury_facts.pdf)
 * *I numeri del sistema solare*:
   * *Distanze e dimensioni*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare-distanze_dimensioni.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/sistema_solare_info.pdf)
+  * *Masse*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare_masse.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/sistema_solare_masse.pdf)
