@@ -1,0 +1,107 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{bending,arrows.meta,snakes,shapes}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{radiation}{HTML}{FFD016}
+\definecolor{galaxy}{HTML}{4278A4}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Esopianeti}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+		human/.pic = {
+			\draw [fill] (0,0) circle (0.3cm);
+			\draw [thick] (0,0) circle -- (0,-1.5);
+			\draw [thick] (-0.5,-1) -- (0,-0.5) -- (0.5,-1);
+			\draw [thick] (-0.5,-2) -- (0,-1.5) -- (0.5,-2);
+		},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\begin{scope}
+			\node at (15,14.8) {\textcolor{white}{\fontsize{90}{91}\selectfont Caccia al pianeta}};
+		\end{scope}
+		%intro
+		\begin{scope}[shift={(0,10.5)}]
+			\node at (15,1) {\textcolor{white}{\fontsize{23}{24}\selectfont Tra tutte le tecniche per cercare esopianeti, ovvero quei pianeti}};
+			\node at (15,0) {\textcolor{white}{\fontsize{23}{24}\selectfont che orbitano intorno alle altre stelle, due si sono rivelate le più efficaci:}};
+		\end{scope}
+		%em spectrum
+		\begin{scope}[shift={(0,3)}]
+			\draw [color=white, ultra thick] (2,6) rectangle (28,4);
+			\shade [left color=black, right color=violet ,outer sep=0pt] (2,6) rectangle (4.47,4);
+			\shade [left color=violet, right color=blue ,outer sep=0pt] (4.47,6) rectangle (8.5,4);
+			\shade [left color=blue, right color=green ,outer sep=0pt] (8.5,6) rectangle (11.1,4);
+			\shade [left color=green, right color=yellow ,outer sep=0pt] (11.1,6) rectangle (11.88,4);
+			\shade [left color=yellow, right color=orange ,outer sep=0pt] (11.88,6) rectangle (12.92,4);
+			\shade [left color=orange, right color=red ,outer sep=0pt] (12.92,6) rectangle (17.47,4);
+			\shade [left color=red, right color=black ,outer sep=0pt] (17.47,6) rectangle (28,4);
+			\node [right] at (2,3.5) {\textcolor{white}{\fontsize{14}{15}\selectfont Spettro di}};
+			\node [right] at (2,3) {\textcolor{white}{\fontsize{14}{15}\selectfont assorbimento}};
+			%
+			\draw[snake=coil, line after snake=0pt, segment aspect=0, segment length=10pt, color=earth, ultra thick] (15,5) -- (9.5,5);
+			\draw[->, color=earth, ultra thick] (9.5,5) -- (9,5);
+			%
+			\draw[snake=coil, line after snake=0pt, segment aspect=0, segment length=10pt, color=mars, ultra thick] (15,5) -- (20.5,5);
+			\draw[->, color=mars, ultra thick] (20.5,5) -- (21,5);
+			%
+			\draw[ultra thick, dashed, color=earth] (9,5) -- (9,-2);
+			\node [right] at (9,3.5) {\textcolor{earth}{\fontsize{14}{15}\selectfont Blueshift}};
+			%
+			\draw[ultra thick, dashed, color=mars] (21,5) -- (21,-2);
+			\node [left] at (21,3.5) {\textcolor{mars}{\fontsize{14}{15}\selectfont Redshift}};
+		\end{scope}
+		\begin{scope}[shift={(0,0.5)}]
+			%
+			\draw (15,0) [->,color=galaxy,ultra thick, partial ellipse=100:125:13 and 1.8];
+			\draw (15,0) [color=galaxy,ultra thick, partial ellipse=120:135:13 and 1.8];
+			\draw (15,0) [color=galaxy,ultra thick, partial ellipse=45:80:13 and 1.8];
+			\draw (15,0) [->,color=galaxy,ultra thick, partial ellipse=325:410:13 and 1.8];
+			\fill [blue, opacity=0.5] (14,0) circle (5cm);
+			\fill [red, opacity=0.5] (16,0) circle (5cm);
+			\draw [fill=radiation] (15,0) circle (5cm);
+			\draw [fill=mars] (5,1) circle (1cm);
+			\draw [fill=mars] (25,-1) circle (1cm);
+			\draw (15,0) [->,color=galaxy,ultra thick, partial ellipse=145:240:13 and 1.8];
+			\draw (15,0) [->,color=galaxy,ultra thick, partial ellipse=230:300:13 and 1.8];
+			\draw (15,0) [color=galaxy,ultra thick, partial ellipse=290:320:13 and 1.8];
+			\draw [fill=mars] (15,-1.8) circle (1cm);
+			%
+			\draw [color=moon,fill=black,ultra thick] (1.2,-7.5) rectangle (28.8,-10);
+			\draw [ultra thick,color=white] (1.5,-8) -- (9.8,-8) to[out=0,in=90] (10,-8.2) -- (10,-9.3) to[out=270,in=180] (10.2,-9.5) -- (19.8,-9.5) to[out=0,in=270] (20,-9.3) -- (20,-8.2) to[out=90,in=180] (20.2,-8) -- (28.5,-8);
+			\node [rotate=90, left] at (0.7,-7.2) {\textcolor{white}{\fontsize{14}{15}\selectfont Luminosità}};
+			\node [right] at (1.2,-10.5) {\textcolor{white}{\fontsize{14}{15}\selectfont Tempo}};
+			%
+			\draw [ultra thick, color=white] (1.5,8.5) -- (1,8.5) -- (1,-5) -- (1.5,-5);
+			\draw [ultra thick, color=white] (0,1.2) -- (1,1.2);
+			\draw [color=white, ultra thick] (-9,8.5) rectangle (0,-11);
+			\draw [color=white, fill=space, ultra thick] (-7.5,9) rectangle (-1.5,8);
+			\node at (-4.5,8.5) {\textcolor{white}{\fontsize{18}{19}\selectfont Velocità radiale}};
+			\node (example-textwidth-2) [right, align=left, text width=8cm, color=white, font=\fontsize{16pt}{17pt}\selectfont] at (-8.6,-1.2) {%
+				La velocità radiale è il moto di una stella causato dall'influenza gravitazionale dei suoi pianeti. Può essere misurato grazie all'aumento (blueshift) o alla diminuzione (redshift) della frequenza della luce emessa dalla stella. Misurare la velocità radiale permette di rilevare solo quei panieti le cui orbite "spingono" la stella lungo la direzione di osservazione. In questo modo è difficile determinare l'orbita esatta di un esopianeta, così il metodo della velocità radiale permette ai ricercatori di dedurre solo il suo periodo orbitale, la deviazione dell'orbita da quella circolare e la sua massa minima. La velocità radiale è molto sensibile ai pianeti massici con brevi periodi orbitali.
+			};
+			%
+			\draw [ultra thick, color=white] (29.3,5) -- (29.8,5) -- (29.8,-10) -- (29.3,-10);
+			\draw [ultra thick, color=white] (29.8,-2.5) -- (30.8,-2.5);
+			\draw [color=white, ultra thick] (30.8,8.5) rectangle (39.8,-13.5);
+			\draw [color=white, fill=space, ultra thick] (32.3,9) rectangle (38.3,8);
+			\node at (35.3,8.5) {\textcolor{white}{\fontsize{18}{19}\selectfont Transito}};
+			\node (example-textwidth-2) [right, align=left, text width=8cm, color=white, font=\fontsize{16pt}{17pt}\selectfont] at (31.2,-2.7) {%
+				Quando un pianeta attraversa, o transita, davanti alla faccia della sua stella, la luce della stella diminuisce di una quantità piccola ma misurabile. La probabilità che un transito planeraio sia visibile dalla Terra è bassa, proporzionale al rapporto tra il raggio della stella e quello dell'orbita del pianeta. I transiti dei pianeti più grandi con un piccolo periodo orbitale intorno a piccole stelle sono più facili da rilevare e per rilevarli bisogna osservare molte stelle. I transiti permettono ai ricercatori di dedirre il raggio di un pianeta e il suo periodo orbitale. Gli astronomi, a volte, riescono a studiare l'atmosfera del pianeta studiando la luce che la attraversa o ne viene riflessa. Questo fornisce informazioni sulla composizione dell'atmosfera, la temperatura e la formazione di nubi.
+			};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
