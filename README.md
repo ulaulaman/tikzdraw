@@ -45,9 +45,10 @@ Graphics and infographics
 * *Fatti e misfatti di un buco nero*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/buco_nero.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/buco_nero.pdf)
 * *Programma Apollo*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna-programma_apollo.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/luna-programma_apollo.pdf)
 * *Come scoprire nuovi pianeti*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/esopianeti.pdf)
+  * *Caccia al pianeta*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/transito-mini_guida.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/transito-mini_guida.pdf)
 * *Il messaggio di Arecibo*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/messaggio_arecibo.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/arecibo.pdf)
 * *Fatti mercuriali*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercury_facts.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/mercury_facts.pdf)
 * *I numeri del sistema solare*:
   * *Distanze e dimensioni*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare-distanze_dimensioni.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/sistema_solare_info.pdf)
   * *Masse*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare_masse.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/sistema_solare_masse.pdf)
-  * *Caccia al pianeta*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/transito-mini_guida.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/transito-mini_guida.pdf)
+  * *Densità*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare_densita.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/sistema_solare_densita.pdf)
