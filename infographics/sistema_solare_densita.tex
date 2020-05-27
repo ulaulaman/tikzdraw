@@ -1,0 +1,118 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{bending,arrows.meta}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+%\usepackage{freetikz}
+%\usetikzlibrary{shapes}
+%\definecolor{eduinafred}{HTML}{BB2D58}
+%\definecolor{eduinafblu}{HTML}{1D71B8}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{mercury}{HTML}{846549}
+\definecolor{venus}{HTML}{BB9765}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{jupiter}{HTML}{A79476}
+\definecolor{saturn}{HTML}{DBBD9B}
+\definecolor{saturnring}{HTML}{857C73}
+\definecolor{uranus}{HTML}{b1d8dd}
+\definecolor{neptune}{HTML}{799bc1}
+\definecolor{pluto}{HTML}{ceaa8a}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+%
+%\definecolor{glasses}{HTML}{08663D}
+%\definecolor{moon}{HTML}{AFAFAF}
+%\definecolor{craterm}{HTML}{616060}
+%\definecolor{linem}{HTML}{DBDBDB}
+%\definecolor{core3}{HTML}{FFD016}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%\setmainfont{Montserrat Medium}
+%
+\title{Sistema Solare}
+\begin{document}
+	%\tikzset{partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}}}
+	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		\tikzstyle{spring}=[thick,decorate,decoration={aspect=0.3, segment length=3mm, amplitude=3mm,coil}]
+		%
+		\def\rsun{15}
+		\def\delta{3}
+		\def\sei{3.5}
+		%
+		\begin{scope}
+			\draw [color=white] (11,-\rsun-\delta) -- (11,-\rsun-\delta-18.5);
+			\node [left] at (10,-\rsun-\delta+1.2) {\textcolor{white}{\fontsize{24}{25}\selectfont Densità}};
+			\node [right] at (12,-\rsun-\delta+1) {\textcolor{white}{\fontsize{24}{25}\selectfont 10}};
+			\node [left] at (13.6,-\rsun-\delta+1.6) {\textcolor{white}{\fontsize{12}{13}\selectfont 3}};
+			\node [left] at (16.1,-\rsun-\delta+0.9) {\textcolor{white}{\fontsize{24}{25}\selectfont kg/m}};
+			\node [left] at (16.5,-\rsun-\delta+1.5) {\textcolor{white}{\fontsize{12}{13}\selectfont 3}};
+			%
+			\draw [color=white] (11,-\rsun-\sei) -- (11.5,-\rsun-\sei);
+			\node [left] at (10.5,-\rsun-\sei) {\textcolor{white}{\fontsize{24}{25}\selectfont 0}};
+			\draw [color=white] (11,-\rsun-\sei-6) -- (11.5,-\rsun-\sei-6);
+			\node [left] at (10.5,-\rsun-\sei-6) {\textcolor{white}{\fontsize{24}{25}\selectfont 2}};
+			\draw [color=white] (11,-\rsun-\sei-12) -- (11.5,-\rsun-\sei-12);
+			\node [left] at (10.5,-\rsun-\sei-12) {\textcolor{white}{\fontsize{24}{25}\selectfont 4}};
+			\draw [color=white] (11,-\rsun-\sei-18) -- (11.5,-\rsun-\sei-18);
+			\node [left] at (10.5,-\rsun-\sei-18) {\textcolor{white}{\fontsize{24}{25}\selectfont 6}};
+			%
+			\draw [fill=earth] (12.5,-\rsun-\sei-3*5.514) circle (0.5cm);
+			\node [left] at (20,-\rsun-\sei-3*5.514) {\textcolor{white}{\fontsize{24}{25}\selectfont Terra - 5.514}};
+			%
+			\draw [fill=mercury] (21,-\rsun-\sei-3*5.427) circle (0.5cm);
+			\node [left] at (29,-\rsun-\sei-3*5.427) {\textcolor{white}{\fontsize{24}{25}\selectfont Mercurio - 5.427}};
+			%
+			\draw [fill=venus] (30,-\rsun-\sei-3*5.243) circle (0.5cm);
+			\node [left] at (38,-\rsun-\sei-3*5.243) {\textcolor{white}{\fontsize{24}{25}\selectfont Venere - 5.243}};
+			%
+			\draw [fill=mars] (12.5,-\rsun-\sei-3*3.934) circle (0.5cm);
+			\node [left] at (20,-\rsun-\sei-3*3.934) {\textcolor{white}{\fontsize{24}{25}\selectfont Marte - 3.934}};
+			%
+			\draw [fill=pluto] (12.5,-\rsun-\sei-3*1.854) circle (0.5cm);
+			\node [left] at (20,-\rsun-\sei-3*1.854) {\textcolor{white}{\fontsize{24}{25}\selectfont Plutone - 1.854}};
+			%
+			\draw [fill=neptune] (21,-\rsun-\sei-3*1.638) circle (0.5cm);
+			\node [left] at (29,-\rsun-\sei-3*1.638) {\textcolor{white}{\fontsize{24}{25}\selectfont Nettuno - 1.638}};
+			%
+			\draw [fill=jupiter] (30,-\rsun-\sei-3*1.326) circle (0.5cm);
+			\node [left] at (38,-\rsun-\sei-3*1.326) {\textcolor{white}{\fontsize{24}{25}\selectfont Giove - 1.326}};
+			%
+			\draw [fill=uranus] (12.5,-\rsun-\sei-3*1.271) circle (0.5cm);
+			\node [left] at (20,-\rsun-\sei-3*1.271) {\textcolor{white}{\fontsize{24}{25}\selectfont Urano - 1.271}};
+			%
+			\draw [fill=saturn] (12.5,-\rsun-\sei-3*0.687) circle (0.5cm);
+			\node [left] at (20,-\rsun-\sei-3*0.687) {\textcolor{white}{\fontsize{24}{25}\selectfont Saturno - 0.687}};
+			%
+			\draw [color=earth, ultra thick] (10.5,-\rsun-\sei-3*0.997) -- (40,-\rsun-\sei-3*0.997);
+			\node [left] at (47,-\rsun-\sei-3*0.997) {\textcolor{white}{\fontsize{24}{25}\selectfont Acqua - 0.997}};
+		\end{scope}
+		%title
+		\begin{scope}[shift={(26,0)}]
+			\tkzDefPoint(0,0){S}
+			\tkzDrawSector[R,fill=white,ultra thick](S,\rsun cm)(180,360)
+			\draw [black,ultra thick,fill=title] (-25,4) rectangle (25,0);
+			\node at (0,2) {\textcolor{black}{\fontsize{90}{91}\selectfont I numeri del Sistema Solare}};
+			%
+			\node at (0,-7.5) {\textcolor{black}{\fontsize{24}{25}\selectfont Sole}};
+			\node at (0,-9) {\textcolor{black}{\fontsize{24}{25}\selectfont densità = 1.408 $\cdot$ 10}};
+			\node at (4.5,-8.5) {\textcolor{black}{\fontsize{12}{13}\selectfont 3}};
+			\node at (6,-9.1) {\textcolor{black}{\fontsize{24}{25}\selectfont kg/m}};
+			\node at (7.3,-8.5) {\textcolor{black}{\fontsize{12}{13}\selectfont 3}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(30,-\rsun-23)}]
+			\node at (17,0) () {\includegraphics[width=3.7cm]{licenza_free_c}};
+			\node[left] at (15,0) {\textcolor{white}{\fontsize{14}{15}\selectfont Grafica: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
