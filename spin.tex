@@ -1,0 +1,172 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{plotmarks}
+\usetikzlibrary{bending,arrows.meta,snakes,shapes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{xcolor}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{moon}{HTML}{AFAFAF}
+%
+\usepackage{mathptmx}
+\usepackage{fontspec}
+%
+\setmainfont{Montserrat}
+
+\title{Spin}
+\begin{document}
+	\tikzset{
+		declare function={f(\x)=sin(540*\x);}
+	}
+	\begin{tikzpicture}[>={[inset=0,angle'=27]Stealth},background rectangle/.style={fill=space},show background rectangle]
+		%
+		\begin{scope}[xscale=4,yscale=1.2]
+			%asse z
+			\tkzDefPoint(0,-15){Z1} \tkzDefPoint(0,15){Z2}
+			\tkzDrawSegment[->,ultra thick,color=white](Z1,Z2)
+			\node [right] at (Z2) {\textcolor{white}{\fontsize{24}{25}\selectfont \emph{S}}};
+			\node [right,shift={(0.5,-0.4)}] at (Z2) {\textcolor{white}{\fontsize{13}{14}\selectfont \emph{z}}};
+			%asse y
+			\tkzDefPoint(-5,-2){Y1} \tkzDefPoint(5,2){Y2}
+			\tkzDrawSegment[->,ultra thick,color=white](Y1,Y2)
+			\node [right] at (Y2) {\textcolor{white}{\fontsize{24}{25}\selectfont \emph{S}}};
+			\node [right,shift={(0.5,-0.4)}] at (Y2) {\textcolor{white}{\fontsize{13}{14}\selectfont \emph{y}}};
+			%asse x
+			\tkzDefPoint(-5,2){X1} \tkzDefPoint(5,-2){X2}
+			\tkzDrawSegment[->,ultra thick,color=white](X1,X2)
+			\node [right] at (X2) {\textcolor{white}{\fontsize{24}{25}\selectfont \emph{S}}};
+			\node [right,shift={(0.5,-0.4)}] at (X2) {\textcolor{white}{\fontsize{13}{14}\selectfont \emph{x}}};
+			%ellisse superiore
+			\tkzDefPoint(0,10){C}
+			\tkzDefPoint(3,10){A}
+			\tkzDrawCircle[fill=earth,color=earth,opacity=0.5](C,A)
+			%centro
+			\tkzDefPoint(0,0){V}
+			%ellisse centrale
+			\tkzDefPointBy[rotation= center C angle -60](A) \tkzGetPoint{s}
+			%
+			\tkzDefLine[parallel=through s](V,C) \tkzGetPoint{s'}
+			\tkzInterLL(s,s')(X1,X2) \tkzGetPoint{s1}
+			\tkzInterLL(s,s')(Y1,Y2) \tkzGetPoint{s2}
+			\tkzDrawCircle[fill=earth,color=earth,opacity=0.5](V,s1)
+			%
+			\tkzTangent[from=V](C,A) \tkzGetPoints{a}{b}
+			\tkzDrawLines[color=white](V,a V,b)
+			%ellisse inferiore
+			\tkzDefPoint(0,-10){C1}
+			\tkzDefPoint(3,-10){A1}
+			\tkzDrawCircle[fill=earth,color=earth,opacity=0.5](C1,A1)
+			\tkzTangent[from=V](C1,A1) \tkzGetPoints{a1}{b1}
+			\tkzDrawLines[color=white](V,a1 V,b1)
+			%
+			\tkzDrawSegment[->,ultra thick,color=red](V,C)
+			\node [left] at (C) {\textcolor{white}{\fontsize{24}{25}\selectfont +\emph{ħ}/2}};
+			\draw (-0.05,-10) -- (0.05,-10);
+			\node [left] at (C1) {\textcolor{white}{\fontsize{24}{25}\selectfont -\emph{ħ}/2}};
+			%
+			\tkzDrawSegment[->,ultra thick,color=moon](V,s)
+			\node [left, above] at (s) {\textcolor{white}{\fontsize{24}{25}\selectfont S}};
+			%spin x e y
+			\tkzDrawSegment[->,ultra thick,color=red](V,s1)
+			\tkzDrawSegment[->,ultra thick,color=red](V,s2)	
+		\end{scope}
+		%
+		\begin{scope}[rotate around={-30:(0,0)}]
+			\begin{scope}[xscale=4,yscale=4]
+				\tkzDefPoint(0,4.8){v1}
+				\tkzDefPoint(0,5.6){v2}
+				\tkzDrawSegment[->,ultra thick, color=white](v1,v2)
+				\tkzDefPoint(0,5.2){C'}
+				\tkzDefPoint(0.25,5.2){A'}
+				\tkzDrawCircle[fill=earth,color=earth,opacity=0.5](C',A')
+			\end{scope}
+			%
+			\begin{scope}[xscale=4,yscale=1.2,shift={(0,12)}]
+				\tikzset{compass style/.append style={->}}
+				\tkzDefPoint(0,5.2){C''}
+				\tkzDefPoint(0.3,5.2){A''}
+				\tkzDefPoint(-0.3,5.2){B''}
+				\tkzDrawArc[color=white,ultra thick](C'',B'')(A'')
+			\end{scope}
+		\end{scope}
+		%destra
+		\begin{scope}[shift={(50,0)}]
+			\begin{scope}[xscale=4,yscale=1.2]
+			%asse z
+			\tkzDefPoint(0,-15){Z1} \tkzDefPoint(0,15){Z2}
+			\tkzDrawSegment[->,ultra thick,color=white](Z1,Z2)
+			\node [right] at (Z2) {\textcolor{white}{\fontsize{24}{25}\selectfont \emph{S}}};
+			\node [right,shift={(0.5,-0.4)}] at (Z2) {\textcolor{white}{\fontsize{13}{14}\selectfont \emph{z}}};
+			%asse y
+			\tkzDefPoint(-5,-2){Y1} \tkzDefPoint(5,2){Y2}
+			\tkzDrawSegment[->,ultra thick,color=white](Y1,Y2)
+			\node [right] at (Y2) {\textcolor{white}{\fontsize{24}{25}\selectfont \emph{S}}};
+			\node [right,shift={(0.5,-0.4)}] at (Y2) {\textcolor{white}{\fontsize{13}{14}\selectfont \emph{y}}};
+			%asse x
+			\tkzDefPoint(-5,2){X1} \tkzDefPoint(5,-2){X2}
+			\tkzDrawSegment[->,ultra thick,color=white](X1,X2)
+			\node [right] at (X2) {\textcolor{white}{\fontsize{24}{25}\selectfont \emph{S}}};
+			\node [right,shift={(0.5,-0.4)}] at (X2) {\textcolor{white}{\fontsize{13}{14}\selectfont \emph{x}}};
+			%ellisse superiore
+			\tkzDefPoint(0,10){C}
+			\tkzDefPoint(3,10){A}
+			\tkzDrawCircle[fill=earth,color=earth,opacity=0.5](C,A)
+			%centro
+			\tkzDefPoint(0,0){V}
+			%ellisse inferiore
+			\tkzDefPoint(0,-10){C1}
+			\tkzDefPoint(3,-10){A1}
+			\tkzDrawCircle[fill=earth,color=earth,opacity=0.5](C1,A1)
+			\tkzTangent[from=V](C1,A1) \tkzGetPoints{a1}{b1}
+			\tkzDrawLines[color=white](V,a1 V,b1)
+			%ellisse centrale
+			\tkzDefPointBy[rotation= center C1 angle -120](A1) \tkzGetPoint{s}
+			%
+			\tkzDefLine[parallel=through s](V,C) \tkzGetPoint{s'}
+			\tkzInterLL(s,s')(X1,X2) \tkzGetPoint{s1}
+			\tkzInterLL(s,s')(Y1,Y2) \tkzGetPoint{s2}
+			\tkzDrawCircle[fill=earth,color=earth,opacity=0.5](V,s1)
+			%
+			\tkzTangent[from=V](C,A) \tkzGetPoints{a}{b}
+			\tkzDrawLines[color=white](V,a V,b)
+			%
+			\tkzDrawSegment[->,ultra thick,color=red](V,C1)
+			\node [left] at (C1) {\textcolor{white}{\fontsize{24}{25}\selectfont -\emph{ħ}/2}};
+			\draw (-0.05,10) -- (0.05,10);
+			\node [left] at (C) {\textcolor{white}{\fontsize{24}{25}\selectfont +\emph{ħ}/2}};
+			%
+			\tkzDrawSegment[->,ultra thick,color=moon](V,s)
+			\node [left, below] at (s) {\textcolor{white}{\fontsize{24}{25}\selectfont -S}};
+			%spin x e y
+			\tkzDrawSegment[->,ultra thick,color=red](V,s1)
+			\tkzDrawSegment[->,ultra thick,color=red](V,s2)	
+			\end{scope}
+			%
+			\begin{scope}[rotate around={158:(0,0)}]
+				\begin{scope}[xscale=4,yscale=4]
+					\tkzDefPoint(0,4.8){v1}
+					\tkzDefPoint(0,5.6){v2}
+					\tkzDrawSegment[->,ultra thick, color=white](v1,v2)
+					\tkzDefPoint(0,5.2){C'}
+					\tkzDefPoint(0.25,5.2){A'}
+					\tkzDrawCircle[fill=earth,color=earth,opacity=0.5](C',A')
+				\end{scope}
+				%
+				\begin{scope}[xscale=4,yscale=1.2,shift={(0,12)}]
+					\tikzset{compass style/.append style={->}}
+					\tkzDefPoint(0,5.2){C''}
+					\tkzDefPoint(0.3,5.2){A''}
+					\tkzDefPoint(-0.3,5.2){B''}
+					\tkzDrawArc[color=white,ultra thick](C'',B'')(A'')
+				\end{scope}
+			\end{scope}
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
