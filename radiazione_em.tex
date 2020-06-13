@@ -1,0 +1,70 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{plotmarks}
+\usetikzlibrary{bending,arrows.meta,snakes,shapes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{xcolor}
+\usepackage{tkz-euclide}
+%
+\definecolor{space}{HTML}{0A2543}
+%
+\usepackage{mathptmx}
+\usepackage{fontspec}
+\setmainfont{Montserrat}
+%
+\title{radiazione elettromagnetica}
+\begin{document}
+	\tikzset{
+		declare function={f(\x)=sin(540*\x);}
+	}
+	\begin{tikzpicture}[>={[inset=0,angle'=27]Stealth}]
+		%
+		\begin{scope}
+			\draw [ultra thick,->] (-0.5,0) -- (28,0);
+			\foreach \x in {1,...,12}
+				{\draw [ultra thick] (2*\x,-0.2) -- (2*\x,0.2);
+				\node at (2*\x,0.5) {\textcolor{black}{\fontsize{19}{20}\selectfont 10}};
+				\node [right] at (2*\x+0.2,0.8) {\textcolor{black}{\fontsize{10}{11}\selectfont -\x}};}
+			\node at (1,-0.7) {\textcolor{black}{\fontsize{14}{15}\selectfont lunghezza d'onda}};
+			\node at (1,-1.2) {\textcolor{black}{\fontsize{14}{15}\selectfont (m)}};
+			%
+			\draw [thick] (4,1.2) -- (4,1.7) -- (1,1.7);
+			\node [left] at (4,2.1) {\textcolor{black}{\fontsize{14}{15}\selectfont radioonde}};
+			\node [left] at (4,2.6) {\textcolor{black}{\fontsize{14}{15}\selectfont microonde}};
+			%
+			\draw [thick] (10,1.2) -- (10,1.7) -- (12,1.7) -- (12,1.2);
+			\node at (11,2.1) {\textcolor{black}{\fontsize{14}{15}\selectfont visibile}};
+			\node at (11,2.6) {\textcolor{black}{\fontsize{14}{15}\selectfont luce}};
+			%
+			\draw [thick] (14,1.2) -- (14,1.7) -- (22,1.7) -- (22,1.2);
+			\node at (18,2.1) {\textcolor{black}{\fontsize{14}{15}\selectfont raggi X}};
+			%
+			\draw [thick] (4,-0.5) -- (4,-1) -- (10,-1) -- (10,-0.5);
+			\node at (7,-1.5) {\textcolor{black}{\fontsize{14}{15}\selectfont infrarossi}};
+			%
+			\draw [thick] (12,-0.5) -- (12,-1) -- (16,-1) -- (16,-0.5);
+			\node at (14,-1.5) {\textcolor{black}{\fontsize{14}{15}\selectfont ultravioletti}};
+			%
+			\draw [thick] (18,-0.5) -- (18,-1) -- (26,-1) -- (26,-0.5);
+			\node at (22,-1.5) {\textcolor{black}{\fontsize{14}{15}\selectfont raggi gamma}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(16,-4)}]
+			\draw[ultra thick, color=space, domain=0:9.8,variable=\x,samples=500] plot
+			({24*sin(-0.6*\x*\x+20))},{f(\x)});
+		\end{scope}
+		%
+		\begin{scope}[shift={(-16,-7)}]
+			\draw [ultra thick,<-] (15.5,0) -- (44,0);
+			\foreach \x in {10,14,17,20}
+				{\draw [ultra thick] (2*\x,-0.2) -- (2*\x,0.2);
+				\node at (2*\x,-0.8) {\textcolor{black}{\fontsize{19}{20}\selectfont 10}};
+				\node [right] at (2*\x+0.2,-0.5) {\textcolor{black}{\fontsize{10}{11}\selectfont \x}};}
+			\node at (17,-0.7) {\textcolor{black}{\fontsize{14}{15}\selectfont frequenza}};
+			\node at (17,-1.2) {\textcolor{black}{\fontsize{14}{15}\selectfont (Hz)}};
+		\end{scope}
+	\end{tikzpicture}
+\end{document}
