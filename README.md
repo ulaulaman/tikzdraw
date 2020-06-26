@@ -41,6 +41,7 @@ Graphics and infographics
 * Convection in a glass of water: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/convezione.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/ghiaccio.pdf)
 * Spin: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/spin.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/spin.pdf)
 * Radiazione elettromagnetica: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/radiazione_em.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/radiazione_em.pdf)
+* Schema dell'esperimento di Michelson e Morley [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/michelson_morley.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/michelson_morley.pdf)
 
 ## Infographics
 
