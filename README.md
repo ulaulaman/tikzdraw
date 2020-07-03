@@ -1,4 +1,4 @@
-[**Infographics**](./infographics/infografiche.html)
+[La pagina delle infografiche](./infographics/infografiche.html)
 
 ## Graphics
 
