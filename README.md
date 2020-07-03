@@ -1,6 +1,6 @@
 Graphics and infographics
 
-[Link to another page](./infogragiche.html)
+[Link to another page](./infographics/infografiche.html)
 
 ## Mathematics
 
