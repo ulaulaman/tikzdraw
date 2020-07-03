@@ -2,6 +2,13 @@ Graphics and infographics
 
 [Link to another page](./infographics/infografiche.html)
 
+## Graphics
+
+| Title | Source | Pdf |
+|:-------------|:------------------|:------|
+| A rocket | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/rocket.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/rocket.pdf) |
+| Saturn V | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/saturnV.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/saturnV.pdf) |
+
 ## Mathematics
 
 | Title       | Source          | Pdf |
@@ -32,11 +39,6 @@ Graphics and infographics
 * Diffusione della luce da parte dell'atmosfera: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/diffusione_luce.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/diffusione_luce.pdf)
 
 * Meteore: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/meteore.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/meteore.pdf)
-
-## Graphics
-
-* A rocket: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/rocket.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/rocket.pdf)
-* Saturn V: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/saturnV.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/saturnV.pdf)
 
 ## Physics
 
