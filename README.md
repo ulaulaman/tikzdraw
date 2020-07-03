@@ -32,26 +32,22 @@ Graphics and infographics
 
 ## Astronomy
 
-* Equinoxes and solstices:
-  * italian language: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/equinox_solstice-it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/equinozi_solstizi.pdf)
-  * english language: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/equinox_solstice-en.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/equinoxes_solstices.pdf)
-  
-* Eratosthenes method for determining the size of the Earth:
-  * italian language: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/eratosthenes-it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/eratosthenes-it.pdf)
-  * english language: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/eratosthenes-en.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/eratosthenes-en.pdf)
-  * with title and background
-    * italian language [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/eratosthenes-infographic-it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/eratosthenes-infographic-it.pdf)
-    * english language [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/eratosthenes-infographic-en.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/eratosthenes-infographic-en.pdf)
-
-* Spacetime deformation by a black hole: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/spacetime_deformation.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/spacetime_deformation.pdf)
-
-* Percorso del Sole nel cielo:
-  * dall'equatore: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/crepuscolo_equatore.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/crepuscolo01_equatore.pdf)
-  * dal circolo artico [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/crepuscolo_circolo_artico.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/crepuscolo02_circolo_artico.pdf)
-
-* Diffusione della luce da parte dell'atmosfera: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/diffusione_luce.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/diffusione_luce.pdf)
-
-* Meteore: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/meteore.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/meteore.pdf)
+| Title | Source | Pdf |
+|:-------------|:------------------|:------|
+| Equinoxes and solstices | | |
+| english | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/equinox_solstice-en.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/equinox_solstice-en.pdf) |
+| italian | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/equinox_solstice-it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/equinox_solstice-it.pdf) |
+| Eratosthenes method for determining the size of the Earth | | |
+| english | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/eratosthenes-en.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/pdf/eratosthenes-en.pdf) |
+| italian | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/eratosthenes-it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/pdf/eratosthenes-it.pdf) |
+| with title and background | | |
+| english | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/eratosthenes-infographic-en.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/pdf/eratosthenes-infographic-en.pdf) |
+| italian | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/eratosthenes-infographic-it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/pdf/eratosthenes-infographic-it.pdf) |
+| Spacetime deformation by a black hole | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/spacetime_deformation.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/spacetime_deformation.pdf) |
+| Percorso del Sole nel cielo | | |
+| dall'equatore | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/crepuscolo_equatore.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/crepuscolo_equatore.pdf) |
+| dal circolo artico | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/crepuscolo_circolo_artico.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/crepuscolo_circolo_artico.pdf) |
+| Diffusione della luce da parte dell'atmosfera | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/diffusione_luce.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/diffusione_luce.pdf) |
 
 ## Infographics
 
@@ -65,3 +61,4 @@ Graphics and infographics
   * *Distanze e dimensioni*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare-distanze_dimensioni.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/sistema_solare_info.pdf)
   * *Masse*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare_masse.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/sistema_solare_masse.pdf)
   * *Densità*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare_densita.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/sistema_solare_densita.pdf)
+* *Meteore*: [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/meteore.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/pdf/meteore.pdf)
