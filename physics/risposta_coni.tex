@@ -8,14 +8,13 @@
 \usepackage{fontspec}
 \setmainfont{Montserrat}
 %
-%source https://tex.stackexchange.com/questions/11368/bell-curve-gaussian-function-normal-distribution-in-tikz-pgf
 \usepackage{pgfplots}
 \pgfplotsset{width=7cm,compat=1.8}
 \pgfmathdeclarefunction{gauss}{2}{%
 	\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
 }
 %
-\title{Risposta relativa dei coni}
+\title{Risposta relativa dei coni dell'occhio}
 \begin{document}
 	\begin{tikzpicture}
 		%
