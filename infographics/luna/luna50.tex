@@ -1,0 +1,416 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{bending,arrows.meta}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{craterm}{HTML}{616060}
+\definecolor{linem}{HTML}{DBDBDB}
+\definecolor{core1}{HTML}{FF5E16}
+\definecolor{core2}{HTML}{FF9616}
+\definecolor{core3}{HTML}{FFD016}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Fatti lunari}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\draw [black,ultra thick,fill=title] (0,9.8) rectangle (30,16.8);
+		\node at (15,14.8) {\textcolor{black}{\fontsize{90}{91}\selectfont Fatti e misfatti}};
+		\node at (15,11.8) {\textcolor{black}{\fontsize{90}{91}\selectfont lunari}};
+		%
+		% intro
+		%
+		\begin{scope}[shift={(0,4)}]
+			%dida
+			\begin{scope}
+				\draw[fill=dida,thick] (11.9,4.7) rectangle (28.2,-4.7);
+				\node at (20,4) {\textcolor{black}{\fontsize{23}{24}\selectfont La Luna è il satellite artificiale}};
+				\node at (20,3) {\textcolor{black}{\fontsize{23}{24}\selectfont del nostro pianeta, la Terra.}};
+				\node at (20,2) {\textcolor{black}{\fontsize{23}{24}\selectfont Ha un diametro di 1737 km}};
+				\node at (20,1) {\textcolor{black}{\fontsize{23}{24}\selectfont e una massa di oltre $7 \cdot 10^{22}$ kg.}};
+				\node at (20,0) {\textcolor{black}{\fontsize{23}{24}\selectfont E' sufficientemente vicina da essere}};
+				\node at (20,-1) {\textcolor{black}{\fontsize{23}{24}\selectfont osservabile a occhio nudo.}};
+				\node at (20,-2) {\textcolor{black}{\fontsize{23}{24}\selectfont La sua rotazione intorno alla Terra}};
+				\node at (20,-3) {\textcolor{black}{\fontsize{23}{24}\selectfont è sincrona, ovvero rivolge al nostro}};
+				\node at (20,-4) {\textcolor{black}{\fontsize{23}{24}\selectfont pianeta sempre la stessa faccia}};
+			\end{scope}
+			%
+			% moon
+			%
+			\begin{scope}
+				\draw[color=craterm, fill=moon, ultra thick] (6.5,0) circle (4.5cm);
+				\foreach \x in {1,...,5}
+					\draw [color=craterm, ultra thick, rotate around={72*\x:(6.5,0)}] (6.5,0) -- (6.5,2);
+				\foreach \x in {1,3,...,20}
+					\draw [color=craterm, ultra thick, rotate around={18*\x:(6.5,0)}] (6.5,0) -- (6.5,1.2);
+				\foreach \x in {2,6,...,18}
+					\draw [color=craterm, ultra thick, rotate around={18*\x:(6.5,0)}] (6.5,0) -- (6.5,0.9);
+				\draw[fill=craterm, ultra thick] (6.5,0) circle (0.5cm);
+				%down-sx
+				\draw (3.3,-2.5) [rotate around={-45:(3.3,-2.5)}, color=linem,ultra thick,partial ellipse=20:160:1.5 and 0.5];
+				\foreach \x in {0.01,0.02,...,0.1}
+					\draw (3.3+\x,-2.5-\x) [rotate around={-45:(3.3,-2.5)}, color=craterm,ultra thick,partial ellipse=20:160:1.5 and 0.5];
+				%down-dx
+				\draw (9.7,-2.5) [rotate around={45:(9.7,-2.5)}, color=linem,ultra thick,partial ellipse=20:160:1 and 0.3];
+				\foreach \x in {0.01,0.02,...,0.1}
+					\draw (9.7+\x,-2.5-\x) [rotate around={45:(9.7,-2.5)}, color=craterm,ultra thick,partial ellipse=20:160:1 and 0.3];
+				%up-sx
+				\draw (3.5,3.2) [rotate around={45:(3.5,3.2)}, color=linem,ultra thick,partial ellipse=180:360:0.5 and 0.3];
+				\foreach \x in {0.01,0.02,...,0.1}
+					\draw (3.5+\x,3.2-\x) [rotate around={45:(3.5,3.2)}, color=craterm,ultra thick,partial ellipse=180:360:0.5 and 0.3];
+				%up-dx shadow
+				\draw (9.5,3) [rotate around={-50:(9.5,3)}, color=linem,ultra thick,partial ellipse=180:360:0.9 and 0.7];
+				\foreach \x in {0.01,0.02,...,0.1}
+					\draw (9.5+\x,3-\x) [rotate around={-50:(9.5,3)}, color=craterm,ultra thick,partial ellipse=180:360:0.9 and 0.7];
+			\end{scope}
+		\end{scope}
+		%
+		% moon-earth
+		%
+		\begin{scope}[shift={(0,-11)}]
+			\draw [fill=space, ultra thick] (2,9) rectangle (28,-5);
+			% earth orbit
+			\draw (2.3,0) [color=gray, ultra thick, partial ellipse=-12:23:21.7 and 21.7];
+			\draw (2.5,0) [->,color=white, ultra thick, partial ellipse=7:13:21.7 and 21.7];
+			% moon orbit
+			\draw [color=gray, ultra thick] (24,0) circle (3.6cm);
+			\draw (24,0) [->,color=white, ultra thick, partial ellipse=45:65:3.8 and 3.8];
+			% sun
+			\draw (2.3,0) [fill=white, partial ellipse=-90:90:4 and 4];
+			\draw (2.3,-4) -- (2.3,4);
+			% earth
+			\draw [fill=earth] (24,0) circle (1cm);
+			\draw (24,0) [->,color=white, ultra thick, partial ellipse=100:130:1.3 and 1.3];
+			% moon
+			\draw [fill=moon] (27,2) circle (0.3cm);
+			\draw (27,2) [->,color=white, ultra thick, partial ellipse=20:80:0.5 and 0.5];
+			%
+			\draw[<->,dashed,gray,opacity=0.5,ultra thick] (6.5,0) -- (22.8,0) node [midway, above, sloped,opacity=1] (TextNode) {\textcolor{earth}{\fontsize{23}{24}\selectfont 150 milioni di chilometri}};
+			\draw[<->,dashed,gray,opacity=0.5,ultra thick] (24.9,0.6) -- (26.7,1.8) node [midway, above, sloped,opacity=1] (TextNode) {\textcolor{earth}{\fontsize{10}{11}\selectfont 384000 km}};
+			%dida
+			\draw [black,thick,fill=dida] (2.5,8.5) rectangle (11.6,6.5);
+			\node at (7,8) {\textcolor{black}{\fontsize{20}{21}\selectfont Attenzione:}};
+			\node at (7,7) {\textcolor{black}{\fontsize{20}{21}\selectfont Immagini non in scala}};
+			%
+		\end{scope}
+		%
+		% moon formation
+		%
+		\begin{scope}[shift={(0,-25)}]
+			\draw[fill=space,ultra thick] (0.5,7.5) rectangle (29,-29.5);
+			%
+			% fission
+			%
+			\draw [fill=earth!30!moon] (6,1) ellipse (3.4cm and 2.8cm);
+			\draw (6,1) [->,ultra thick, color=red, partial ellipse=160:250:3.7 and 1.5];
+			\draw [->,color=white, ultra thick] (6,3.5) -- (6,4.8);
+			%
+			\draw (6,-5.5) [fill=earth!40!moon,partial ellipse=20:315:3.4 and 2.8] -- (9.4,-6.5) to[out=45,in=180] (12.4,-5.8) to[out=0,in=270] (12.7,-5.5) to[out=90,in=0] (12.4,-5.2) to[out=180,in=310] (9.17,-4.5);
+			\draw (6,-5.5) [->,ultra thick, color=red, partial ellipse=160:250:3.7 and 1.5];
+			\draw [color=white, ultra thick] (6,-1.8) -- (6,-3.2);
+			%
+			\draw (6,-12) [fill=earth!50!moon,partial ellipse=20:315:3.4 and 2.8] -- (9.4,-13) to[out=45,in=180] (12.4,-12.6) to[out=0,in=270] (12.9,-12) to[out=90,in=0] (12.4,-11.4) to[out=180,in=310] (9.17,-11);
+			\draw [color=white, ultra thick] (6,-8.3) -- (6,-9.7);
+			\draw (6,-12) [->,ultra thick, color=red, partial ellipse=160:250:3.7 and 1.5];
+			%
+			\draw (6,-18.5) [->,ultra thick, color=white, partial ellipse=5:30:6.3 and 2.5];
+			\draw (6,-18.5) [fill=earth!80!moon,partial ellipse=20:315:3.2 and 2.8] -- (9.4,-19.5) to[out=45,in=180] (10.4,-19.1) to[out=0,in=270] (10.9,-18.5) to[out=90,in=0] (10.4,-17.9) to[out=180,in=310] (9,-17.54);
+			\draw [fill=earth!50!moon] (12.4,-18.5) circle (0.6cm);
+			\draw [color=white, ultra thick] (6,-14.8) -- (6,-16.2);
+			\draw (6,-18.5) [->,ultra thick, color=red, partial ellipse=160:250:3.5 and 1.5];
+			\draw (6,-18.5) [ultra thick, color=white, partial ellipse=330:355:6.3 and 2.5];
+			%
+			\draw (6,-25.5) [->,ultra thick, color=white, partial ellipse=5:30:6.3 and 2.5];
+			\draw [fill=earth] (6,-25.5) circle (3.2cm);
+			\draw (6,-25.5) [->,ultra thick, color=red, partial ellipse=160:250:3.5 and 1.5];
+			\draw [fill=moon] (12.4,-25.5) circle (0.6cm);
+			\draw [color=white, ultra thick] (6,-21.3) -- (6,-22.7);
+			\draw (6,-25.5) [ultra thick, color=white, partial ellipse=330:355:6.3 and 2.5];
+			%dida
+			\draw[fill=dida,thick] (3.5,8.2) rectangle (24.7,5.8);
+			\node at (14.1,7.5) {\textcolor{black}{\fontsize{23}{24}\selectfont Nel corso del tempo sono state formulate varie}};
+			\node at (12.9,6.5) {\textcolor{black}{\fontsize{23}{24}\selectfont teorie riguardanti la formazione della Luna:}};
+			%dida back
+			\draw [fill=title] (16.5,1) rectangle (26.5,3);
+			\draw [fill=dida] (13.5,-2) rectangle (29.5,-12);
+			\draw [fill=dida] (13.5,-18) rectangle (29.5,-22);
+			%dida text
+			\node at (21.5,2) {\textcolor{black}{\fontsize{23}{24}\selectfont Teoria della fissione}};
+			\node at (21.5,-3) {\textcolor{black}{\fontsize{23}{24}\selectfont Formulata per la prima volta}};
+			\node at (21.5,-4) {\textcolor{black}{\fontsize{23}{24}\selectfont da \textbf{George Darwin}, figlio di}};
+			\node at (21.5,-5) {\textcolor{black}{\fontsize{23}{24}\selectfont Charles il padre dell'evoluzione,}};
+			\node at (21.5,-6) {\textcolor{black}{\fontsize{23}{24}\selectfont supponeva che, a causa delle}};
+			\node at (21.5,-7) {\textcolor{black}{\fontsize{23}{24}\selectfont forze mareali del Sole, la Luna}};
+			\node at (21.5,-8) {\textcolor{black}{\fontsize{23}{24}\selectfont si sarebbe staccata dalla}};
+			\node at (21.5,-9) {\textcolor{black}{\fontsize{23}{24}\selectfont proto-Terra, lasciando una voragine}};
+			\node at (21.5,-10) {\textcolor{black}{\fontsize{23}{24}\selectfont che si supponeva occupata}};
+			\node at (21.5,-11) {\textcolor{black}{\fontsize{23}{24}\selectfont dall'oceano Pacifico.}};
+			\node at (21.5,-19) {\textcolor{black}{\fontsize{23}{24}\selectfont Il modello non è compatibile con}};
+			\node at (21.5,-20) {\textcolor{black}{\fontsize{23}{24}\selectfont l'eta relativamente giovane della}};
+			\node at (21.5,-21) {\textcolor{black}{\fontsize{23}{24}\selectfont crosta oceanica.}};
+		\end{scope}
+		%
+		%capture
+		%
+		\begin{scope}[shift={(0,-63)}]
+			\draw [fill=space, ultra thick] (0.5,7) rectangle (29.2,-5);
+			\draw (20,0) [->,ultra thick, color=white, partial ellipse=75:90:19 and 6, rotate around={60:(20,0)}];
+			\draw (20,0) [ultra thick, color=white, partial ellipse=89:180:19 and 6, rotate around={60:(20,0)}];
+			\draw (9,0) [ultra thick, color=white, dashed, partial ellipse=120:180:8 and 3];
+			\draw (9,0) [color=white,->,ultra thick, partial ellipse=40:60:8 and 3];
+			\draw (9,0) [color=white, ultra thick, partial ellipse=58:90:8 and 3];
+			\draw [fill=earth] (7,0) circle (3.7cm);
+			\draw [fill=moon] (25,5.8) circle (1cm);
+			\draw [fill=moon] (15,2) circle (1cm);
+			\draw (9,0) [color=white, ultra thick, partial ellipse=180:394:8 and 3];
+			%
+			%dida up
+			\draw [fill=title, thick] (10.2,8.2) rectangle (19.8,6.2);
+			\node at (15,7.2) {\textcolor{black}{\fontsize{23}{24}\selectfont Teoria della cattura}};
+			%
+			\draw [fill=dida,thick] (17.2,4) rectangle (29.8,-4);
+			\node at (23.5,3) {\textcolor{black}{\fontsize{23}{24}\selectfont Gerstenkorn, professore di}};
+			\node at (23.5,2) {\textcolor{black}{\fontsize{23}{24}\selectfont scuola superiore, ripetendo}};
+			\node at (23.5,1) {\textcolor{black}{\fontsize{23}{24}\selectfont i calcoli di Darwin si rese}};
+			\node at (23.5,0) {\textcolor{black}{\fontsize{23}{24}\selectfont conto che la Luna in passato}};
+			\node at (23.5,-1) {\textcolor{black}{\fontsize{23}{24}\selectfont poteva essere stato un}};
+			\node at (23.5,-2) {\textcolor{black}{\fontsize{23}{24}\selectfont pianeta indipendente poi}};
+			\node at (23.5,-3) {\textcolor{black}{\fontsize{23}{24}\selectfont catturato dalla Terra.}};
+			%
+			\draw [fill=dida, thick] (1,-5.5) rectangle (29,-8.5);
+			\node at (15,-6.5) {\textcolor{black}{\fontsize{23}{24}\selectfont Il modello, però, per funzionare avrebbe bisogno dell'esistenza}};
+			\node at (15,-7.5) {\textcolor{black}{\fontsize{23}{24}\selectfont di un secondo satellite già presente in orbita intorno alla Terra}};
+		\end{scope}
+		%
+		% great impact
+		\begin{scope}[shift={(0,-81.5)},decoration=zigzag]
+			% 01
+			\draw [fill=space,ultra thick] (2,8) rectangle (16.5,-4.5);
+			\draw [fill=moon] (6,4) circle (1cm);
+			\draw [color=white] (3.4,7.3) -- (5.9,4.8);
+			\draw [color=white] (3,7) -- (5.5,4.5);
+			\draw [color=white] (2.7,6.5) -- (5.2,4);
+			\draw [fill=earth] (12,0) circle (3.7cm);
+			% 02
+			\draw [fill=space,ultra thick] (17.5,8) rectangle (28.5,-4.5);
+			\draw [fill=earth] (24,0) circle (3.7cm);
+			\coordinate (I) at (20.85,1.8);
+			\draw (I) [decorate,fill=mars,rotate around={60:(I)},partial ellipse=0:180:1.5 and 0.7];
+			\draw [fill=moon] (20.5,2) circle (1cm);
+			\draw (I) [decorate,fill=mars,rotate around={60:(I)},partial ellipse=180:360:1.5 and 0.7];
+			\draw (I) [fill=moon,rotate around={60:(I)},partial ellipse=180:360:0.91 and 0.3];
+			% 03
+			\draw [fill=space,ultra thick] (2,-5.5) rectangle (14.5,-18);
+			\draw (8,-12) [color=white,fill=white,opacity=0.2,rotate around={-45:(8,-12)},partial ellipse=0:180:6.5 and 2.1];
+			\begin{scope}[yshift=1cm,rotate around={-45:(8,-12)}]
+			\foreach \i in {1,2,...,60}{
+				\pgfmathsetmacro{\x}{8 + (6.5 * rand) * cos (180*rand)}
+				\pgfmathsetmacro{\y}{-12 + (1.1 * rand) * sin (180*rand)}
+				\pgfmathsetmacro{\opacVal}{rand*0.5+1}
+				\draw [color=craterm, fill=moon] (\x,\y) circle (0.1cm);
+			}
+			\end{scope}
+			\draw [fill=earth] (8,-12) circle (3.7cm);
+			\draw (8,-12) [color=white, fill=white, opacity=0.2,rotate around={-45:(8,-12)},partial ellipse=180:360:6.5 and 2.1];
+			\fill (8,-12) [earth,rotate around={-45:(8,-12)},partial ellipse=180:360:3.68 and 0.9];
+			%
+			\begin{scope}[yshift=-1.7cm,rotate around={-45:(9,-12)}]
+				\foreach \i in {1,2,...,60}{
+					\pgfmathsetmacro{\x}{8 + (6.5 * rand) * cos (180*rand)}
+					\pgfmathsetmacro{\y}{-12 + (1.1 * rand) * sin (180*rand)}
+					\pgfmathsetmacro{\opacVal}{rand*0.5+1}
+					\draw [color=craterm, fill=moon] (\x,\y) circle (0.1cm);
+				}
+			\end{scope}
+			%04
+			\draw [fill=space,ultra thick] (15.5,-5.5) rectangle (28.5,-18);
+			\draw (22,-12) [color=white,ultra thick,rotate around={-45:(22,-12)},partial ellipse=0:180:6 and 1.5];
+			\draw [fill=earth] (22,-12) circle (3.7cm);
+			\draw [fill=moon] (18,-8) circle (1cm);
+			\draw (22,-12) [color=white,ultra thick,rotate around={-45:(22,-12)},partial ellipse=200:360:6 and 1.5];
+			%didas
+			\draw [fill=title,thick] (8.5,9.7) rectangle (21.5,7.7);
+			\node at (15,8.7) {\textcolor{black}{\fontsize{23}{24}\selectfont Teoria dell'impatto gigante}};
+			%
+			\draw [fill=dida,thick] (1.3,-18.5) rectangle (28.7,-26.5);
+			\node at (15,-19.5) {\textcolor{black}{\fontsize{23}{24}\selectfont Il modello prevede che nel passato la proto-Terra}};
+			\node at (15,-20.5) {\textcolor{black}{\fontsize{23}{24}\selectfont sia stata colpita da un oggetto di dimensioni}};
+			\node at (15,-21.5) {\textcolor{black}{\fontsize{23}{24}\selectfont comparabili o maggiori rispetto alla Luna.}};
+			\node at (15,-22.5) {\textcolor{black}{\fontsize{23}{24}\selectfont I resti dell'oggetto, aggregatisi per gravità,}};
+			\node at (15,-23.5) {\textcolor{black}{\fontsize{23}{24}\selectfont hanno formato il nostro satellite.}};
+			\node at (15,-24.5) {\textcolor{black}{\fontsize{23}{24}\selectfont Venne proposto per la prima volta da Reginald Aldworth Daly}};
+			\node at (15,-25.5) {\textcolor{black}{\fontsize{23}{24}\selectfont nel 1945 ed è supportato da prove geologiche e chimiche.}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-117)}]
+			\draw [fill=space,ultra thick] (0.5,6.5) rectangle (29.5,-5);
+			%on the earth
+			\draw [fill=mars] (7,4.1) circle (0.5cm);
+			\draw (7,3.8) [color=craterm,fill=linem,ultra thick,partial ellipse=200:340:3 and 0.5];
+			\draw [color=craterm,ultra thick] (7,3) -- (7,3.3);
+			\draw [color=craterm,fill=linem,ultra thick] (4,3) rectangle (10,-3);
+			\foreach \o in {0,1,...,9}
+			\draw [thick,rotate around={36*\o:(7,0)}] (7,2) -- (7,2.4);
+			\draw [color=red,ultra thick,rotate around={-353.16:(7,0)}] (7,0) -- (7,1.8);
+			\draw [fill=black] (7,0) circle (0.2cm);
+			\draw [fill=earth,opacity=0.4] (7,0) circle (2.5cm);
+			%on the moon
+			\draw [fill=mars] (23,4.1) circle (0.5cm);
+			\draw (23,3.8) [color=craterm,fill=linem,ultra thick,partial ellipse=200:340:3 and 0.5];
+			\draw [color=craterm,ultra thick] (23,3) -- (23,3.3);
+			\draw [color=craterm,fill=linem,ultra thick] (20,3) rectangle (26,-3);
+			\foreach \o in {0,1,...,9}
+				\draw [thick,rotate around={36*\o:(23,0)}] (23,2) -- (23,2.4);
+			\draw [color=red,ultra thick,rotate around={-58.32:(23,0)}] (23,0) -- (23,1.8);
+			\draw [fill=black] (23,0) circle (0.2cm);
+			\draw [fill=earth,opacity=0.4] (23,0) circle (2.5cm);
+			%
+			\draw [thick,fill=title] (9,8.3) rectangle (21,6.3);
+			\node at (15,7.3) {\textcolor{black}{\fontsize{23}{24}\selectfont Accelerazione di gravità}};
+			\node at (15,3) {\textcolor{white}{\fontsize{23}{24}\selectfont Sulla Terra}};
+			\node at (15,2) {\textcolor{white}{\fontsize{23}{24}\selectfont 9.81 m/s}};
+			\node at (17,2.3) {\textcolor{white}{\fontsize{11}{12}\selectfont 2}};
+			%
+			\node at (15,0) {\textcolor{white}{\fontsize{23}{24}\selectfont Sulla Luna}};
+			\node at (15,-1) {\textcolor{white}{\fontsize{23}{24}\selectfont 1.62 m/s}};
+			\node at (17,-0.7) {\textcolor{white}{\fontsize{11}{12}\selectfont 2}};
+			\node at (15,-4) {\textcolor{white}{\fontsize{23}{24}\selectfont Peso di 10 kg}};
+			%
+			\draw [fill=white,thick] (8.8,-4.5) rectangle (5.2,-3.5);
+			\node at (7,-4) {\textcolor{black}{\fontsize{23}{24}\selectfont 98.1 N}};
+			\draw [fill=white,thick] (24.8,-4.5) rectangle (21.2,-3.5);
+			\node at (23,-4) {\textcolor{black}{\fontsize{23}{24}\selectfont 16.2 N}};
+		\end{scope}
+		%
+		% phases
+		%
+		\begin{scope}[shift={(0,-132)}]
+			%
+			\draw [fill=space,ultra thick] (0.5,7.5) rectangle (29.5,-20);
+			%
+			\foreach \c in {0,1,...,7}
+				{\draw [fill=moon] (2.7 + \c*3.5,5) circle (1.5cm);
+				\node at (2.7 + \c*3.5,3) {\textcolor{white}{\fontsize{17}{18}\selectfont \c}};}
+			\draw [fill=black, opacity=0.5] (2.7,5) circle (1.5cm);
+			\draw [fill=black, opacity=0.5] (6.2,5) [partial ellipse=-90:90:0.7 and 1.5] (6.2,5) [partial ellipse=90:270:1.5 and 1.5];
+			\draw [fill=black, opacity=0.5] (9.7,5) [partial ellipse=90:270:1.5 and 1.5];
+			\draw (9.7,6.5) -- (9.7,3.5);
+			\draw [fill=black, opacity=0.5] (13.2,5) [partial ellipse=90:270:1.5 and 1.5]; \draw [fill=moon] (13.2,5) [partial ellipse=90:270:0.7 and 1.5];
+			\draw [fill=black, opacity=0.5] (20.2,5) [partial ellipse=90:-90:1.5 and 1.5]; \draw [fill=moon] (20.2,5) [partial ellipse=90:-90:0.7 and 1.5];
+			\draw [fill=black, opacity=0.5] (23.7,5) [partial ellipse=90:-90:1.5 and 1.5];
+			\draw (23.7,6.5) -- (23.7,3.5);
+			\draw [fill=black, opacity=0.5] (27.2,5) [partial ellipse=90:-90:1.5 and 1.5] (27.2,5) [partial ellipse=90:270:0.7 and 1.5];
+			%
+			\draw [color=white, ultra thick] (10,-10) circle (8cm);
+			\draw [fill=earth] (10,-10) circle (3.7cm);
+			\foreach \c in {0,1,...,7}
+				{\draw [fill=moon,rotate around={\c*45:(10,-10)}] (18,-10) circle (1cm);
+				\draw [rotate around={45*\c:(10,-10)}, color=white, opacity=0] (10,-10) -- (16,-10) node [opacity=1] {\textcolor{white}{\fontsize{17}{18}\selectfont \c}};
+				}
+			\foreach \ry in {-2,-3,...,-18}
+				\draw[<-,color=white,ultra thick] (20,\ry) -- (29,\ry);
+			\draw[->,color=mars,ultra thick] (10,-10) [partial ellipse=10:35:9 and 9];
+			%dida up
+			\draw [fill=title,thick] (13,9.3) rectangle (17,7.3);
+			\node at (15,8.3) {\textcolor{black}{\fontsize{23}{24}\selectfont Le fasi}};
+		\end{scope}
+		%
+		% eclipse
+		%
+		\begin{scope}[shift={(0,-163)}]
+			\draw [fill=space, ultra thick] (2,9) rectangle (28,-5);
+			% earth orbit
+			\draw (2.3,0) [color=gray, ultra thick, partial ellipse=-12:23:18.9 and 18.9];
+			\draw (2.5,0) [->,color=white, ultra thick, partial ellipse=15:22:18.9 and 18.9];
+			% moon orbit
+			\draw [color=gray, ultra thick] (21.2,0) circle (2.5cm);
+			\draw (21.2,0) [->,color=white, ultra thick, partial ellipse=65:93:2.8 and 2.8];
+			% earth
+			\draw [fill=earth] (21.2,0) circle (1cm);
+			% moon
+			\foreach \o in {0,1,...,4}
+				\draw [fill=moon,rotate around={-22*\o:(21.2,0)}] (22.7,2) circle (0.3cm);
+			%
+			\draw (2.5,3.99) -- (21.2,1);
+			\draw (2.5,-3.99) -- (21.2,-1);
+			\draw (2.3,4) -- (21.2,-1);
+			\draw (2.3,-4) -- (21.2,1);
+			\draw [fill=black, opacity=0.3] (21.2,1) -- (27.7,0) -- (21.2,-1) -- (21.2,1);
+			\draw [fill=black, opacity=0.3] (27.7,2.8) -- (21.2,1) -- (21.2,-1) -- (27.7,-2.8);
+			%
+			\draw [->,color=white, ultra thick] (22.5,4) -- (25,1.5);
+			\draw [fill=white,thick] (21,4) rectangle (27,5);
+			\node at (24,4.5) {\textcolor{black}{\fontsize{17}{18}\selectfont Fase di penombra}};
+			\draw [<-,color=white, ultra thick] (25,0) -- (25,-3.5);
+			\draw [fill=white,thick] (21,-3.5) rectangle (27,-4.5);
+			\node at (24,-4) {\textcolor{black}{\fontsize{17}{18}\selectfont Fase di totalità}};
+			% sun
+			\draw (2.3,0) [fill=white, partial ellipse=-90:90:4 and 4];
+			\draw (2.3,-4) -- (2.3,4);
+			% didas
+			\draw [fill=title,thick] (11.6,10.3) rectangle (18.4,8.3);
+			\node at (15,9.3) {\textcolor{black}{\fontsize{23}{24}\selectfont Eclissi di Luna}};
+			\draw [fill=dida,thick] (3.8,-4.5) rectangle (26.2,-7.5);
+			\node at (15,-5.5) {\textcolor{black}{\fontsize{23}{24}\selectfont L'eclissi di Luna, parziale o totale, avviene durante}};
+			\node at (15,-6.5) {\textcolor{black}{\fontsize{23}{24}\selectfont la fase di Luna piena}};
+		\end{scope}
+		%
+		% moon structure
+		%
+		\begin{scope}[shift={(0,-184)}]
+			\draw [fill=moon,ultra thick] (15,0) circle (10cm);
+			\draw [fill=craterm] (15,0) [partial ellipse=-90:90:9.5 and 9.5] (15,0) [partial ellipse=90:270:4 and 9.5];
+			\draw [fill=core3] (15,0) [partial ellipse=-90:90:4 and 4] (15,0) [partial ellipse=90:270:2 and 4];
+			\draw [fill=core2] (15,0) [partial ellipse=-90:90:3 and 3] (15,0) [partial ellipse=90:270:1.2 and 3];
+			\draw (15,9.5) -- (15,-9.5);
+			\draw [fill=core1] (15,0) [partial ellipse=-90:90:2 and 2] (15,0) [partial ellipse=90:270:0.7 and 2];
+			%
+			\draw [<-,ultra thick] (16,8) -- (21,10);
+			\draw [fill=dida,thick] (19.7,9.5) rectangle (24.3,11.5);
+			\node at (22,10.5) {\textcolor{black}{\fontsize{23}{24}\selectfont mantello}};
+			%
+			\draw [<-,ultra thick] (16,3.3) -- (19,6);
+			\draw [fill=dida,thick] (15.5,5.5) rectangle (26.5,7.5);
+			\node at (21,6.5) {\textcolor{black}{\fontsize{23}{24}\selectfont strato parzialmente fuso}};
+			%
+			\draw [<-,ultra thick] (16,2.3) -- (20,2.3);
+			\draw [fill=dida,thick] (19.9,0.7) rectangle (27,3.7);
+			\node at (23.5,2.7) {\textcolor{black}{\fontsize{23}{24}\selectfont nucleo esterno}};
+			\node at (21.7,1.7) {\textcolor{black}{\fontsize{23}{24}\selectfont liquido}};
+			%
+			\draw [<-,ultra thick] (16,0) -- (20,-3);
+			\draw [fill=dida,thick] (19.9,-1.6) rectangle (27,-4.6);
+			\node at (23.5,-2.6) {\textcolor{black}{\fontsize{23}{24}\selectfont nucleo interno}};
+			\node at (21.7,-3.6) {\textcolor{black}{\fontsize{23}{24}\selectfont solido}};
+			%
+			\draw [<-,ultra thick] (15,-9.7) -- (14,-11);
+			\draw [fill=dida,thick] (2,-11) rectangle (22,-17);
+			\node at (12,-12) {\textcolor{black}{\fontsize{23}{24}\selectfont Nel 2009 la NASA ha confermato la presenza}};
+			\node at (10.3,-13) {\textcolor{black}{\fontsize{23}{24}\selectfont di ghiaccio d'acqua al Polo Sud lunare.}};
+			\node at (12,-14) {\textcolor{black}{\fontsize{23}{24}\selectfont Anche al Polo Nord potrebbe essere presente}};
+			\node at (12,-15) {\textcolor{black}{\fontsize{23}{24}\selectfont ghiaccio d'acqua, ma in quantità molto minori}};
+			\node at (6.7,-16) {\textcolor{black}{\fontsize{23}{24}\selectfont rispetto al Polo Sud.}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-203)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
