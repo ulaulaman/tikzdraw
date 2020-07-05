@@ -1,0 +1,52 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+%
+\usetikzlibrary{bending,arrows.meta}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{lsb}{HTML}{D8603E}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Squares}
+\begin{document}
+	\begin{tikzpicture}[background rectangle/.style={fill=black},show background rectangle]
+		%
+		\begin{scope}
+			\tkzDefPoint(0,0){A}
+			\tkzDefPoint(8,0){B}
+			\tkzDefSquare(A,B)
+			\tkzDrawSquare[color=white,fill=space](A,B)
+		\end{scope}
+		%
+		\begin{scope}[shift={(8,0)}, scale=0.5, rotate around={30:(8,0)}]
+			\tkzDefPoint(0,0){A}
+			\tkzDefPoint(8,0){B}
+			\tkzDefSquare(A,B)
+			\tkzDrawSquare[color=white,fill=lsb,opacity=0.8](A,B)
+		\end{scope}
+		%
+		\begin{scope}[shift={(12,0)}, scale=0.25, rotate around={60:(12,0)}]
+			\tkzDefPoint(0,0){A}
+			\tkzDefPoint(8,0){B}
+			\tkzDefSquare(A,B)
+			\tkzDrawSquare[color=white,fill=mars,opacity=0.6](A,B)
+		\end{scope}
+		%
+		\begin{scope}[shift={(14,0)}, scale=0.125, rotate around={75:(14,0)}]
+			\tkzDefPoint(0,0){A}
+			\tkzDefPoint(8,0){B}
+			\tkzDefSquare(A,B)
+			\tkzDrawSquare[color=white,fill=title,opacity=0.4](A,B)
+		\end{scope}
+		%
+	\end{tikzpicture}
+\end{document}
