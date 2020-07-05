@@ -6,6 +6,7 @@
 |:-------------|:------------------|:------|
 | A rocket | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/rocket.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/rocket.pdf) |
 | Saturn V | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/saturnV.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/saturnV.pdf) |
+| Captain Marvel | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/carol_danvers.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/carol_danvers.pdf) |
 
 ## Mathematics
 
