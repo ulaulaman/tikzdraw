@@ -20,6 +20,7 @@
 | Math without words: Square roots | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/square_roots.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/square_roots.pdf) |
 | Math without words: square of *n* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/squares.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/squares.pdf) |
 | Math without words: trisecare un foglio di carta | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/trisecare_pagina.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/trisecare_pagina.pdf) |
+| The Witch of Agnesi | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/agnesi_witch.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/agnesi_witch.pdf)
 
 ## Physics
 
