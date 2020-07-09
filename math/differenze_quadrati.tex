@@ -1,0 +1,45 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\usepackage{amsmath}
+%
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{moon}{HTML}{AFAFAF}
+%
+\title{Difference of two squares}
+\begin{document}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle]
+		\begin{scope}
+			\tkzDefPoint(0,0){A}
+			\tkzDefPoint(5,0){B}
+			\tkzDefSquare(A,B)
+			\tkzDrawSquare[color=space,fill=space](A,B)
+			%
+			\tkzDefPoint(3,0){C}
+			\tkzDefSquare(A,C)
+			\tkzDrawSquare[color=moon, opacity=0.5,fill=moon](A,C)
+			%
+			\tkzDefPoint(3,5){C1}
+			\tkzDrawSegment[color=white, dashed](C,C1)
+		\end{scope}
+		%
+		\begin{scope}[shift={(6,3)}]
+			\tkzDefPoint(0,0){D}
+			\tkzDefPoint(8,2){F}
+			\tkzDefPoint(8,0){E}
+			\tkzDefPoint(0,2){G}
+			\tkzDrawPolygon[color=earth,fill=earth](D,E,F,G)
+			%
+			\tkzDefPoint(3,0){B1}
+			\tkzDefPoint(3,2){B2}
+			\tkzDrawSegment[color=white, dashed](B1,B2)
+		\end{scope}
+	\end{tikzpicture}
+\end{document}
