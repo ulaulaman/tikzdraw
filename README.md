@@ -17,10 +17,16 @@
 | Hutton's formula | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/hutton_formula.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/hutton_formula.pdf)  |
 | Strassnitzky's formula | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/strassnitzky_formula.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/strassnitzky_formula.pdf) |
 | Rolling circle squares itself | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/rolling_circle.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/rolling_circle.pdf) |
-| Math without words: Square roots | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/square_roots.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/square_roots.pdf) |
-| Math without words: square of *n* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/squares.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/squares.pdf) |
-| Math without words: trisecare un foglio di carta | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/trisecare_pagina.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/trisecare_pagina.pdf) |
 | The Witch of Agnesi | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/agnesi_witch.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/agnesi_witch.pdf)
+
+### Math without words
+
+| Title       | Source          | Pdf |
+|:-------------|:------------------|:------|
+| Square roots | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/square_roots.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/square_roots.pdf) |
+| Square of *n* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/squares.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/squares.pdf) |
+| Trisecare un foglio di carta | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/trisecare_pagina.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/trisecare_pagina.pdf) |
+| Difference of two squares | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/differenze_quadrati.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/differenze_quadrati.pdf)
 
 ## Physics
 
