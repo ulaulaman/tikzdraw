@@ -1,0 +1,284 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,bending,arrows.meta}
+%
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\usepackage{xcolor}
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{craterm}{HTML}{616060}
+\definecolor{linem}{HTML}{DBDBDB}
+\definecolor{core1}{HTML}{FF5E16}
+\definecolor{core2}{HTML}{FF9616}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Fatti marziani}
+\begin{document}
+	\tikzset{partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}}}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\draw [black,ultra thick,fill=title] (0,8) rectangle (30,11.5);
+		\node at (14,9.8) {\textcolor{black}{\fontsize{90}{91}\selectfont Fatti marziani}};
+		%mars
+		\begin{scope}[scale=2.5]
+			\coordinate (E) at (2.6,0.4);
+			\coordinate (F) at (3.7,0.7);
+			\draw[fill=mars,ultra thick] (3,0.5) circle (2.1cm);
+			%scar
+			\draw[-,thick] (1.8,0.2) -- (2.9,1.5);
+			\draw[-] (1.9,0.2) -- (1.9,0.4);
+			\draw[-] (2,0.35) -- (2,0.55);
+			\draw[-] (2.1,0.45) -- (2.1,0.65);
+			\draw[-] (2.6,1.05) -- (2.6,1.25);
+			\draw[-] (2.7,1.15) -- (2.7,1.35);
+			\draw[-] (2.8,1.25) -- (2.8,1.45);
+			%eyebrows
+			\draw[-,thick] (2.25,1.3) -- (2.45,1.2);
+			\draw[-,thick] (3.45,1.2) -- (3.65,1.3);
+			%nose
+			\draw[-,thick] (2.95,0.1) to[out=105,in=85] (2.75,0) to[out=275,in=205] (3,-0.1);
+			%mouth
+			\draw[-,thick] (2.8,-0.6) -- (3,-0.55);
+			%eyes
+			\draw[fill=white] (2.4,0.7) ellipse (7pt and 10pt);
+			\draw[fill=white] (3.5,0.7) ellipse (7pt and 10pt);
+			\draw[fill=black,rotate around={-30:(E)}] (2.5,0.5) ellipse (2pt and 5pt);
+			\draw[fill=black,rotate around={-30:(F)}] (3.75,0.5) ellipse (2pt and 5pt);
+		\end{scope}
+		%dida mars
+		\begin{scope}[shift={(1,0)}]
+			\draw[fill=dida,thick] (13,-1.7) rectangle (27,4.2);
+			\node (example-textwidth-2) [right, align=left, text width=13cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (13.5,1.5) {Marte è il 4.o pianeta dal Sole. Possiede due lune: Phobos, con un diametro di 22.2 chilometri e Deimos, con un diametro di 12.6 chilometri.};
+		\end{scope}
+		%dimensions
+		\begin{scope}[scale=0.8,shift={(23.5,-14.5)}]
+			\draw[fill=space, ultra thick] (-22.5,8.5) rectangle (12.5,-9);
+			\draw[fill=moon, ultra thick] (8,0) circle (2cm);
+			\draw[fill=mars, ultra thick] (0,0) circle (3.9cm);
+			\draw[fill=earth, ultra thick] (-14,0) circle (7.34cm);
+			%
+			\draw[<->,earth] (-21.34,-8.5) -- (-6.66,-8.5) node [midway, above, sloped,opacity=1] (TextNode) {\textcolor{earth}{\fontsize{23}{24}\selectfont Terra: 6371 km}};
+			\draw[<->,mars] (-3.9,-5) -- (3.9,-5) node [midway, above, sloped,opacity=1] (TextNode) {\textcolor{mars}{\fontsize{23}{24}\selectfont Marte: 3390 km}};
+			\draw[<->,moon] (6,-3) -- (10,-3) node [midway, above, sloped,opacity=1] (TextNode) {\textcolor{moon}{\fontsize{23}{24}\selectfont Luna: 1737 km}};
+		\end{scope}
+		%orbits
+		\begin{scope}[scale=1.5,shift={(0.4,-23.5)}]
+			\coordinate (S) at (0,5);
+			\coordinate (E) at (12,3);
+			\coordinate (M) at (18,9);
+			%
+			\draw[fill=space, ultra thick] (0,10) rectangle (19,-1.2);
+			%earth orbit
+			\draw[gray,ultra thick] (11,0) to[out=50,in=70] (E);
+			\draw[gray,opacity=0.5,ultra thick] (E) to[out=90,in=300] (9.8,10);
+			%mars orbit
+			\draw[gray,ultra thick] (17.5,0) to[out=70,in=290] (M);
+			\draw[gray,opacity=0.5,ultra thick] (M) to[out=110,in=300] (17.5,10);
+			%sun
+			\draw[fill=white] (S) arc (90:-90:2) -- (S);
+			%earth
+			\draw[fill=earth] (E) circle (0.5cm);
+			%mars
+			\draw[fill=mars] (M) circle (0.25cm);
+			%arrows
+			\draw[<->,dashed,gray,opacity=0.5,ultra thick] (2.2,3) -- (11.3,3) node [midway, above, sloped,opacity=1] (TextNode) {\textcolor{earth}{\fontsize{23}{24}\selectfont 150 milioni di chilometri}};
+			\draw[<->,dashed,gray,opacity=0.5,ultra thick] (2.15,3.7) -- (17.7,8.9) node [midway, above, sloped,opacity=1] (TextNode) {\textcolor{mars}{\fontsize{23}{24}\selectfont 229 milioni di chilometri}};
+			%
+			\draw [fill=dida,thick] (0.5,9.3) rectangle (8.8,7.7);
+			\node (example-textwidth-2) [right, align=left, text width=12cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (0.7,8.5) {Distanza media tra il Sole e le orbite di Terra e Marte.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(10,-35)}]
+			\draw[fill=dida, thick] (1.9,1) rectangle (18.1,-3.4);
+			\node (example-textwidth-2) [right, align=left, text width=16cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2.3,-1.2) {Un anno su Marte dura 687 giorni, quasi il doppio di un anno terrestre. La sua temperatura media è di $63 ^\circ C$, con variazioni da $-140 ^\circ C$ a $+30 ^\circ C$.};
+		\end{scope}
+		%retrograde motion
+		\begin{scope}[shift={(0,-52)}]
+			\clip (1,15) rectangle (30,-10);
+			\draw [fill=black] (1,9) rectangle (29,-9);
+			\tkzDefPoint(3,0){S}
+			\tkzDrawCircle[R,fill=white](S,1.5 cm)
+			\tkzDefShiftPoint[S](4,0){A}
+			\tkzDrawCircle[color=white, ultra thick](S,A)
+			\tkzDefShiftPoint[S](6,0){B}
+			\tkzDrawCircle[color=white, ultra thick](S,B)
+			%
+			\tkzDefShiftPoint[S](1,0){L}
+			\foreach \i in {-1,-2,1,2}
+			{\tkzDefPointBy[rotation = center S angle 30*\i](A) \tkzGetPoint{A\i}}
+			%		
+			\foreach \i in {-1,-2,1,2}
+				{\tkzDefPointBy[rotation = center S angle 16.5*\i](B) \tkzGetPoint{B\i}}
+			%
+			\tkzInterLL(A,B)(A1,B1) \tkzGetPoint{AB}
+			\tkzDefShiftPoint[AB](4.5,0){H}
+			\tkzDefShiftPoint[H](-3,8){H1}
+			\tkzDefShiftPoint[H](3,5){H2}
+			\tkzDefShiftPoint[H](3,-8){H3}
+			\tkzDefShiftPoint[H](-3,-5){H4}
+			\tkzDrawPolygon[fill=space](H1,H2,H3,H4)
+			%
+			\tkzDefShiftPoint[H](0,0){F}
+			\tkzDefLine[parallel=through F](H2,H3) \tkzGetPoint{f}
+			\tkzInterLL(F,f)(A,B) \tkzGetPoint{M3}
+			%
+			\tkzDefShiftPoint[F](0.5,0){F1}
+			\tkzDefLine[parallel=through F1](H2,H3) \tkzGetPoint{f1}
+			\tkzInterLL(F1,f1)(A-1,B-1) \tkzGetPoint{M2}
+			%
+			\tkzDefShiftPoint[F](-0.5,0){F2}
+			\tkzDefLine[parallel=through F2](H2,H3) \tkzGetPoint{f2}
+			\tkzInterLL(F2,f2)(A1,B1) \tkzGetPoint{M4}
+			%
+			\tkzDefShiftPoint[H](2,0){F3}
+			\tkzDefLine[parallel=through F3](H2,H3) \tkzGetPoint{f3}
+			\tkzInterLL(F3,f3)(A-2,B-2) \tkzGetPoint{M1}
+			%
+			\tkzDefShiftPoint[H](-2,0){F4}
+			\tkzDefLine[parallel=through F4](H2,H3) \tkzGetPoint{f4}
+			\tkzInterLL(F4,f4)(A2,B2) \tkzGetPoint{M5}
+			%
+			\tkzDefShiftPoint[M2](1,2.5){I1}
+			\tkzDefShiftPoint[M4](-1,-2.5){I2}
+			%
+			\draw [white] plot [smooth, tension=0.9] coordinates { (M1) (I1) (M2) (M3) (M4) (I2) (M5) };
+			%
+			\tkzDrawSegments[color=white](A-2,M1 A,M3 A-1,M2 A1,M4 A2,M5)
+			\tkzDrawCircle[R,fill=earth](A,0.2 cm)
+			\foreach \i in {-1,-2,1,2}
+				{\tkzDrawCircle[R,fill=earth](A\i,0.2 cm)}
+			\tkzDrawCircle[R,fill=mars](B,0.2 cm)
+			\foreach \i in {-1,-2,1,2}
+				{\tkzDrawCircle[R,fill=mars](B\i,0.2 cm)}
+			\foreach \i in {1,...,5}
+				{\tkzDrawCircle[R,fill=mars](M\i,0.2 cm)}
+			%
+			\draw[fill=dida, thick] (1.3,12) rectangle (28.8,8);
+			\node (example-textwidth-2) [right, align=left, text width=27cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (1.5,10) {Quando Marte si avvicina all'opposizione, sembra mostrare un moto retrogrado apparente, ovvero sembra momentaneamente tornare indietro lungo la sua traiettoria per poi riprendere la direzione usuale.};
+		\end{scope}
+		%gravity
+		\begin{scope}[shift={(0,-70)}]
+			\draw [fill=space,ultra thick] (0.5,6.5) rectangle (29.5,-5);
+			%on the earth
+			\draw [fill=mars] (7,4.1) circle (0.5cm);
+			\draw (7,3.8) [color=craterm,fill=linem,ultra thick,partial ellipse=200:340:3 and 0.5];
+			\draw [color=craterm,ultra thick] (7,3) -- (7,3.3);
+			\draw [color=craterm,fill=linem,ultra thick] (4,3) rectangle (10,-3);
+			\foreach \o in {0,1,...,9}
+			\draw [thick,rotate around={36*\o:(7,0)}] (7,2) -- (7,2.4);
+			\draw [color=red,ultra thick,rotate around={-353.16:(7,0)}] (7,0) -- (7,1.8);
+			\draw [fill=black] (7,0) circle (0.2cm);
+			\draw [fill=earth,opacity=0.4] (7,0) circle (2.5cm);
+			%on mercury
+			\draw [fill=mars] (23,4.1) circle (0.5cm);
+			\draw (23,3.8) [color=craterm,fill=linem,ultra thick,partial ellipse=200:340:3 and 0.5];
+			\draw [color=craterm,ultra thick] (23,3) -- (23,3.3);
+			\draw [color=craterm,fill=linem,ultra thick] (20,3) rectangle (26,-3);
+			\foreach \o in {0,1,...,9}
+			\draw [thick,rotate around={36*\o:(23,0)}] (23,2) -- (23,2.4);
+			\draw [color=red,ultra thick,rotate around={-133.15:(23,0)}] (23,0) -- (23,1.8);
+			\draw [fill=black] (23,0) circle (0.2cm);
+			\draw [fill=earth,opacity=0.4] (23,0) circle (2.5cm);
+			%
+			\draw [thick,fill=title] (9,8.3) rectangle (21,6.3);
+			\node at (15,7.3) {\textcolor{black}{\fontsize{23}{24}\selectfont Accelerazione di gravità}};
+			\node at (15,3) {\textcolor{white}{\fontsize{23}{24}\selectfont Sulla Terra}};
+			\node at (15,2) {\textcolor{white}{\fontsize{23}{24}\selectfont 9.81 m/s}};
+			\node at (17,2.3) {\textcolor{white}{\fontsize{11}{12}\selectfont 2}};
+			%
+			\node at (15,0) {\textcolor{white}{\fontsize{23}{24}\selectfont Su Marte}};
+			\node at (15,-1) {\textcolor{white}{\fontsize{23}{24}\selectfont 3.69 m/s}};
+			\node at (17,-0.7) {\textcolor{white}{\fontsize{11}{12}\selectfont 2}};
+			\node at (15,-4) {\textcolor{white}{\fontsize{23}{24}\selectfont Peso di 10 kg}};
+			%
+			\draw [fill=white,thick] (8.8,-4.5) rectangle (5.2,-3.5);
+			\node at (7,-4) {\textcolor{black}{\fontsize{23}{24}\selectfont 98.1 N}};
+			\draw [fill=white,thick] (24.8,-4.5) rectangle (21.2,-3.5);
+			\node at (23,-4) {\textcolor{black}{\fontsize{23}{24}\selectfont 36.9 N}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-90)}]
+			\draw [fill=dida] (2,14) rectangle (28.1,10.2);
+			\node (example-textwidth-2) [right, align=center, text width=26cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,12.2) {La gravità su Marte risulta, quindi, il $62.4 \%$ inferiore rispetto a quella sulla Terra. Questo vuol dire che, a parità di spinta, il record di salto in alto su Marte sarebbe più... alto!};
+			%
+			\draw [fill=earth] (14,4.5) ellipse (0.2cm and 0.7cm);
+			\draw (14.2,2.3) [fill=mars] ellipse (0.3cm and 1.5cm);
+			\draw (14.2,1.9) [fill=black] circle (0.3cm);
+			\draw [fill=earth] (15,4.2) ellipse (0.9cm and 2.1cm);
+			\draw [fill=earth] (16,4.9) ellipse (0.2cm and 0.9cm);
+			\draw [fill=moon] (16,5.9) ellipse (0.1cm and 0.3cm);
+			\draw [fill=mars] (15.8,2.3) ellipse (0.3cm and 1.5cm);
+			\draw [fill=black] (15.8,2.7) circle (0.3cm);
+			\draw [fill=moon] (15,7) circle (0.8cm);
+			%
+			\draw [fill=black] (10,8.7) -- (20,8.7) -- (20,8.6) -- (10,8.6) -- (10,8.7);
+			\draw [fill=white] (10.5,0) -- (10.5,8.9) -- (10.6,8.9) -- (10.6,0) -- (10.5,0);
+			\draw [fill=white] (19.4,0) -- (19.4,8.9) -- (19.5,8.9) -- (19.5,0) -- (19.4,0);
+			\fill [craterm] (2,0.8) rectangle (28,-0.1);
+			%
+			\node at (7,8.7) {\textcolor{black}{\fontsize{17}{18}\selectfont Sulla Terra}};
+			\node at (7,8) {\textcolor{black}{\fontsize{17}{18}\selectfont 2.45 m}};
+			\node at (23,8.7) {\textcolor{black}{\fontsize{17}{18}\selectfont Su Marte}};
+			\node at (23,8) {\textcolor{black}{\fontsize{17}{18}\selectfont 6.51 m}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-108)}]
+			\draw [fill=earth, opacity=0.4] (15,0) circle (11cm);
+			\draw [fill=mars,ultra thick] (15,0) circle (10cm);
+			\draw [fill=craterm] (15,0) [partial ellipse=-90:90:9.5 and 9.5] (15,0) [partial ellipse=90:270:4 and 9.5];
+			%
+			\draw [fill=core2] (15,0) [partial ellipse=-90:90:8.8 and 8.8] (15,0) [partial ellipse=90:270:3.4 and 8.8];
+			\draw (15,9.5) -- (15,-9.5);
+			\draw [fill=core1] (15,0) [partial ellipse=-90:90:3.5 and 3.5] (15,0) [partial ellipse=90:270:2.5 and 3.5];
+			%
+			\draw [->,ultra thick] (10,14) -- (12,10);
+			\draw [fill=dida,thick] (2.5,16) rectangle (10,10);
+			\node [right] at (3,15.5) {\textcolor{black}{\fontsize{23}{24}\selectfont atmosfera}};
+			\node [right] at (3,14.5) {\textcolor{black}{\fontsize{15}{16}\selectfont composizione:}};
+			\node [right] at (3,13.5) {\textcolor{black}{\fontsize{15}{16}\selectfont anidride carbonica $95 \%$}};
+			\node [right] at (3,12.5) {\textcolor{black}{\fontsize{15}{16}\selectfont azoto $2.6 \%$}};
+			\node [right] at (3,11.5) {\textcolor{black}{\fontsize{15}{16}\selectfont argon $1.6 \%$}};
+			\node [right] at (3,10.5) {\textcolor{black}{\fontsize{15}{16}\selectfont altri $0.8 \%$}};
+			%
+			\draw [<-,ultra thick] (16,9) -- (20.3,10);
+			\draw [fill=dida,thick] (19.5,15) rectangle (25.5,9);
+			\node [right] at (20,14.5) {\textcolor{black}{\fontsize{23}{24}\selectfont crosta}};
+			\node [right] at (20,13.5) {\textcolor{black}{\fontsize{15}{16}\selectfont spessore: 50 km}};
+			\node [right] at (20,12.5) {\textcolor{black}{\fontsize{15}{16}\selectfont composizione:}};
+			\node [right] at (20,11.5) {\textcolor{black}{\fontsize{15}{16}\selectfont ferro, magnesio,}};
+			\node [right] at (20,10.5) {\textcolor{black}{\fontsize{15}{16}\selectfont alluminio, calcio,}};
+			\node [right] at (20,9.5) {\textcolor{black}{\fontsize{15}{16}\selectfont potassio}};
+			%
+			\draw [->,ultra thick] (21.5,4) -- (16,5.5);
+			\draw [fill=dida,thick] (21.5,5) rectangle (28,1);
+			\node [right] at (22,4.5) {\textcolor{black}{\fontsize{23}{24}\selectfont mantello}};
+			\node [right] at (22,3.5) {\textcolor{black}{\fontsize{15}{16}\selectfont spessore: 1500 km}};
+			\node [right] at (22,2.5) {\textcolor{black}{\fontsize{15}{16}\selectfont composizione:}};
+			\node [right] at (22,1.5) {\textcolor{black}{\fontsize{15}{16}\selectfont silicato}};
+			%
+			\draw [->,ultra thick] (11,-6) -- (15,-2);
+			\draw [fill=dida,thick] (4.5,-5) rectangle (11,-9);
+			\node [right] at (5,-5.5) {\textcolor{black}{\fontsize{23}{24}\selectfont nucleo}};
+			\node [right] at (5,-6.5) {\textcolor{black}{\fontsize{15}{16}\selectfont raggio: 1800 km}};
+			\node [right] at (5,-7.5) {\textcolor{black}{\fontsize{15}{16}\selectfont composizione:}};
+			\node [right] at (5,-8.5) {\textcolor{black}{\fontsize{15}{16}\selectfont ferro, nichel, zolfo}};
+			%
+			\draw [fill=dida,thick] (4.5,-11.5) rectangle (25.5,-12.5);
+			\node at (15,-12) {\textcolor{black}{\fontsize{15}{16}\selectfont La superficie di Marte è di colore rosso a causa delle sferule di ematite.}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-122.5)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+\end{document}
