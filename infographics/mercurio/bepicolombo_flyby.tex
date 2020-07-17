@@ -1,0 +1,176 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,bending,arrows.meta,shapes.callouts}
+%
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\usepackage{xcolor}
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{mercury}{HTML}{846549}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{craterm}{HTML}{616060}
+%
+\usepackage{amsmath}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Flyby Bepi-Colombo}
+\begin{document}
+	\tikzset{notice/.style  = { draw, ellipse callout, callout relative pointer={#1} },}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\draw [black,ultra thick,fill=title] (0,7) rectangle (30,15);
+		\node (example-textwidth-2) [right, align=center, text width=30cm, color=black, font=\fontsize{90pt}{91pt}\selectfont] at (0,11) {Un \emph{flyby} con Bepi-Colombo};
+		%bepi-colombo
+		\begin{scope}[shift={(0,0)}]
+			\draw [ultra thick, fill=space] (1.5,6) rectangle (28.5,-6);
+			\node at (23,0) {\includegraphics[width=12cm]{bepi-colombo}};
+			\node (example-textwidth-2) [notice={(3,0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (1,-1) {Salve! Sono la sonda Bepi-Colombo e sono in viaggio verso Mercurio!};
+		\end{scope}
+		%mercury
+		\begin{scope}[shift={(0,-12)}]
+			\draw [ultra thick, fill=space] (1.5,5) rectangle (28.5,-6);
+			\node at (7,0) {\includegraphics[width=10cm]{freddy_mercurio}};
+			\node (example-textwidth-2) [notice={(-3,-0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (12,1) {Ciao! Io sono Mercurio e dalle mie parti il Sole picchia forte...};
+		\end{scope}
+		%dida1
+		\begin{scope}[shift={(0,-24)}]
+			\draw [ultra thick, fill=space] (1,5) rectangle (29,-5);
+			\node (example-textwidth-2) [right, align=left, text width=15cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (2,0) {Il viaggio per raggiungere il pianeta si concluderà nel 2025, ma nel frattempo, per non arrivare troppo veloce e non cadere dentro al Sole, dovrò rallentare la mia velocità.};
+			\draw [fill=white] (24,0) circle (4cm);
+			\node at (28,2) {\includegraphics[width=2cm]{bepi-colombo}};
+			\node (example-textwidth-2) [notice={(0.5,0.5)}, ultra thick, right, align=center, color=black, fill=white, font=\fontsize{16pt}{17pt}\selectfont] at (24,0.5) {Ops...};
+		\end{scope}
+		%dida2
+		\begin{scope}[shift={(0,-35)}]
+			\draw [ultra thick, fill=dida] (1.5,4.5) rectangle (28.5,-4.5);
+			\node (example-textwidth-2) [right, align=left, text width=19cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2.5,0) {Per fare questa operazione sarà necessaria una manovra chiamata flyby, che può essere utilizzata sia per accelerare, sia per rallentare, come nel mio caso. La prima di queste manovre la farò il 10 aprile vicino alla Terra, quindi altre due vicino a Venere e gli ultimi 6 flyby intorno a Mercurio, prima di mettermi su un'orbita stabile intorno al pianeta.};
+			\node at (25,0) {\includegraphics[width=6cm]{bepi-colombo}};
+		\end{scope}
+		%subtitle flyby increase
+		\begin{scope}[shift={(0,-42)}]
+			\draw [ultra thick, fill=title] (2.5,1.5) rectangle (27.5,-1.5);
+			\node (example-textwidth-2) [align=center, text width=30cm, color=black, font=\fontsize{40pt}{41pt}\selectfont] at (15,0) {Flyby per aumentare la velocità};
+		\end{scope}
+		%increase
+		\begin{scope}[shift={(0,-53.5)}]
+			\tkzDefPoint(12,0){M}
+			\tkzDefPoint(5,-10){O}
+			\tkzDefPoint(20,-8){A}
+			\tkzDefPointBy[rotation= center O angle 85](A) \tkzGetPoint{B}
+			%
+			\draw [fill=mercury] (M) circle (2cm);
+			\draw [<-, ultra thick, color=mars] (7,0) -- (9,0);
+			\node [right, color=black, font=\fontsize{20pt}{21pt}\selectfont] at (6.8,-0.7) {$\text{v}_\text{pianeta}$};
+			\draw [dashed, ultra thick] (M) circle (8cm);
+			\tkzDrawArc[ultra thick, color=craterm, delta=8](O,A)(B)
+			\tkzTangent[at=A](O) \tkzGetPoint{a}
+			\tkzDrawSegments[->,ultra thick,add = 0 and 1](A,a)
+			\node [right, color=black, font=\fontsize{20pt}{21pt}\selectfont] at (A) {$\text{v}_\text{ingresso}$};
+			\tkzTangent[at=B](O) \tkzGetPoint{b}
+			\tkzDrawSegments[->,ultra thick,add = 0 and 1](B,b)
+			\node [below, color=black, font=\fontsize{20pt}{21pt}\selectfont] at (B) {$\text{v}_\text{uscita}$};
+			\tkzDrawPoints[fill=white](A,B)
+			%
+			\node [color=black, font=\fontsize{20pt}{21pt}\selectfont] at (12,8.7) {Sfera di influenza};
+		\end{scope}
+		%ingresso
+		\begin{scope}[shift={(27,-51.5)}]
+			\draw [fill=space, ultra thick] (-8.5,6.5) rectangle (3,-1);
+			\node[right, text width=10.5cm, color=white, font=\fontsize{15pt}{16pt}\selectfont] at (-8,5.5) {Ingresso nella sfera d'influenza del pianeta};
+			\tkzDefPoint(0,0){O} \tkzDefPoint(-0.2,4){A} \tkzDefPoint(-4,0){B}
+			\tkzDefPointWith[colinear= at B](O,A)
+			\tkzGetPoint{D}
+			\tkzDrawSegments[dashed, color=craterm](A,D B,D)
+			\tkzDrawVectors[color=earth, ultra thick](O,A)
+			\tkzDrawVectors[color=mars, ultra thick](O,B)
+			\tkzDrawVectors[color=earth!50!mars, ultra thick](O,D)
+			\node [right, color=white, font=\fontsize{20pt}{21pt}\selectfont] at (A) {$\text{v}_\text{ingresso}$};
+			\node [left, color=white, font=\fontsize{20pt}{21pt}\selectfont] at (B) {$\text{v}_\text{pianeta}$};
+			\node [left, color=white, font=\fontsize{20pt}{21pt}\selectfont] at (D) {$\text{v}_\text{risultante in}$};
+		\end{scope}
+		%uscita
+		\begin{scope}[shift={(29.5,-57.5)}]
+			\draw [fill=space, ultra thick] (-11,3.5) rectangle (0.5,-1);
+			\node[right, text width=10.5cm, color=white, font=\fontsize{15pt}{16pt}\selectfont] at (-10.5,2.5) {Uscita dalla sfera d'influenza del pianeta};
+			\tkzDefPoint(0,0){O} \tkzDefPoint(-3,1){A} \tkzDefPoint(-4,0){B}
+			\tkzDefPointWith[colinear= at B](O,A)
+			\tkzGetPoint{D}
+			\tkzDrawSegments[dashed, color=craterm](A,D B,D)
+			\tkzDrawVectors[color=earth, ultra thick](O,A)
+			\tkzDrawVectors[color=mars, ultra thick](O,B)
+			\tkzDrawVectors[color=earth!50!mars, ultra thick](O,D)
+			\node [right, color=white, font=\fontsize{20pt}{21pt}\selectfont] at (A) {$\text{v}_\text{uscita}$};
+			\node [left, color=white, font=\fontsize{20pt}{21pt}\selectfont] at (B) {$\text{v}_\text{pianeta}$};
+			\node [left, color=white, font=\fontsize{20pt}{21pt}\selectfont] at (D) {$\text{v}_\text{risultane fn}$};
+		\end{scope}
+		%subtitle flyby increase
+		\begin{scope}[shift={(0,-65)}]
+			\draw [ultra thick, fill=title] (2.5,1.5) rectangle (27.5,-1.5);
+			\node (example-textwidth-2) [align=center, text width=30cm, color=black, font=\fontsize{40pt}{41pt}\selectfont] at (15,0) {Flyby per diminuire la velocità};
+		\end{scope}
+		%decrease
+		\begin{scope}[shift={(0,-76.5)}]
+			\tkzDefPoint(12,0){M}
+			\tkzDefPoint(20,-8){O}
+			\tkzDefPoint(5,-10){A}
+			\tkzDefPointBy[rotation= center O angle -90](A) \tkzGetPoint{B}
+			%
+			\draw [fill=mercury] (M) circle (2cm);
+			\draw [<-, ultra thick, color=mars] (7,0) -- (9,0);
+			\node [right, color=black, font=\fontsize{20pt}{21pt}\selectfont] at (6.8,-0.7) {$\text{v}_\text{pianeta}$};
+			\draw [dashed, ultra thick] (M) circle (8cm);
+			\tkzDrawArc[ultra thick, color=craterm, delta=8](O,B)(A)
+			\tkzDrawPoints[fill=white](A,B)
+			\tkzTangent[at=A](O) \tkzGetPoint{a}
+			\tkzDrawSegments[<-,ultra thick,add = 2 and -1](A,a)
+			\node [right, color=black, font=\fontsize{20pt}{21pt}\selectfont] at (A) {$\text{v}_\text{ingresso}$};
+			\tkzTangent[at=B](O) \tkzGetPoint{b}
+			\tkzDrawSegments[<-,ultra thick,add = 2 and -1](B,b)
+			\node [below, color=black, font=\fontsize{20pt}{21pt}\selectfont] at (B) {$\text{v}_\text{uscita}$};
+			%
+			\node [color=black, font=\fontsize{20pt}{21pt}\selectfont] at (12,8.7) {Sfera di influenza};
+		\end{scope}
+		%ingresso
+		\begin{scope}[shift={(27,-77.5)}]
+			\draw [fill=space, ultra thick] (-8,6.5) rectangle (3,-1);
+			\node[right, text width=10.5cm, color=white, font=\fontsize{15pt}{16pt}\selectfont] at (-7.5,5.5) {Ingresso nella sfera d'influenza del pianeta};
+			\tkzDefPoint(-1,0){O} \tkzDefPoint(-0.2,4){A} \tkzDefPoint(-5,0){B}
+			\tkzDefPointWith[colinear= at B](O,A)
+			\tkzGetPoint{D}
+			\tkzDrawSegments[dashed, color=craterm](A,D B,D)
+			\tkzDrawVectors[color=earth, ultra thick](O,A)
+			\tkzDrawVectors[color=mars, ultra thick](O,B)
+			\tkzDrawVectors[color=blue, ultra thick](O,D)
+			\node [right, color=white, font=\fontsize{20pt}{21pt}\selectfont] at (A) {$\text{v}_\text{ingresso}$};
+			\node [left, color=white, font=\fontsize{20pt}{21pt}\selectfont] at (B) {$\text{v}_\text{pianeta}$};
+			\node [left, color=white, font=\fontsize{20pt}{21pt}\selectfont] at (D) {$\text{v}_\text{risultane in}$};
+		\end{scope}
+		%uscita
+		\begin{scope}[shift={(24,-83.5)}]
+			\draw [fill=space, ultra thick] (-7.5,3.5) rectangle (6,-1);
+			\node[right, text width=13cm, color=white, font=\fontsize{15pt}{16pt}\selectfont] at (-7,2.5) {Uscita dalla sfera d'influenza del pianeta};
+			\tkzDefPoint(0,0){O} \tkzDefPoint(3,1){A} \tkzDefPoint(-4,0){B}
+			\tkzDefPointWith[colinear= at B](O,A)
+			\tkzGetPoint{D}
+			\tkzDrawSegments[dashed, color=craterm](A,D B,D)
+			\tkzDrawVectors[color=earth, ultra thick](O,A)
+			\tkzDrawVectors[color=mars, ultra thick](O,B)
+			\tkzDrawVectors[color=earth!50!mars, ultra thick](O,D)
+			\node [right, color=white, font=\fontsize{20pt}{21pt}\selectfont] at (A) {$\text{v}_\text{uscita}$};
+			\node [left, color=white, font=\fontsize{20pt}{21pt}\selectfont] at (B) {$\text{v}_\text{pianeta}$};
+			\node [left, color=white, font=\fontsize{20pt}{21pt}\selectfont] at (D) {$\text{v}_\text{risultane fn}$};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-90)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+\end{document}
