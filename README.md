@@ -10,6 +10,13 @@
 | Quadrati che si dimezzano | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/squares01.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/squares01.pdf) |
 | Quadrati che raddoppiano | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/squares02.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/squares02.pdf) |
 
+### Planets
+
+| Title | Source | Pdf |
+|:-------------|:------------------|:------|
+| Mars | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/mars.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/mars.pdf) |
+| Mercury | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/mercury.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/mercury.pdf) |
+
 ## Mathematics
 
 | Title       | Source          | Pdf |
