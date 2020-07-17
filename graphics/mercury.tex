@@ -1,0 +1,47 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+%
+\usepackage{xcolor}
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{mercury}{HTML}{846549}
+\definecolor{glasses}{HTML}{08663D}
+%
+\title{Mercury}
+\begin{document}
+	\tikzset{partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}}}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,]
+		%mercury
+		\begin{scope}[scale=2.5]
+			\fill[space] (0.5,3) rectangle (5.5,-2);
+			\draw[fill=mercury,ultra thick] (3,0.5) circle (2.1cm);
+			%nose
+			\draw[thick] (2.95,0.1) -- (3.05,-0.1) -- (2.9,0);
+			%moustache
+			\draw[ultra thick,fill=black,opacity=0.6] (2.95,-0.12) -- (3.05,-0.2) -- (3.15,-0.1) -- (3.65,-0.3) to[out=175,in=10] (2.45,-0.5) -- (2.95,-0.12);
+			%mouth
+			\begin{scope}[rotate around={10:(3.1,-0.5)}]
+				\draw (3.1,-0.5) [thick, partial ellipse=200:340:0.4 and 0.2];
+				\draw (3.1,-0.6) [thick, partial ellipse=240:300:0.2 and 0.2];
+				\draw (3.25,-0.55) [thick, partial ellipse=-10:20:0.3 and 0.4];
+				\draw (2.95,-0.55) [thick, partial ellipse=160:190:0.3 and 0.4];
+			\end{scope}
+			%eyes
+			\draw (2.4,0.4) [fill=white, partial ellipse=0:180:0.15 and 0.6];
+			\draw (3.5,0.4) [fill=white, partial ellipse=0:180:0.15 and 0.6];
+			\draw (2.5,0.5) [fill=black, partial ellipse=-50:230:0.07 and 0.18];
+			\draw (3.6,0.5) [fill=black, partial ellipse=-50:230:0.07 and 0.18];
+			%glasses
+			\draw (2.4,0.8) [fill=glasses, opacity=0.5, partial ellipse=180:360:0.3 and 0.5];
+			\draw (2.4,0.8) [fill=glasses, opacity=0.5, partial ellipse=0:180:0.3 and 0.2];
+			\draw (3.5,0.8) [fill=glasses, opacity=0.5, partial ellipse=180:360:0.3 and 0.5];
+			\draw (3.5,0.8) [fill=glasses, opacity=0.5, partial ellipse=0:180:0.3 and 0.2];
+			\draw (2.4,0.8) [ultra thick, color=yellow, partial ellipse=0:180:0.3 and 0.2];
+			\draw (3.5,0.8) [ultra thick, color=yellow, partial ellipse=0:180:0.3 and 0.2];
+			\draw (2.95,0.8) [ultra thick, color=yellow, partial ellipse=0:180:0.2 and 0.07];
+		\end{scope}
+	\end{tikzpicture}
+\end{document}
