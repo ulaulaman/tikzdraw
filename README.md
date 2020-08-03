@@ -61,7 +61,8 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Square roots | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/square_roots.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/square_roots.pdf) |
 | Square of *n* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/squares.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/squares.pdf) |
 | Trisecare un foglio di carta | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/trisecare_pagina.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/trisecare_pagina.pdf) |
-| Difference of two squares | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/differenze_quadrati.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/differenze_quadrati.pdf)
+| Difference of two squares | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/differenze_quadrati.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/differenze_quadrati.pdf) |
+| Arctan 1/2 + Arctan 1/3 = pi/4 | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/arctan-pi4.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/arctan-pi4.pdf) |
 
 ## Physics
 
