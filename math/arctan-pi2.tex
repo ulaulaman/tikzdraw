@@ -1,0 +1,61 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,calc}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\usepackage{amsmath}
+%
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{moon}{HTML}{AFAFAF}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Trigonometry: ArcTan pi/2}
+\begin{document}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle]
+	%
+	\begin{scope}[scale=8]
+		\tkzDefPoint(0,0){O}
+		\tkzDefPoint(56,0){A}
+		\tkzDefPoint(56,7){B}
+		\tkzDrawSquare[fill=space](O,A)
+		%
+		\tkzDrawPolygon[fill=earth, opacity=0.7](O,A,B)
+		%
+		\tkzDefPoint(56,56){C}
+		\tkzDefPointBy[rotation = center O angle {atan(1/8)}](C) \tkzGetPoint{C1}
+		\tkzDefPointBy[rotation = center O angle {atan(1/8)}](A) \tkzGetPoint{A1}
+		\tkzDrawPolygon[fill=mars, opacity=0.7](O,A1,C1)
+		%
+		\tkzDefPoint(56,8){D}
+		\tkzDefPointBy[rotation = center O angle {atan(1/8)+45}](D) \tkzGetPoint{D1}
+		\tkzDefPointBy[rotation = center O angle {45}](A1) \tkzGetPoint{A2}
+		\tkzDrawPolygon[fill=dida, opacity=0.7](O,A2,D1)
+		%
+		\tkzDefPoint(56,32){E}
+		\tkzDefPointBy[rotation = center O angle {atan(1/8)+45+atan(1/7)}](E) \tkzGetPoint{E1}
+		\tkzDefPointBy[rotation = center O angle {atan(1/7)}](A2) \tkzGetPoint{A3}
+		\tkzDrawPolygon[fill=moon, opacity=0.7](O,A3,E1)
+		%
+		\tkzLabelSegment[black,below=5ex,pos=.5](O,A){\fontsize{299}{300}\selectfont 56}
+		\tkzLabelSegment[black,right=5ex,pos=.5](A,B){\fontsize{299}{300}\selectfont 7}
+		\tkzLabelSegment[white,above=10ex,pos=.5](O,A1){\fontsize{299}{300}\selectfont 56}
+		\tkzLabelSegment[white,right=10ex,pos=.5](A1,C1){\fontsize{299}{300}\selectfont 56}
+		\tkzLabelSegment[white,below=10ex,pos=.5](O,A2){\fontsize{299}{300}\selectfont 56}
+		\tkzLabelSegment[white,right=10ex,pos=.5](A2,D1){\fontsize{299}{300}\selectfont 8}
+		\tkzLabelSegment[white,above=20ex,pos=.5](O,A3){\fontsize{299}{300}\selectfont 56}
+		\tkzLabelSegment[black,right=20ex,pos=.6](A3,E1){\fontsize{299}{300}\selectfont 32}
+		%
+		\node at (28,-3) {\textcolor{black}{\fontsize{299}{300}\selectfont Arctan 1/8 + pi/4 + Arctan 1/7 + Arctan 4/7 = pi/2}};
+	\end{scope}
+	%
+	\end{tikzpicture}
+\end{document}
