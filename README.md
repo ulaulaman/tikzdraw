@@ -63,6 +63,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Trisecare un foglio di carta | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/trisecare_pagina.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/trisecare_pagina.pdf) |
 | Difference of two squares | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/differenze_quadrati.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/differenze_quadrati.pdf) |
 | Arctan 1/2 + Arctan 1/3 = pi/4 | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/arctan-pi4.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/arctan-pi4.pdf) |
+| Arctan 1/8 + pi/4 + Arctan 1/7 + Arctan 4/7 = pi/2 | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/arctan-pi2.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/arctan-pi2.pdf) |
 
 ## Physics
 
