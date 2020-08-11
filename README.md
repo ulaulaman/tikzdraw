@@ -26,7 +26,8 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Il messaggio di Arecibo* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/messaggio_arecibo.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/messaggio_arecibo.pdf)
 | *Meteore* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/meteore.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/meteore.pdf) |
 | *Programma Apollo* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/luna-programma_apollo.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/pdf/luna-programma_apollo.pdf) |
-| *Un flyby con Bep-Colombo* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/bepicolombo_flyby.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/pdf/bepicolombo_flyby.pdf) |
+| *Un flyby con Bepi-Colombo* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/bepicolombo_flyby.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/pdf/bepicolombo_flyby.pdf) |
+| *Le Perseidi* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/perseidi.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/perseidi.pdf) |
 
 ### Fatti e misfatti
 
@@ -35,7 +36,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Fatti e misfatti lunari* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/luna50.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/pdf/luna50.pdf) |
 | *Fatti e misfatti di un buco nero* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/buco_nero.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/buco_nero.pdf) |
 | *Fatti mercuriali* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/mercury_facts.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/pdf/mercury_facts.pdf) |
-| *Fatti marziani* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/mars_facts.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/mars_facts.pdf) |
+| *Fatti marziani* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/mars_facts.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/pdf/mars_facts.pdf) |
 
 ### *I numeri del sistema solare*
 
