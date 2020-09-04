@@ -34,7 +34,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 
 | Title | Source | Pdf |
 |:-------------|:------------------|:------|
-| *Fatti e misfatti lunari* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/luna50.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/pdf/luna50.pdf) |
+| *Fatti e misfatti lunari* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/fatti-lunari.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/pdf/fatti-lunari.pdf) |
 | *Fatti e misfatti di un buco nero* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/buco_nero.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/buco_nero.pdf) |
 | *Fatti mercuriali* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/mercury_facts.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/pdf/mercury_facts.pdf) |
 | *Fatti marziani* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/mars_facts.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/pdf/mars_facts.pdf) |
