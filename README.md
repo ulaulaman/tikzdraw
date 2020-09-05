@@ -17,6 +17,8 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Mars | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/mars.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/mars.pdf) |
 | Mercury | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/mercury.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/mercury.pdf) |
 | Moon | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/moon.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/moon.pdf) |
+| Europa | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/europa.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/europa.pdf) |
+| Io | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/io.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/io.pdf) |
 
 ## Infographics
 
