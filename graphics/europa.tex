@@ -1,0 +1,27 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{europa}{HTML}{744818}
+\definecolor{europaice}{HTML}{b7c290}
+%
+\title{Europa}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle]
+		\tkzDefPoint(6.5,0){A}
+		\tkzDrawCircle[R,color=europaice,fill=europaice](A,4.5cm)
+		\tkzDefPoint(9,-2){B}
+		\tkzDrawCircle[R,color=europa,fill=europa](B,0.2cm)
+		\draw (A) [rotate around={60:(A)},color=europa,partial ellipse=260:360:4.5 and 0.5];
+		\draw (A) [rotate around={100:(A)},color=europa,partial ellipse=270:320:4.5 and 0.5];
+		\draw (A) [rotate around={20:(A)},color=europa,partial ellipse=270:320:4.5 and 0.5];
+		\draw (A) [rotate around={140:(A)},color=europa,partial ellipse=250:320:4.5 and 0.5];		
+	\end{tikzpicture}
+\end{document}
