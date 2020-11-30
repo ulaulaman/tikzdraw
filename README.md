@@ -32,6 +32,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Programma Apollo* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/luna-programma_apollo.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/pdf/luna-programma_apollo.pdf) |
 | *Un flyby con Bepi-Colombo* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/bepicolombo_flyby.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/pdf/bepicolombo_flyby.pdf) |
 | *Le Perseidi* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/perseidi.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/perseidi.pdf) |
+| *Eclissi di Sole* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eclissi_sole.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/eclissi_sole.pdf) |
 
 ### Fatti e misfatti
 
