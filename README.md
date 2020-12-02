@@ -58,7 +58,8 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Hutton's formula | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/hutton_formula.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/hutton_formula.pdf)  |
 | Strassnitzky's formula | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/strassnitzky_formula.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/strassnitzky_formula.pdf) |
 | Rolling circle squares itself | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/rolling_circle.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/rolling_circle.pdf) |
-| The Witch of Agnesi | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/agnesi_witch.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/agnesi_witch.pdf)
+| The Witch of Agnesi | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/agnesi_witch.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/agnesi_witch.pdf) |
+| The Butterfly curve | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/butterfly.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/butterfly.pdf) |
 
 ### Math without words
 
