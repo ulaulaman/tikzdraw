@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \definecolor{space}{HTML}{0A2543}
 \definecolor{earth}{HTML}{0089FA}
+\definecolor{earthn}{HTML}{0C5898}
 \definecolor{land}{HTML}{309347}
 %
 \title{Earth}
@@ -20,6 +21,13 @@
 			\tkzDefPoint(5.5,0){E}
 			\tkzDrawCircle[fill = earth](O,E)
 			\tkzClipCircle(O,E)
+			\tkzDefPoint(0.6,0.4){A}
+			\tkzDefPoint(-0.6,0.4){B}
+			%
+			\tkzDefShiftPoint[A](-0.2,0.3){A1}
+			\tkzDefShiftPoint[A1](0,-0.25){A2}
+			\tkzDefShiftPoint[B](-0.2,0.3){B1}
+			\tkzDefShiftPoint[B1](0,-0.25){B2}
 			%
 			% lands
 			%
@@ -65,6 +73,15 @@
 					\fill[white] (\x,\y) circle (0.5cm);
 				}
 			\end{scope}
+			%nose
+			\draw[-,thick,fill=earthn] (-0.2,0.1) to[out=105,in=85] (-0.8,-1.1) to[out=275,in=205] (0.1,-0.05);
+			%mouth
+			\draw[-,thick] (-0.2,-0.6) to[out=275,in=205] (0.2,-0.5);
+			%eyes
+			\draw[fill=white] (A1) ellipse (7pt and 13pt);
+			\draw[fill=white] (B1) ellipse (7pt and 13pt);
+			\draw[fill=black] (A2) ellipse (2pt and 5.5pt);
+			\draw[fill=black] (B2) ellipse (2pt and 5.5pt);
 		\end{scope}
 	\end{tikzpicture}
 \end{document}
