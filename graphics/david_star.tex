@@ -1,0 +1,98 @@
+\documentclass{standalone}
+%\documentclass[a4paper,landscape]{article}
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+%\usetikzlibrary{plotmarks}
+\usetikzlibrary{bending,arrows.meta}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{xcolor}
+%\usepackage{freetikz}
+%\usetikzlibrary{shapes}
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{craterm}{HTML}{616060}
+\definecolor{lsb}{HTML}{D8603E}
+%
+%\usepackage{xetex}
+%\usepackage{mathptmx}
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%\setmainfont{Times LT Std}
+%\setmainfont{Universalis ADF Std}
+%\setmainfont{Univers LT Std Thin Ultra Cn}
+%\setmainfont{Montserrat}
+%\setmainfont{Burn The Witch}
+%
+%source https://tex.stackexchange.com/questions/11368/bell-curve-gaussian-function-normal-distribution-in-tikz-pgf
+%
+\title{Prove}
+\begin{document}
+	\tikzset{partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+		arc/.style={color=brown,style=dashed,delta=10}}
+	\begin{tikzpicture}%[background rectangle/.style={fill=space},show background rectangle]%[>={[inset=0,angle'=27]Stealth}]%[y=.2cm, x=.7cm,font=\sffamily]%[background rectangle/.style={fill=black},show background rectangle]
+		%
+		%\draw[color=white] (-13,11) rectangle (11,-12);
+		\def\r{5}
+		\tkzDefPoint(-2*\r,\r+1){R1}
+		\tkzDefPoint(2*\r,-\r-1){R2}
+		%
+		\draw[fill=space] (R1) rectangle (R2);
+		%
+		\foreach \i in {1,2,...,30}{
+			%\pgfmathsetmacro{\x}{(rand*2*\r - \r)}
+			%\pgfmathsetmacro{\y}{(rand*2*\r - 0.5*\r)}
+			%\draw[color=red, fill=red!50!yellow] (\x,\y) circle (0.1cm);
+			\tkzGetRandPointOn[rectangle = R1 and R2]{ai}
+			%\tkzDrawPoints(ai)
+			\draw[color=white, fill=white] (ai) circle (0.1cm);
+		}
+		\begin{scope}[rotate around={90:(0,0)}]
+			%\tkzDefPoint()
+			\tkzDefPoint(0,0){O}
+			\tkzDefPoint(-\r,0){A}
+			\tkzDefPoint(\r,0){D}
+			%
+			\tkzDefCircle[radius](O,A)
+			\tkzDefCircle[radius](A,O)
+			\tkzDefCircle[radius](D,O)
+			%
+			\tkzInterCC(O,A)(A,O) \tkzGetPoints{B}{F}
+			\tkzInterCC(O,A)(D,O) \tkzGetPoints{E}{C}
+			%
+			\tkzInterLL(A,C)(F,B) \tkzGetPoint{A1}
+			\tkzInterLL(B,D)(A,C) \tkzGetPoint{B1}
+			\tkzInterLL(C,E)(B,D) \tkzGetPoint{C1}
+			\tkzInterLL(D,F)(E,C) \tkzGetPoint{D1}
+			\tkzInterLL(A,E)(D,F) \tkzGetPoint{E1}
+			\tkzInterLL(A,E)(F,B) \tkzGetPoint{F1}
+			%
+			\tkzDrawPolygon[fill=white](A,A1,B,B1,C,C1,D,D1,E,E1,F,F1)
+			\tkzDrawPolygon[color=earth,line width=1.5mm](B,F,D)
+			\tkzDrawPolygon[color=earth,line width=1.5mm](A,E,C)
+			%
+			%
+			%\tkzDrawPoints(O,A,D,B,F,C,E,A1,B1,C1,D1,E1,F1)
+			%\tkzLabelPoints[below](A,D,B,F,C,E)
+			%\tkzDrawCircle(O,A)
+		\end{scope}
+		\begin{scope}[rotate around={30:(0,0)}]
+			%\tkzDefPoint(0,0){A}
+			%\tkzDefShiftPointCoord[0,0](30:4){B}
+			%\tkzDefShiftPointCoord[0,0](-30:4){C}
+			%\tkzDrawPolygon(A,B,C)
+		\end{scope}
+		%
+		\begin{scope}%[rotate around={210:(0,0)},shift={(-4,0)}]
+			%\tkzDefPoint(0,0){A1}
+			%\tkzDefShiftPointCoord[0,0](30:4){B1}
+			%\tkzDefShiftPointCoord[0,0](-30:4){C1}
+			%\tkzDrawPolygon(A1,B1,C1)
+		\end{scope}
+		%
+	\end{tikzpicture}
+\end{document}
