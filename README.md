@@ -9,6 +9,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Captain Marvel | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/carol_danvers.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/carol_danvers.pdf) |
 | Quadrati che si dimezzano | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/squares01.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/squares01.pdf) |
 | Quadrati che raddoppiano | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/squares02.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/squares02.pdf) |
+| David' Star | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/david_star.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/david_star.pdf) |
 
 ### Planets and satellites
 
