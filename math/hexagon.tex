@@ -1,0 +1,47 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Hexagon's construction}
+\begin{document}
+	\begin{tikzpicture}
+		\def\r{5}
+		\begin{scope}
+			\tkzDefPoint(0,0){O}
+			\tkzDefPoint(-\r,0){A}
+			\tkzDefPoint(\r,0){D}
+			%
+			\tkzDefCircle[radius](O,A)
+			\tkzDefCircle[radius](A,O)
+			\tkzDefCircle[radius](D,O)
+			%
+			\tkzInterCC(O,A)(A,O) \tkzGetPoints{B}{F}
+			\tkzInterCC(O,A)(D,O) \tkzGetPoints{E}{C}
+			%
+			\tkzDefMidPoint(A,O) \tkzGetPoint{Rc}
+			\tkzDefShiftPoint[Rc](0,0.2){rc}
+			\node [right, align=left, color=black, font=\fontsize{12pt}{13pt}\selectfont] at (rc) {$r$};
+			%
+			\tkzDefMidPoint(E,D) \tkzGetPoint{Hl}
+			\tkzDefShiftPoint[Hl](0.2,0.2){hl}
+			\node [right, align=left, color=black, font=\fontsize{12pt}{13pt}\selectfont] at (hl) {$l \, = \, r$};
+			%
+			\tkzDrawCircle(O,A)
+			\tkzDrawLine(A,D)
+			\tkzDrawArc[delta=10](A,B)(F)
+			\tkzDrawArc[delta=10](D,E)(C)
+			\tkzDrawPolygon[ultra thick](A,B,C,D,E,F)
+			%
+			\tkzDrawPoints(O,A,D,B,F,C,E)
+			\tkzLabelPoints[below left](A,O,B)
+			\tkzLabelPoints[below right](D,C)
+			\tkzLabelPoints[above left](F)
+			\tkzLabelPoints[above right](E)
+		\end{scope}
+		%
+	\end{tikzpicture}
+\end{document}
