@@ -62,6 +62,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | The Witch of Agnesi | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/agnesi_witch.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/agnesi_witch.pdf) |
 | The Butterfly curve | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/butterfly.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/butterfly.pdf) |
 | Ostomachion | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/ostomachion.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/ostomachion.pdf) |
+| Hexagon's construction | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/hexagon.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/hexagon.pdf) |
 
 ### Math without words
 
