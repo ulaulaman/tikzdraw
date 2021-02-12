@@ -1,0 +1,126 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+%
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\usepackage{dsfont}
+%
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+%
+\usepackage{amsmath}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Un fatto curioso sui semicerchi}
+\begin{document}
+	\begin{tikzpicture}
+		\draw [use as bounding box,color=white] (-0.2,15.2) -| (30.2,15.2) |- (30.2,-60) -| (-0.2,-60);
+		%title
+		\draw [black,ultra thick,fill=title] (0,7) rectangle (30,15);
+		\node (example-textwidth-2) [right, align=center, text width=30cm, color=black, font=\fontsize{90pt}{91pt}\selectfont] at (0,11) {Un fatto curioso sui semicerchi};
+		\def\a{5}
+		\def\b{9}
+		\begin{scope}[shift={(0,4)}]
+			\tkzDefPoint(15,0){C1}
+			\tkzDefShiftPoint[C1](\a,0){A}
+			\tkzDefShiftPoint[C1](-\a,0){A1}
+			\tkzDefShiftPoint[C1](0,-\a-\b){C2}
+			\tkzDefShiftPoint[C2](\b,0){B}
+			\tkzDefShiftPoint[C2](-\b,0){B1}
+			%
+			\tkzDrawSector[rotate,ultra thick,fill=earth](C1,A)(-180)
+			\tkzDrawSector[rotate,ultra thick,fill=earth](C2,B)(180)
+			%
+			\tkzCircumCenter(A,A1,B)
+			\tkzGetPoint{O}
+			\tkzDrawCircle(O,A1)
+			%
+			\tkzDefLine[perpendicular=through A1,K=-1](A1,C1)
+			\tkzGetPoint{x}
+			\tkzInterLL(A1,x)(C2,B)
+			\tkzGetPoint{H}
+			\tkzInterLC(A1,H)(O,A1)
+			\tkzGetPoints{A2}{r}
+			\tkzDrawSegments(A1,A2)
+			
+			\tkzMarkRightAngle(C1,A1,A2)
+			\tkzDrawPoints(C1,C2)
+			\tkzLabelPoints[font=\fontsize{18pt}{19pt}](H,B)
+			\tkzLabelPoints[above,font=\fontsize{18pt}{19pt}](A1)
+			\tkzLabelPoints[below,font=\fontsize{18pt}{19pt}](B1,A2)
+			%
+			\tkzLabelSegment[font=\fontsize{18pt}{19pt}\selectfont](C1,A1){\emph{a}}
+			\tkzLabelSegment[font=\fontsize{18pt}{19pt}\selectfont](C1,A){\emph{a}}
+			\tkzLabelSegment[font=\fontsize{18pt}{19pt}\selectfont](C2,B){\emph{b}}
+			\tkzLabelSegment[font=\fontsize{18pt}{19pt}\selectfont](C2,H){\emph{a}}
+			\tkzLabelSegment[right,font=\fontsize{18pt}{19pt}\selectfont](A1,H){\emph{a + b}}
+			\tkzLabelSegment[font=\fontsize{18pt}{19pt}\selectfont](H,B1){\emph{b - a}}
+			\tkzLabelSegment[left,font=\fontsize{18pt}{19pt}\selectfont](H,A2){\emph{x}}
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-17)}]
+			\draw [fill=space, thick] (3.5,0) rectangle (23,-6);
+			\draw [fill=dida, thick] (1.8,0.5) rectangle (11.2,-0.5);
+			\node [right, align=left, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,0) {Teorema delle corde};
+			\node [right, align=left, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (4,-2) {$A_1H : HB = B_1H : HA2$};
+			\node [right, align=left, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (4,-4) {$A_1H = a+b = HB \Rightarrow b-a = B_1H = HA_2 = x$};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-26)}]
+			\tkzDefPoint(15,0){C1}
+			\tkzDefShiftPoint[C1](\a,0){A}
+			\tkzDefShiftPoint[C1](-\a,0){A1}
+			\tkzDefShiftPoint[C1](0,-\a-\b){C2}
+			\tkzDefShiftPoint[C2](\b,0){B}
+			\tkzDefShiftPoint[C2](-\b,0){B1}
+			%
+			\tkzDrawSector[rotate,ultra thick,fill=earth](C1,A)(-180)
+			\tkzDrawSector[rotate,ultra thick,fill=earth](C2,B)(180)
+			%
+			\tkzCircumCenter(A,A1,B)
+			\tkzGetPoint{O}
+			\tkzDrawCircle(O,A1)
+			%
+			\tkzDefLine[perpendicular=through A1,K=-1](A1,C1)
+			\tkzGetPoint{x}
+			\tkzInterLL(A1,x)(C2,B)
+			\tkzGetPoint{H}
+			\tkzInterLC(A1,H)(O,A1)
+			\tkzGetPoints{A2}{r}
+			\tkzDrawSegments(A1,A2 A2,A)
+			
+			\tkzMarkRightAngle(C1,A1,A2)
+			\tkzLabelPoints[above,font=\fontsize{18pt}{19pt}](A1,A)
+			\tkzLabelPoints[below,font=\fontsize{18pt}{19pt}](A2)
+			%
+			\tkzLabelSegment[font=\fontsize{18pt}{19pt}\selectfont](A1,A){2\emph{a}}
+			\tkzLabelSegment[right,font=\fontsize{18pt}{19pt}\selectfont](A1,A2){2\emph{b}}
+			\tkzLabelSegment[right,font=\fontsize{18pt}{19pt}\selectfont](A2,A){2\emph{r}}
+			\tkzDrawPoint(O)
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-47)}]
+			\draw [fill=space, thick] (3.5,0) rectangle (23,-10);
+			\draw [fill=dida, thick] (1.8,0.6) rectangle (11.2,-0.5);
+			\node [right, align=left, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,0) {Teorema di Pitagora};
+			\node [right, align=left, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (4,-2) {$(2a)^2 + (2b)^2 = (2r)^2 \Rightarrow a^2 + b^2 = r^2$};
+			\node [right, align=left, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (4,-4) {$A_a = \frac{1}{2} \pi a^2, \qquad A_b = \frac{1}{2} \pi b^2$};
+			\node [right, align=left, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (4,-6) {$A_c = \frac{1}{2} \pi r^2$};
+			\node [right, align=left, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (4,-8) {$A_a + A_b = \frac{1}{2} \pi (a^2 + b^2) = \frac{1}{2} \pi r^2 = \frac{1}{2} A_c, \, \forall a, b \in \mathds{R}$};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-59)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
