@@ -1,0 +1,235 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,arrows.meta,shapes.callouts}
+%
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{craterm}{HTML}{616060}
+%
+\usepackage{amsmath}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Trasferimento di Hohmann}
+\begin{document}
+	\tikzset{notice/.style  = { draw, ellipse callout, callout relative pointer={#1} },
+		didash/.style  = { draw, rectangle, ultra thick },
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth},my arrow/.style={decorate,decoration={markings,mark=at position 0.5 with {\arrow[scale=1.5]{>}};}}]
+		%title
+		\draw [black,ultra thick,fill=title] (0,7) rectangle (30,15);
+		\node (example-textwidth-2) [right, align=center, text width=30cm, color=black, font=\fontsize{90pt}{91pt}\selectfont] at (0,11) {Trasferimento di Hohmann};
+		%mars
+		\begin{scope}[shift={(0,0)}]
+			\draw [ultra thick, fill=space] (1.5,5) rectangle (28.5,-6);
+			\begin{scope}[scale=2.1,shift={(0.3,-0.5)}]
+				\coordinate (E) at (2.6,0.4);
+				\coordinate (F) at (3.7,0.7);
+				\draw[fill=mars,ultra thick] (3,0.5) circle (2.1cm);
+				%scar
+				\draw[-,thick] (1.8,0.2) -- (2.9,1.5);
+				\draw[-] (1.9,0.2) -- (1.9,0.4);
+				\draw[-] (2,0.35) -- (2,0.55);
+				\draw[-] (2.1,0.45) -- (2.1,0.65);
+				\draw[-] (2.6,1.05) -- (2.6,1.25);
+				\draw[-] (2.7,1.15) -- (2.7,1.35);
+				\draw[-] (2.8,1.25) -- (2.8,1.45);
+				%eyebrows
+				\draw[-,thick] (2.25,1.3) -- (2.45,1.2);
+				\draw[-,thick] (3.45,1.2) -- (3.65,1.3);
+				%nose
+				\draw[-,thick] (2.95,0.1) to[out=105,in=85] (2.75,0) to[out=275,in=205] (3,-0.1);
+				%mouth
+				\draw[-,thick] (2.8,-0.6) -- (3,-0.55);
+				%eyes
+				\draw[fill=white] (2.4,0.7) ellipse (7pt and 10pt);
+				\draw[fill=white] (3.5,0.7) ellipse (7pt and 10pt);
+				\draw[fill=black,rotate around={-30:(E)}] (2.5,0.5) ellipse (2pt and 5pt);
+				\draw[fill=black,rotate around={-30:(F)}] (3.75,0.5) ellipse (2pt and 5pt);
+			\end{scope}
+			%
+			\node (example-textwidth-2) [notice={(-3,-0.5)}, ultra thick, right, align=center, text width=7cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (12,2) {Salve! Sono Marte!};
+			\node (example-textwidth-2) [notice={(-3,0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (12,-3) {Voi umani state inviando in orbita intorno a me un bel po' di satelliti. Oggi vi farò vedere una delle manovre utilizzate per farli arrivare sani e salvi fino a qui.};
+		\end{scope}
+		%dida1
+		\begin{scope}[shift={(0,-12)}]
+			\draw [ultra thick, fill=space] (1,5) rectangle (29,-25);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (2,3) {L'orbita di trasferimento di Hohmann è una manovra utilizzata per permettere ai satelliti artificiali di trasferirsi da un'orbita a un'altra che si trova sullo stesso piano e con lo stesso centro.};
+			%
+			\tkzDefPoint(15,-10){S}
+			\tkzDefShiftPoint[S](0,0.5){Sr}
+			\tkzDefShiftPoint[S](-5,0){E}
+			\tkzDefShiftPoint[E](0,0.2){Er}
+			\tkzDefShiftPoint[S](10,0){M}
+			\tkzDefShiftPoint[M](0,0.2){Mr}
+			\tkzDefMidPoint(E,M) \tkzGetPoint{H}
+			\tkzDefPointBy[rotation=center S angle 240](E) \tkzGetPoint{E1}
+			\tkzDefShiftPoint[E1](0,0.2){Er1}
+			\tkzDefPointBy[rotation=center S angle -135](M) \tkzGetPoint{M1}
+			\tkzDefShiftPoint[M1](0,0.2){Mr1}
+			%
+			\tkzDrawArc[ultra thick, color=craterm, delta=0,postaction={my arrow}](S,E)(E1)
+			\tkzDrawArc[ultra thick, color=craterm, delta=0,dashed](S,E1)(E)
+			%
+			\tkzDrawArc[ultra thick, color=craterm, delta=0,postaction={my arrow}](S,M1)(M)
+			\tkzDrawArc[ultra thick, color=craterm, delta=0,dashed](S,M)(M1)
+			%
+			\tkzDrawArc[ultra thick, color=green, delta=0,postaction={my arrow}](H,E)(M)
+			%
+			\tkzDrawCircle[fill=white](S,Sr)
+			\tkzDrawCircle[fill=earth](E,Er)
+			\tkzDrawCircle[fill=earth](E1,Er1)
+			\tkzDrawCircle[fill=mars](M,Mr)
+			\tkzDrawCircle[fill=mars](M1,Mr1)
+			%
+			\tkzDefShiftPoint[E](-3,2){Ed1}
+			\draw [->,ultra thick,color=white,opacity=0.5](Ed1) -- (E);
+			\node (example-textwidth-2) [didash, align=center, text width=10cm, color=black, fill=dida, font=\fontsize{18pt}{19pt}\selectfont] at (Ed1) {Posizione della Terra al momento del lancio};
+			\tkzDefShiftPoint[E1](3,2){Ed2}
+			\draw [->,ultra thick,color=white,opacity=0.5](Ed2) -- (E1);
+			\node (example-textwidth-2) [didash, align=center, text width=10cm, color=black, fill=dida, font=\fontsize{18pt}{19pt}\selectfont] at (Ed2) {Posizione della Terra al momento dell'arrivo};
+			%
+			\tkzDefShiftPoint[M1](-2,-3){Md1}
+			\draw [->,ultra thick,color=white,opacity=0.5](Md1) -- (M1);
+			\node (example-textwidth-2) [didash, align=center, text width=10cm, color=black, fill=dida, font=\fontsize{18pt}{19pt}\selectfont] at (Md1) {Posizione di Marte al momento del lancio};
+			%
+			\tkzDefShiftPoint[M](-2,-11){Md2}
+			\draw [->,ultra thick,color=white,opacity=0.5](Md2) -- (M);
+			\node (example-textwidth-2) [didash, align=center, text width=10cm, color=black, fill=dida, font=\fontsize{18pt}{19pt}\selectfont] at (Md2) {Posizione di Marte al momento dell'arrivo};
+			%
+			\draw [fill=dida, thick] (1.5,-23) rectangle (28.5,-29.7);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,-26.5) {L'orbita di trasferimento (in verde), in generale un arco di ellisse (in questo caso abbiamo optato per un arco di circonferenza solo per semplicità di disegno), viene calcolata tenendo conto della posizione della Terra al momento della partenza e della posizione di Marte (o di un altro pianeta) al momento di arrivo del satellite.\\
+			L'angolo relativo tra queste due posizioni è di 180$^\circ$.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-47)}]
+			\draw [ultra thick, fill=space] (1,5) rectangle (29,-7);
+			\tkzDefPoint(6.5,0){S}
+			\tkzDefShiftPoint[S](0,0.5){Sr}
+			\tkzDefShiftPoint[S](-5,0){E}
+			\tkzDefShiftPoint[E](0,0.2){Er}
+			\tkzDefShiftPoint[S](10,0){M}
+			\tkzDefShiftPoint[M](0,0.2){Mr}
+			\tkzDefMidPoint(E,M) \tkzGetPoint{H}
+			\tkzDefMidPoint(E,S) \tkzGetPoint{r1}
+			\tkzDefMidPoint(M,S) \tkzGetPoint{r2}
+			\tkzDefShiftPoint[r1](0,0.5){re}
+			\tkzDefShiftPoint[r2](0,0.5){rm}
+			%
+			\tkzDrawSegment[color=white,dashed](E,S)
+			\tkzDrawSegment[color=white,dashed](M,S)
+			%
+			\tkzDrawCircle[fill=white](S,Sr)
+			\tkzDrawCircle[fill=earth](E,Er)
+			\tkzDrawCircle[fill=mars](M,Mr)
+			%
+			\begin{scope}[yscale=0.5]
+				\tkzDrawArc[ultra thick, color=green, delta=0,postaction={my arrow}](H,E)(M)
+				\tkzDrawArc[ultra thick, color=green, delta=0,dashed](H,M)(E)
+			\end{scope}
+			%
+			\node [right, align=left, text width=10cm, color=white, font=\fontsize{18pt}{19pt}\selectfont] at (re) {$R_T$};
+			\node [right, align=left, text width=10cm, color=white, font=\fontsize{18pt}{19pt}\selectfont] at (rm) {$R_M$};
+			\node (example-textwidth-2) [right, align=left, text width=10cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (18,-1) {Il periodo di percorrenza dell'arco di ellisse viene calcolato utilizzando la terza legge di Keplero:\\
+			"\emph{I quadrati dei tempi che i pianeti impiegano a percorrere le loro orbite sono proporzionali al cubo del semiasse maggiore.}"};
+			\draw [fill=dida, thick] (1.5,-6.5) rectangle (28.5,-12.5);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,-9.5) {Nel caso dell'orbita di trasferimento, il suo semiasse maggiore coincide con la somma dei semiassi dell'orbita terrestre ($R_T$) e dell'orbita marziana ($R_M$), ottenendo alla fine un tempo di percorrenza di tutta l'orbita (inclusa la curva tratteggiata) di poco più di 13 mesi circa, e circa 6 mesi e mezzo per la traiettoria di Hohman.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-65)}]
+			\draw [ultra thick, fill=space] (1,5) rectangle (29,-27.5);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (2,3) {La manovra di Hohmann non è l'unica possibile per giungere su un altro pianeta. Qui sotto ne vediamo altri due tipi:};
+			\tkzDefPoint(15,-10){S}
+			\tkzDefShiftPoint[S](0,0.5){Sr}
+			\tkzDefShiftPoint[S](-5,0){E}
+			\tkzDefShiftPoint[E](0,0.2){Er}
+			\tkzDefShiftPoint[S](10,0){M}
+			\tkzDefShiftPoint[M](0,0.2){Mr}
+			\tkzDefMidPoint(E,M) \tkzGetPoint{H}
+			\tkzDefPointBy[rotation=center S angle -30](E) \tkzGetPoint{E1}
+			\tkzDefShiftPoint[E1](0,0.2){Er1}
+			\tkzDefPointBy[rotation=center S angle 30](E) \tkzGetPoint{E2}
+			\tkzDefShiftPoint[E2](0,0.2){Er2}
+			\tkzDefPointBy[rotation=center S angle -70](M) \tkzGetPoint{m1}
+			\tkzDefPointBy[rotation=center S angle 70](M) \tkzGetPoint{m2}
+			%
+			\tkzDrawArc[ultra thick, color=craterm, delta=0,postaction={my arrow}](S,E)(Er)
+			%
+			\tkzDrawArc[ultra thick, color=craterm, delta=0,postaction={my arrow}](S,Mr)(M)
+			%
+			\tkzDrawArc[ultra thick, color=green, delta=0,postaction={my arrow}](H,E)(M)
+			%			
+			\tkzCircumCenter(E1,M,m1)\tkzGetPoint{T1}
+			\tkzDrawArc[ultra thick, color=red, delta=0,postaction={my arrow}](T1,E1)(M)
+			\tkzCircumCenter(E2,M,m2)\tkzGetPoint{T2}
+			\tkzDrawArc[ultra thick, color=yellow, delta=0,postaction={my arrow}](T2,E2)(M)
+			\tkzDrawArc[ultra thick, dashed, color=yellow, delta=0](T2,M)(m2)
+			%
+			\tkzDrawCircle[fill=white](S,Sr)
+			\tkzDrawCircle[fill=earth](E,Er)
+			\tkzDrawCircle[fill=earth](E1,Er1)
+			\tkzDrawCircle[fill=earth](E2,Er2)
+			\tkzDrawCircle[fill=mars](M,Mr)
+			%
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (2,-24) {La traiettoria rossa coincide con una partenza anticipata rispetto all'orbita di Hohmann e incontra il pianeta nel secondo punto di intersezione con l'orbita di quest'ultimo.\\
+			La traiettoria gialla corrisponde a una partenza posticipata e incontra il pianeta nel primo punto di intersezione con l'orbita di quest'ultimo.};
+			%
+			\tkzDefShiftPoint[E](-3,6){Ed1}
+			\draw [->,ultra thick,color=white,opacity=0.5](Ed1) -- (E);
+			\draw [->,ultra thick,color=white,opacity=0.5](Ed1) -- (E1);
+			\draw [->,ultra thick,color=white,opacity=0.5](Ed1) -- (E2);
+			\node (example-textwidth-2) [didash, align=center, text width=10cm, color=black, fill=dida, font=\fontsize{18pt}{19pt}\selectfont] at (Ed1) {Posizione della Terra al momento del lancio};
+			%
+			\tkzDefShiftPoint[M](-2,6){Md2}
+			\draw [->,ultra thick,color=white,opacity=0.5](Md2) -- (M);
+			\node (example-textwidth-2) [didash, align=center, text width=10cm, color=black, fill=dida, font=\fontsize{18pt}{19pt}\selectfont] at (Md2) {Posizione di Marte al momento dell'arrivo};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-99)}]
+			\draw [ultra thick, fill=space] (1.5,5) rectangle (28.5,-6);
+			\begin{scope}[scale=2.1,shift={(0.3,-0.5)}]
+				\coordinate (E) at (2.6,0.4);
+				\coordinate (F) at (3.7,0.7);
+				\draw[fill=mars,ultra thick] (3,0.5) circle (2.1cm);
+				%scar
+				\draw[-,thick] (1.8,0.2) -- (2.9,1.5);
+				\draw[-] (1.9,0.2) -- (1.9,0.4);
+				\draw[-] (2,0.35) -- (2,0.55);
+				\draw[-] (2.1,0.45) -- (2.1,0.65);
+				\draw[-] (2.6,1.05) -- (2.6,1.25);
+				\draw[-] (2.7,1.15) -- (2.7,1.35);
+				\draw[-] (2.8,1.25) -- (2.8,1.45);
+				%eyebrows
+				\draw[-,thick] (2.25,1.3) -- (2.45,1.2);
+				\draw[-,thick] (3.45,1.2) -- (3.65,1.3);
+				%nose
+				\draw[-,thick] (2.95,0.1) to[out=105,in=85] (2.75,0) to[out=275,in=205] (3,-0.1);
+				%mouth
+				\draw[-,thick] (2.8,-0.6) -- (3,-0.55);
+				%eyes
+				\draw[fill=white] (2.4,0.7) ellipse (7pt and 10pt);
+				\draw[fill=white] (3.5,0.7) ellipse (7pt and 10pt);
+				\draw[fill=black,rotate around={-30:(E)}] (2.5,0.5) ellipse (2pt and 5pt);
+				\draw[fill=black,rotate around={-30:(F)}] (3.75,0.5) ellipse (2pt and 5pt);
+			\end{scope}
+			\node (example-textwidth-2) [notice={(-3,-1)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (12,3) {La finestra di lancio è il periodo di tempo (in giorni) entro il quale è possibile eseguire una specifica manovra.};
+			\node (example-textwidth-2) [notice={(-3,1)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (12,-4) {Il periodo di lancio è il periodo di tempo (in mesi) entro il quale è possibile lanciare il satellite usando una specifica manovra di trasferimento.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-108)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
