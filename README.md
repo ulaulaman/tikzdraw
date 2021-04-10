@@ -21,6 +21,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Europa | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/europa.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/europa.pdf) |
 | Io | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/io.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/io.pdf) |
 | Earth | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/earth.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/earth.pdf) |
+| Earth as a globe | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/globe.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/globe.pdf) |
 
 ## Infographics
 
