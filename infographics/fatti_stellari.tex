@@ -1,0 +1,200 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,decorations.pathmorphing,arrows.meta}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{craterm}{HTML}{616060}
+\definecolor{star}{HTML}{45457D}
+\definecolor{radiation}{HTML}{FFD016}
+\definecolor{core1}{HTML}{FF5E16}
+\definecolor{core2}{HTML}{FF9616}
+\definecolor{core3}{HTML}{FFD016}
+\definecolor{hydro}{HTML}{00EFFF}
+\definecolor{helium}{HTML}{52267B}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Fatti stellari}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\draw [black,ultra thick,fill=title] (0,9.8) rectangle (30,16.8);
+		\node at (15,14.8) {\textcolor{black}{\fontsize{90}{91}\selectfont Fatti e misfatti}};
+		\node at (15,11.8) {\textcolor{black}{\fontsize{90}{91}\selectfont stellari}};
+		%
+		\begin{scope}[shift={(0,4)}]
+			%dida
+			\begin{scope}
+				\draw[fill=dida,thick] (12,3.7) rectangle (28.7,-3);
+				\node (example-textwidth-2) [right, align=left, text width=16cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (12.5,0.5) {Il Sole è la nostra stella. Ha una massa di $1.9891 \cdot 10^{30}$ kg e un diametro medio di $1.39095 \cdot 10^9$ m. La sua massa è quasi il $99.9 \%$ della massa totale di tutto il sistema planetario che gli ruota intorno.};
+			\end{scope}
+			% sun
+			\begin{scope}
+				\tkzDefPoint(6.5,0){S}
+				\tkzDefPoint(1.5,0){s1}
+				\tkzDrawCircle[fill=white,ultra thick](S,s1)
+			\end{scope}
+		\end{scope}
+		% sun-moon-earth
+		\begin{scope}[shift={(0,-11)}]
+			\draw [fill=space, ultra thick] (2,9) rectangle (28,-5);
+			% earth orbit
+			\draw (2.3,0) [color=gray, ultra thick, partial ellipse=-12:23:21.7 and 21.7];
+			\draw (2.5,0) [->,color=white, ultra thick, partial ellipse=7:13:21.7 and 21.7];
+			% moon orbit
+			\draw [color=gray, ultra thick] (24,0) circle (3.6cm);
+			\draw (24,0) [->,color=white, ultra thick, partial ellipse=45:65:3.8 and 3.8];
+			% sun
+			\draw (2.3,0) [fill=white, partial ellipse=-90:90:4 and 4];
+			\draw (2.3,-4) -- (2.3,4);
+			% earth
+			\draw [fill=earth] (24,0) circle (1cm);
+			\draw (24,0) [->,color=white, ultra thick, partial ellipse=100:130:1.3 and 1.3];
+			% moon
+			\draw [fill=moon] (27,2) circle (0.3cm);
+			\draw (27,2) [->,color=white, ultra thick, partial ellipse=20:80:0.5 and 0.5];
+			%
+			\draw[<->,dashed,gray,opacity=0.5,ultra thick] (6.5,0) -- (22.8,0) node [midway, above, sloped,opacity=1] (TextNode) {\textcolor{earth}{\fontsize{23}{24}\selectfont 150 milioni di chilometri}};
+			\draw[<->,dashed,gray,opacity=0.5,ultra thick] (24.9,0.6) -- (26.7,1.8) node [midway, above, sloped,opacity=1] (TextNode) {\textcolor{earth}{\fontsize{10}{11}\selectfont 384000 km}};
+			%
+		\end{scope}
+		% constitution
+		\begin{scope}[shift={(0,-26)}]
+			\draw [fill=space,ultra thick] (0.5,6.5) rectangle (29.5,-6);
+			%on the earth
+			\tkzDefPoint(6.5,0){S}
+			\tkzDefPoint(1.5,0){s1}
+			\tkzDrawCircle[fill=white,ultra thick](S,s1)
+			%
+			\draw[fill=hydro,color=hydro] (15,-4) rectangle (15.5,4);
+			\draw[fill=helium,color=helium] (20,-1.35) rectangle (20.5,1.35);
+			\draw[fill=black,color=black] (25,-0.1) rectangle (25.1,0.1);
+			%
+			\draw[fill=dida,thick] (6.2,9.3) rectangle (24.3,5.3);
+			\node (example-textwidth-2) [right, align=left, text width=18cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (6.5,7.3) {E' costituito principalmente da idrogeno (al $74 \%$ della sua massa) ed elio (al $24-25 \%$) e piccole tracce di altri elementi più pesanti.};
+		\end{scope}
+		% sun structure
+		\begin{scope}[shift={(0,-45)}]
+			\draw [fill=core1,ultra thick] (15,0) circle (10cm);
+			\draw [fill=core3] (15,0) [partial ellipse=-90:90:9.5 and 9.5] (15,0) [partial ellipse=90:270:7 and 9.5];
+			\draw [fill=core2] (15,0) [partial ellipse=-90:90:9.5 and 9.5] (15,0) [partial ellipse=90:270:4 and 9.5];
+			\draw [fill=core3] (15,0) [partial ellipse=-90:90:4 and 4] (15,0) [partial ellipse=90:270:2 and 4];
+			\draw (15,9.5) -- (15,-9.5);
+			\draw [fill=white] (15,0) [partial ellipse=-90:90:2 and 2] (15,0) [partial ellipse=90:270:0.7 and 2];
+			%
+			\draw [<-,ultra thick] (16,8) -- (21,10);
+			\draw [fill=dida,thick] (18.2,9.5) rectangle (25.8,11.5);
+			\node at (22,10.5) {\textcolor{black}{\fontsize{23}{24}\selectfont zona convettiva}};
+			%
+			\draw [<-,ultra thick] (16,3.3) -- (19,6);
+			\draw [fill=dida,thick] (17.5,5.5) rectangle (24.5,7.5);
+			\node at (21,6.5) {\textcolor{black}{\fontsize{23}{24}\selectfont zona radiativa}};
+			%
+			\draw [<-,ultra thick] (16,0) -- (20,-2.8);
+			\draw [fill=dida,thick] (19.9,-2) rectangle (24,-3.2);
+			\node at (22,-2.6) {\textcolor{black}{\fontsize{23}{24}\selectfont nucleo}};
+			%
+			\draw [<-,ultra thick] (10,8) -- (7.5,10);
+			\draw [fill=dida,thick] (2.4,9.8) rectangle (7.6,11);
+			\node at (5,10.5) {\textcolor{black}{\fontsize{23}{24}\selectfont cromosfera}};
+			%
+			\draw [<-,ultra thick] (10,-1.5) -- (7.2,-2.6);
+			\draw [fill=dida,thick] (2.7,-2) rectangle (7.3,-3.2);
+			\node at (5,-2.6) {\textcolor{black}{\fontsize{23}{24}\selectfont fotosfera}};
+			%
+			\draw [<-,ultra thick] (15,-9.7) -- (14,-11);
+			\draw [fill=space,thick] (7.5,-18.5) rectangle (27.5,-25.5);
+			\draw [fill=space,thick] (2,-11) rectangle (22,-18.5);
+			\node (example-textwidth-2) [right, align=left, text width=19cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (2.5,-14.8) {Classificato come \emph{nana gialla} di tipo G2 V ha una temperatura superficiale di $5500^\circ C$, ovvero $5777 \, K$, da cui discende una colorazione bianca e particolarmente fredda che in alcuni momenti della giornata può apparire giallognola in funzione della sua elevazione nel cielo e della limpidezza dell'atmosfera.};
+			%
+			\node (example-textwidth-2) [right, align=left, text width=19cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (8,-22) {La V, che in realtà è il 5 in numeri romani, indica che il Sole, in questo momento della sua vita, è all'interno della sequenza principale, ovvero una fase relativamente lunga di stabilità in cui all’interno del nucleo si svolgono processi di fusione nucleare che trasformano l'idrogeno in elio.};
+		\end{scope}
+		% radiation
+		\begin{scope}[shift={(0,-78)},decoration=snake]
+			\draw[color=star,fill=star] (10,0) circle (6cm);
+			\draw[color=radiation!20!star,fill=radiation!20!star] (10,0) circle (5.5cm);
+			\draw[color=radiation,fill=radiation] (10,0) circle (4.5cm);
+			\foreach \x in {0,1,2,3}
+			{\begin{scope}[rotate around={(90 * \x):(10,0)}]
+				\draw [->, color=white, ultra thick] (10,5.5) -- (10,4.5);
+				\draw [-,decorate,color=radiation,ultra thick,rotate around={45:(10,0)}] (10,4.5) -- (10,5.3);
+				\draw [->,color=radiation,ultra thick,rotate around={45:(10,0)}] (10,5.3)-- (10,5.5);
+			\end{scope}}
+			%
+			\draw [<-,ultra thick] (15,0) -- (15,-0.5) -- (16.5,-0.5);
+			\draw [fill=white,thick] (16.5,0.3) rectangle (21.5,-1.5);
+			\node at (18.4,-0.2) {\textcolor{black}{\fontsize{17}{18}\selectfont Attrazione}};
+			\node at (19,-0.9) {\textcolor{black}{\fontsize{17}{18}\selectfont gravitazionale}};
+			%
+			\draw [<-,ultra thick] (13.5,3.4) -- (14.4,2.5) -- (16.5,2.5);
+			\draw [fill=white,thick] (16.5,3.3) rectangle (23.2,1.6);
+			\node at (19.8,2.8) {\textcolor{black}{\fontsize{17}{18}\selectfont Radiazione nucleare}};
+			\node at (17.5,2.1) {\textcolor{black}{\fontsize{17}{18}\selectfont forte}};
+			%
+			\draw [fill=space,thick] (1.5,-6.5) rectangle (29.5,-12.5);
+			\node (example-textwidth-2) [right, align=left, text width=27cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (2,-9.5) {L'energia all'interno delle stelle viene prodotta da reazioni nucleari. In particolare l'equilibrio tra la radiazione nucleare forte, che trasforma i nuclei leggeri in pesanti, e la forza di gravità, che tenderebbe a concentrare la massa nel nucleo, permette alla stella di non collassare su se stessa. Almeno per un po' di tempo.};
+		\end{scope}
+		% nucleus structure
+		\begin{scope}[shift={(0,-105)}]
+			\draw [fill=title,thick] (10,12.5) rectangle (20,11.5);
+			\node at (15,12) {\textcolor{black}{\fontsize{23}{24}\selectfont Struttura del nucleo}};
+			%
+			\draw [fill=core3,ultra thick] (15,0) circle (10cm);
+			\draw [fill=core2] (15,0) [partial ellipse=-90:90:9.5 and 9.5] (15,0) [partial ellipse=90:270:4 and 9.5];
+			\draw [fill=craterm] (15,0) [partial ellipse=-90:90:6 and 6] (15,0) [partial ellipse=90:270:3 and 6];
+			\draw [fill=moon] (15,0) [partial ellipse=-90:90:5.5 and 5.5] (15,0) [partial ellipse=90:270:2.8 and 5.5];
+			\draw [fill=core3] (15,0) [partial ellipse=-90:90:5 and 5] (15,0) [partial ellipse=90:270:2.5 and 5];
+			\draw [fill=core2] (15,0) [partial ellipse=-90:90:4 and 4] (15,0) [partial ellipse=90:270:2 and 4];
+			\draw [fill=core1] (15,0) [partial ellipse=-90:90:3 and 3] (15,0) [partial ellipse=90:270:1.2 and 3];
+			\draw (15,9.5) -- (15,-9.5);
+			\draw [fill=core3] (15,0) [partial ellipse=-90:90:2 and 2] (15,0) [partial ellipse=90:270:0.7 and 2];
+			%
+			\draw [<-,ultra thick] (19.2,7) -- (20.6,7);
+			\draw [fill=dida,thick] (20.5,7.5) rectangle (28.5,6.5);
+			\node [align=left] at (24.5,7) {\textcolor{black}{\fontsize{23}{24}\selectfont idrogeno non fuso}};
+			%
+			\draw [<-,ultra thick] (19.2,3.7) -- (21.1,4);
+			\draw [fill=dida,thick] (21,4.5) rectangle (29,3.5);
+			\node [align=left] at (25,4) {\textcolor{black}{\fontsize{20}{21}\selectfont fusione dell'idrogeno}};
+			%
+			\draw [<-,ultra thick] (20,1.2) -- (21.1,1.5);
+			\draw [fill=dida,thick] (21,1) rectangle (28,2);
+			\node [align=left] at (24.5,1.5) {\textcolor{black}{\fontsize{23}{24}\selectfont fusione dell'elio}};
+			%
+			\draw [<-,ultra thick] (19,-1) -- (20.1,-1);
+			\draw [fill=dida,thick] (20,-0.5) rectangle (29,-1.5);
+			\node [align=left] at (24.5,-1) {\textcolor{black}{\fontsize{23}{24}\selectfont fusione del carbonio}};
+			%
+			\draw [<-,ultra thick] (16,-2) -- (19.6,-6.5);
+			\draw [fill=dida,thick] (19.5,-6) rectangle (27.5,-7);
+			\node [align=left] at (23.5,-6.5) {\textcolor{black}{\fontsize{23}{24}\selectfont fusione del silicio}};
+			%
+			\draw [<-,ultra thick] (15,-1) -- (18.9,-9);
+			\draw [fill=dida,thick] (18.8,-8.5) rectangle (28.2,-9.5);
+			\node [align=left] at (23.5,-9) {\textcolor{black}{\fontsize{23}{24}\selectfont nucleo interno: ferro}};
+			%
+			\draw [<-,ultra thick] (18,-1) -- (22.5,-3.6);
+			\draw [fill=dida,thick] (16,-3.5) rectangle (29,-4.5);
+			\node [align=left] at (22.5,-4) {\textcolor{black}{\fontsize{19}{20}\selectfont fusione di ossigeno, neon, magnesio}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-117)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
