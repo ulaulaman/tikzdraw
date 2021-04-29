@@ -37,7 +37,6 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Eclissi di Sole* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eclissi_sole.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/eclissi_sole.pdf) |
 | *Manovra di trasferimento di Hohmann* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/hohmann.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/pdf/hohmann.pdf) |
 | *Un fatto curioso sui semicerchi* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/math/semicerchi.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/math/pdf/semicerchi.pdf) |
-| *Fatti e misfatti stellari* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/fatti_stellari.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/fatti_stellari.pdf) |
 
 ### Fatti e misfatti
 
@@ -47,6 +46,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Fatti e misfatti di un buco nero* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/buco_nero.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/buco_nero.pdf) |
 | *Fatti mercuriali* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/mercury_facts.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/pdf/mercury_facts.pdf) |
 | *Fatti marziani* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/mars_facts.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/pdf/mars_facts.pdf) |
+| *Fatti e misfatti stellari* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/fatti_stellari.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/fatti_stellari.pdf) |
 
 ### *I numeri del sistema solare*
 
