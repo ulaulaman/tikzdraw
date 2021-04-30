@@ -58,15 +58,15 @@
 		\end{scope}
 		%
 		\begin{scope}[shift={(20,0)}]
-			\node at (0,6) {\textcolor{black}{\fontsize{15}{16}\selectfont bassa marea}};
-			\node at (0,-6) {\textcolor{black}{\fontsize{15}{16}\selectfont bassa marea}};
+			\node at (0,5.4) {\textcolor{black}{\fontsize{15}{16}\selectfont bassa marea}};
+			\node at (0,-5.3) {\textcolor{black}{\fontsize{15}{16}\selectfont bassa marea}};
 			\tkzDefPoint(0,0){O}
 			%
 			\begin{scope}
-				\draw [fill=earth, color=earth, opacity=0.5] (O) ellipse (6.5cm and 5cm);
+				\draw [fill=earth, color=earth, opacity=0.5] (O) ellipse (6cm and 5cm);
 			\end{scope}
 			%
-			\begin{scope}
+			\begin{scope}[yscale=0.9]
 				\tkzDefPoint(5.5,0){E}
 				\tkzDrawCircle[fill = earth](O,E)
 				\tkzClipCircle(O,E)
@@ -115,9 +115,8 @@
 				\end{scope}
 			\end{scope}
 			%
-			\draw [fill=earthn, color=earthn, opacity=0.5] (O) ellipse (4.5cm and 5.5cm);
-			\node at (7.5,0) {\textcolor{black}{\fontsize{15}{16}\selectfont alta marea}};
-			\node at (-7.5,0) {\textcolor{black}{\fontsize{15}{16}\selectfont alta marea}};
+			\node at (7.7,0) {\textcolor{black}{\fontsize{15}{16}\selectfont alta marea}};
+			\node at (-7.7,0) {\textcolor{black}{\fontsize{15}{16}\selectfont alta marea}};
 		\end{scope}
 		%
 	\end{tikzpicture}
