@@ -10,6 +10,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Quadrati che si dimezzano | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/squares01.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/squares01.pdf) |
 | Quadrati che raddoppiano | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/squares02.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/squares02.pdf) |
 | David' Star | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/david_star.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/david_star.pdf) |
+| SuperMoon | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/supermoon.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/supermoon.pdf) |
 
 ### Planets and satellites
 
