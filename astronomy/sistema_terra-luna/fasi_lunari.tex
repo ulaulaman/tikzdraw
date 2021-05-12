@@ -1,0 +1,139 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,arrows.meta}
+%
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\usepackage{dsfont}
+%
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{moon}{HTML}{AFAFAF}
+%
+\usepackage{amsmath}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Fasi lunari}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		\tkzDefPoint(0,0){E}
+		\tkzDefPoint(3,0){Er}
+		\tkzDefPoint(0,12){L1}
+		\tkzDefPoint(1,12){Lr1}
+		%
+		\draw (E) [->,color=white, ultra thick, partial ellipse=120:478:15 and 12];
+		%
+		\tkzDrawCircle[fill=earth](E,Er)
+		\tkzDrawCircle[fill=moon](L1,Lr1)
+		%
+		\begin{scope}[shift={(0,3.5)}]
+			\tkzDefPoint(0,12){F1}
+			\tkzDefPoint(0,10.5){Fr1}
+			\tkzDrawCircle[fill=moon](F1,Fr1)
+			\tkzDrawArc[color=black,fill=black,rotate](F1,Fr1)(180)
+		\end{scope}
+		%
+		\tkzDefPoint(-10.5,8.4){L2}
+		\tkzDefPoint(-11.5,8.4){Lr2}
+		\tkzDrawCircle[fill=moon](L2,Lr2)
+		%
+		\begin{scope}[shift={(-3.5,3.5)}]
+			\tkzDefPoint(-10.5,8.4){F2}
+			\tkzDefPoint(-10.5,9.9){Fr2}
+			\tkzDrawCircle[fill=moon](F2,Fr2)
+			\tkzDrawArc[color=black,fill=black,rotate](F2,Fr2)(-180)
+			\draw (F2) [color=black, fill=black, partial ellipse=90:270:1.1 and 1.5];
+		\end{scope}
+		%
+		\tkzDefPoint(-15,0){L3}
+		\tkzDefPoint(-16,0){Lr3}
+		\tkzDrawCircle[fill=moon](L3,Lr3)
+		%
+		\begin{scope}[shift={(-3.5,0)}]
+			\tkzDefPoint(-15,0){F3}
+			\tkzDefPoint(-16.5,0){Fr3}
+			\tkzDrawCircle[fill=black](F3,Fr3)
+		\end{scope}
+		%
+		\tkzDefPoint(-10.5,-8.4){L4}
+		\tkzDefPoint(-11.5,-8.4){Lr4}
+		\tkzDrawCircle[fill=moon](L4,Lr4)
+		%
+		\begin{scope}[shift={(-3.5,-3.5)}]
+			\tkzDefPoint(-10.5,-8.4){F4}
+			\tkzDefPoint(-10.5,-9.9){Fr4}
+			\tkzDrawCircle[fill=moon](F4,Fr4)
+			\tkzDrawArc[color=black,fill=black,rotate](F4,Fr4)(-180)
+			\draw (F4) [color=black, fill=black, partial ellipse=270:-90:1.1 and 1.5];
+		\end{scope}
+		%
+		\tkzDefPoint(0,-12){L5}
+		\tkzDefPoint(1,-12){Lr5}
+		\tkzDrawCircle[fill=moon](L5,Lr5)
+		%
+		\begin{scope}[shift={(0,-3.5)}]
+			\tkzDefPoint(0,-12){F5}
+			\tkzDefPoint(0,-10.5){Fr5}
+			\tkzDrawCircle[fill=moon](F5,Fr5)
+			\tkzDrawArc[color=black,fill=black,rotate](F5,Fr5)(180)
+		\end{scope}
+		%
+		\tkzDefPoint(10.5,-8.4){L6}
+		\tkzDefPoint(11.5,-8.4){Lr6}
+		\tkzDrawCircle[fill=moon](L6,Lr6)
+		%
+		\begin{scope}[shift={(3.5,-3.5)}]
+			\tkzDefPoint(10.5,-8.4){F6}
+			\tkzDefPoint(10.5,-9.9){Fr6}
+			\tkzDrawCircle[fill=black](F6,Fr6)
+			\tkzDrawArc[color=moon,fill=moon,rotate](F6,Fr6)(180)
+			\draw (F6) [color=moon, fill=moon, partial ellipse=90:-270:1.1 and 1.5];
+		\end{scope}
+		%
+		\tkzDefPoint(15,0){L7}
+		\tkzDefPoint(16,0){Lr7}
+		\tkzDrawCircle[fill=moon](L7,Lr7)
+		%
+		\begin{scope}[shift={(3.5,0)}]
+			\tkzDefPoint(15,0){F7}
+			\tkzDefPoint(16.5,0){Fr7}
+			\tkzDrawCircle[fill=moon](F7,Fr7)
+		\end{scope}
+		%
+		\tkzDefPoint(10.5,8.4){L8}
+		\tkzDefPoint(11.5,8.4){Lr8}
+		\tkzDrawCircle[fill=moon](L8,Lr8)
+		%
+		\begin{scope}[shift={(3.5,3.5)}]
+			\tkzDefPoint(10.5,8.4){F8}
+			\tkzDefPoint(10.5,9.9){Fr8}
+			\tkzDrawCircle[fill=black](F8,Fr8)
+			\tkzDrawArc[color=moon,fill=moon,rotate](F8,Fr8)(180)
+			\draw (F8) [color=moon, fill=moon, partial ellipse=90:-270:1.1 and 1.5];
+		\end{scope}
+		%
+		\node at (11,0) {\textcolor{white}{\fontsize{20}{21}\selectfont opposizione}};
+		\node at (-11,0) {\textcolor{white}{\fontsize{20}{21}\selectfont congiunzione}};
+		\node at (0,-10) {\textcolor{white}{\fontsize{20}{21}\selectfont quadratura}};
+		\node at (0,10) {\textcolor{white}{\fontsize{20}{21}\selectfont quadratura}};
+		\node at (0,18) {\textcolor{white}{\fontsize{20}{21}\selectfont ultimo quarto}};
+		\node at (-18.5,-2.5) {\textcolor{white}{\fontsize{20}{21}\selectfont Luna nuova}};
+		\node at (0,-18) {\textcolor{white}{\fontsize{20}{21}\selectfont primo quarto}};
+		\node at (18.5,-2.5) {\textcolor{white}{\fontsize{20}{21}\selectfont Luna piena}};
+		%
+		\foreach \i in {0,1,...,34}
+			\draw [->,ultra thick,color=white] (-27,16-\i) -- (-23,16-\i);
+		%
+		\node at (-25,18) {\textcolor{white}{\fontsize{20}{21}\selectfont raggi solari}};
+	\end{tikzpicture}
+%
+\end{document}
