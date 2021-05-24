@@ -1,0 +1,329 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,arrows.meta}
+\usepackage{xcolor}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{craterm}{HTML}{616060}
+\definecolor{linem}{HTML}{DBDBDB}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{I moti della Luna}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\draw [black,ultra thick,fill=title] (0,12.8) rectangle (30,16.8);
+		\node at (15,14.8) {\textcolor{black}{\fontsize{90}{91}\selectfont Moti lunari}};
+		%
+		\begin{scope}[shift={(15,-4)}]
+			\draw [fill=space] (-15,13) rectangle (15,-13);
+			\tkzDefPoint(0,0){O}
+			\tkzDefPoint(-7,0){E}
+			\tkzDefPoint(-5,0){Er}
+			\tkzDefPoint(13,0){L}
+			\tkzDefPoint(14,0){Lr}
+			%
+			\begin{scope}[yscale=0.8]
+				\tkzDrawCircle[color=white,ultra thick](O,L)
+			\end{scope}
+			%
+			\tkzDrawCircle[fill=earth](E,Er)
+			\tkzDrawCircle[fill=moon](L,Lr)
+			%
+			\tkzDefPoint(0,10){L1}
+			\tkzDefPoint(1,10){Lr1}
+			\tkzDrawCircle[fill=moon](L1,Lr1)
+			%
+			\tkzDefPoint(-13,0){L2}
+			\tkzDefPoint(-14,0){Lr2}
+			\tkzDrawCircle[fill=moon](L2,Lr2)
+			%
+			\tkzDefPoint(0,-10){L3}
+			\tkzDefPoint(1,-10){Lr3}
+			\tkzDrawCircle[fill=moon](L3,Lr3)
+			%
+			\draw [fill=dida, thick] (11.5,-1.5) rectangle (14.5,-2.5);
+			\node at (13,-2) {\textcolor{black}{\fontsize{20}{21}\selectfont apogeo}};
+			\draw [fill=dida, thick] (-11.5,-1.5) rectangle (-14.5,-2.5);
+			\node at (-13,-2) {\textcolor{black}{\fontsize{20}{21}\selectfont perigeo}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,10)}]
+			\draw [ultra thick, fill=dida] (1,2) rectangle (29,-2);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,0) {Come sappiamo, la Luna ruota intorno alla Terra. Questo moto, detto di \emph{rivoluzione}, porta la Luna ora più vicina (perigeo), ora più lontana (apogeo) dal nostro pianeta.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-20.5)}]
+			\draw [ultra thick, fill=dida] (1,3) rectangle (29,-3);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,0) {Inoltre si definiscono un mese sidereo, ovvero la durata del moto di rivoluzione della Luna intorno alla Terra, che è di poco più di 27 giorni, e un mese sinodico, ovvero il periodo di tempo entro il quale le fasi lunari si ripetono, che è di poco più di 29 giorni.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-34)}]
+			\draw[fill=space] (2,10) rectangle (28,-19);
+			%
+			\foreach \i in {1,2,...,19}
+				\draw[->,ultra thick,color=white] (5+\i,9.3) -- (5+\i,8.3);
+			\node at (18,7.3) {\textcolor{white}{\fontsize{23}{24}\selectfont luce stelle lontane}};
+			%
+			\tkzDefPoint(10,4){S}
+			\tkzDefPoint(10,-10){E}
+			\tkzDefPoint(10,-13){M}
+			\tkzDefPoint(10,-14.5){S1}
+			\tkzDefPoint(10,-16){S2}
+			\tkzDefPointBy[rotation= center S angle 50](E) \tkzGetPoint{E1}
+			\tkzDefPointBy[rotation= center S angle 50](M) \tkzGetPoint{M1}
+			\tkzDefPointBy[rotation= center E1 angle -50](M1) \tkzGetPoint{M2}
+			%
+			\tkzCalcLength(S,E) \tkzGetLength{rSE}
+			\tkzCalcLength(S,S1) \tkzGetLength{rSa}
+			\tkzCalcLength(S,S2) \tkzGetLength{rSb}
+			%
+			\tkzDrawLine[color=white](S,M)
+			\tkzDrawLine[color=white](S,M1)
+			\tkzDrawLine[color=white,add = 0.5 and 1.5](E1,M2)
+			%
+			\draw[fill=white] (S) circle (2cm);
+			\draw[fill=earth] (E) circle (1cm);
+			\tikzset{compass style/.append style={->}}
+			\tkzDrawArc[R,color=white](E,3cm)(45,44)
+			\draw[fill=moon] (M) circle (0.5cm);
+			\tkzDrawArc[R,color=white](S,\rSE pt)(250,265)
+			
+			%
+			\draw[fill=earth] (E1) circle (1cm);
+			\tkzDrawArc[R,color=white](E1,3cm)(45,44)
+			\tkzDrawArc[R,color=white](S,\rSE pt)(275,315)
+			\tkzDrawArc[R,color=white](S,\rSE pt)(325,340)
+			\draw[fill=moon] (M1) circle (0.5cm);
+			\draw[fill=moon] (M2) circle (0.5cm);
+			\tkzDrawArc[R,color=white](S,\rSa pt)(270,305)
+			\tkzDrawArc[R,color=white](S,\rSb pt)(270,320)
+			%
+			\node[left] at (S1) {\textcolor{white}{\fontsize{23}{24}\selectfont mese sidereo}};
+			\node[left] at (S2) {\textcolor{white}{\fontsize{23}{24}\selectfont mese sinodico}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(15,-70)}]
+			\draw [fill=space] (-15,11) rectangle (15,-9);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (-14,10) {La Luna non ruota intorno al suo asse};
+			\tkzDefPoint(0,0){O}
+			\tkzDefPoint(-7,0){E}
+			\tkzDefPoint(-5,0){Er}
+			\tkzDefPoint(13,0){L}
+			\tkzDefPoint(14,0){Lr}
+			\tkzDefPoint(13,2){V}
+			%
+			\draw (O) [->,color=white, ultra thick, partial ellipse=300:655:13 and 6.5];
+			%
+			\tkzDrawCircle[fill=earth](E,Er)
+			\tkzDrawVector[color=white, ultra thick](L,V)
+			\tkzDrawCircle[fill=moon](L,Lr)
+			%
+			\tkzDefPoint(0,6.5){L1}
+			\tkzDefPoint(1,6.5){Lr1}
+			\tkzDefPoint(0,8.5){V1}
+			\tkzDrawVector[color=white, ultra thick](L1,V1)
+			\tkzDrawCircle[fill=moon](L1,Lr1)
+			%
+			\tkzDefPoint(-13,0){L2}
+			\tkzDefPoint(-14,0){Lr2}
+			\tkzDefPoint(-13,2){V2}
+			\tkzDrawVector[color=white, ultra thick](L2,V2)
+			\tkzDrawCircle[fill=moon](L2,Lr2)
+			%
+			\tkzDefPoint(0,-6.5){L3}
+			\tkzDefPoint(1,-6.5){Lr3}
+			\tkzDefPoint(0,-4.5){V3}
+			\tkzDrawVector[color=white, ultra thick](L3,V3)
+			\tkzDrawCircle[fill=moon](L3,Lr3)
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-56)}]
+			\draw [ultra thick, fill=dida] (1,2.5) rectangle (29,-2.5);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,0) {Il tempo che la Luna impiega a ruotare intorno al proprio asse coincide con il periodo di rivoluzione. Questo genera una rotazione sincrona che ha come risultato il fatto che la Luna rivolge alla Terra sempre la stessa faccia.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(15,-91)}]
+			\draw [fill=space] (-15,11) rectangle (15,-9);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (-14,10) {La Luna ruota intorno al suo asse};
+			\tkzDefPoint(0,0){O}
+			\tkzDefPoint(-7,0){E}
+			\tkzDefPoint(-5,0){Er}
+			\tkzDefPoint(13,0){L}
+			\tkzDefPoint(14,0){Lr}
+			\tkzDefPoint(11,0){V}
+			%
+			\draw (O) [->,color=white, ultra thick, partial ellipse=300:655:13 and 6.5];
+			%
+			\tkzDrawCircle[fill=earth](E,Er)
+			\tkzDrawVector[color=white, ultra thick](L,V)
+			\tkzDrawCircle[fill=moon](L,Lr)
+			\draw (L) [->,color=white, ultra thick, partial ellipse=0:90:1.5 and 1.5];
+			%
+			\tkzDefPoint(0,6.5){L1}
+			\tkzDefPoint(1,6.5){Lr1}
+			\tkzDefPoint(0,4.5){V1}
+			\tkzDrawVector[color=white, ultra thick](L1,V1)
+			\tkzDrawCircle[fill=moon](L1,Lr1)
+			\draw (L1) [->,color=white, ultra thick, partial ellipse=45:135:1.5 and 1.5];
+			%
+			\tkzDefPoint(-13,0){L2}
+			\tkzDefPoint(-14,0){Lr2}
+			\tkzDefPoint(-11,0){V2}
+			\tkzDrawVector[color=white, ultra thick](L2,V2)
+			\tkzDrawCircle[fill=moon](L2,Lr2)
+			\draw (L2) [->,color=white, ultra thick, partial ellipse=100:190:1.5 and 1.5];
+			%
+			\tkzDefPoint(0,-6.5){L3}
+			\tkzDefPoint(1,-6.5){Lr3}
+			\tkzDefPoint(0,-4.5){V3}
+			\tkzDrawVector[color=white, ultra thick](L3,V3)
+			\tkzDrawCircle[fill=moon](L3,Lr3)
+			\draw (L3) [->,color=white, ultra thick, partial ellipse=210:300:1.5 and 1.5];
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-112)}]
+			\begin{scope}[scale=0.4]
+				\draw [color=craterm, fill=moon, ultra thick] (6.5,0) circle (4.5cm);
+				\foreach \x in {1,...,5}
+				\draw [color=craterm, ultra thick, rotate around={72*\x:(6.5,0)}] (6.5,0) -- (6.5,2);
+				\foreach \x in {1,3,...,20}
+				\draw [color=craterm, ultra thick, rotate around={18*\x:(6.5,0)}] (6.5,0) -- (6.5,1.2);
+				\foreach \x in {2,6,...,18}
+				\draw [color=craterm, ultra thick, rotate around={18*\x:(6.5,0)}] (6.5,0) -- (6.5,0.9);
+				\draw[fill=craterm, ultra thick] (6.5,0) circle (0.5cm);
+				%down-sx
+				\draw (3.3,-2.5) [rotate around={-45:(3.3,-2.5)}, color=linem,ultra thick,partial ellipse=20:160:1.5 and 0.5];
+				\foreach \x in {0.01,0.02,...,0.1}
+				\draw (3.3+\x,-2.5-\x) [rotate around={-45:(3.3,-2.5)}, color=craterm,ultra thick,partial ellipse=20:160:1.5 and 0.5];
+				%down-dx
+				\draw (9.7,-2.5) [rotate around={45:(9.7,-2.5)}, color=linem,ultra thick,partial ellipse=20:160:1 and 0.3];
+				\foreach \x in {0.01,0.02,...,0.1}
+				\draw (9.7+\x,-2.5-\x) [rotate around={45:(9.7,-2.5)}, color=craterm,ultra thick,partial ellipse=20:160:1 and 0.3];
+				%up-sx
+				\draw (3.5,3.2) [rotate around={45:(3.5,3.2)}, color=linem,ultra thick,partial ellipse=180:360:0.5 and 0.3];
+				\foreach \x in {0.01,0.02,...,0.1}
+				\draw (3.5+\x,3.2-\x) [rotate around={45:(3.5,3.2)}, color=craterm,ultra thick,partial ellipse=180:360:0.5 and 0.3];
+				%up-dx shadow
+				\draw (9.5,3) [rotate around={-50:(9.5,3)}, color=linem,ultra thick,partial ellipse=180:360:0.9 and 0.7];
+				\foreach \x in {0.01,0.02,...,0.1}
+				\draw (9.5+\x,3-\x) [rotate around={-50:(9.5,3)}, color=craterm,ultra thick,partial ellipse=180:360:0.9 and 0.7];
+			\end{scope}
+			%
+			\begin{scope}[shift={(20,0)}]
+				\node at (0,5.4) {\textcolor{black}{\fontsize{15}{16}\selectfont bassa marea}};
+				\node at (0,-5.3) {\textcolor{black}{\fontsize{15}{16}\selectfont bassa marea}};
+				\tkzDefPoint(0,0){O}
+				%
+				\begin{scope}
+					\draw [fill=earth, color=earth, opacity=0.5] (O) ellipse (6cm and 5cm);
+				\end{scope}
+				%
+				\begin{scope}[yscale=0.9]
+					\tkzDefPoint(5.5,0){E}
+					\tkzDrawCircle[fill = earth](O,E)
+					\tkzClipCircle(O,E)
+					\tkzDefPoint(0.6,0.4){A}
+					\tkzDefPoint(-0.6,0.4){B}
+					%
+					\tkzDefShiftPoint[A](-0.2,0.3){A1}
+					\tkzDefShiftPoint[A1](0,-0.25){A2}
+					\tkzDefShiftPoint[B](-0.2,0.3){B1}
+					\tkzDefShiftPoint[B1](0,-0.25){B2}
+					%
+					% clouds
+					%
+					\draw [line width=5mm, color=white] (-5.5,4.5) -- (-1.5,4.5);
+					\draw [line width=5mm, color=white] (-5.5,4.1) -- (-1.2,4.1);
+					\fill [white] (-1.5,4.55) circle (0.2cm);
+					\fill [white] (-1.2,4.1) circle (0.25cm);
+					%
+					\draw [line width=5mm, color=white] (-5.5,1.1) -- (-3.5,1.1);
+					\draw [line width=5mm, color=white] (-5.5,0.7) -- (-3.2,0.7);
+					\fill [white] (-3.5,1.15) circle (0.2cm);
+					\fill [white] (-3.2,0.7) circle (0.25cm);
+					%
+					\draw [line width=5mm, color=white] (-5.5,-4.1) -- (-1.5,-4.1);
+					\draw [line width=5mm, color=white] (-5.5,-4.5) -- (-1.2,-4.5);
+					\draw [line width=4mm, color=white] (-2.3,-4.8) -- (-1.6,-4.8);
+					\fill [white] (-1.5,-4.05) circle (0.2cm);
+					\fill [white] (-1.2,-4.5) circle (0.25cm);
+					\fill [white] (-1.6,-4.8) circle (0.2cm);
+					\fill [white] (-2.3,-4.8) circle (0.2cm);
+					%
+					\draw [line width=5mm, color=white] (3,-2.5) -- (5.5,-2.5);
+					\draw [line width=5mm, color=white] (2.5,-2.9) -- (5.5,-2.9);
+					\draw [line width=4mm, color=white] (3.5,-3.2) -- (5,-3.2);
+					\fill [white] (3,-2.45) circle (0.2cm);
+					\fill [white] (2.5,-2.9) circle (0.25cm);
+					\fill [white] (3.5,-3.2) circle (0.2cm);
+					%
+					\begin{scope}[yscale=0.5]
+						\foreach \i in {1,2,...,6}{
+							\pgfmathsetmacro{\x}{(rand*0.2 + 1)*12-12}
+							\pgfmathsetmacro{\y}{(rand*0.5 + 1)*10-10}
+							\pgfmathsetmacro{\opacVal}{rand*0.5+1}
+							\fill[white] (\x,\y) circle (0.5cm);
+						}
+					\end{scope}
+				\end{scope}
+				%
+				\node at (7.7,0) {\textcolor{black}{\fontsize{15}{16}\selectfont alta marea}};
+				\node at (-7.7,0) {\textcolor{black}{\fontsize{15}{16}\selectfont alta marea}};
+			\end{scope}
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-103)}]
+			\draw [ultra thick, fill=dida] (1,2) rectangle (29,-2);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,0) {Infine l'attrazione gravitazionale esercitata dalla Luna sulla Terra genera le maree, il fenomeno per il quale l'acqua degli oceani si solleva rispetto alla superficie della Terra.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(15,-133)}]
+			\draw [fill=space] (-15,9) rectangle (15,-9);
+			\tkzDefPoint(0,0){O}
+			\tkzDefPoint(-7,0){E}
+			\tkzDefPoint(-5,0){Er}
+			\tkzDefPoint(13,0){L}
+			\tkzDefPoint(14,0){Lr}
+			%
+			\draw (O) [->,color=white, ultra thick, partial ellipse=300:655:13 and 6.5];
+			\draw (O) [->,color=white, ultra thick, dashed, partial ellipse=310:665:13.2 and 6.7];
+			%
+			\tkzDrawCircle[fill=earth](E,Er)
+			\tkzDrawCircle[fill=moon](L,Lr)
+			%
+			\tkzDefPoint(13.2,0){L1}
+			\tkzDefPoint(14.2,0){Lr1}
+			\tkzDrawCircle[fill=moon,opacity=0.5](L1,Lr1)
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-121)}]
+			\draw [ultra thick, fill=dida] (1,2) rectangle (29,-2);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,0) {A sua volta la protuberanza oceanica agisce sulla Luna "trascinandola" nel suo moto di rivoluzione. Come conseguenza la Luna ruota intorno alla Terra a una velocità di anno in anno leggermente superiore.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-143)}]
+			\draw [ultra thick, fill=dida] (1,2) rectangle (29,-2);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,0) {A causa di questo aumento di velocità, il raggio medio dell'orbita lunare aumenta ogni anno di circa 3.8 cm, spingendo la Luna sempre un po' più lontano dalla Terra.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-147)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
