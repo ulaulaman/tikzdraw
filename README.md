@@ -38,6 +38,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Eclissi di Sole* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eclissi_sole.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/eclissi_sole.pdf) |
 | *Manovra di trasferimento di Hohmann* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/hohmann.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/pdf/hohmann.pdf) |
 | *Un fatto curioso sui semicerchi* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/math/semicerchi.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/math/pdf/semicerchi.pdf) |
+| *I moti lunari* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/moti_lunari.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/pdf/moti_lunari.pdf) |
 
 ### Fatti e misfatti
 
