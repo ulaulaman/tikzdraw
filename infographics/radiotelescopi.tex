@@ -1,0 +1,225 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,arrows.meta,plotmarks}
+\tikzstyle directed=[postaction={decorate,decoration={markings, mark=at position .5 with {\arrow{>}}}}]
+%
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+%
+\usepackage{xcolor}
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{craterm}{HTML}{616060}
+\definecolor{linem}{HTML}{DBDBDB}
+\definecolor{core2}{HTML}{FF9616}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Come funzionano i radiotelescopi}
+\begin{document}
+	\tikzset{partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+		notice/.style  = { draw, ellipse callout, callout relative pointer={#1} },
+		declare function={f(\x)=sin(540*\x);}
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\draw [black,ultra thick,fill=title] (0,7) rectangle (30,15);
+		\node (example-textwidth-2) [right, align=center, text width=30cm, color=black, font=\fontsize{90pt}{91pt}\selectfont] at (0,11) {Come funzionano i radiotelescopi};
+		%dida 01
+		\begin{scope}[shift={(0,3)}]
+			\draw [ultra thick, fill=dida] (1.5,3.5) rectangle (28.5,-3.5);
+			\node (example-textwidth-2) [right, align=left, text width=25cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2.5,0) {L'universo ci invia diversi segnali luminosi, detti radiazione elettromagnetica. La luce che osserviamo con i nostri occhi è solo una minima parte di quella possiamo osservare. Per rilevare le altre frequenze della radiazione elettromagnetica dobbiamo utilizzare degli strumenti specifici per ognuna di esse.};
+		\end{scope}
+		% e.m. radiation
+		\begin{scope}[shift={(5,-5)},scale=0.8]
+			\begin{scope}
+				\draw [ultra thick,->] (-0.5,0) -- (28,0);
+				\foreach \x in {1,...,12}
+				{\draw [ultra thick] (2*\x,-0.2) -- (2*\x,0.2);
+					\node at (2*\x,0.5) {\textcolor{black}{\fontsize{19}{20}\selectfont 10}};
+					\node [right] at (2*\x+0.2,0.8) {\textcolor{black}{\fontsize{10}{11}\selectfont -\x}};}
+				\node at (1,-0.7) {\textcolor{black}{\fontsize{14}{15}\selectfont lunghezza d'onda}};
+				\node at (1,-1.2) {\textcolor{black}{\fontsize{14}{15}\selectfont (m)}};
+				%
+				\draw [thick] (4,1.2) -- (4,1.7) -- (1,1.7);
+				\node [left] at (4,2.1) {\textcolor{black}{\fontsize{14}{15}\selectfont radioonde}};
+				\node [left] at (4,2.6) {\textcolor{black}{\fontsize{14}{15}\selectfont microonde}};
+				%
+				\draw [thick] (10,1.2) -- (10,1.7) -- (12,1.7) -- (12,1.2);
+				\node at (11,2.1) {\textcolor{black}{\fontsize{14}{15}\selectfont visibile}};
+				\node at (11,2.6) {\textcolor{black}{\fontsize{14}{15}\selectfont luce}};
+				%
+				\draw [thick] (14,1.2) -- (14,1.7) -- (22,1.7) -- (22,1.2);
+				\node at (18,2.1) {\textcolor{black}{\fontsize{14}{15}\selectfont raggi X}};
+				%
+				\draw [thick] (4,-0.5) -- (4,-1) -- (10,-1) -- (10,-0.5);
+				\node at (7,-1.5) {\textcolor{black}{\fontsize{14}{15}\selectfont infrarossi}};
+				%
+				\draw [thick] (12,-0.5) -- (12,-1) -- (16,-1) -- (16,-0.5);
+				\node at (14,-1.5) {\textcolor{black}{\fontsize{14}{15}\selectfont ultravioletti}};
+				%
+				\draw [thick] (18,-0.5) -- (18,-1) -- (26,-1) -- (26,-0.5);
+				\node at (22,-1.5) {\textcolor{black}{\fontsize{14}{15}\selectfont raggi gamma}};
+			\end{scope}
+			%
+			\begin{scope}[shift={(16,-4)}]
+				\draw[ultra thick, color=space, domain=0:9.8,variable=\x,samples=500] plot
+				({24*sin(-0.6*\x*\x+20))},{f(\x)});
+			\end{scope}
+			%
+			\begin{scope}[shift={(-16,-7)}]
+				\draw [ultra thick,<-] (15.5,0) -- (44,0);
+				\foreach \x in {10,14,17,20}
+				{\draw [ultra thick] (2*\x,-0.2) -- (2*\x,0.2);
+					\node at (2*\x,-0.8) {\textcolor{black}{\fontsize{19}{20}\selectfont 10}};
+					\node [right] at (2*\x+0.2,-0.5) {\textcolor{black}{\fontsize{10}{11}\selectfont \x}};}
+				\node at (17,-0.7) {\textcolor{black}{\fontsize{14}{15}\selectfont frequenza}};
+				\node at (17,-1.2) {\textcolor{black}{\fontsize{14}{15}\selectfont (Hz)}};
+			\end{scope}
+		\end{scope}
+		%
+		\begin{scope}[shift=({18,-1})]
+			\draw [ultra thick, fill=title] (0.5,1) rectangle (11,-1);
+			\node (example-textwidth-2) [right, align=left, text width=10cm, color=black, font=\fontsize{20pt}{21pt}\selectfont] at (1,0) {Spettro elettromagnetico};
+		\end{scope}
+		%dida 02
+		\begin{scope}[shift={(0,-14)}]
+			\draw [ultra thick, fill=dida] (1.5,1.5) rectangle (28.5,-1.5);
+			\node (example-textwidth-2) [right, align=left, text width=25cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2.5,0) {Ad esempio per captare e registrare le onde radio provenienti dalle stelle utilizziamo i radiotelescopi:};
+		\end{scope}
+		% radiotelescope
+		\begin{scope}[shift={(5,-29)},scale=0.8]
+			\begin{scope}
+				\draw [fill=linem] (0,-11) [partial ellipse=180:360:4 and 0.8] -- (4,-11) -- (4,-9) -- (-4,-9) -- (-4,-11);
+				\draw [fill=linem] (0,-9) [partial ellipse=0:360:4 and 0.8];
+				\draw [fill=moon] (0,-9) [partial ellipse=180:360:3 and 0.5] -- (3,-9) -- (0,4) -- (-3,-9);
+			\end{scope}
+			%
+			\begin{scope}[rotate around={-40:(0,0)}]
+				\draw [fill=linem] (-3.5,1) -- (-2,-0.5) -- (2,-0.5) -- (3.5,1) -- (-3.5,1);
+				\draw [fill=craterm] (0,0) circle (0.2 cm);
+				\draw [fill=moon] (0,4.5) [partial ellipse=180:360:7.5 and 4];
+				\draw [fill=linem](0,4.5) [partial ellipse=0:360:7.5 and 1];
+				\draw [fill=craterm] (0,3.5) [partial ellipse=0:180:0.5 and 0.2];
+				\draw [color=moon, line width=0.2 cm] (-4.5,4) -- (-0.4,9);
+				\draw [color=moon, line width=0.2 cm] (4.5,4) -- (0.4,9);
+				%radio
+				\draw [directed,very thick,color=core2] (5.5,13) -- (5.5,4);
+				\draw [directed,very thick,color=core2] (5.5,4) -- (0.2,9);
+				\draw [directed,very thick,color=core2] (0.2,9) -- (0.1,3.6);
+				\draw [directed,very thick,color=core2] (-5.5,13) -- (-5.5,4);
+				\draw [directed,very thick,color=core2] (-5.5,4) -- (-0.2,9);
+				\draw [directed,very thick,color=core2] (-0.2,9) -- (-0.1,3.6);
+				%
+				\draw [fill=craterm] (0,9) [partial ellipse=180:360:0.5 and 0.2] -- (0.5,9) -- (0.5,10.5) -- (-0.5,10.5) -- (-0.5,9);
+				\draw [fill=craterm] (0,10.5) [partial ellipse=0:360:0.5 and 0.2];
+			\end{scope}
+			%
+			\begin{scope}[shift={(20,-11.5)}]
+				\draw [fill=linem] (0,0) -- (0,1) -- (5,1) -- (5,0) -- (0,0);
+				\draw [fill=linem] (5,0) -- (7,2.2) -- (7,3) -- (5,1) -- (5,0);
+				\draw [fill=linem] (7,3) -- (2.2,3) -- (0,1) -- (5,1) -- (7,3);
+				\draw [fill=white] (4.5,0.5) circle (0.2 cm);
+				\draw [fill=white] (4,0.5) circle (0.2 cm);
+				\foreach \i in {1,2,...,12}
+				\draw [very thick] (0.3*\i,0.3) -- (0.3*\i,0.7);
+			\end{scope}
+			%
+			\begin{scope}[shift=({21,0})]
+				\draw [fill=craterm] (3.9,0) -- (3.8,-2) -- (4.2,-2) -- (4.1,0) -- (3.9,0);
+				\draw [fill=linem] (0,0) -- (0,4.5) -- (8,4.5) -- (8,0) -- (0,0);
+				\draw [fill=craterm] (2.5,-2) -- (5.5,-2) -- (5.7,-2.1) -- (2.3,-2.1) -- (2.5,-2);
+				\draw [fill=earth!50!white] (0.2,0.2) -- (0.2,4.3) -- (7.8,4.3) -- (7.8,0.2) -- (0.2,0.2);
+				\draw [fill=white] (0.5,0.5) -- (0.5,4) -- (2.5,4) -- (2.5,0.5) -- (0.5,0.5);
+				\foreach \i in {1,2,...,5}
+				\draw (0.7,4-\i*0.2) -- (2.3-\i*0.1,4-\i*0.2);
+			\end{scope}
+			%
+			\draw (12,-12) [directed,very thick,color=core2,partial ellipse=180:360:12 and 0.5];
+			\draw (27,-5) [directed,very thick,color=core2,partial ellipse=-90:90:1 and 4.5];
+		\end{scope}
+		%
+		\begin{scope}[shift={(14,-19)}]
+			\node at (0,0) () {\includegraphics[width=5cm]{source}};
+			\draw [ultra thick, fill=space] (3,0.8) rectangle (12,-0.8);
+			\node (example-textwidth-2) [right, align=left, text width=10cm, color=white, font=\fontsize{20pt}{21pt}\selectfont] at (3,0) {Radiogalassia Cygnus A};
+		\end{scope}
+		%dida 03
+		\begin{scope}[shift={(0,-43)}]
+			\draw [ultra thick, fill=space] (1,3.5) rectangle (29,-3.5);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (2,0) {Le onde radio arrivano alla parabola (detta anche disco o specchio primario) e vengono riflesse in un punto fisso detto fuoco. Nel fuoco si può trovare un ricevitore oppure un altro specchio parabolico (detto specchio secondario) che convoglia le onde radio all'interno del radio telescopio. Qui vengono registrate, amplificate e trasferite in sala controllo per l'analisi.};
+		\end{scope}
+		%dida 04
+		\begin{scope}[shift={(0,-51)}]
+			\draw [ultra thick, fill=dida] (13.5,5) rectangle (27.5,-5);
+			\node (example-textwidth-2) [right, align=left, text width=14cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (14,0) {I radio telescopi possono funzionare da soli (modalità \emph{single dish}) o in combinazione con altri telescopi fisicamente vicini o anche molto lontani (modalità interferometrica). Con le configurazioni interferometriche si possono studiare dettagli più fini degli oggetti astrofisici.};
+		\end{scope}
+		%interferometry
+		\begin{scope}[shift={(0,-69)}]
+			\begin{scope}[scale=0.5,shift={(31,-4)}]
+				\begin{scope}
+					\draw [fill=linem] (0,-11) [partial ellipse=180:360:4 and 0.8] -- (4,-11) -- (4,-9) -- (-4,-9) -- (-4,-11);
+					\draw [fill=linem] (0,-9) [partial ellipse=0:360:4 and 0.8];
+					\draw [fill=moon] (0,-9) [partial ellipse=180:360:3 and 0.5] -- (3,-9) -- (0,4) -- (-3,-9);
+				\end{scope}
+				%
+				\begin{scope}[rotate around={-40:(0,0)}]
+					\draw [fill=linem] (-3.5,1) -- (-2,-0.5) -- (2,-0.5) -- (3.5,1) -- (-3.5,1);
+					\draw [fill=craterm] (0,0) circle (0.2 cm);
+					\draw [fill=moon] (0,4.5) [partial ellipse=180:360:7.5 and 4];
+					\draw [fill=linem](0,4.5) [partial ellipse=0:360:7.5 and 1];
+					\draw [fill=craterm] (0,3.5) [partial ellipse=0:180:0.5 and 0.2];
+					\draw [color=moon, line width=0.2 cm] (-4.5,4) -- (-0.4,9);
+					\draw [color=moon, line width=0.2 cm] (4.5,4) -- (0.4,9);
+					\draw [fill=craterm] (0,9) [partial ellipse=180:360:0.5 and 0.2] -- (0.5,9) -- (0.5,10.5) -- (-0.5,10.5) -- (-0.5,9);
+					\draw [fill=craterm] (0,10.5) [partial ellipse=0:360:0.5 and 0.2];
+					\draw [color=core2,very thick] (0,25) -- (0,10.5);
+					\draw [color=space,very thick] (0,10.5) -- (0,0);
+				\end{scope}
+			\end{scope}
+			%
+			\begin{scope}[scale=0.5,shift={(10,0)}]
+				\begin{scope}
+					\draw [fill=linem] (0,-11) [partial ellipse=180:360:4 and 0.8] -- (4,-11) -- (4,-9) -- (-4,-9) -- (-4,-11);
+					\draw [fill=linem] (0,-9) [partial ellipse=0:360:4 and 0.8];
+					\draw [fill=moon] (0,-9) [partial ellipse=180:360:3 and 0.5] -- (3,-9) -- (0,4) -- (-3,-9);
+				\end{scope}
+				%
+				\begin{scope}[rotate around={-40:(0,0)}]
+					\draw [fill=linem] (-3.5,1) -- (-2,-0.5) -- (2,-0.5) -- (3.5,1) -- (-3.5,1);
+					\draw [fill=craterm] (0,0) circle (0.2 cm);
+					\draw [fill=moon] (0,4.5) [partial ellipse=180:360:7.5 and 4];
+					\draw [fill=linem](0,4.5) [partial ellipse=0:360:7.5 and 1];
+					\draw [fill=craterm] (0,3.5) [partial ellipse=0:180:0.5 and 0.2];
+					\draw [color=moon, line width=0.2 cm] (-4.5,4) -- (-0.4,9);
+					\draw [color=moon, line width=0.2 cm] (4.5,4) -- (0.4,9);
+					\draw [fill=craterm] (0,9) [partial ellipse=180:360:0.5 and 0.2] -- (0.5,9) -- (0.5,10.5) -- (-0.5,10.5) -- (-0.5,9);
+					\draw [fill=craterm] (0,10.5) [partial ellipse=0:360:0.5 and 0.2];
+					\draw [color=space,very thick] (-2,21) -- (20,21);
+					\draw [color=core2,very thick] (0,35) -- (0,21);
+					\draw [color=space,very thick] (0,21) -- (0,10.5);
+					\draw [color=mars,very thick] (0,10.5) -- (0,0);
+					\draw [color=green,very thick] (0,0) -- (18.5,10.5);
+					\draw [color=space,very thick] (0,10.5) -- (18.5,10.5);
+				\end{scope}
+			\end{scope}
+			\node at (20,11) () {\includegraphics[width=5cm]{source}};
+		\end{scope}
+		%credits and licence
+		\begin{scope}[shift={(0,-78)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (20.5,0.2) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo: @silvia.casu.7 - Silvia Casu}};
+			\node at (19.2,-0.5) {\textcolor{black}{\fontsize{14}{15}\selectfont Illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
