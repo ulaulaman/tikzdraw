@@ -40,6 +40,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Un fatto curioso sui semicerchi* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/math/semicerchi.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/math/pdf/semicerchi.pdf) |
 | *I moti lunari* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/moti_lunari.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/pdf/moti_lunari.pdf) |
 | *L'eclissi di Eddington* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eclissi_eddington.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/eclissi_eddington.pdf) |
+| *Come funzionano i radiotelescopi* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/radiotelescopi.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/radiotelescopi.pdf) |
 
 ### Fatti e misfatti
 
