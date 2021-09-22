@@ -30,9 +30,9 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 
 | Title | Source | Pdf |
 |:-------------|:------------------|:------|
-| *Come scoprire nuovi pianeti* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/esopianeti.pdf) |
-| *Caccia al pianeta* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/transito-mini_guida.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/transito-mini_guida.pdf)
-| *Il messaggio di Arecibo* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/messaggio_arecibo.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/messaggio_arecibo.pdf)
+| *Come scoprire nuovi pianeti* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti/esopianeti.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti/pdf/esopianeti.pdf) |
+| *Caccia al pianeta* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti/transito-mini_guida.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti/pdf/transito-mini_guida.pdf) |
+| *Il messaggio di Arecibo* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/messaggio_arecibo.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/messaggio_arecibo.pdf) |
 | *Meteore* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/meteore.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/meteore.pdf) |
 | *Programma Apollo* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/luna-programma_apollo.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/pdf/luna-programma_apollo.pdf) |
 | *Un flyby con Bepi-Colombo* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/bepicolombo_flyby.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/pdf/bepicolombo_flyby.pdf) |
@@ -43,6 +43,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *I moti lunari* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/moti_lunari.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/pdf/moti_lunari.pdf) |
 | *L'eclissi di Eddington* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eclissi_eddington.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/eclissi_eddington.pdf) |
 | *Come funzionano i radiotelescopi* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/radiotelescopi.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/radiotelescopi.pdf) |
+| *Motore a curvatura* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/star_trek/motore_curvatura.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/star_trek/pdf/motore_curvatura.pdf) |
 
 ### Fatti e misfatti
 
