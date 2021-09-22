@@ -44,6 +44,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *L'eclissi di Eddington* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eclissi_eddington.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/eclissi_eddington.pdf) |
 | *Come funzionano i radiotelescopi* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/radiotelescopi.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/radiotelescopi.pdf) |
 | *Motore a curvatura* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/star_trek/motore_curvatura.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/star_trek/pdf/motore_curvatura.pdf) |
+| *Esopianeti fantastici e dove trovarli* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti/esopianeti_fantastici.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti/pdf/esopianeti_fantastici.pdf) |
 
 ### Fatti e misfatti
 
