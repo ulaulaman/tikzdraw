@@ -1,6 +1,6 @@
 Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw* di ***LaTeX***.
 
-<span style="display:block">prova.md</span>
+<span style="display:block"><iframe src="prova.md" seamless></iframe></span>
 
 ## Graphics
 
