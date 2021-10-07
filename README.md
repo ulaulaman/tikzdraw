@@ -25,6 +25,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 |Earth in black, white and grey | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/earth-bw.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/earth-bw.pdf) |
 | Earth as a globe | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/globe.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/globe.pdf) |
 | SuperMoon | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/supermoon.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/supermoon.pdf) |
+| Asteroid | [tex source](graphics/asteroid.tex) | [pdf](graphics/pdf/asteroid.pdf)
 
 ## Infographics
 
