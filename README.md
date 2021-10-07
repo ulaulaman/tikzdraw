@@ -4,27 +4,27 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 
 | Title | Source | Pdf |
 |:-------------|:------------------|:------|
-| A rocket | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/rocket.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/rocket.pdf) |
-| Saturn V | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/saturnV.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/saturnV.pdf) |
-| Captain Marvel | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/carol_danvers.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/carol_danvers.pdf) |
-| Quadrati che si dimezzano | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/squares01.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/squares01.pdf) |
-| Quadrati che raddoppiano | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/squares02.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/squares02.pdf) |
-| David' Star | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/david_star.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/david_star.pdf) |
+| A rocket | [tex source](graphics/rocket.tex) | [pdf](graphics/pdf/rocket.pdf) |
+| Saturn V | [tex source](graphics/saturnV.tex) | [pdf](graphics/pdf/saturnV.pdf) |
+| Captain Marvel | [tex source](graphics/carol_danvers.tex) | [pdf](graphics/pdf/carol_danvers.pdf) |
+| Quadrati che si dimezzano | [tex source](graphics/squares01.tex) | [pdf](graphics/pdf/squares01.pdf) |
+| Quadrati che raddoppiano | [tex source](graphics/squares02.tex) | [pdf](graphics/pdf/squares02.pdf) |
+| David' Star | [tex source](graphics/david_star.tex) | [pdf](graphics/pdf/david_star.pdf) |
 
 ### Planets and satellites
 
 | Title | Source | Pdf |
 |:-------------|:------------------|:------|
-| Mars | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/mars.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/mars.pdf) |
-| Mercury | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/mercury.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/mercury.pdf) |
-| Moon | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/moon.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/moon.pdf) |
-| Europa | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/europa.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/europa.pdf) |
-| Io | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/io.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/io.pdf) |
-| Earth | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/earth.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/earth.pdf) |
-|Earth (no face) | tex source | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/earth-noface.pdf) |
-|Earth in black, white and grey | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/earth-bw.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/earth-bw.pdf) |
-| Earth as a globe | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/globe.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/globe.pdf) |
-| SuperMoon | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/supermoon.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/graphics/pdf/supermoon.pdf) |
+| Mars | [tex source](graphics/mars.tex) | [pdf](graphics/pdf/mars.pdf) |
+| Mercury | [tex source](graphics/mercury.tex) | [pdf](graphics/pdf/mercury.pdf) |
+| Moon | [tex source](graphics/moon.tex) | [pdf](graphics/pdf/moon.pdf) |
+| Europa | [tex source](graphics/europa.tex) | [pdf](graphics/pdf/europa.pdf) |
+| Io | [tex source](graphics/io.tex) | [pdf](graphics/pdf/io.pdf) |
+| Earth | [tex source](graphics/earth.tex) | [pdf](graphics/pdf/earth.pdf) |
+|Earth (no face) | tex source | [pdf](graphics/pdf/earth-noface.pdf) |
+|Earth in black, white and grey | [tex source](graphics/earth-bw.tex) | [pdf](graphics/pdf/earth-bw.pdf) |
+| Earth as a globe | [tex source](graphics/globe.tex) | [pdf](graphics/pdf/globe.pdf) |
+| SuperMoon | [tex source](graphics/supermoon.tex) | [pdf](graphics/pdf/supermoon.pdf) |
 | Asteroid | [tex source](graphics/asteroid.tex) | [pdf](graphics/pdf/asteroid.pdf)
 
 ## Infographics
