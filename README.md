@@ -1,7 +1,5 @@
 Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw* di ***LaTeX***.
 
-<iframe src="https://github.com/ulaulaman/tikzdraw/blob/master/prova.md" seamless></iframe>
-
 ## Graphics
 
 | Title | Source | Pdf |
@@ -33,31 +31,31 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 
 | Title | Source | Pdf |
 |:-------------|:------------------|:------|
-| *Come scoprire nuovi pianeti* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti/esopianeti.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti/pdf/esopianeti.pdf) |
-| *Caccia al pianeta* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti/transito-mini_guida.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti/pdf/transito-mini_guida.pdf) |
-| *Il messaggio di Arecibo* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/messaggio_arecibo.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/messaggio_arecibo.pdf) |
-| *Meteore* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/meteore.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/meteore.pdf) |
-| *Programma Apollo* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/luna-programma_apollo.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/pdf/luna-programma_apollo.pdf) |
-| *Un flyby con Bepi-Colombo* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/bepicolombo_flyby.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/pdf/bepicolombo_flyby.pdf) |
-| *Le Perseidi* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/perseidi.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/perseidi.pdf) |
-| *Eclissi di Sole* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eclissi_sole.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/eclissi_sole.pdf) |
-| *Manovra di trasferimento di Hohmann* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/hohmann.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/pdf/hohmann.pdf) |
-| *Un fatto curioso sui semicerchi* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/math/semicerchi.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/math/pdf/semicerchi.pdf) |
-| *I moti lunari* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/moti_lunari.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/pdf/moti_lunari.pdf) |
-| *L'eclissi di Eddington* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eclissi_eddington.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/eclissi_eddington.pdf) |
-| *Come funzionano i radiotelescopi* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/radiotelescopi.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/radiotelescopi.pdf) |
-| *Motore a curvatura* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/star_trek/motore_curvatura.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/star_trek/pdf/motore_curvatura.pdf) |
-| *Esopianeti fantastici e dove trovarli* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti/esopianeti_fantastici.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/esopianeti/pdf/esopianeti_fantastici.pdf) |
+| *Come scoprire nuovi pianeti* | [tex source](infographics/esopianeti/esopianeti.tex) | [pdf](infographics/esopianeti/pdf/esopianeti.pdf) |
+| *Caccia al pianeta* | [tex source](infographics/esopianeti/transito-mini_guida.tex) | [pdf](infographics/esopianeti/pdf/transito-mini_guida.pdf) |
+| *Il messaggio di Arecibo* | [tex source](infographics/messaggio_arecibo.tex) | [pdf](infographics/pdf/messaggio_arecibo.pdf) |
+| *Meteore* | [tex source](infographics/meteore.tex) | [pdf](infographics/pdf/meteore.pdf) |
+| *Programma Apollo* | [tex source](infographics/luna/luna-programma_apollo.tex) | [pdf](infographics/luna/pdf/luna-programma_apollo.pdf) |
+| *Un flyby con Bepi-Colombo* | [tex source](infographics/mercurio/bepicolombo_flyby.tex) | [pdf](infographics/mercurio/pdf/bepicolombo_flyby.pdf) |
+| *Le Perseidi* | [tex source](infographics/perseidi.tex) | [pdf](infographics/pdf/perseidi.pdf) |
+| *Eclissi di Sole* | [tex source](infographics/eclissi_sole.tex) | [pdf](infographics/pdf/eclissi_sole.pdf) |
+| *Manovra di trasferimento di Hohmann* | [tex source](infographics/marte/hohmann.tex) | [pdf](infographics/marte/pdf/hohmann.pdf) |
+| *Un fatto curioso sui semicerchi* | [tex source](infographics/math/semicerchi.tex) | [pdf](infographics/math/pdf/semicerchi.pdf) |
+| *I moti lunari* | [tex source](infographics/luna/moti_lunari.tex) | [pdf](infographics/luna/pdf/moti_lunari.pdf) |
+| *L'eclissi di Eddington* | [tex source](infographics/eclissi_eddington.tex) | [pdf](infographics/pdf/eclissi_eddington.pdf) |
+| *Come funzionano i radiotelescopi* | [tex source](infographics/radiotelescopi.tex) | [pdf](infographics/pdf/radiotelescopi.pdf) |
+| *Motore a curvatura* | [tex source](infographics/star_trek/motore_curvatura.tex) | [pdf](infographics/star_trek/pdf/motore_curvatura.pdf) |
+| *Esopianeti fantastici e dove trovarli* | [tex source](infographics/esopianeti/esopianeti_fantastici.tex) | [pdf](infographics/esopianeti/pdf/esopianeti_fantastici.pdf) |
 
 ### Fatti e misfatti
 
 | Title | Source | Pdf |
 |:-------------|:------------------|:------|
-| *Fatti e misfatti lunari* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/fatti-lunari.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/luna/pdf/fatti-lunari.pdf) |
-| *Fatti e misfatti di un buco nero* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/buco_nero.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/buco_nero.pdf) |
-| *Fatti mercuriali* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/mercury_facts.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/mercurio/pdf/mercury_facts.pdf) |
-| *Fatti marziani* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/mars_facts.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/marte/pdf/mars_facts.pdf) |
-| *Fatti e misfatti stellari* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/fatti_stellari.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/pdf/fatti_stellari.pdf) |
+| *Fatti e misfatti lunari* | [tex source](infographics/luna/fatti-lunari.tex) | [pdf](infographics/luna/pdf/fatti-lunari.pdf) |
+| *Fatti e misfatti di un buco nero* | [tex source](infographics/buco_nero.tex) | [pdf](infographics/pdf/buco_nero.pdf) |
+| *Fatti mercuriali* | [tex source](infographics/mercurio/mercury_facts.tex) | [pdf](infographics/mercurio/pdf/mercury_facts.pdf) |
+| *Fatti marziani* | [tex source](infographics/marte/mars_facts.tex) | [pdf](infographics/marte/pdf/mars_facts.pdf) |
+| *Fatti e misfatti stellari* | [tex source](infographics/fatti_stellari.tex) | [pdf](infographics/pdf/fatti_stellari.pdf) |
 
 ### *I numeri del sistema solare*
 
