@@ -61,9 +61,9 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 
 | Title | Source | Pdf |
 |:-------------|:------------------|:------|
-| *Distanze e dimensioni* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare/sistema_solare-distanze_dimensioni.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare/pdf/sistema_solare-distanze_dimensioni.pdf) |
-| *Masse* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare/sistema_solare_masse.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare/pdf/sistema_solare_masse.pdf) |
-| *Densità* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare/sistema_solare_densita.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/sistema_solare/pdf/sistema_solare_densita.pdf) |
+| *Distanze e dimensioni* | [tex source](infographics/sistema_solare/sistema_solare-distanze_dimensioni.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare-distanze_dimensioni.pdf) |
+| *Masse* | [tex source](infographics/sistema_solare/sistema_solare_masse.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare_masse.pdf) |
+| *Densità* | [tex source](infographics/sistema_solare/sistema_solare_densita.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare_densita.pdf) |
 
 ## Mathematics
 
@@ -92,19 +92,20 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 
 | Title | Source | Pdf |
 |:-------------|:------------------|:------|
-| Risposta relativa dei coni dell'occhio | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/physics/risposta_coni.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/physics/pdf/risposta_coni.pdf) |
-| Riflessione e rifrazione | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/physics/riflessione-rifrazione.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/physics/pdf/riflessione-rifrazione.pdf) |
-| Convection in a glass of water | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/physics/convezione.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/physics/pdf/convezione.pdf) |
-| Spin | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/physics/spin.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/physics/pdf/spin.pdf) |
-| Radiazione elettromagnetica | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/physics/radiazione_em.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/physics/pdf/radiazione_em.pdf) |
-| Effetto Doppler | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/physics/effetto_doppler.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/physics/pdf/effetto_doppler.pdf) |
+| Risposta relativa dei coni dell'occhio | [tex source](physics/risposta_coni.tex) | [pdf](physics/pdf/risposta_coni.pdf) |
+| Riflessione e rifrazione | [tex source](physics/riflessione-rifrazione.tex) | [pdf](physics/pdf/riflessione-rifrazione.pdf) |
+| Convection in a glass of water | [tex source](physics/convezione.tex) | [pdf](physics/pdf/convezione.pdf) |
+| Spin | [tex source](physics/spin.tex) | [pdf](physics/pdf/spin.pdf) |
+| Radiazione elettromagnetica | [tex source](physics/radiazione_em.tex) | [pdf](physics/pdf/radiazione_em.pdf) |
+| Effetto Doppler | [tex source](physics/effetto_doppler.tex) | [pdf](physics/pdf/effetto_doppler.pdf) |
+| Schema di formazione della radiazione cosmica secondaria | [tex source](physics/radiazione_cosmica_secondaria.tex) | [pdf](physics/pdf/radiazione_cosmica_secondaria.pdf)
 
 ### Michelson and Morley's experiment
 
 | Language | Source | Pdf |
 |:-------------|:------------------|:------|
-| english | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/physics/michelson_morley.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/physics/pdf/michelson_morley.pdf) |
-| italian | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/physics/michelson_morley_it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/physics/pdf/michelson_morley_it.pdf) |
+| english | [tex source](physics/michelson_morley.tex) | [pdf](physics/pdf/michelson_morley.pdf) |
+| italian | [tex source](physics/michelson_morley_it.tex) | [pdf](physics/pdf/michelson_morley_it.pdf) |
 
 ## Astronomy
 
