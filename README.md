@@ -46,6 +46,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Come funzionano i radiotelescopi* | [tex source](infographics/radiotelescopi.tex) | [pdf](infographics/pdf/radiotelescopi.pdf) |
 | *Motore a curvatura* | [tex source](infographics/star_trek/motore_curvatura.tex) | [pdf](infographics/star_trek/pdf/motore_curvatura.pdf) |
 | *Esopianeti fantastici e dove trovarli* | [tex source](infographics/esopianeti/esopianeti_fantastici.tex) | [pdf](infographics/esopianeti/pdf/esopianeti_fantastici.pdf) |
+| *Vita di un asteroide* | [tex source](infographics/vita_asteroide.tex) | [pdf](infographics/pdf/vita_asteroide.pdf) |
 
 ### Fatti e misfatti
 
