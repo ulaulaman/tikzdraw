@@ -21,8 +21,9 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Europa | [tex source](graphics/europa.tex) | [pdf](graphics/pdf/europa.pdf) |
 | Io | [tex source](graphics/io.tex) | [pdf](graphics/pdf/io.pdf) |
 | Earth | [tex source](graphics/earth.tex) | [pdf](graphics/pdf/earth.pdf) |
-|Earth (no face) | tex source | [pdf](graphics/pdf/earth-noface.pdf) |
-|Earth in black, white and grey | [tex source](graphics/earth-bw.tex) | [pdf](graphics/pdf/earth-bw.pdf) |
+| Earth (no face) | tex source | [pdf](graphics/pdf/earth-noface.pdf) |
+| Earth in black, white and grey | [tex source](graphics/earth-bw.tex) | [pdf](graphics/pdf/earth-bw.pdf) |
+| Hot Earth | [tex source](graphics/earth-hot.tex) | [pdf](graphics/pdf/earth-hot.pdf) |
 | Earth as a globe | [tex source](graphics/globe.tex) | [pdf](graphics/pdf/globe.pdf) |
 | SuperMoon | [tex source](graphics/supermoon.tex) | [pdf](graphics/pdf/supermoon.pdf) |
 | Asteroid | [tex source](graphics/asteroid.tex) | [pdf](graphics/pdf/asteroid.pdf)
@@ -70,13 +71,13 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 
 | Title       | Source          | Pdf |
 |:-------------|:------------------|:------|
-| Hutton's formula | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/hutton_formula.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/hutton_formula.pdf)  |
-| Strassnitzky's formula | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/strassnitzky_formula.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/strassnitzky_formula.pdf) |
-| Rolling circle squares itself | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/rolling_circle.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/rolling_circle.pdf) |
-| The Witch of Agnesi | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/agnesi_witch.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/agnesi_witch.pdf) |
-| The Butterfly curve | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/butterfly.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/butterfly.pdf) |
-| Ostomachion | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/ostomachion.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/ostomachion.pdf) |
-| Hexagon's construction | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/hexagon.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/hexagon.pdf) |
+| Hutton's formula | [tex source](math/hutton_formula.tex) | [pdf](math/pdf/hutton_formula.pdf)  |
+| Strassnitzky's formula | [tex source](math/strassnitzky_formula.tex) | [pdf](math/pdf/strassnitzky_formula.pdf) |
+| Rolling circle squares itself | [tex source](math/rolling_circle.tex) | [pdf](math/pdf/rolling_circle.pdf) |
+| The Witch of Agnesi | [tex source](math/agnesi_witch.tex) | [pdf](math/pdf/agnesi_witch.pdf) |
+| The Butterfly curve | [tex source](math/butterfly.tex) | [pdf](math/pdf/butterfly.pdf) |
+| Ostomachion | [tex source](math/ostomachion.tex) | [pdf](math/pdf/ostomachion.pdf) |
+| Hexagon's construction | [tex source](math/hexagon.tex) | [pdf](math/pdf/hexagon.pdf) |
 
 ### Math without words
 
