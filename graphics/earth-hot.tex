@@ -1,0 +1,102 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+%
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%
+\usepackage{xcolor}
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{earthn}{HTML}{0C5898}
+\definecolor{land}{HTML}{309347}
+%
+\title{Earth}
+\begin{document}
+	\tikzset{partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}}}
+	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle,]
+		\begin{scope}
+			\tkzDefPoint(0,0){O}
+			\tkzDefPoint(5.5,0){E}
+			\tkzDrawCircle[fill = earth](O,E)
+			\tkzClipCircle(O,E)
+			\tkzDefPoint(0.6,0.4){A}
+			\tkzDefPoint(-0.6,0.4){B}
+			%
+			\tkzDefShiftPoint[A](-0.2,0.3){A1}
+			\tkzDefShiftPoint[A1](0,-0.25){A2}
+			\tkzDefShiftPoint[B](-0.2,0.3){B1}
+			\tkzDefShiftPoint[B1](0,-0.25){B2}
+			%
+			% lands
+			%
+			\fill [land] plot [smooth, tension=0.9] coordinates { (5,5) (4,4) (4.5,0) (4.5,-4) (4.3,-5.5) (6,0) (5,5) };
+			\begin{scope}[xscale=3]
+				\fill [land] (0,-5.5) circle (1cm);
+			\end{scope}
+			\fill [land] plot [smooth, tension=0.9] coordinates { (-2,0.5) (0,1) (3,0.5) (2.2,-1.2) (0.3,-3) (-0.1,-2) (-2.5,-0.7) (-2,0.5) };
+			\fill [land] plot [smooth, tension=0.9] coordinates { (0,4) (2,3.2) (2.2,1.6) (1.8,1) (1.5,1.8) (0.1,2) (-1.2,1.7) (-2.3,2) (-2.4,3.5) (0,4) };
+			%
+			% clouds
+			%
+			\draw [line width=5mm, color=white] (-5.5,4.5) -- (-1.5,4.5);
+			\draw [line width=5mm, color=white] (-5.5,4.1) -- (-1.2,4.1);
+			\fill [white] (-1.5,4.55) circle (0.2cm);
+			\fill [white] (-1.2,4.1) circle (0.25cm);
+			%
+			\draw [line width=5mm, color=white] (-5.5,1.1) -- (-3.5,1.1);
+			\draw [line width=5mm, color=white] (-5.5,0.7) -- (-3.2,0.7);
+			\fill [white] (-3.5,1.15) circle (0.2cm);
+			\fill [white] (-3.2,0.7) circle (0.25cm);
+			%
+			\draw [line width=5mm, color=white] (-5.5,-4.1) -- (-1.5,-4.1);
+			\draw [line width=5mm, color=white] (-5.5,-4.5) -- (-1.2,-4.5);
+			\draw [line width=4mm, color=white] (-2.3,-4.8) -- (-1.6,-4.8);
+			\fill [white] (-1.5,-4.05) circle (0.2cm);
+			\fill [white] (-1.2,-4.5) circle (0.25cm);
+			\fill [white] (-1.6,-4.8) circle (0.2cm);
+			\fill [white] (-2.3,-4.8) circle (0.2cm);
+			%
+			\draw [line width=5mm, color=white] (3,-2.5) -- (5.5,-2.5);
+			\draw [line width=5mm, color=white] (2.5,-2.9) -- (5.5,-2.9);
+			\draw [line width=4mm, color=white] (3.5,-3.2) -- (5,-3.2);
+			\fill [white] (3,-2.45) circle (0.2cm);
+			\fill [white] (2.5,-2.9) circle (0.25cm);
+			\fill [white] (3.5,-3.2) circle (0.2cm);
+			%
+			\begin{scope}[yscale=0.5]
+				\foreach \i in {1,2,...,6}{
+					\pgfmathsetmacro{\x}{(rand*0.2 + 1)*12-12}
+					\pgfmathsetmacro{\y}{(rand*0.5 + 1)*10-10}
+					\pgfmathsetmacro{\opacVal}{rand*0.5+1}
+					\fill[white] (\x,\y) circle (0.5cm);
+				}
+			\end{scope}
+			%hot color
+			\tkzDrawCircle[fill = orange,opacity=0.5](O,E)
+			%mouth
+			\draw[-,thick] (-0.2,-0.6) to[out=95,in=165] (0.2,-0.5);
+			%nose
+			\draw[-,thick,fill=earthn!50!red] (-0.2,0.1) to[out=105,in=85] (-0.8,-1.1) to[out=275,in=205] (0.1,-0.05);
+			%eyes
+			\draw[fill=white] (A1) ellipse (7pt and 13pt);
+			\draw[fill=white] (B1) ellipse (7pt and 13pt);
+			\draw[fill=black] (A2) ellipse (2pt and 5.5pt);
+			\draw[fill=black] (B2) ellipse (2pt and 5.5pt);
+			% sweat drops
+			\foreach \j in {1,2,...,4}{
+				\pgfmathsetmacro{\x}{(rand*0.2 + 1)*12-12}
+				\pgfmathsetmacro{\y}{(rand*0.5 + 1)*10-10}
+				\pgfmathsetmacro{\opacVal}{rand*0.5+1}
+				\tkzDefPoint(\x,\y){G}
+				\tkzDefShiftPoint[G](-0.1,-0.5){G1}
+				\tkzDefShiftPoint[G](0,-0.6){G2}
+				\tkzDefShiftPoint[G](0.1,-0.5){G3}
+				\draw[fill=earth,thick] (G) to[out=80,in=100] (G1) to[out=100,in=180] (G2) to[out=0,in=80] (G3) to[out=80,in=100] (G);
+			}
+			%\tkzDefPoint(1,1){G}
+			
+		\end{scope}
+	\end{tikzpicture}
+\end{document}
