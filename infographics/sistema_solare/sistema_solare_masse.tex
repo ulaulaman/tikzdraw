@@ -2,15 +2,12 @@
 %
 \usepackage{tikz}
 \usetikzlibrary{backgrounds}
-\usetikzlibrary{calc}
-\usetikzlibrary{decorations.pathmorphing}
-\usetikzlibrary{bending,arrows.meta}
 \usepackage{tkz-euclide}
 \usetkzobj{all}
 \usepackage{xcolor}
 \usepackage{pgfplots}
 %
-\definecolor{space}{HTML}{0A2543}
+\definecolor{space}{HTML}{1F2C4E}
 \definecolor{mercury}{HTML}{846549}
 \definecolor{venus}{HTML}{BB9765}
 \definecolor{earth}{HTML}{0089FA}
@@ -29,7 +26,7 @@
 %
 \title{Sistema Solare}
 \begin{document}
-	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle]
 		\tikzstyle{spring}=[thick,decorate,decoration={aspect=0.3, segment length=3mm, amplitude=3mm,coil}]
 		%
 		\def\rsun{15}
@@ -140,7 +137,7 @@
 		\end{scope}
 		%
 		\begin{scope}[shift={(35,-\rsun-9*\delta-5)}]
-			\node at (17,0) () {\includegraphics[width=3.7cm]{licenza_free_c}};
+			\node at (17,0) () {\includegraphics[width=3.7cm]{licenza}};
 			\node[left] at (15,0) {\textcolor{white}{\fontsize{14}{15}\selectfont Grafica: @ulaulaman - Gianluigi Filippelli}};
 		\end{scope}
 	\end{tikzpicture}
