@@ -64,6 +64,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Title | Source | Pdf |
 |:-------------|:------------------|:------|
 | *Distanze e dimensioni* | [tex source](infographics/sistema_solare/sistema_solare-distanze_dimensioni.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare-distanze_dimensioni.pdf) |
+| *Distanze e dimensioni: sistema solare interno* [tex source](infographics/sistema_solare/sistema_solare_interno-distanze_dimensioni.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare_interno-distanze_dimensioni.pdf) |
 | *Masse* | [tex source](infographics/sistema_solare/sistema_solare_masse.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare_masse.pdf) |
 | *Densità* | [tex source](infographics/sistema_solare/sistema_solare_densita.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare_densita.pdf) |
 
@@ -121,6 +122,8 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | dall'equatore | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/crepuscolo_equatore.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/crepuscolo_equatore.pdf) |
 | dal circolo artico | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/crepuscolo_circolo_artico.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/crepuscolo_circolo_artico.pdf) |
 | Diffusione della luce da parte dell'atmosfera | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/diffusione_luce.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/diffusione_luce.pdf) |
+| Sistema Solare | [tex source](graphics/sistema_solare.tex) | [pdf](graphics/pdf/sistema_solare.pdf) |
+
 
 ### Eratosthenes method for determining the size of the Earth
 
