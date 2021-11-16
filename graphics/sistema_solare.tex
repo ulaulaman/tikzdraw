@@ -1,0 +1,61 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usepackage{xcolor}
+%
+\definecolor{eduinafblu}{HTML}{1D71B8}
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{mercury}{HTML}{846549}
+\definecolor{venus}{HTML}{BB9765}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{jupiter}{HTML}{A79476}
+\definecolor{saturn}{HTML}{DBBD9B}
+\definecolor{saturnring}{HTML}{857C73}
+\definecolor{uranus}{HTML}{b1d8dd}
+\definecolor{neptune}{HTML}{799bc1}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Il Sistema Solare}
+\begin{document}
+	\tikzset{partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}}}
+	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle]
+		%
+		\begin{scope}[scale=2.5]
+			\draw[color=eduinafblu, thick, partial ellipse=90:180:2.4 and 0.8];%mercury
+			\draw[color=eduinafblu, thick, partial ellipse=5:80:2.4 and 0.8];%mercury
+			\draw[color=eduinafblu, thick, partial ellipse=90:180:3.1 and 1.1];%venus
+			\draw[color=eduinafblu, thick, partial ellipse=5:80:3.1 and 1.1];%venus
+			\draw[color=eduinafblu, thick, partial ellipse=90:180:4 and 1.8];%earth
+			\draw[color=eduinafblu, thick, partial ellipse=5:80:4 and 1.8];%earth
+			\draw[color=eduinafblu, thick, partial ellipse=2:180:5.2 and 2.3];%mars
+			\draw[color=eduinafblu, thick, partial ellipse=5:180:6.9 and 3];%jupiter
+			\draw[color=eduinafblu, thick, partial ellipse=5:180:9.5 and 3.8];%saturn
+			\draw[color=eduinafblu, thick, partial ellipse=3:180:12 and 4.7];%uranus
+			\draw[color=eduinafblu, thick, partial ellipse=3:180:13.5 and 5.6];%neptune
+			\fill[white] (0,0) circle (2cm);
+			\fill[mercury] (2.4,0) circle (0.1cm);
+			\draw[color=eduinafblu, thick, partial ellipse=180:357:2.4 and 0.8];%mercury
+			\fill[venus] (3.1,0) circle (0.25cm);
+			\draw[color=eduinafblu, thick, partial ellipse=180:355:3.1 and 1.3];%venus
+			\fill[earth] (4,0) circle (0.26cm);
+			\draw[color=eduinafblu, thick, partial ellipse=180:355:4 and 1.8];%earth
+			\fill[mars] (5.2,0) circle (0.13cm);
+			\draw[color=eduinafblu, thick, partial ellipse=180:358:5.2 and 2.3];%mars
+			\fill[jupiter] (6.9,0) circle (1cm);
+			\draw[color=eduinafblu, thick, partial ellipse=180:355:6.9 and 3];%jupiter
+			\draw (9.5,0) [line width=5mm, color=saturnring,rotate around={-45:(9.5,0)}, partial ellipse=0:180:1.5 and 0.5];
+			\fill[saturn] (9.5,0) circle (0.9cm);
+			\draw (9.5,0) [line width=5mm, color=saturnring,rotate around={-45:(9.5,0)}, partial ellipse=180:360:1.5 and 0.5];
+			\draw[color=eduinafblu, thick, partial ellipse=180:355:9.5 and 3.8];%saturn
+			\fill[uranus] (12,0) circle (0.52cm);
+			\draw[color=eduinafblu, thick, partial ellipse=180:357:12 and 4.7];%uranus
+			\fill[neptune] (13.5,0) circle (0.5cm);
+			\draw[color=eduinafblu, thick, partial ellipse=180:357:13.5 and 5.6];%neptune
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
