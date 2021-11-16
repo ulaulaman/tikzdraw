@@ -1,0 +1,84 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,bending,arrows.meta}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{mercury}{HTML}{846549}
+\definecolor{venus}{HTML}{BB9765}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Sistema Solare}
+\begin{document}
+	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		\def\rsun{2}
+		\def\fact{8}
+		%
+		\def\uam{\fact*0.387}
+		\def\rmer{0.2}
+		%
+		\def\uav{\fact*0.723}
+		\def\rven{0.5}
+		%
+		\def\uaet{\fact*1}
+		\def\ret{0.53}
+		%
+		\def\uams{\fact*1.52}
+		\def\rms{0.28}
+		%title
+		\begin{scope}[shift={(0,10)}]
+			\node[right] at (8.5,-10) {\textcolor{white}{\fontsize{24}{25}\selectfont Sole}};
+			\node[right] at (8.5,-11) {\textcolor{white}{\fontsize{24}{25}\selectfont raggio = 1.39095 $\cdot$ 10 m}};
+			\node[right] at (17.8,-10.5) {\textcolor{white}{\fontsize{12}{13}\selectfont 9}};
+		\end{scope}
+		%
+		\begin{scope}[rotate around={-90:(0,0)}]
+			\tkzDefPoint(0,0){S1}
+			\tkzDrawSector[R,fill=white,ultra thick](S1,\rsun cm)(270,450)
+			%
+			\tkzDefShiftPoint[S1](0:\rsun+\uam+\rmer){M1}
+			\tkzDrawCircle[fill=mercury,R,ultra thick](M1,\rmer cm)
+			%
+			\tkzDefShiftPoint[S1](0:\rsun+\uav+\rven){V1}
+			\tkzDrawCircle[fill=venus,R,ultra thick](V1,\rven cm)
+			%
+			\tkzDefShiftPoint[S1](0:\rsun+\uaet+\ret){E1}
+			\tkzDrawCircle[fill=earth,R,ultra thick](E1,\ret cm)
+			%
+			\tkzDefShiftPoint[S1](0:\rsun+\uams+\rms){M2}
+			\tkzDrawCircle[fill=mars,R,ultra thick](M2,\rms cm)
+			%
+		\end{scope}
+		%
+		\begin{scope}
+			\draw[->,color=white,ultra thick] (1,-\rsun-\uam-\rmer) -- (8,-\rsun-\uam-\rmer);
+			\node[right] at (8.5,-\rsun-\uam-\rmer+0.5) {\textcolor{white}{\fontsize{24}{25}\selectfont Mercurio}};
+			\node[right] at (8.5,-\rsun-\uam-\rmer-0.5) {\textcolor{white}{\fontsize{24}{25}\selectfont distanza = 0.387 UA}};
+			%
+			\draw[->,color=white,ultra thick] (1,-\rsun-\uav-\rven) -- (8,-\rsun-\uav-\rven);
+			\node[right] at (8.5,-\rsun-\uav-\rven+0.5) {\textcolor{white}{\fontsize{24}{25}\selectfont Venere}};
+			\node[right] at (8.5,-\rsun-\uav-\rven-0.5) {\textcolor{white}{\fontsize{24}{25}\selectfont distanza = 0.723 UA}};
+			%
+			\draw[->,color=white,ultra thick] (1,-\rsun-\uaet-\ret) -- (8,-\rsun-\uaet-\ret);
+			\node[right] at (8.5,-\rsun-\uaet-\ret+0.5) {\textcolor{white}{\fontsize{24}{25}\selectfont Terra}};
+			\node[right] at (8.5,-\rsun-\uaet-\ret-0.5) {\textcolor{white}{\fontsize{24}{25}\selectfont distanza = 1 UA}};
+			%
+			\draw[->,color=white,ultra thick] (1,-\rsun-\uams-\rmer) -- (8,-\rsun-\uams-\rmer);
+			\node[right] at (8.5,-\rsun-\uams-\rmer+0.5) {\textcolor{white}{\fontsize{24}{25}\selectfont Marte}};
+			\node[right] at (8.5,-\rsun-\uams-\rmer-0.5) {\textcolor{white}{\fontsize{24}{25}\selectfont distanza = 1.52 UA}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-18)}]
+			\node at (17,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node[left] at (15,0) {\textcolor{white}{\fontsize{14}{15}\selectfont Grafica: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
