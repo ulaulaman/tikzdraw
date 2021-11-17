@@ -48,6 +48,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Motore a curvatura* | [tex source](infographics/star_trek/motore_curvatura.tex) | [pdf](infographics/star_trek/pdf/motore_curvatura.pdf) |
 | *Esopianeti fantastici e dove trovarli* | [tex source](infographics/esopianeti/esopianeti_fantastici.tex) | [pdf](infographics/esopianeti/pdf/esopianeti_fantastici.pdf) |
 | *Vita di un asteroide* | [tex source](infographics/vita_asteroide.tex) | [pdf](infographics/pdf/vita_asteroide.pdf) |
+| *Viaggio verso la nube di Oort* | [tex source](infographics/sistema_solare/nube_oort.tex) | [pdf](infographics/sistema_solare/pdf/nube_oort.pdf) |
 
 ### Fatti e misfatti
 
