@@ -1,4 +1,4 @@
-Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw* di ***LaTeX***
+Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw* di ***LaTeX***.
 
 ## Graphics
 
