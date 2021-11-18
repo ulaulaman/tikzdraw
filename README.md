@@ -10,6 +10,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Quadrati che si dimezzano | [tex source](graphics/squares01.tex) | [pdf](graphics/pdf/squares01.pdf) |
 | Quadrati che raddoppiano | [tex source](graphics/squares02.tex) | [pdf](graphics/pdf/squares02.pdf) |
 | David' Star | [tex source](graphics/david_star.tex) | [pdf](graphics/pdf/david_star.pdf) |
+| Sistema Solare | [tex source](graphics/sistema_solare.tex) | [pdf](graphics/pdf/sistema_solare.pdf) |
 
 ### Planets and satellites
 
@@ -26,7 +27,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Hot Earth | [tex source](graphics/earth-hot.tex) | [pdf](graphics/pdf/earth-hot.pdf) |
 | Earth as a globe | [tex source](graphics/globe.tex) | [pdf](graphics/pdf/globe.pdf) |
 | SuperMoon | [tex source](graphics/supermoon.tex) | [pdf](graphics/pdf/supermoon.pdf) |
-| Asteroid | [tex source](graphics/asteroid.tex) | [pdf](graphics/pdf/asteroid.pdf)
+| Asteroid | [tex source](graphics/asteroid.tex) | [pdf](graphics/pdf/asteroid.pdf) |
 
 ## Infographics
 
@@ -85,12 +86,12 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 
 | Title       | Source          | Pdf |
 |:-------------|:------------------|:------|
-| Square roots | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/square_roots.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/square_roots.pdf) |
-| Square of *n* | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/squares.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/squares.pdf) |
-| Trisecare un foglio di carta | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/trisecare_pagina.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/trisecare_pagina.pdf) |
-| Difference of two squares | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/differenze_quadrati.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/differenze_quadrati.pdf) |
-| Arctan 1/2 + Arctan 1/3 = pi/4 | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/arctan-pi4.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/arctan-pi4.pdf) |
-| Arctan 1/8 + pi/4 + Arctan 1/7 + Arctan 4/7 = pi/2 | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/math/arctan-pi2.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/math/pdf/arctan-pi2.pdf) |
+| Square roots | [tex source](math/square_roots.tex) | [pdf](math/pdf/square_roots.pdf) |
+| Square of *n* | [tex source](math/squares.tex) | [pdf](math/pdf/squares.pdf) |
+| Trisecare un foglio di carta | [tex source](math/trisecare_pagina.tex) | [pdf](math/pdf/trisecare_pagina.pdf) |
+| Difference of two squares | [tex source](math/differenze_quadrati.tex) | [pdf](math/pdf/differenze_quadrati.pdf) |
+| Arctan 1/2 + Arctan 1/3 = pi/4 | [tex source](math/arctan-pi4.tex) | [pdf](math/pdf/arctan-pi4.pdf) |
+| Arctan 1/8 + pi/4 + Arctan 1/7 + Arctan 4/7 = pi/2 | [tex source](math/arctan-pi2.tex) | [pdf](math/pdf/arctan-pi2.pdf) |
 
 ## Physics
 
@@ -116,43 +117,45 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Title | Source | Pdf |
 |:-------------|:------------------|:------|
 | Equinoxes and solstices | | |
-| english | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/equinox_solstice-en.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/equinox_solstice-en.pdf) |
-| italian | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/equinox_solstice-it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/equinox_solstice-it.pdf) |
-| Spacetime deformation by a black hole | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/spacetime_deformation.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/spacetime_deformation.pdf) |
-| Percorso del Sole nel cielo | | |
-| dall'equatore | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/crepuscolo_equatore.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/crepuscolo_equatore.pdf) |
-| dal circolo artico | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/crepuscolo_circolo_artico.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/crepuscolo_circolo_artico.pdf) |
-| Diffusione della luce da parte dell'atmosfera | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/diffusione_luce.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/diffusione_luce.pdf) |
-| Sistema Solare | [tex source](graphics/sistema_solare.tex) | [pdf](graphics/pdf/sistema_solare.pdf) |
+| english | [tex source](astronomy/equinox_solstice-en.tex) | [pdf](astronomy/pdf/equinox_solstice-en.pdf) |
+| italian | [tex source](astronomy/equinox_solstice-it.tex) | [pdf](astronomy/pdf/equinox_solstice-it.pdf) |
+| Spacetime deformation by a black hole | [tex source](astronomy/spacetime_deformation.tex) | [pdf](astronomy/pdf/spacetime_deformation.pdf) |
+| Diffusione della luce da parte dell'atmosfera | [tex source](astronomy/diffusione_luce.tex) | [pdf](astronomy/pdf/diffusione_luce.pdf) |
 
+### Percorso del Sole nel cielo
+
+| Title | Source | Pdf |
+|:-------------|:------------------|:------|
+| dall'equatore | [tex source](astronomy/crepuscolo_equatore.tex) | [pdf](astronomy/pdf/crepuscolo_equatore.pdf) |
+| dal circolo artico | [tex source](astronomy/crepuscolo_circolo_artico.tex) | [pdf](astronomy/pdf/crepuscolo_circolo_artico.pdf) |
 
 ### Eratosthenes method for determining the size of the Earth
 
 | Language | Source | Pdf |
 |:-------------|:------------------|:------|
-| english | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/eratosthenes-en.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/pdf/eratosthenes-en.pdf) |
-| italian | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/eratosthenes-it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/pdf/eratosthenes-it.pdf) |
+| english | [tex source](infographics/eratosthenes/eratosthenes-en.tex) | [pdf](infographics/eratosthenes/pdf/eratosthenes-en.pdf) |
+| italian | [tex source](infographics/eratosthenes/eratosthenes-it.tex) | [pdf](infographics/eratosthenes/pdf/eratosthenes-it.pdf) |
 
 With title and background:
 
 | Language | Source | Pdf |
 |:-------------|:------------------|:------|
-| english | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/eratosthenes-infographic-en.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/pdf/eratosthenes-infographic-en.pdf) |
-| italian | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/eratosthenes-infographic-it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/infographics/eratosthenes/pdf/eratosthenes-infographic-it.pdf) |
+| english | [tex source](infographics/eratosthenes/eratosthenes-infographic-en.tex) | [pdf](infographics/eratosthenes/pdf/eratosthenes-infographic-en.pdf) |
+| italian | [tex source](infographics/eratosthenes/eratosthenes-infographic-it.tex) | [pdf](infographics/eratosthenes/pdf/eratosthenes-infographic-it.pdf) |
 
 ### The Sun and its neighbours
 
 | Language | Source | Pdf |
 |:-------------|:------------------|:------|
-| english | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/sun_neighbours_en.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/sun_neighbours_en.pdf) |
-| italian | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/sun_neighbours_it.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/pdf/sun_neighbours_it.pdf) |
+| english | [tex source](astronomy/sun_neighbours_en.tex) | [pdf](astronomy/pdf/sun_neighbours_en.pdf) |
+| italian | [tex source](astronomy/sun_neighbours_it.tex) | [pdf](astronomy/pdf/sun_neighbours_it.pdf) |
 
 ### Earth-Moon system
 
 | Title | Source | Pdf |
 |:-------------|:------------------|:------|
-| Apogeo e perigeo | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/sistema_terra-luna/sistema_terra-luna.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/sistema_terra-luna/pdf/sistema_terra-luna.pdf) |
-| Maree | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/sistema_terra-luna/maree.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/sistema_terra-luna/pdf/maree.pdf) |
-| Sistema di riferimento inerziale | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/sistema_terra-luna/sistema_inerziale.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/sistema_terra-luna/pdf/sistema_inerziale.pdf) |
-| Sistema di riferimento solidale con la Terra | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/sistema_terra-luna/sistema_terra.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/sistema_terra-luna/pdf/sistema_terra.pdf) |
-| Fasi lunari | [tex source](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/sistema_terra-luna/fasi_lunari.tex) | [pdf](https://github.com/ulaulaman/tikzdraw/blob/master/astronomy/sistema_terra-luna/pdf/fasi_lunari.pdf) |
+| Apogeo e perigeo | [tex source](astronomy/sistema_terra-luna/sistema_terra-luna.tex) | [pdf](astronomy/sistema_terra-luna/pdf/sistema_terra-luna.pdf) |
+| Maree | [tex source](astronomy/sistema_terra-luna/maree.tex) | [pdf](astronomy/sistema_terra-luna/pdf/maree.pdf) |
+| Sistema di riferimento inerziale | [tex source](astronomy/sistema_terra-luna/sistema_inerziale.tex) | [pdf](astronomy/sistema_terra-luna/pdf/sistema_inerziale.pdf) |
+| Sistema di riferimento solidale con la Terra | [tex source](astronomy/sistema_terra-luna/sistema_terra.tex) | [pdf](astronomy/sistema_terra-luna/pdf/sistema_terra.pdf) |
+| Fasi lunari | [tex source](astronomy/sistema_terra-luna/fasi_lunari.tex) | [pdf](astronomy/sistema_terra-luna/pdf/fasi_lunari.pdf) |
