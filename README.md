@@ -122,6 +122,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | italian | [tex source](astronomy/equinox_solstice-it.tex) | [pdf](astronomy/pdf/equinox_solstice-it.pdf) |
 | Spacetime deformation by a black hole | [tex source](astronomy/spacetime_deformation.tex) | [pdf](astronomy/pdf/spacetime_deformation.pdf) |
 | Diffusione della luce da parte dell'atmosfera | [tex source](astronomy/diffusione_luce.tex) | [pdf](astronomy/pdf/diffusione_luce.pdf) |
+| Fasi lunari | [tex source](astronomy/fasi_lunari.tex) | [pdf](astronomy/pdf/fasi_lunari.pdf) |
 
 ### Percorso del Sole nel cielo
 
