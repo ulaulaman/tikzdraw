@@ -28,6 +28,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Earth as a globe | [tex source](graphics/globe.tex) | [pdf](graphics/pdf/globe.pdf) |
 | SuperMoon | [tex source](graphics/supermoon.tex) | [pdf](graphics/pdf/supermoon.pdf) |
 | Asteroid | [tex source](graphics/asteroid.tex) | [pdf](graphics/pdf/asteroid.pdf) |
+| A comet | [tex source](graphics/comet.tex) | [pdf](graphics/pdf/comet.pdf) |
 
 ## Infographics
 
