@@ -1,0 +1,47 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{moon}{HTML}{AFAFAF}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Fasi lunari}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,]
+		\begin{scope}
+			\draw [fill=space,ultra thick] (3.8,8) rectangle (30,1);
+			%
+			\foreach \c in {1,3,...,7}
+			{
+				\draw [fill=moon] (2.7 + \c*3.5,5) circle (1.5cm);
+			}
+			\draw [fill=black, opacity=0.5] (2.7 + 3.5,5) circle (1.5cm);
+			\draw [fill=black, opacity=0.5] (2.7 + 3*3.5,5) [partial ellipse=90:270:1.5 and 1.5];
+			\draw [fill=black, opacity=0.5] (2.7 + 7*3.5,5) [partial ellipse=-90:90:1.5 and 1.5];
+			%
+			\node at (2.7 + 3.5,7) {\textcolor{white}{\fontsize{17}{18}\selectfont Luna Nuova}};
+			\node at (2.7 + 3.5,3) {\textcolor{white}{\fontsize{17}{18}\selectfont 2 gennaio}};
+			\node at (2.7 + 3.5,2) {\textcolor{white}{\fontsize{17}{18}\selectfont 19:33}};
+			%
+			\node at (2.7 + 3*3.5,7) {\textcolor{white}{\fontsize{17}{18}\selectfont Primo Quarto}};
+			\node at (2.7 + 3*3.5,3) {\textcolor{white}{\fontsize{17}{18}\selectfont 9 gennaio}};
+			\node at (2.7 + 3*3.5,2) {\textcolor{white}{\fontsize{17}{18}\selectfont 19:11}};
+			%
+			\node at (2.7 + 5*3.5,7) {\textcolor{white}{\fontsize{17}{18}\selectfont Luna Piena}};
+			\node at (2.7 + 5*3.5,3) {\textcolor{white}{\fontsize{17}{18}\selectfont 18 gennaio}};
+			\node at (2.7 + 5*3.5,2) {\textcolor{white}{\fontsize{17}{18}\selectfont 00:48}};
+			%
+			\node at (2.7 + 7*3.5,7) {\textcolor{white}{\fontsize{17}{18}\selectfont Terzo Quarto}};
+			\node at (2.7 + 7*3.5,3) {\textcolor{white}{\fontsize{17}{18}\selectfont 25 gennaio}};
+			\node at (2.7 + 7*3.5,2) {\textcolor{white}{\fontsize{17}{18}\selectfont 14:41}};
+		\end{scope}
+	\end{tikzpicture}
+\end{document}
