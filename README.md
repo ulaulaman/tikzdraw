@@ -11,6 +11,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Quadrati che raddoppiano | [tex source](graphics/squares02.tex) | [pdf](graphics/pdf/squares02.pdf) |
 | David' Star | [tex source](graphics/david_star.tex) | [pdf](graphics/pdf/david_star.pdf) |
 | Sistema Solare | [tex source](graphics/sistema_solare.tex) | [pdf](graphics/pdf/sistema_solare.pdf) |
+| Banner per il gruppo *flickr* dedicato alla cometa Leonard | [tex source](graphics/comet_banner.tex) | [pdf](graphics/pdf/comet_banner.pdf) |
 
 ### Planets and satellites
 
