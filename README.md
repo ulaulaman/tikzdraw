@@ -31,6 +31,11 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Asteroid | [tex source](graphics/asteroid.tex) | [pdf](graphics/pdf/asteroid.pdf) |
 | A comet | [tex source](graphics/comet.tex) | [pdf](graphics/pdf/comet.pdf) |
 
+### Calendars
+| Title | Source | Pdf |
+|:-------------|:------------------|:------|
+| 2022 | [tex source](calendar/calendar2022.tex) | [pdf](calendar/calendar2022.pdf) |
+
 ## Infographics
 
 | Title | Source | Pdf |
