@@ -12,6 +12,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | David' Star | [tex source](graphics/david_star.tex) | [pdf](graphics/pdf/david_star.pdf) |
 | Sistema Solare | [tex source](graphics/sistema_solare.tex) | [pdf](graphics/pdf/sistema_solare.pdf) |
 | Banner per il gruppo *flickr* dedicato alla cometa Leonard | [tex source](graphics/comet_banner.tex) | [pdf](graphics/pdf/comet_banner.pdf) |
+| La struttura del Sole | [tex source](graphics/struttura_sole.tex) | [pdf](graphics/pdf/struttura_sole.pdf) |
 
 ### Planets and satellites
 
@@ -57,6 +58,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Esopianeti fantastici e dove trovarli* | [tex source](infographics/esopianeti/esopianeti_fantastici.tex) | [pdf](infographics/esopianeti/pdf/esopianeti_fantastici.pdf) |
 | *Vita di un asteroide* | [tex source](infographics/vita_asteroide.tex) | [pdf](infographics/pdf/vita_asteroide.pdf) |
 | *Viaggio verso la nube di Oort* | [tex source](infographics/sistema_solare/nube_oort.tex) | [pdf](infographics/sistema_solare/pdf/nube_oort.pdf) |
+| *Il percorso dei fotoni nel Sole* | [tex source](infographics/fotoni_sole.tex) | [pdf](infographics/pdf/fotoni_sole.pdf) |
 
 ### Fatti e misfatti
 
