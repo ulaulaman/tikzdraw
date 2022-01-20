@@ -1,0 +1,140 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,decorations.pathmorphing,arrows.meta}
+\usepackage{tkz-euclide}
+%
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{core1}{HTML}{FF5E16}
+\definecolor{core2}{HTML}{FF9616}
+\definecolor{core3}{HTML}{FFD016}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Il percorso dei fotoni nel Sole}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\draw [black,ultra thick,fill=title] (0,9.8) rectangle (30,16.8);
+		\node at (15,14.8) {\textcolor{black}{\fontsize{75}{76}\selectfont Il percorso dei fotoni}};
+		\node at (15,11.8) {\textcolor{black}{\fontsize{75}{76}\selectfont nel Sole}};
+		%
+		\begin{scope}[shift={(0,4)}]
+			% sun
+			\begin{scope}
+				\tkzDefPoint(15,0){S}
+				\tkzDefPoint(10,0){s1}
+				\tkzDrawCircle[fill=white,ultra thick](S,s1)
+				\draw (0.8,-6) -- (29.2,-6);
+				%
+				\foreach \i in {0,1,...,10}
+				{
+					\draw (1+\i*2.8,-6.1) -- (1+\i*2.8,-5.9);
+					\node at (1+\i*2.8,-6.6) {\i};
+				}
+				%
+				\draw [thick, color=red] (1+4.6*2.8,-6.1) -- (1+4.8*2.8,-5.9);
+				\draw [thick, color=red] (1+4.6*2.8,-5.9) -- (1+4.8*2.8,-6.1);
+			\end{scope}
+			%
+			\draw[<-,thick] (1+4.7*2.8,-6.2) -- (0.2+4.7*2.8,-7.5);
+			%dida
+			\begin{scope}
+				\draw[fill=earth!50!white,thick] (14,-12.5) rectangle (29.5,-17.5);
+				\draw[fill=dida,thick] (4.5,-7.5) rectangle (19.5,-12.5);
+				\node (example-textwidth-2) [right, align=left, text width=16cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (5,-10) {Il Sole, secondo le nostre stime, ha un'età di 4.7 miliardi di anni, e dovrebbe produrre energia per un'epoca lunga quanto quella trascorsa.};
+				\node (example-textwidth-2) [right, align=left, text width=16cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (14.5,-15) {Consuma 4 milioni di tonnellate di idrogeno al secondo. Questa materia, grazie alle reazioni di fusione nucleare, viene convertita in energia.};
+			\end{scope}
+		\end{scope}
+		% photon journey
+		\begin{scope}[shift={(0,-29.5)}]
+			\draw [fill=core1,ultra thick] (15,0) circle (10cm);
+			\draw [fill=core3] (15,0) [partial ellipse=-90:90:9.5 and 9.5] (15,0) [partial ellipse=90:270:7 and 9.5];
+			\draw [fill=core2] (15,0) [partial ellipse=-90:90:9 and 9] (15,0) [partial ellipse=90:270:4 and 9];
+			\draw [fill=core3] (15,0) [partial ellipse=-90:90:5 and 5] (15,0) [partial ellipse=90:270:2 and 5];
+			\draw (15,9.5) -- (15,-9.5);
+			\draw [fill=white] (15,0) [partial ellipse=-90:90:2 and 2] (15,0) [partial ellipse=90:270:0.7 and 2];
+			%
+			\draw [->,ultra thick] (19,11.5) -- (16,1);
+			\draw [fill=space!50!white] (11.5,15) rectangle (27,11);
+			\node (example-textwidth-2) [right, align=left, text width=16cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (12,13) {I fotoni, prodotti nel Sole, devono attraversare i vari strati di cui è costituita la nostra stella prima di arrivare sulla sua superficie.};
+			%
+			\draw [->,ultra thick] (12,10) -- (14,2);
+			\draw [fill=earth!50!white] (1,0.5) rectangle (12,-11);
+			\draw [fill=earth!50!white] (1.5,10) rectangle (12.5,0);
+			\node (example-textwidth-2) [right, align=left, text width=10cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,5) {Il primo tratto da attraversare è la \textbf{zona radiativa}, spessa circa 300000 km. La densità è così alta che i fotoni hanno problemi a muiversi al suo interno, collidendo con gli atomi e gli ioni di idrogeno ed elio.};
+			\node (example-textwidth-2) [right, align=left, text width=10cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (1.5,-5.5) {I fotoni si muovono in maniera caotica, un po' come un ubriaco sul marciapiede! I fotoni, infatti, vengono assorbiti dagli atomi e ributtati fuori un po' in tutte le direzioni. E questa serie di assorbimenti ed emissioni si ripete per milioni di volte.};
+			\draw [fill=core3] (0.5,-12) rectangle (12,-30);
+			\begin{scope}[shift={(6,-20)}]
+				\foreach \i in {1,2,...,15}
+				{
+					\pgfmathsetmacro{\x}{5*rand}
+					\pgfmathsetmacro{\y}{8*rand}
+					\pgfmathsetmacro{\a}{45*rand}
+					\pgfmathsetmacro{\opacVal}{rand*0.5+1}
+					\tkzDefPoint(\x,\y){P\i}
+					\tkzDrawPoint(P\i)
+				}
+				\tkzDrawSegments(P1,P2 P2,P3 P4,P5 P5,P6 P6,P7 P7,P8 P8,P9 P9,P10 P10,P11 P11,P12 P12,P13 P13,P14 P14,P15)	
+			\end{scope}
+			%
+			\draw [->,ultra thick] (18.5,-18) -- (15.5,-6);
+			\draw [->,ultra thick] (17.5,-21.5) -- (15,-10);
+			\draw [fill=earth!50!white] (18.5,-11) rectangle (29,-20);
+			\draw [fill=earth!50!white] (17.5,-2.5) rectangle (28.5,-11.5);
+			\draw [fill=space] (12.5,-21.5) rectangle (22,-26.5);
+			\node (example-textwidth-2) [right, align=left, text width=10cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (18,-7) {Man mano che i fotoni si avvicinano alla superficie del Sole, la densità della materia diminuisce, e quindi anche il numero di collisioni e il tempo trascorso dal fotone in quella particolare zona.};
+			\node (example-textwidth-2) [right, align=left, text width=10cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (19,-15.5) {Fino a che, giunti nella \textbf{zona connettiva}, a qualcosa come 200000 km dalla superficie, i fotoni subiscono un'accelerazione nel loro percorso dovuta alla spinta di bolle di materia.};
+			\node (example-textwidth-2) [right, align=left, text width=10cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (13,-24) {In questo modo i fotoni impiegano una decina di giorni per raggiungere la superficie del Sole.};
+		\end{scope}
+		% journey
+		\begin{scope}[shift={(0,-68)},decoration=snake]
+			\draw[fill=core1] (10,0) circle (6cm);
+			\draw[fill=core2] (10,0) circle (5.5cm);
+			\draw[fill=white] (10,0) circle (2cm);
+			\foreach \i in {0,1,...,8}
+			{
+				\pgfmathsetmacro{\t}{rand}
+				\def\px{sin(\t)}
+				\def\py{cos(\t)}
+				\tkzDefPoint(12+0.5*\i+\px,\py){A\i}
+			}
+			\tkzDrawSegments[decorate,color=white,ultra thick](A0,A1 A1,A2 A2,A3 A3,A4 A4,A5 A5,A6 A6,A7 A7,A8)
+			%
+			\draw [fill=space,thick] (16.5,1) rectangle (27.5,-1);
+			\node (example-textwidth-2) [right, align=left, text width=12cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (17,0) {Durata del viaggio:\\da 10000 a 170000 anni.};
+		\end{scope}
+		% sun-earth travel
+		\begin{scope}[shift={(0,-87)}]
+			\draw [fill=space, ultra thick] (2,9) rectangle (28,-5);
+			% earth orbit
+			\draw (2.3,0) [color=gray, ultra thick, partial ellipse=-12:23:21.7 and 21.7];
+			\draw (2.5,0) [->,color=white, ultra thick, partial ellipse=7:13:21.7 and 21.7];
+			% sun
+			\draw (2.3,0) [fill=white, partial ellipse=-90:90:4 and 4];
+			\draw (2.3,-4) -- (2.3,4);
+			% earth
+			\draw [fill=earth] (24,0) circle (1cm);
+			\draw (24,0) [->,color=white, ultra thick, partial ellipse=100:130:1.3 and 1.3];
+			%
+			\draw[<->,dashed,gray,opacity=0.5,ultra thick] (6.5,0) -- (22.8,0) node [midway, above, sloped,opacity=1] (TextNode) {\textcolor{earth}{\fontsize{23}{24}\selectfont 150 milioni di chilometri}};
+			%
+			\draw [fill=dida,ultra thick] (3.5,11) rectangle (27.5,7);
+			\node (example-textwidth-2) [right, align=left, text width=25cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (4,9) {Una volta giunti sulla superficie, per i fotoni inizia il percorso più breve in termini di tempo, quello che gli permette di arrivare fino alla Terra in appena 8 minuti!};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-93)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+\end{document}
