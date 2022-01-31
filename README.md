@@ -11,7 +11,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Quadrati che raddoppiano | [tex source](graphics/squares02.tex) | [pdf](graphics/pdf/squares02.pdf) |
 | David' Star | [tex source](graphics/david_star.tex) | [pdf](graphics/pdf/david_star.pdf) |
 | Sistema Solare | [tex source](graphics/sistema_solare.tex) | [pdf](graphics/pdf/sistema_solare.pdf) |
-| Banner per il gruppo *flickr* dedicato alla cometa Leonard | [tex source](graphics/comet_banner.tex) | [pdf](graphics/pdf/comet_banner.pdf) |
+| Banner per il gruppo *flickr* dedicato alla cometa Leonard | [tex source](graphics/banners/comet_banner.tex) | [pdf](graphics/banners/pdf/comet_banner.pdf) |
 | La struttura del Sole | [tex source](graphics/struttura_sole.tex) | [pdf](graphics/pdf/struttura_sole.pdf) |
 
 ### Planets and satellites
@@ -130,7 +130,11 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | italian | [tex source](astronomy/equinox_solstice-it.tex) | [pdf](astronomy/pdf/equinox_solstice-it.pdf) |
 | Spacetime deformation by a black hole | [tex source](astronomy/spacetime_deformation.tex) | [pdf](astronomy/pdf/spacetime_deformation.pdf) |
 | Diffusione della luce da parte dell'atmosfera | [tex source](astronomy/diffusione_luce.tex) | [pdf](astronomy/pdf/diffusione_luce.pdf) |
-| Fasi lunari | [tex source](astronomy/fasi_lunari.tex) | [pdf](astronomy/pdf/fasi_lunari.pdf) |
+
+### Fasi lunari
+
+| Le fasi del mese corrente | [tex source](astronomy/fasi_lunari.tex) | [pdf](astronomy/pdf/fasi_lunari.pdf) |
+[ Gennaio 2022 ] tex source | [pdf](astronomy/fasilunari-pdf/202201-gennaio.pdf) |
 
 ### Percorso del Sole nel cielo
 
