@@ -76,6 +76,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 |:-------------|:------------------|:------|
 | *Distanze e dimensioni* | [tex source](infographics/sistema_solare/sistema_solare-distanze_dimensioni.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare-distanze_dimensioni.pdf) |
 | *Distanze e dimensioni: sistema solare interno* | [tex source](infographics/sistema_solare/sistema_solare_interno-distanze_dimensioni.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare_interno-distanze_dimensioni.pdf) |
+| Le orbite del sistema solare interno | [tex source](infographics/sistema_solare/sistema_solare_interno-orbite.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare_interno-orbite.pdf) |
 | *Masse* | [tex source](infographics/sistema_solare/sistema_solare_masse.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare_masse.pdf) |
 | *Densità* | [tex source](infographics/sistema_solare/sistema_solare_densita.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare_densita.pdf) |
 
