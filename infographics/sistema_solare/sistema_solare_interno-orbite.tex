@@ -1,0 +1,58 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,bending,arrows.meta}
+\usepackage{tkz-euclide}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{mercury}{HTML}{846549}
+\definecolor{venus}{HTML}{BB9765}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Sistema Solare interno: orbite}
+\begin{document}
+	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		\def\rsun{2}
+		\def\fact{8}
+		%
+		\def\uam{\fact*0.387}
+		\def\rmer{0.2}
+		%
+		\def\uav{\fact*0.723}
+		\def\rven{0.5}
+		%
+		\def\uaet{\fact*1}
+		\def\ret{0.53}
+		%
+		\def\uams{\fact*1.52}
+		\def\rms{0.28}
+		%
+		\begin{scope}[rotate around={-90:(0,0)}]
+			\tkzDefPoint(0,0){S1}
+			\tkzDrawCircle[R,fill=white,ultra thick](S1,\rsun cm)
+			%
+			\tkzDefShiftPoint[S1](0:\rsun+\uam+\rmer){M1}
+			\tkzDrawCircle[ultra thick,color=mercury,dashed](S1,M1)
+			\tkzDrawCircle[fill=mercury,R,ultra thick](M1,\rmer cm)
+			%
+			\tkzDefShiftPoint[S1](0:\rsun+\uav+\rven){V1}
+			\tkzDrawCircle[ultra thick,color=venus,dashed](S1,V1)
+			\tkzDrawCircle[fill=venus,R,ultra thick](V1,\rven cm)
+			%
+			\tkzDefShiftPoint[S1](0:\rsun+\uaet+\ret){E1}
+			\tkzDrawCircle[ultra thick,color=earth,dashed](S1,E1)
+			\tkzDrawCircle[fill=earth,R,ultra thick](E1,\ret cm)
+			%
+			\tkzDefShiftPoint[S1](0:\rsun+\uams+\rms){M2}
+			\tkzDrawCircle[ultra thick,color=mars,dashed](S1,M2)
+			\tkzDrawCircle[fill=mars,R,ultra thick](M2,\rms cm)
+			%
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
