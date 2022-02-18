@@ -59,6 +59,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Vita di un asteroide* | [tex source](infographics/vita_asteroide.tex) | [pdf](infographics/pdf/vita_asteroide.pdf) |
 | *Viaggio verso la nube di Oort* | [tex source](infographics/sistema_solare/nube_oort.tex) | [pdf](infographics/sistema_solare/pdf/nube_oort.pdf) |
 | *Il percorso dei fotoni nel Sole* | [tex source](infographics/fotoni_sole.tex) | [pdf](infographics/pdf/fotoni_sole.pdf) |
+| *Vite d'astronome* | [tex source](infographics/donne_astronomia/donne_astronomia.tex) | [pdf](infographics/donne_astronomia/pdf/donne_astronomia.pdf) |
 
 ### Fatti e misfatti
 
