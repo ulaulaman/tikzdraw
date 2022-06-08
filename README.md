@@ -61,6 +61,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Il percorso dei fotoni nel Sole* | [tex source](infographics/fotoni_sole.tex) | [pdf](infographics/pdf/fotoni_sole.pdf) |
 | *Vite d'astronome* | [tex source](infographics/donne_astronomia/donne_astronomia.tex) | [pdf](infographics/donne_astronomia/pdf/donne_astronomia.pdf) |
 | *Una storia illuminante* | [tex source](infographics/storia_luce.tex) | [pdf](infographics/pdf/storia_luce.pdf) |
+| *Il messaggio del pioniere* | [tex source](infographics/messaggio_pioneer.tex) | [pdf](infographics/pdf/messaggio_pioneer.pdf) |
 
 ### Fatti e misfatti
 
