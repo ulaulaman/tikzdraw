@@ -62,6 +62,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Vite d'astronome* | [tex source](infographics/donne_astronomia/donne_astronomia.tex) | [pdf](infographics/donne_astronomia/pdf/donne_astronomia.pdf) |
 | *Una storia illuminante* | [tex source](infographics/storia_luce.tex) | [pdf](infographics/pdf/storia_luce.pdf) |
 | *Il messaggio del pioniere* | [tex source](infographics/messaggio_pioneer.tex) | [pdf](infographics/pdf/messaggio_pioneer.pdf) |
+| *Itinerario di un'astrofisica* | [tex source](infographics/hack_astrofisica.tex) | [pdf](infographics/pdf/hack_astrofisica.pdf) |
 
 ### Fatti e misfatti
 
