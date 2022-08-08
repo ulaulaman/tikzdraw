@@ -64,6 +64,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Il messaggio del pioniere* | [tex source](infographics/messaggio_pioneer.tex) | [pdf](infographics/pdf/messaggio_pioneer.pdf) |
 | *Itinerario di un'astrofisica* | [tex source](infographics/hack_astrofisica.tex) | [pdf](infographics/pdf/hack_astrofisica.pdf) |
 | *Storia della misura della distanza Terra-Luna* | [tex source](infographics/luna/distanza_luna.tex) | [pdf](infographics/luna/pdf/distanza_luna.pdf) |
+| *La notte di San Lorenzo* | [tex source](infographics/sistema_solare/perseidi/notte_san_lorenzo.tex) | [pdf](infographics/sistema_solare/perseidi/pdf/notte_san_lorenzo.pdf) |
 
 ### Fatti e misfatti
 
