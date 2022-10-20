@@ -13,6 +13,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Sistema Solare | [tex source](graphics/sistema_solare.tex) | [pdf](graphics/pdf/sistema_solare.pdf) |
 | Banner per il gruppo *flickr* dedicato alla cometa Leonard | [tex source](graphics/banners/comet_banner.tex) | [pdf](graphics/banners/pdf/comet_banner.pdf) |
 | La struttura del Sole | [tex source](graphics/struttura_sole.tex) | [pdf](graphics/pdf/struttura_sole.pdf) |
+| *Fool Moon* | [tex source](graphics/moon02.tex) | [pdf](graphics/pdf/moon02.pdf) |
 
 ### Planets and satellites
 
@@ -65,6 +66,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Itinerario di un'astrofisica* | [tex source](infographics/hack_astrofisica.tex) | [pdf](infographics/pdf/hack_astrofisica.pdf) |
 | *Storia della misura della distanza Terra-Luna* | [tex source](infographics/luna/distanza_luna.tex) | [pdf](infographics/luna/pdf/distanza_luna.pdf) |
 | *La notte di San Lorenzo* | [tex source](infographics/sistema_solare/perseidi/notte_san_lorenzo.tex) | [pdf](infographics/sistema_solare/perseidi/pdf/notte_san_lorenzo.pdf) |
+| *Incontri ravvicinati* | [tex source](infographics/sistema_solare/asteroidi_top10.tex) | [pdf](infographics/sistema_solare/pdf/asteroidi_top10.pdf) |
 
 ### Fatti e misfatti
 
@@ -85,6 +87,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | Le orbite del sistema solare interno | [tex source](infographics/sistema_solare/sistema_solare_interno-orbite.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare_interno-orbite.pdf) |
 | *Masse* | [tex source](infographics/sistema_solare/sistema_solare_masse.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare_masse.pdf) |
 | *Densità* | [tex source](infographics/sistema_solare/sistema_solare_densita.tex) | [pdf](infographics/sistema_solare/pdf/sistema_solare_densita.pdf) |
+| *La luce nel Sistema Solare* | [tex source](infographics/sistema_solare/luce_pianeti.tex) | [pdf](infographics/sistema_solare/pdf/luce_pianeti.pdf) |
 
 ## Mathematics
 
