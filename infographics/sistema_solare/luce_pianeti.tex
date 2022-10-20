@@ -1,0 +1,147 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,bending,arrows.meta,shapes.callouts}
+\usetikzlibrary{patterns}
+\usepackage{tkz-euclide}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{mercury}{HTML}{846549}
+\definecolor{venus}{HTML}{BB9765}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{jupiter}{HTML}{A79476}
+\definecolor{saturn}{HTML}{DBBD9B}
+\definecolor{saturnring}{HTML}{857C73}
+\definecolor{uranus}{HTML}{b1d8dd}
+\definecolor{neptune}{HTML}{799bc1}
+\definecolor{pluto}{HTML}{ceaa8a}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{La luce nel Sistema Solare}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+		notice/.style  = { draw, ellipse callout, callout relative pointer={#1} },
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\begin{scope}
+			\draw [black,ultra thick,fill=title] (-15,4) rectangle (15,-3);
+			\node at (0,2) {\textcolor{black}{\fontsize{90}{91}\selectfont La luce nel}};
+			\node at (0,-1) {\textcolor{black}{\fontsize{90}{91}\selectfont Sistema Solare}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-8)}]
+			\draw [ultra thick, fill=earth] (8.5,4) rectangle (13.5,-4);
+			\node at (11,0) {\includegraphics[width=5cm]{carl_sagan}};
+			\node (example-textwidth-2) [notice={(3,0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (-11,-1) {I corpi celesti del Sistema Solare ricevono una quantità di luce differente in relazione alla loro distanza dal Sole. Vediamo quanta radiazione solare li raggiunge.};
+		\end{scope}
+		% inner solar system
+		\begin{scope}[shift={(0,-16)}]
+			%\draw [fill=space,ultra thick] (6,6) rectangle (-6,-6);
+			% mercury
+			\tkzDefPoint(0,-16){M}
+			\tkzDrawCircle[fill=mercury,R,ultra thick](M,14 cm)
+			\draw [fill=earth!50!white,thick] (-8,-2.5) rectangle (-4,-3.5);
+			\node at (-6,-3) {\textcolor{black}{\fontsize{23}{24pt}\selectfont Mercurio}};
+			\draw [fill=dida,thick] (-7.8,-3.5) rectangle (-2,-4.5);
+			\node at (-5,-4) {\textcolor{black}{\fontsize{23}{24pt}\selectfont 14446 W/m$^2$}};
+			% venus
+			\tkzDefPoint(10,-8){V}
+			\tkzDrawCircle[fill=venus,R,ultra thick](V,2.6 cm)
+			\draw [fill=earth!50!white,thick] (8,-10) rectangle (12,-11);
+			\node at (10,-10.5) {\textcolor{black}{\fontsize{23}{24pt}\selectfont Venere}};
+			\draw [fill=dida,thick] (7.5,-11) rectangle (12.5,-12);
+			\node at (10,-11.5) {\textcolor{black}{\fontsize{23}{24pt}\selectfont 2647 W/m$^2$}};
+			% earth
+			\tkzDefPoint(14,-16){T}
+			\tkzDrawCircle[fill=earth,R,ultra thick](T,1.4 cm)
+			\draw [fill=earth!50!white,thick] (9.5,-15) rectangle (12.5,-16);
+			\node at (11,-15.5) {\textcolor{black}{\fontsize{23}{24pt}\selectfont Terra}};
+			\draw [fill=dida,thick] (8.5,-16) rectangle (13.5,-17);
+			\node at (11,-16.5) {\textcolor{black}{\fontsize{23}{24pt}\selectfont 1413 W/m$^2$}};
+			% mars
+			\tkzDefPoint(11,-24){R}
+			\tkzDrawCircle[fill=mars,R,ultra thick](R,0.7 cm)
+			\draw [fill=earth!50!white,thick] (9.5,-25) rectangle (12.5,-26);
+			\node at (11,-25.5) {\textcolor{black}{\fontsize{23}{24pt}\selectfont Marte}};
+			\draw [fill=dida,thick] (8.8,-26) rectangle (13.2,-27);
+			\node at (11,-26.5) {\textcolor{black}{\fontsize{23}{24pt}\selectfont 715 W/m$^2$}};
+			%
+			\draw [black,ultra thick,fill=title] (-8,1) rectangle (8,-1);
+			\node at (0,0) {\textcolor{black}{\fontsize{30}{31}\selectfont Il Sistema Solare interno}};
+		\end{scope}
+		% outer solar system
+		\begin{scope}[shift={(0,-48)}]
+			%\draw [fill=space,ultra thick] (6,6) rectangle (-6,-6);
+			% jupiter
+			\tkzDefPoint(0,-8){J}
+			\tkzDrawCircle[fill=jupiter,R,ultra thick](J,5.6 cm)
+			\draw [fill=earth!50!white,thick] (-8,-2.5) rectangle (-4,-3.5);
+			\node at (-6,-3) {\textcolor{black}{\fontsize{23}{24pt}\selectfont Giove}};
+			\draw [fill=dida,thick] (-7.8,-3.5) rectangle (-2.5,-4.5);
+			\node at (-5,-4) {\textcolor{black}{\fontsize{23}{24pt}\selectfont 55.8 W/m$^2$}};
+			% saturn
+			\tkzDefPoint(4,-4){S}
+			\tkzDrawCircle[fill=saturn,R,ultra thick](S,1.7 cm)
+			\draw [fill=earth!50!white,thick] (6,-3) rectangle (10,-4);
+			\node at (8,-3.5) {\textcolor{black}{\fontsize{23}{24pt}\selectfont Saturno}};
+			\draw [fill=dida,thick] (6.2,-4) rectangle (11.5,-5);
+			\node at (9,-4.5) {\textcolor{black}{\fontsize{23}{24pt}\selectfont 16.7 W/m$^2$}};
+			% uranus
+			\tkzDefPoint(5.6,-8){U}
+			\tkzDrawCircle[fill=uranus,R,ultra thick](U,0.4 cm)
+			\draw [fill=earth!50!white,thick] (6.5,-8.5) rectangle (9.5,-7.5);
+			\node at (8,-8) {\textcolor{black}{\fontsize{23}{24pt}\selectfont Urano}};
+			\draw [fill=dida,thick] (6.2,-8.5) rectangle (11.5,-9.5);
+			\node at (9,-9) {\textcolor{black}{\fontsize{23}{24pt}\selectfont 4.04 W/m$^2$}};
+			% neptune
+			\tkzDefPoint(4,-12){N}
+			\tkzDrawCircle[fill=neptune,R,ultra thick](N,0.15 cm)
+			\draw [fill=earth!50!white,thick] (4.5,-11.5) rectangle (8.5,-12.5);
+			\node at (6.5,-12) {\textcolor{black}{\fontsize{23}{24pt}\selectfont Nettuno}};
+			\draw [fill=dida,thick] (5,-12.5) rectangle (10,-13.5);
+			\node at (7.5,-13) {\textcolor{black}{\fontsize{23}{24pt}\selectfont 1.54 W/m$^2$}};
+			% pluto
+			\tkzDefPoint(0,-13.6){P}
+			\tkzDrawCircle[fill=pluto,R,ultra thick](P,0.15 cm)
+			\draw [fill=earth!50!white,thick] (-2,-15) rectangle (2,-14);
+			\node at (0,-14.5) {\textcolor{black}{\fontsize{23}{24pt}\selectfont Plutone}};
+			\draw [fill=dida,thick] (-2.5,-15) rectangle (2.5,-16);
+			\node at (0,-15.5) {\textcolor{black}{\fontsize{23}{24pt}\selectfont 1.55 W/m$^2$}};
+			%
+			\draw [black,ultra thick,fill=title] (-8,1) rectangle (8,-1);
+			\node at (0,0) {\textcolor{black}{\fontsize{30}{31}\selectfont Il Sistema Solare esterno}};
+		\end{scope}
+		% mars vs jupiter
+		\begin{scope}[shift={(0,-67)}]
+			%\draw [fill=space,ultra thick] (6,6) rectangle (-6,-6);
+			% mars
+			\tkzDefPoint(0,-9){MS}
+			\tkzDrawCircle[fill=mars,R,ultra thick](MS,7 cm)
+			% jupiter
+			\tkzDefPoint(7,-9){JP}
+			\tkzDrawCircle[fill=jupiter,R,ultra thick](JP,0.56 cm)
+			%
+			\draw [black,ultra thick,fill=title] (-8,1) rectangle (8,-1);
+			\node at (0,0) {\textcolor{black}{\fontsize{30}{31}\selectfont Confronto Marte-Giove}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(-15,-85)}]
+			\draw [black,ultra thick,fill=dida] (3.5,1) rectangle (26.5,-1);
+			\node (example-textwidth-2) [right, align=center, text width=28cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (1,0) {Per realizzare questa infografica sono stati presi in considerazione i valori massimi di radiazione solare.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-88)}]
+			\node at (12,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node[left] at (10,0) {\textcolor{black}{\fontsize{14}{15}\selectfont Testi e grafica: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
