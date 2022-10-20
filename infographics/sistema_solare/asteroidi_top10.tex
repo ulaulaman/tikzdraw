@@ -1,0 +1,174 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,bending,arrows.meta}
+\usepackage{tkz-euclide}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{mercury}{HTML}{846549}
+\definecolor{venus}{HTML}{BB9765}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Incontri ravvicinati}
+\begin{document}
+	\tikzset{
+		notice/.style  = { draw, ellipse callout, callout relative pointer={#1} },
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=black},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		\draw [use as bounding box,color=white] (0,2.2) -| (30.2,2.2) |- (30.2,-34) -| (0,-34);
+		\begin{scope}
+			\draw [black,ultra thick,fill=title] (0,2) rectangle (30,-2);
+			\node at (15,0) {\textcolor{black}{\fontsize{85}{86}\selectfont Incontri ravvicinati}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-5)}]
+			\draw [ultra thick, fill=dida] (0.5,2) rectangle (29,-2);
+			\node (example-textwidth-2) [right, align=left, text width=28cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (1,0) {I dieci asteroidi più grandi e quanto vicini sono passati alla Terra. Quest'ultima è il puntino blu, mentre il puntino e la linea tratteggiata grigi sono la Luna e la sua orbita.};
+			\draw [black,ultra thick,fill=title] (20,-1.5) rectangle (29.8,-2.5);
+			\node at (25,-2) {\textcolor{black}{\fontsize{20}{21}\selectfont 1 UA = 149597887.5 km}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(3.5,-27.5)}]
+			\def\rten{0.3}
+			\def\reten{\rten*1.17}
+			\def\dthree{4}
+			%
+			\def\rune{\rten*4}
+			\def\runee{\rten*4.8}
+			\def\done{\dthree*3.23}
+			%
+			\def\rtwo{\rten*3.57}
+			\def\retwo{\rten*3.66}
+			\def\dtwo{\dthree*3.7}
+			%
+			\def\rthree{\rten*3.09}
+			%
+			\def\rfour{\rten*4.9}
+			\def\dfour{\dthree*4.5}
+			%
+			\def\rfive{\rten*2}
+			\def\refive{\rten*4.4}
+			\def\dfive{\dthree*4.03}
+			%
+			\def\rsix{\rten*1.94}
+			\def\dsix{\dthree*2.9}
+			%
+			\def\rseven{\rten*1.8}
+			\def\reseven{\rten*2.2}
+			\def\dseven{\dthree*4.8}
+			%
+			\def\reight{\rten*1.46}
+			\def\reeight{\rten*1.55}
+			\def\deight{\dthree*3.21}
+			%
+			\def\rnine{\rten*1.06}
+			\def\renine{\rten*1.07}
+			\def\dnine{\dthree*4.5}
+			%
+			\def\dten{\dthree*4.1}
+			%
+			\tkzDefPoint(0,0){E}
+			\tkzDrawPoint[fill=earth](E)
+			\tkzDefPoint(0,0.25){L}
+			\tkzDrawCircle[color=moon,dashed](E,L)
+			\tkzDrawPoint[fill=moon](L)
+			%
+			\begin{scope}%[rotate around={-90:(0,0)}]
+				\tkzDefShiftPoint[E](0:\done){A1}
+				\tkzDrawCircle[fill=mercury!50!white,opacity=0.5,R](A1,\runee cm)
+				\tkzDrawCircle[fill=mercury,R](A1,\rune cm)
+			\end{scope}
+			\node at (17.5,0.2) {\textcolor{white}{\fontsize{15}{16}\selectfont Diametro: 7 $\pm$ 1.4 km}};
+			\node at (17.45,-0.3) {\textcolor{white}{\fontsize{15}{16}\selectfont Distanza: 0.03348 ua}};
+			%
+			\begin{scope}[rotate around={45:(0,0)}]
+				\tkzDefShiftPoint[E](0:\dtwo){A2}
+				\tkzDrawCircle[fill=mercury!50!white,opacity=0.5,R](A2,\retwo cm)
+				\tkzDrawCircle[fill=mercury,R](A2,\rtwo cm)
+			\end{scope}
+			\node at (15.4,10.8) {\textcolor{white}{\fontsize{15}{16}\selectfont Diametro: 6.25 $\pm$ 0.15 km}};
+			\node at (14.6,10.3) {\textcolor{white}{\fontsize{15}{16}\selectfont Distanza: 0.0384 ua}};
+			%
+			\begin{scope}[rotate around={45:(0,0)}]
+				\tkzDefShiftPoint[E](0:\dthree){A3}
+				\tkzDrawCircle[fill=mercury,R](A3,\rthree cm)
+			\end{scope}
+			\node at (6.3,3.1) {\textcolor{white}{\fontsize{15}{16}\selectfont Diametro: 5.4 km}};
+			\node at (6.8,2.6) {\textcolor{white}{\fontsize{15}{16}\selectfont Distanza: 0.01036 ua}};
+			%
+			\begin{scope}[rotate around={90:(0,0)}]
+				\tkzDefShiftPoint[E](0:\dfour){A4}
+				\tkzDrawCircle[fill=mercury,R](A4,\rfour cm)
+			\end{scope}
+			\node at (4.1,18.5) {\textcolor{white}{\fontsize{15}{16}\selectfont Diametro: 4.9 km}};
+			\node at (4.6,18) {\textcolor{white}{\fontsize{15}{16}\selectfont Distanza: 0.04724 ua}};
+			%
+			\begin{scope}[rotate around={30:(0,0)}]
+				\tkzDefShiftPoint[E](0:\dfive){A5}
+				\tkzDrawCircle[fill=mercury!50!white,opacity=0.5,R](A5,\refive cm)
+				\tkzDrawCircle[fill=mercury,R](A5,\rfive cm)
+			\end{scope}
+			\node at (18.7,8.3) {\textcolor{white}{\fontsize{15}{16}\selectfont Diametro: 3.5 $\div$ 7.7 km}};
+			\node at (18.4,7.8) {\textcolor{white}{\fontsize{15}{16}\selectfont Distanza: 0.04179 ua}};
+			%
+			\begin{scope}[rotate around={30:(0,0)}]
+				\tkzDefShiftPoint[E](0:\dsix){A6}
+				\tkzDrawCircle[fill=mercury,R](A6,\rsix cm)
+			\end{scope}
+			\node at (12.4,4.8) {\textcolor{white}{\fontsize{15}{16}\selectfont Diametro: 3.4 km}};
+			\node at (12.9,4.3) {\textcolor{white}{\fontsize{15}{16}\selectfont Distanza: 0.02979 ua}};
+			%
+			\begin{scope}[rotate around={60:(0,0)}]
+				\tkzDefShiftPoint[E](0:\dseven){A7}
+				\tkzDrawCircle[fill=mercury!50!white,opacity=0.5,R](A7,\reseven cm)
+				\tkzDrawCircle[fill=mercury,R](A7,\rseven cm)
+			\end{scope}
+			\node at (13.9,16.8) {\textcolor{white}{\fontsize{15}{16}\selectfont Diametro: 3.16 $\pm$ 0.73 km}};
+			\node at (13.3,16.3) {\textcolor{white}{\fontsize{15}{16}\selectfont Distanza: 0.04958 ua}};
+			%
+			\begin{scope}[rotate around={60:(0,0)}]
+				\tkzDefShiftPoint[E](0:\deight){A8}
+				\tkzDrawCircle[fill=mercury!50!white,opacity=0.5,R](A8,\reeight cm)
+				\tkzDrawCircle[fill=mercury,R](A8,\reight cm)
+			\end{scope}
+			\node at (2.9,10.3) {\textcolor{white}{\fontsize{15}{16}\selectfont Diametro: 2.56 $\pm$ 0.15 km}};
+			\node at (3.7,9.8) {\textcolor{white}{\fontsize{15}{16}\selectfont Distanza: 0.0333 ua}};
+			%
+			\begin{scope}[rotate around={20:(0,0)}]
+				\tkzDefShiftPoint[E](0:\dnine){A9}
+				\tkzDrawCircle[fill=mercury!50!white,opacity=0.5,R](A9,\renine cm)
+				\tkzDrawCircle[fill=mercury,R](A9,\rnine cm)
+			\end{scope}
+			\node at (21.3,6.1) {\textcolor{white}{\fontsize{15}{16}\selectfont Diametro: 1.849 $\pm$ 0.022 km}};
+			\node at (20.35,5.6) {\textcolor{white}{\fontsize{15}{16}\selectfont Distanza: 0.04654 ua}};
+			%
+			\begin{scope}[rotate around={80:(0,0)}]
+				\tkzDefShiftPoint[E](0:\dten){A10}
+				\tkzDrawCircle[fill=mercury!50!white,opacity=0.5,R](A10,\rten cm)
+				\tkzDrawCircle[fill=mercury,R](A10,\rten cm)
+			\end{scope}
+			\node at (6.2,15.5) {\textcolor{white}{\fontsize{15}{16}\selectfont Diametro: 1.75 $\pm$ 0.3 km}};
+			\node at (5.75,15) {\textcolor{white}{\fontsize{15}{16}\selectfont Distanza: 0.04205 ua}};
+			%
+		\end{scope}
+		%
+		\begin{scope}[shift={(5,-31)}]
+			\draw [ultra thick, fill=earth!50!white] (0.5,0.6) rectangle (24.5,-0.6);
+			\node (example-textwidth-2) [right, align=left, text width=24cm, color=black, font=\fontsize{15pt}{16pt}\selectfont] at (1,0) {Dati presi dal Center for Near Earth Object Studies https://cneos.jpl.nasa.gov/ca/};
+		\end{scope}
+		%
+		\begin{scope}[shift={(11,-33)}]
+			\node at (17,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node[left] at (15,0) {\textcolor{white}{\fontsize{14}{15}\selectfont Grafica: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
