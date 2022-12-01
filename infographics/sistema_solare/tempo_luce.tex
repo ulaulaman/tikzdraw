@@ -1,0 +1,101 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,bending,arrows.meta}
+\usepackage{tkz-euclide}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{mercury}{HTML}{846549}
+\definecolor{venus}{HTML}{BB9765}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{jupiter}{HTML}{A79476}
+\definecolor{saturn}{HTML}{DBBD9B}
+\definecolor{saturnring}{HTML}{857C73}
+\definecolor{uranus}{HTML}{b1d8dd}
+\definecolor{neptune}{HTML}{799bc1}
+\definecolor{pluto}{HTML}{ceaa8a}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{craterm}{HTML}{616060}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Sistema Solare: cronometrare la luce}
+\begin{document}
+	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		\def\rclock{10}
+		\def\rtick{9.5}
+		%
+		\draw [black,ultra thick,fill=title] (-5,8) rectangle (33,11.5);
+		\node at (14,9.8) {\textcolor{black}{\fontsize{90}{91}\selectfont Cronometrare la luce}};
+		%
+		\begin{scope}[shift={(15.5,-5)}]
+			\tkzDefPoint(-20,0){S}
+			\tkzDefPoint(20,0){L}
+			\tkzDrawCircle[R,fill=white,ultra thick](S, 3 cm)
+			\tkzDrawSegment[color=white,ultra thick](S,L)
+			%
+			\tkzDefPoint(0,0){C}
+			\tkzDefPoint(0,10.5){A}
+			\tkzDefPoint(0,9){H}
+			\tkzDefPointBy[rotation = center C angle 30](A)
+			\tkzGetPoint{A1}
+			\tkzDefPointBy[rotation = center C angle -30](A)
+			\tkzGetPoint{B1}
+			\tkzDrawSector[rotate,fill=craterm,ultra thick](C,A1)(5)
+			\tkzDrawSector[rotate,fill=craterm,ultra thick](C,B1)(-5)
+			\tkzDrawCircle[R,fill=moon,ultra thick](C,\rclock cm)
+			\tkzDrawCircle[R,fill=white,ultra thick](C,\rtick cm)
+			% time
+			\foreach \o in {0,1,...,5}
+				\draw [-,ultra thick,rotate around={60*\o:(C)}] (0,9.3) -- (0,8.8);
+			% inner solar system
+			\tkzDefPointBy[rotation = center C angle -3](H)
+			\tkzGetPoint{I1}
+			\tkzDefPointBy[rotation = center C angle -8](H)
+			\tkzGetPoint{I2}
+			\tkzDrawSector[fill=earth!50!white,ultra thick](C,I2)(I1)
+			\tkzDrawCircle[R,fill=mercury](I1,0.1 cm)
+			\tkzDrawCircle[R,fill=mars](I2,0.1 cm)
+			% jupiter
+			\tkzDefPointBy[rotation = center C angle -43](H)
+			\tkzGetPoint{J}
+			\tkzDrawSegment[ultra thick](C,J)
+			\tkzDrawCircle[R,fill=jupiter](J,0.1 cm)
+			% saturn
+			\tkzDefPointBy[rotation = center C angle -80](H)
+			\tkzGetPoint{S}
+			\tkzDrawSegment[ultra thick](C,S)
+			\tkzDrawCircle[R,fill=saturn](S,0.1 cm)
+			% uranus
+			\tkzDefPointBy[rotation = center C angle -160](H)
+			\tkzGetPoint{U}
+			\tkzDrawSegment[ultra thick](C,U)
+			\tkzDrawCircle[R,fill=uranus](U,0.1 cm)
+			% neptune
+			\tkzDefPointBy[rotation = center C angle -250](H)
+			\tkzGetPoint{N}
+			\tkzDrawSegment[ultra thick](C,N)
+			\tkzDrawCircle[R,fill=neptune](N,0.1 cm)
+			% pluto
+			\tkzDefPointBy[rotation = center C angle -328](H)
+			\tkzGetPoint{P}
+			\tkzDrawSegment[ultra thick](C,P)
+			\tkzDrawCircle[R,fill=pluto](P,0.1 cm)
+			%
+			\node at (0,-8.2) {\textcolor{black}{\fontsize{20}{21}\selectfont 3h}};
+			\tkzDrawCircle[R,fill=black](C,0.2 cm)
+			%			%
+			%\tkzDrawCircle[R,fill=earth,opacity=0.4,ultra thick](C,\rtick cm)
+			%
+			\draw[fill=dida,thick] (-21.5,-3.5) rectangle (-11.5,-14.5);
+			\node (example-textwidth-2) [right, align=left, text width=10cm, color=black, font=\fontsize{19pt}{20pt}\selectfont] at (-21,-9) {Ogni tacca dell'orologio coincide con un'ora.\\Il tempo impiegato dalla luce per raggiungere Mercurio e arrivare fino a Marte, ovvero il Sistema Solare interno, va dai 3 ai 12 minuti.\\Per raggiungere Giove alla luce servono circa 43 minuti. Saturno 1h e 20 minuti. Urano 2h e 40 minuti. Nettuno 4h e 10 minuti. Plutone 5h e 28 minuti.};
+		\end{scope}
+		%
+	\end{tikzpicture}
+%
+\end{document}
