@@ -67,6 +67,7 @@ Un *repository* di grafiche e infografiche realizzate con il pacchetto *tikzdraw
 | *Storia della misura della distanza Terra-Luna* | [tex source](infographics/luna/distanza_luna.tex) | [pdf](infographics/luna/pdf/distanza_luna.pdf) |
 | *La notte di San Lorenzo* | [tex source](infographics/sistema_solare/perseidi/notte_san_lorenzo.tex) | [pdf](infographics/sistema_solare/perseidi/pdf/notte_san_lorenzo.pdf) |
 | *Incontri ravvicinati* | [tex source](infographics/sistema_solare/asteroidi_top10.tex) | [pdf](infographics/sistema_solare/pdf/asteroidi_top10.pdf) |
+| *Cronometrare la luce* | [tex source](infographics/sistema_solare/tempo_luce.tex) | [pdf](infographics/sistema_solare/pdf/tempo_luce.pdf) |
 
 ### Fatti e misfatti
 
