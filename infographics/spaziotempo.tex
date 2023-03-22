@@ -7,6 +7,7 @@
 	decorations.pathmorphing,
 shapes.callouts}
 \usepackage{tkz-euclide}
+%
 %\usetkzobj{all}
 \usepackage{xcolor}
 \usepackage{ifthen}
@@ -15,12 +16,7 @@ shapes.callouts}
 \definecolor{earth}{HTML}{0089FA}
 \definecolor{dida}{HTML}{FFDE00}
 \definecolor{title}{HTML}{FBA706}
-\definecolor{moon}{HTML}{AFAFAF}
 \definecolor{spacetime}{HTML}{0CF508}
-\definecolor{star}{HTML}{45457D}
-\definecolor{radiation}{HTML}{FFD016}
-\definecolor{bh2}{HTML}{FDBF38}
-\definecolor{bh3}{HTML}{5A0701}
 %
 \usepackage{fontspec}
 \setmainfont{Open Dyslexic}
@@ -46,146 +42,138 @@ shapes.callouts}
 		\begin{scope}[shift={(0,-4)}]
 			\draw [ultra thick, fill=earth] (4.5,4) rectangle (9.5,-4);
 			\node at (7,0) {\includegraphics[width=5cm]{carl_sagan}};
-			\node (example-textwidth-2) [notice={(-3,0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (12,-1) {Uno dei modelli per raccontare la teoria della relatività generale più utilizzati è quello del telo elastico con al centro una massa che lo deforma.};
-			%
-			\begin{scope}[
-				shift={(18,-10)},yslant=0.5,xslant=-2
-			]
-				\foreach \x in {0,2,...,6}
-					\foreach \y in {0,2,...,6}
-						\fill (\x,\y) rectangle (1+\x,1+\y) rectangle (2+\x,2+\y);
-				\draw [thick] (0,0) rectangle (8,8);
-				%\draw [fill=white,opacity=0.5] (4,4) circle (1cm);
-			\end{scope}
-			%
-			\begin{scope}[yslant=0.5,xslant=-2]
-				\foreach \x in {0,1,...,8}
-					\foreach \y in {0,1,...,8} {
-					\tkzDefPoint(\x,\y){P\x\y}
-					}
-				\foreach \i in {0,1,...,3} {
-					%\tkzDrawLine(P\i0,P\i6)
-					%\draw (P\i0) -- (P\i6);
-					%\draw (4,4) [partial ellipse=90:270:-\i+4 and 4];
-					\draw (P\i0) to[out=90+10*\i,in=270-10*\i] (P\i6);
-				}
-				\foreach \i in {0,1,...,3} {
-					%\tkzDrawLine(P\i0,P\i6)
-					%\draw (P\i0) -- (P\i6);
-					%\draw (4,4) [partial ellipse=90:270:-\i+4 and 4];
-					\draw (P0\i) to[out=180+10*\i,in=360-10*\i] (P6\i);
-				}
-				\foreach \i in {5,6,...,8} {
-					%\tkzDrawLine(P\i0,P\i6)
-					%\draw (P\i0) -- (P\i6);
-					%\draw (4,4) [partial ellipse=90:270:-\i+4 and 4];
-					%\def\j{8-\i}
-					%\draw (P\i0) to[out=270-10*\j,in=90+10*\j] (P\i6);
-				}
-				\foreach \i in {0,1,...,7} {
-					%\tkzDrawLine(P0\i,P6\i)
-					%\draw (P0\i) -- (P6\i);
-				}
-				
-				%\fill (\x,\y) rectangle (1+\x,1+\y) rectangle (2+\x,2+\y);
-				%\draw [thick] (0,0) rectangle (8,8);
-			\end{scope}
-			%
-			\draw [fill=red] (14.5,-7.5) circle (1cm);
-		\end{scope}
-		%
-		\begin{scope}[shift={(0,31)}]
-			\draw[fill=space,ultra thick] (0.5,8) rectangle (28,-6.7);
-			%dida
-			\begin{scope}
+			\node (example-textwidth-2) [notice={(-3,0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (12,-1) {Uno dei modelli per raccontare la teoria della relatività generale più utilizzati è quello del telo elastico con al centro una pallina che lo deforma.};
+			%flamm paraboloid
+			\begin{scope}[shift={(14,-14)}]
 				%
-				%\node at (20,7) {\textcolor{black}{\fontsize{23}{24}\selectfont Un buco nero è una}};
-				%\node at (20,6) {\textcolor{black}{\fontsize{23}{24}\selectfont regione sferica dello spazio tempo}};
-				%\node at (20,5) {\textcolor{black}{\fontsize{23}{24}\selectfont da cui nemmeno la luce è in grado}};
-				%\node at (20,4) {\textcolor{black}{\fontsize{23}{24}\selectfont di fuggire.}};
-				%\node at (20,3) {\textcolor{black}{\fontsize{23}{24}\selectfont Il raggio di questa sfera}};
-				%\node at (20,2) {\textcolor{black}{\fontsize{23}{24}\selectfont è detto raggio di Schwarzschild}};
-				%\node at (20,0.5) {\textcolor{black}{\fontsize{23}{24}\selectfont $r_S = \frac{2GM}{c^2}$}};
-				%\draw[fill=dida,thick] (11,-6.5) rectangle (29.2,-0.8);
-				%\node at (20,-1.5) {\textcolor{black}{\fontsize{23}{24}\selectfont Questo raggio è anche detto}};
-				%\node at (20,-2.5) {\textcolor{black}{\fontsize{23}{24}\selectfont \emph{orizzonte degli eventi}}};
-				%\node at (20,-3.5) {\textcolor{black}{\fontsize{23}{24}\selectfont perché oltre questa superficie}};
-				%\node at (20,-4.5) {\textcolor{black}{\fontsize{23}{24}\selectfont non sappiamo cosa succede alla materia}};
-				%\node at (20,-5.5) {\textcolor{black}{\fontsize{23}{24}\selectfont né se le leggi fisiche sono ancora valide.}};
+				\draw (-0.1,-2.9) to[out=90,in=275] (-0.9,8.3);
+				\draw (-0.6,-2.7) to[out=98,in=300] (-5.1,7.8);
+				\draw (-1.1,-2.7) to[out=100,in=314] (-8.7,6.7);
+				\draw (-1.3,-2.4) to[out=120,in=325] (-5.9,1.9) to[out=148,in=335] (-11.2,4.9);
+				\draw (-1.6,-2.4) to[out=130,in=330] (-4.9,0.1) to[out=150,in=340] (-12,2.9);
+				%
+				\draw (0.3,-2.9) to[out=81,in=250] (3.5,8.1);
+				\draw (0.8,-2.6) to[out=76,in=231] (7.4,7.2);
+				\draw (1.4,-2.5) to[out=65,in=214] (10.5,5.6);
+				\draw (1.7,-2.4) to[out=75,in=210] (4.85,0.5) to[out=20,in=180] (11.9,2.4);
+				%
+				\draw (0,-1.8) [partial ellipse=0:180:2.1 and 1];
+				\draw (0,-1.2) [partial ellipse=0:180:2.8 and 1.3];
+				\draw (0,-0.6) [partial ellipse=0:180:3.5 and 1.6];
+				\draw (0,0) [partial ellipse=0:180:4.2 and 1.8];
+				\draw (0,0.3) [partial ellipse=0:180:4.9 and 2.1];
+				%
+				\draw[fill=red] (0,0) circle (2.9cm);
+				%
+				\draw (-1.6,-2.4) to[out=150,in=330] (-3.5,-1) to[out=160,in=350] (-10.8,0.7);
+				\draw (-1.3,-2.6) to[out=165,in=330] (-2.9,-1.4) to[out=165,in=360] (-7.8,-1);
+				\draw (-1,-2.7) to[out=130,in=330] (-2,-1.6) to[out=160,in=30] (-4.6,-1.9);
+				\draw (-0.5,-2.85) to[out=90,in=350] (-1,-1.8) to[out=160,in=40] (-1.8,-2.25);
+				%
+				\draw (1.5,-2.5) to[out=80,in=214] (3.5,-1) to[out=20,in=180] (9,-0.5);
+				\draw (0.65,-2.8) to[out=80,in=214] (1.7,-1.7) to[out=20,in=170] (5.2,-1.8);
+				\draw (0.1,-2.9) to [out=88,in=250] (0.3,-1.8) to[out=20,in=140] (1,-2.3);
+				%
+				\draw (0,-1.8) [partial ellipse=180:360:2.1 and 1];
+				\draw (0,-1.2) [partial ellipse=180:360:2.8 and 1.3];
+				\draw (0,-0.6) [partial ellipse=180:360:3.5 and 1.6];
+				\draw (0,0) [partial ellipse=180:360:4.2 and 1.8];
+				\draw (0,0.3) [partial ellipse=180:360:4.9 and 2.1];
+				\draw (0,0.6) ellipse (5.6cm and 2.4cm);
+				\draw (0,0.9) ellipse (6.3cm and 2.7cm);
+				\draw (0,1.2) ellipse (7cm and 3cm);
+				\draw (0,1.5) ellipse (7.7cm and 3.3cm);
+				\draw (0,1.8) ellipse (8.5cm and 3.7cm);
+				\draw (0,2.1) ellipse (9.3cm and 4.1cm);
+				\draw (0,2.4) ellipse (10.2cm and 4.5cm);
+				\draw (0,2.7) ellipse (11.1cm and 4.9cm);
+				\draw (0,3) ellipse (12cm and 5.3cm);
 			\end{scope}
-			%blackhole
-			%\draw[fill=black] (7,1) circle (6cm);
-			\draw [color=white, ultra thick] (3,1) -- (15,1);
-			\draw (9,1) [color=white,ultra thick,partial ellipse=180:0:6 and 3];
-			\node at (3,0) {\textcolor{white}{\fontsize{23}{24}\selectfont Ottawa}};
-			\node at (15,0) {\textcolor{white}{\fontsize{23}{24}\selectfont Venezia}};
-			%
-			%\draw[ultra thick,color=white,->] (7,1) -- (11.24,5.24) node [midway, above, sloped,opacity=1] (TextNode) {\textcolor{white}{\fontsize{12}{13}\selectfont Raggio di Schwarzschild, $r_S$}};
-			%\draw (7,1) [color=moon,ultra thick,partial ellipse=180:360:6 and 3];
 		\end{scope}
-		%flamm paraboloid
-		\begin{scope}[shift={(16,55.5)}]
+		%dida
+		\begin{scope}[shift={(0,-24)}]
 			%
-			\draw [fill=space, ultra thick] (-13,9) rectangle (13,-5);
-			%
-			\draw [color=white] (-0.1,-2.9) to[out=90,in=275] (-0.9,8.3);
-			\draw [color=white] (-0.6,-2.7) to[out=98,in=300] (-5.1,7.8);
-			\draw [color=white] (-1.1,-2.7) to[out=100,in=314] (-8.7,6.7);
-			\draw [color=white] (-1.3,-2.4) to[out=120,in=325] (-5.9,1.9) to[out=148,in=335] (-11.2,4.9);
-			\draw [color=white] (-1.6,-2.4) to[out=130,in=330] (-4.9,0.1) to[out=150,in=340] (-12,2.9);
-			%
-			\draw [color=white] (0.3,-2.9) to[out=81,in=250] (3.5,8.1);
-			\draw [color=white] (0.8,-2.6) to[out=76,in=231] (7.4,7.2);
-			\draw [color=white] (1.4,-2.5) to[out=65,in=214] (10.5,5.6);
-			\draw [color=white] (1.7,-2.4) to[out=75,in=210] (4.85,0.5) to[out=20,in=180] (11.9,2.4);
-			%
-			%\draw (0,-3.6) [color=white,partial ellipse=0:180:1.4 and 0.7];
-			\draw (0,-1.8) [color=white,partial ellipse=0:180:2.1 and 1];
-			\draw (0,-1.2) [color=white,partial ellipse=0:180:2.8 and 1.3];
-			\draw (0,-0.6) [color=white,partial ellipse=0:180:3.5 and 1.6];
-			\draw (0,0) [color=white,partial ellipse=0:180:4.2 and 1.8];
-			\draw (0,0.3) [color=white,partial ellipse=0:180:4.9 and 2.1];
-			%
-			\draw[fill=earth] (0,0) circle (2.9cm);
-			%
-			\draw [color=white] (-1.6,-2.4) to[out=150,in=330] (-3.5,-1) to[out=160,in=350] (-10.8,0.7);
-			\draw [color=white] (-1.3,-2.6) to[out=165,in=330] (-2.9,-1.4) to[out=165,in=360] (-7.8,-1);
-			\draw [color=white] (-1,-2.7) to[out=130,in=330] (-2,-1.6) to[out=160,in=30] (-4.6,-1.9);
-			\draw [color=white] (-0.5,-2.85) to[out=90,in=350] (-1,-1.8) to[out=160,in=40] (-1.8,-2.25);
-			%
-			\draw [color=white] (1.5,-2.5) to[out=80,in=214] (3.5,-1) to[out=20,in=180] (9,-0.5);
-			\draw [color=white] (0.65,-2.8) to[out=80,in=214] (1.7,-1.7) to[out=20,in=170] (5.2,-1.8);
-			\draw [color=white] (0.1,-2.9) to [out=88,in=250] (0.3,-1.8) to[out=20,in=140] (1,-2.3);
-			%
-			%\draw (0,-3.6) [color=white,partial ellipse=180:360:1.4 and 0.7];
-			\draw (0,-1.8) [color=white,partial ellipse=180:360:2.1 and 1];
-			\draw (0,-1.2) [color=white,partial ellipse=180:360:2.8 and 1.3];
-			\draw (0,-0.6) [color=white,partial ellipse=180:360:3.5 and 1.6];
-			\draw (0,0) [color=white,partial ellipse=180:360:4.2 and 1.8];
-			\draw (0,0.3) [color=white,partial ellipse=180:360:4.9 and 2.1];
-			\draw [color=white] (0,0.6) ellipse (5.6cm and 2.4cm);
-			\draw [color=white] (0,0.9) ellipse (6.3cm and 2.7cm);
-			\draw [color=white] (0,1.2) ellipse (7cm and 3cm);
-			\draw [color=white] (0,1.5) ellipse (7.7cm and 3.3cm);
-			\draw [color=white] (0,1.8) ellipse (8.5cm and 3.7cm);
-			\draw [color=white] (0,2.1) ellipse (9.3cm and 4.1cm);
-			\draw [color=white] (0,2.4) ellipse (10.2cm and 4.5cm);
-			\draw [color=white] (0,2.7) ellipse (11.1cm and 4.9cm);
-			\draw [color=white] (0,3) ellipse (12cm and 5.3cm);
-			%dida
-			%\draw [black,thick,fill=dida] (-14,-4) rectangle (14,-15);
-			%\node at (0,-5) {\textcolor{black}{\fontsize{23}{24}\selectfont Ogni oggetto celeste dotato di massa deforma lo spaziotempo}};
-			%\node at (0,-6) {\textcolor{black}{\fontsize{23}{24}\selectfont intorno a se. In particolare la deformazione generata da un}};
-			%\node at (0,-7) {\textcolor{black}{\fontsize{23}{24}\selectfont buco nero è tale per cui la velocità di fuga dalla superficie}};
-			%\node at (0,-8) {\textcolor{black}{\fontsize{23}{24}\selectfont è superiore a quella della luce}};
-			%\node at (0,-9.5) {\textcolor{black}{\fontsize{23}{24}\selectfont $v_f = \sqrt{\frac{r_s}{r}} \, c$}};
-			%\node at (0,-11) {\textcolor{black}{\fontsize{23}{24}\selectfont La formula ci dice che al centro del buco nero $(r=0)$,}};
-			%\node at (0,-12) {\textcolor{black}{\fontsize{23}{24}\selectfont la velocità di fuga è infinita, il che è fisicamente impossibile.}};
-			%\node at (0,-13) {\textcolor{black}{\fontsize{23}{24}\selectfont Questo ci suggerisce che all'interno del buco nero}};
-			%\node at (0,-14) {\textcolor{black}{\fontsize{23}{24}\selectfont la fisica è differente rispetto a quella che conosciamo.}};
+			\draw [fill=dida, ultra thick] (1,2.5) rectangle (27.5,-2.5);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (1.5,0) {Questo permette di mostrare come palline più piccole "orbitino" intorno alla palla più grande al centro in un modo simile ai pianeti, almeno fino a che l'attrito non ha ragione del moto circolare, rallentando le palline che quindi cadono dentro la "sacca gravitazionale".};
 		\end{scope}
 		%
-		\begin{scope}[shift={(0,-38.8)}]
+		%flamm paraboloid
+		\begin{scope}[shift={(14,-37)}]
+			%
+			\draw (-0.1,-2.9) to[out=90,in=275] (-0.9,8.3);
+			\draw (-0.6,-2.7) to[out=98,in=300] (-5.1,7.8);
+			\draw (-1.1,-2.7) to[out=100,in=314] (-8.7,6.7);
+			\draw (-1.3,-2.4) to[out=120,in=325] (-5.9,1.9) to[out=148,in=335] (-11.2,4.9);
+			\draw (-1.6,-2.4) to[out=130,in=330] (-4.9,0.1) to[out=150,in=340] (-12,2.9);
+			%
+			\draw (0.3,-2.9) to[out=81,in=250] (3.5,8.1);
+			\draw (0.8,-2.6) to[out=76,in=231] (7.4,7.2);
+			\draw (1.4,-2.5) to[out=65,in=214] (10.5,5.6);
+			\draw (1.7,-2.4) to[out=75,in=210] (4.85,0.5) to[out=20,in=180] (11.9,2.4);
+			%
+			\draw (0,-1.8) [partial ellipse=0:180:2.1 and 1];
+			\draw (0,-1.2) [partial ellipse=0:180:2.8 and 1.3];
+			\draw (0,-0.6) [partial ellipse=0:180:3.5 and 1.6];
+			\draw (0,0) [partial ellipse=0:180:4.2 and 1.8];
+			\draw (0,0.3) [partial ellipse=0:180:4.9 and 2.1];
+			%
+			\draw[fill=red] (0,0) circle (2.9cm);
+			%
+			\draw (-1.6,-2.4) to[out=150,in=330] (-3.5,-1) to[out=160,in=350] (-10.8,0.7);
+			\draw (-1.3,-2.6) to[out=165,in=330] (-2.9,-1.4) to[out=165,in=360] (-7.8,-1);
+			\draw (-1,-2.7) to[out=130,in=330] (-2,-1.6) to[out=160,in=30] (-4.6,-1.9);
+			\draw (-0.5,-2.85) to[out=90,in=350] (-1,-1.8) to[out=160,in=40] (-1.8,-2.25);
+			%
+			\draw (1.5,-2.5) to[out=80,in=214] (3.5,-1) to[out=20,in=180] (9,-0.5);
+			\draw (0.65,-2.8) to[out=80,in=214] (1.7,-1.7) to[out=20,in=170] (5.2,-1.8);
+			\draw (0.1,-2.9) to [out=88,in=250] (0.3,-1.8) to[out=20,in=140] (1,-2.3);
+			%
+			\draw (0,-1.8) [partial ellipse=180:360:2.1 and 1];
+			\draw (0,-1.2) [partial ellipse=180:360:2.8 and 1.3];
+			\draw (0,-0.6) [partial ellipse=180:360:3.5 and 1.6];
+			\draw (0,0) [partial ellipse=180:360:4.2 and 1.8];
+			\draw (0,0.3) [partial ellipse=180:360:4.9 and 2.1];
+			\draw (0,0.6) ellipse (5.6cm and 2.4cm);
+			\draw (0,0.9) ellipse (6.3cm and 2.7cm);
+			\draw (0,1.2) ellipse (7cm and 3cm);
+			\draw (0,1.5) ellipse (7.7cm and 3.3cm);
+			\draw (0,1.8) ellipse (8.5cm and 3.7cm);
+			\draw (0,2.1) ellipse (9.3cm and 4.1cm);
+			\draw (0,2.4) ellipse (10.2cm and 4.5cm);
+			\draw (0,2.7) ellipse (11.1cm and 4.9cm);
+			\draw (0,3) ellipse (12cm and 5.3cm);
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-45)}]
+			\draw [ultra thick, fill=earth] (20.5,4) rectangle (25.5,-4);
+			\node at (23,0) {\includegraphics[width=5cm]{carl_sagan}};
+			\node (example-textwidth-2) [notice={(3,0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (1,-1) {Questo modo "concreto" di vedere la relatività generale è diretta conseguenza del modo matematico "visuale" generato dai diagrammi di incorporamento e dai parabolodi di Flamm.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-56)}]
+			\draw [ultra thick, fill=earth] (4.5,4) rectangle (9.5,-4);
+			\node at (7,0) {\includegraphics[width=5cm]{carl_sagan}};
+			\node (example-textwidth-2) [notice={(-3,0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (12,-1) {Esiste, però, un metodo alternativo per raccontare la deformazione dello spaziotempo. Vediamolo insieme.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-61)}]
+			\draw[fill=space,ultra thick] (0.5,0) rectangle (28,-12);
+			%
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (1.5,-3) {Supponiamo di voler andare da Ottawa a Venezia in aereo. Questo, che si sposta relativamente vicino alla superficie del pianeta, compirà un arco di circonferenza per andare dalla cittadina canadese fino a quella italiana, invece di prendere la retta che collega direttamente le due città.};
+			\draw [color=white, ultra thick] (3,-10) -- (15,-10);
+			\draw (9,-10) [color=white,ultra thick,partial ellipse=180:0:6 and 3];
+			\node at (3,-11) {\textcolor{white}{\fontsize{23}{24}\selectfont Ottawa}};
+			\node at (15,-11) {\textcolor{white}{\fontsize{23}{24}\selectfont Venezia}};
+		\end{scope}
+		%
+		%
+		\begin{scope}[shift={(0,-78)}]
+			\draw [ultra thick, fill=earth] (20.5,4) rectangle (25.5,-4);
+			\node at (23,0) {\includegraphics[width=5cm]{carl_sagan}};
+			\node (example-textwidth-2) [notice={(3,0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (1,-1) {Vediamo ora tre differenti tipi di curve relativi a tre differenti tipi di moti nello spaziotempo:};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-90)}]
 			\draw[fill=space,ultra thick] (0.5,7.5) rectangle (29,-5.5);
 			\draw [->,color=white,ultra thick] (3,1) -- (15,1);
 			\draw [->,color=white,ultra thick] (4,-4) -- (4,6);
@@ -200,173 +188,17 @@ shapes.callouts}
 			\node at (7,-4) {\textcolor{white}{\fontsize{23}{24}\selectfont a}};
 			\node at (9,-4) {\textcolor{white}{\fontsize{23}{24}\selectfont b}};
 			\node at (12,-4) {\textcolor{white}{\fontsize{23}{24}\selectfont c}};
-			%dida
-			%\draw[fill=dida,thick] (12.5,6) rectangle (29.5,-3);
-			%sun
-			%\draw[fill=white] (7,1) circle (6cm);
-			%\draw (7,1) [color=black,dashed,ultra thick,partial ellipse=180:0:6 and 3];
-			%\draw[ultra thick,color=black,->] (7,1) -- (11.24,5.24) node [midway, above, sloped,opacity=1] (TextNode) {\textcolor{black}{\fontsize{12}{13}\selectfont Raggio del Sole, $70000 \, km$}};
-			%\draw (7,1) [color=black,ultra thick,partial ellipse=180:360:6 and 3];
-			%dida text
-			%\node at (21,5) {\textcolor{black}{\fontsize{23}{24}\selectfont Per ogni oggetto dotato di massa}};
-			%\node at (21,4) {\textcolor{black}{\fontsize{23}{24}\selectfont è possibile calcolare il corrispondente}};
-			%\node at (21,3) {\textcolor{black}{\fontsize{23}{24}\selectfont raggio di Schwarzschild. Ad esempio}};
-			%\node at (21,2) {\textcolor{black}{\fontsize{23}{24}\selectfont quello del Sole è di $3 \, km$.}};
-			%\node at (21,1) {\textcolor{black}{\fontsize{23}{24}\selectfont Questo vuol dire che se il Sole}};
-			%\node at (21,0) {\textcolor{black}{\fontsize{23}{24}\selectfont  diventasse un buco nero,}};
-			%\node at (21,-1) {\textcolor{black}{\fontsize{23}{24}\selectfont tutta la sua massa si concentrerebbe}};
-			%\node at (21,-2) {\textcolor{black}{\fontsize{23}{24}\selectfont in una sfera di 3 chilometri di raggio.}};
+			%
+			\node (example-textwidth-2) [right, align=left, text width=11cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (18,2) {La linea a rappresenta una particella a riposo, la linea b una particella che si muove a velocità costante e la curva c rappresenta una particella che si muove di moto accelerato.};
 		\end{scope}
 		%
-		\begin{scope}[shift={(-6,-54.3)},decoration=snake]
-			\draw[color=star,fill=star] (15,0) circle (6cm);
-			\draw[color=radiation!20!star,fill=radiation!20!star] (15,0) circle (5.5cm);
-			\draw[color=radiation,fill=radiation] (15,0) circle (4.5cm);
-			\foreach \x in {0,1,2,3}
-			{\begin{scope}[rotate around={(90 * \x):(15,0)}]
-				\draw [->, color=white, ultra thick] (15,5.5) -- (15,4.5);
-				\draw [-,decorate,color=radiation,ultra thick,rotate around={45:(15,0)}] (15,4.5) -- (15,5.3);
-				\draw [->,color=radiation,ultra thick,rotate around={45:(15,0)}] (15,5.3)-- (15,5.5);
-			\end{scope}}
-			%
-			\draw [<-,ultra thick] (20,0) -- (20,-0.5) -- (21.5,-0.5);
-			\draw [fill=white,thick] (21.5,0.3) rectangle (26.5,-1.5);
-			\node at (23.4,-0.2) {\textcolor{black}{\fontsize{17}{18}\selectfont Attrazione}};
-			\node at (24,-0.9) {\textcolor{black}{\fontsize{17}{18}\selectfont gravitazionale}};
-			%
-			\draw [<-,ultra thick] (18.5,3.4) -- (19.4,2.5) -- (21.5,2.5);
-			\draw [fill=white,thick] (21.5,3.3) rectangle (28.2,1.6);
-			\node at (24.8,2.8) {\textcolor{black}{\fontsize{17}{18}\selectfont Radiazione nucleare}};
-			\node at (22.5,2.1) {\textcolor{black}{\fontsize{17}{18}\selectfont forte}};
-			%dida up
-			\draw [fill=dida,thick] (8.4,9.2) rectangle (33.8,5.8);
-			\node at (21,8.5) {\textcolor{black}{\fontsize{23}{24}\selectfont All'interno di una stella, quando l'equilibrio tra attrazione}};
-			\node at (21,7.5) {\textcolor{black}{\fontsize{23}{24}\selectfont gravitazionale e forza nucleare forte viene rotto}};
-			\node at (21,6.5) {\textcolor{black}{\fontsize{23}{24}\selectfont a favore della prima, la stella collassa.}};
-			%
-			\draw [fill=dida,thick] (20.5,-2.3) rectangle (35.5,-7.7);
-			\node at (28,-3) {\textcolor{black}{\fontsize{23}{24}\selectfont Non tutte le stelle possono}};
-			\node at (28,-4) {\textcolor{black}{\fontsize{23}{24}\selectfont diventare buchi neri, ma solo}};
-			\node at (28,-5) {\textcolor{black}{\fontsize{23}{24}\selectfont quelle la cui massa è superiore al}};
-			\node at (28,-6) {\textcolor{black}{\fontsize{23}{24}\selectfont "limite di Chandrasekhar", che è}};
-			\node at (28,-7) {\textcolor{black}{\fontsize{23}{24}\selectfont all'incirca 1.44 masse solari}};
+		\begin{scope}[shift={(0,-100)}]
+			\draw [ultra thick, fill=earth] (4.5,4) rectangle (9.5,-4);
+			\node at (7,0) {\includegraphics[width=5cm]{carl_sagan}};
+			\node (example-textwidth-2) [notice={(-3,0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (12,-1) {Dunque l'arco di circonferenza tra Ottawa e Venezia, che in un certo senso rappresenta il moto dell'aereo nel campo gravitazionale della Terra, può essere una analogia alternativa per descrivere la deformazione dello spaziotempo generata dalla massa dei pianeti.};
 		\end{scope}
 		%
-		\begin{scope}[shift={(0,-68)}]
-			%background
-			\draw [fill=space,ultra thick] (0.5,5) rectangle (29.5,-8);
-			%dida
-			\draw [fill=dida,thick] (0.3,4.7) rectangle (13.6,-1.7);
-			%blackhole
-			\draw[fill=black] (18,0) circle (4cm);
-			%
-			\draw (18,0) [ultra thick,color=white,partial ellipse=290:330:8 and 2];
-			\draw [fill=white] (20.8,-1.85) circle (0.2cm);
-			%
-			\draw (18,0) [ultra thick,color=white,rotate around={30:(18,0)},partial ellipse=160:120:9 and 3.6];
-			\draw [fill=white] (12.5,0.4) circle (0.2cm);
-			%
-			\draw (18,0) [ultra thick,color=white,rotate around={120:(18,0)},partial ellipse=110:140:10 and 2.8];
-			\draw [fill=white] (17.4,-4.2) circle (0.2cm);
-			%
-			\node at (7,4) {\textcolor{black}{\fontsize{23}{24}\selectfont Per scoprire un buco nero,}};
-			\node at (7,3) {\textcolor{black}{\fontsize{23}{24}\selectfont poiché neanche la luce riesce}};
-			\node at (7,2) {\textcolor{black}{\fontsize{23}{24}\selectfont a sfuggire alla sua superficie, }};
-			\node at (7,1) {\textcolor{black}{\fontsize{23}{24}\selectfont si studiano i moti orbitali}};
-			\node at (7,0) {\textcolor{black}{\fontsize{23}{24}\selectfont delle stelle che}};
-			\node at (7,-1) {\textcolor{black}{\fontsize{23}{24}\selectfont gli ruotano attorno}};
-		\end{scope}
-		%
-		\begin{scope}[shift={(0,-86.5)}]
-			\draw [fill=space,ultra thick] (0.5,6.5) rectangle (29.5,-5);
-			%m87 graphic interpretation
-			\draw [color=bh3,fill=bh3,ultra thick] (15,0.4) ellipse (4.4cm and 3.8cm);
-			\draw [color=bh2,fill=bh2,ultra thick] (17,1.4) to[out=180,in=230] (15.95,0.6) -- (14.2,0.6) to[out=100,in=0] (14,2.6) to[out=180,in=75] (12,0.9) to[out=255,in=90] (11.9,0.2) to[out=265,in=150] (13,-1.55) to[out=330,in=175] (15.1,-2.5) to[out=0,in=250] (17.9,-0.1) to[out=75,in=10] (17,1.4);
-			\draw [color=black,fill=black,ultra thick,rotate around={-10:(15.1,0.9)}] (15.1,0.9) ellipse (0.9cm and 1.1cm);
-			\draw [color=white,fill=white,ultra thick] (13.2,0.7) to[out=350,in=10] (13.4,-0.7) to[out=170,in=210] (13.2,0.7);
-			\draw [color=white,fill=white,rotate around={14:(13.2,0)}] (13.2,0) ellipse (0.3cm and 0.6cm);
-			\draw [color=white,fill=white] (14.5,-1.3) to[out=310,in=250] (16.9,-0.1) to[out=95,in=50] (16.4,0) to[out=240,in=360] (15,-1) to[out=170,in=120] (14.5,-1.3);
-			%
-			\draw [<-,color=white,ultra thick] (18.5,1) -- (21,1);
-			\node at (25,1.8) {\textcolor{white}{\fontsize{17}{18}\selectfont Materia che sta cadendo}};
-			\node at (25.1,1.1) {\textcolor{white}{\fontsize{17}{18}\selectfont nel buco nero attraverso}};
-			\node at (24.8,0.4) {\textcolor{white}{\fontsize{17}{18}\selectfont l'orizzonte degli eventi}};
-			%
-			\draw [thick,fill=dida] (14.1,-4.3) rectangle (28.9,-5.8);
-			\node at (21.5,-4.7) {\textcolor{black}{\fontsize{14}{15}\selectfont La foto del buco nero può essere vista al seguente link}};
-			\node at (21.5,-5.4) {\textcolor{black}{\fontsize{14}{15}\selectfont https://www.eso.org/public/italy/news/eso1907/}};
-			%
-			\draw [<-,color=white,ultra thick] (15.1,0.9) -- (5,-2.5);
-			\node at (5,-3) {\textcolor{white}{\fontsize{17}{18}\selectfont Buco nero al centro di M87}};
-			%dida up
-			\draw [fill=dida,thick] (0.2,10.2) rectangle (29.8,6.8);
-			\node at (15,9.5) {\textcolor{black}{\fontsize{23}{24}\selectfont Il 10 aprile del 2019 è stata rilasciata}};
-			\node at (15,8.5) {\textcolor{black}{\fontsize{23}{24}\selectfont la prima foto di un buco nero realizzata}};
-			\node at (15,7.5) {\textcolor{black}{\fontsize{23}{24}\selectfont grazie a una rete di radiotelescopi: Event Horizon Telescope}};
-		\end{scope}
-		%
-		\begin{scope}[shift={(0,-103)}]
-			%
-			\draw [fill=space,ultra thick] (1,7.5) rectangle (29,-10);
-			%
-			\draw (13.5,-1.5) [ultra thick,color=white,partial ellipse=180:360:4.8 and 4.8];
-			\draw [color=white,ultra thick] (1,0) to[out=30,in=180] (11.9,4.2) to[out=0,in=90] (18.3,-1.5);
-			%
-			\draw [color=white,ultra thick] (8.7,-1.5) to[out=92,in=215] (11.9,4.2) to[out=30,in=185] (17.2,5.9) to[out=5,in=180] (24.5,6.2) -- (28.9,6.2);%1
-			\draw [color=white,ultra thick] (9.1,-1.5) to[out=92,in=215] (12,3.9) to[out=30,in=185] (17.2,5.6) to[out=5,in=180] (24.5,5.9) -- (28.9,5.9);%2
-			\draw [color=white,ultra thick] (9.6,-1.5) to[out=96,in=215] (12.1,3.6) to[out=30,in=186.5] (17.2,5.3) to[out=6.5,in=180] (24.5,5.6) -- (28.9,5.6);%3
-			\draw [color=white,ultra thick] (10.1,-1.5) to[out=100,in=215] (12.2,3.35) to[out=32,in=186] (17.2,5) to[out=6,in=180] (24.5,5.3) -- (28.9,5.3);%4
-			\draw [color=white,ultra thick] (10.6,-1.5) to[out=110,in=215] (12.3,3.1) to[out=34,in=186] (17.2,4.7) to[out=6,in=180] (24.5,5) -- (28.9,5);%5
-			\draw [color=white,ultra thick] (11,-1.5) to[out=120,in=215] (12.4,2.8) to[out=36,in=186] (17.2,4.4) to[out=6,in=180] (24.5,4.7) -- (28.9,4.7);%6
-			\draw [color=white,ultra thick] (11.4,-1.5) to[out=120,in=215] (12.5,2.55) to[out=36,in=186] (17.2,4.1) to[out=6,in=180] (24.5,4.4) -- (28.9,4.4);%7
-			\draw [color=white,ultra thick] (11.8,-1.5) to[out=120,in=215] (12.6,2.3) to[out=36,in=186] (17.2,3.85) to[out=6,in=180] (24.5,4.1) -- (28.9,4.1);%8
-			\draw [color=white,ultra thick] (12.2,-1.5) to[out=120,in=215] (12.7,2.1) to[out=36,in=186] (17.2,3.6) to[out=6,in=180] (24.5,3.8) -- (28.9,3.8);%9
-			\draw [color=white,ultra thick] (12.4,0.8) to[out=120,in=220] (12.8,1.8) to[out=40,in=186] (17.2,3.3) to[out=5,in=180] (24.5,3.5) -- (28.9,3.5);%10
-			\draw [color=white,ultra thick] (12.7,1.4) to[out=44,in=186] (17.2,3.05) to[out=5,in=180] (24.5,3.2) -- (28.9,3.2);%11
-			\draw [color=white,ultra thick] (13,1.3) to[out=41,in=186] (17.2,2.8) to[out=5,in=180] (24.5,2.9) -- (28.9,2.9);%12
-			\draw [color=white,ultra thick] (13.7,1.5) to[out=36,in=186] (17.2,2.5) to[out=5,in=180] (24.5,2.6) -- (28.9,2.6);%13
-			\draw [color=white,ultra thick] (14,1.4) to[out=32,in=186] (17.2,2.2) to[out=5,in=180] (24.5,2.3) -- (28.9,2.3);%14
-			\draw [color=white,ultra thick] (14.3,1.25) to[out=32,in=186] (17.2,1.9) to[out=5,in=180] (24.5,2.05) -- (28.9,2.05);%15
-			\draw [color=white,ultra thick] (14.6,1.1) to[out=32,in=186] (16.7,1.6) to[out=5,in=180] (24.5,1.75) -- (28.9,1.75);%16
-			\draw [color=white,ultra thick] (14.9,0.9) to[out=32,in=186] (16.7,1.35) to[out=5,in=180] (24.5,1.45) -- (28.9,1.45);%17
-			\draw [color=white,ultra thick] (15.2,0.7) to[out=32,in=186] (16.7,1.1) to[out=5,in=180] (24.5,1.15) -- (28.9,1.15);%18
-			\draw [color=white,ultra thick] (15.5,0.6) to[out=20,in=186] (16.7,0.85) to[out=3,in=180] (24.5,0.85) -- (28.9,0.85);%19
-			\draw [color=white,ultra thick] (15.5,0.3) to[out=30,in=186] (16.7,0.55) to[out=1,in=180] (24.5,0.55) (28.9,0.55);%20
-			\foreach \x in {0,1,2,3,4,5}
-				{\draw [color=white,ultra thick] (15.5,0.25-0.3*\x) -- (28.9,0.25-0.3*\x);}
-			%
-			\draw [color=white,ultra thick] (9.1,-1.5) to[out=275,in=200] (13,-4.5);
-			\draw [color=white,ultra thick] (9.6,-1.5) to[out=280,in=155] (11.3,-3.5);
-			\draw [color=white,ultra thick] (10.1,-1.5) to[out=290,in=155] (10.8,-2.3);
-			%
-			\draw [color=red,fill=black,opacity=0.5,ultra thick] (13.5,-1.5) circle (4.5cm);
-			\draw [color=white,fill=black,ultra thick] (13.5,-1.5) circle (3cm);
-			\draw [color=white,fill=black,ultra thick] (25.7,-1.5) ellipse (3.2cm and 7.6cm);
-			%
-			\draw [<->,color=white,ultra thick] (13.5,-1.5) -- (13.5,1.5);
-			\node at (14.4,-0.2) {\textcolor{white}{\fontsize{23}{24}\selectfont $r_S$}};
-			\draw [<->,color=red,ultra thick,rotate around={45:(13.5,-1.5)}] (13.5,-1.5) -- (13.5,-6);
-			\node at (13.8,-3.5) {\textcolor{red}{\fontsize{23}{24}\selectfont $1.5 \, r_S$}};
-			\draw [->,color=white,ultra thick] (7,-2.5) -- (10.5,-1.5);
-			\node at (4.8,-2.1) {\textcolor{white}{\fontsize{23}{24}\selectfont Sfera di}};
-			\node at (5.6,-3.1) {\textcolor{white}{\fontsize{23}{24}\selectfont non ritorno}};
-			\draw [->,color=red,ultra thick] (5.9,-5.1) -- (9.4,-3.5);
-			\node at (5.9,-6) {\textcolor{red}{\fontsize{23}{24}\selectfont Sfera di luce}};
-			\draw [<->,color=white,ultra thick] (25.7,-1.5) -- (25.7,6.1) node [midway, above, sloped] (TextNode) {\textcolor{white}{\fontsize{20}{21}\selectfont Raggio di cattura}};;
-			\node at (26.9,1.8) {\textcolor{white}{\fontsize{23}{24}\selectfont $2.6 \, r_S$}};
-			%dida up
-			\draw [fill=dida,thick] (0.2,10.2) rectangle (29.8,6.8);
-			\node at (15,9.5) {\textcolor{black}{\fontsize{23}{24}\selectfont La macchia nera, però, è solo l'ombra del buco nero.}};
-			\node at (15,8.5) {\textcolor{black}{\fontsize{23}{24}\selectfont Il suo raggio, infatti, è la così detta zona di cattura della luce,}};
-			\node at (15,7.5) {\textcolor{black}{\fontsize{23}{24}\selectfont grande all'incirca 2.6 raggi di Schwarzschild.}};
-			%
-			\draw [thick,fill=dida] (14.1,-9.4) rectangle (28.9,-11.6);
-			\node at (21.5,-9.8) {\textcolor{black}{\fontsize{14}{15}\selectfont Schema ispirato dal video youtube di Veristasium da}};
-			\node at (21.5,-10.5) {\textcolor{black}{\fontsize{14}{15}\selectfont un'idea di Gabriele Ghisellini}};
-			\node at (21.5,-11.2) {\textcolor{black}{\fontsize{14}{15}\selectfont Link video: https://youtu.be/zUyH3XhpLTo}};
-		\end{scope}
-		%
-		\begin{scope}[shift={(0,-115.8)}]
+		\begin{scope}[shift={(0,-110)}]
 			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
 			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
 		\end{scope}
