@@ -1,0 +1,78 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{bending,arrows.meta,snakes,shapes}
+\usepackage{xcolor}
+\usepackage{tkz-euclide}
+%
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{radiation}{HTML}{FFD016}
+\definecolor{galaxy}{HTML}{4278A4}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{L'atmosfera di Marte}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\begin{scope}
+			\node at (15,0) {\textcolor{white}{\fontsize{70}{71}\selectfont L'atmosfera di Marte}};
+		\end{scope}
+		%intro
+		\begin{scope}[shift={(0,-4)}]
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (1.5,0) {A causa della perdita del suo campo magnetico, l'atmosfera di Marte e' povera di quei gas piu' leggeri che l'avrebbero resa in grado di sostenere la vita cosi' come la conosciamo.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-10.5)}]	
+			\tkzDefPoint(7,0){M}
+			\tkzDrawSector[R,fill=mars](M,4cm)(0,343)
+			\tkzDrawSector[R,fill=earth!90!white](M,4cm)(343,360)
+			%
+			\tkzDefPoint(16.5,-4){O}
+			\tkzDrawSector[R,fill=earth!90!white](O,3cm)(0,206.6)
+			\tkzDrawSector[R,fill=earth!80!white](O,3cm)(206.6,329)
+			\tkzDrawSector[R,fill=earth!70!white](O,3cm)(329,339.1)
+			\tkzDrawSector[R,fill=earth!60!white](O,3cm)(339.1,345.2)
+			\tkzDrawSector[R,fill=earth!50!white](O,3cm)(345.2,346.6)
+			\tkzDrawSector[R,fill=earth!40!white](O,3cm)(346.6,347.4)
+			\tkzDrawSector[R,fill=earth!30!white](O,3cm)(347.4,360)
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-10.5)}]
+			\draw[->,ultra thick,color=white] (9,1) -- (14,3);
+			\node at (19,3) {\textcolor{white}{\fontsize{18}{19}\selectfont Anidride carbonica: 95.32$\%$}};
+			\draw[->,ultra thick,color=white] (9.5,-0.5) -- (14,-2);
+			%
+			\draw[->,ultra thick,color=white] (18,-2) -- (23,0);
+			\node at (25.5,0) {\textcolor{white}{\fontsize{18}{19}\selectfont Azoto: 2.7$\%$}};
+			\draw[->,ultra thick,color=white] (16,-5) -- (11,-8);
+			\node at (8.5,-8) {\textcolor{white}{\fontsize{18}{19}\selectfont Argon: 1.6$\%$}};
+			\draw[->,ultra thick,color=white] (18,-4.7) -- (20,-7.8);
+			\node at (23,-8) {\textcolor{white}{\fontsize{18}{19}\selectfont Ossigeno: 0.13$\%$}};
+			\draw[->,ultra thick,color=white] (18.5,-4.6) -- (21.5,-5.8);
+			\node at (25,-6) {\textcolor{white}{\fontsize{18}{19}\selectfont Monossido di Carbonio: 0.08$\%$}};
+			\draw[->,ultra thick,color=white] (19,-4.2) -- (23,-4.4);
+			\node at (25.5,-4.3) {\textcolor{white}{\fontsize{18}{19}\selectfont Altro: 0.17$\%$}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-20)}]
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=white, font=\fontsize{18}{19}\selectfont] at (1,0) {Altro: Acqua (0.021$\%$), Monossido di Azoto (0.01$\%$), Neon (tracce), Kripton (tracce), Xeno (tracce), Ozono (tracce), Metano (tracce)};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-22)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,-0.1) {\textcolor{white}{\fontsize{14}{15}\selectfont Testo e grafica: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
