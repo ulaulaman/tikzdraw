@@ -1,0 +1,147 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{bending,arrows.meta}
+\usetikzlibrary{shapes.callouts}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes.arrows}
+\usepackage{array}
+%
+\usepackage{tkz-euclide}
+%
+%\usepackage{dsfont}
+%
+\usepackage{xcolor}
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+%
+\usepackage{amsmath}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{I raggi cosmici}
+%
+\begin{document}
+	\tikzset{partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+		line/.style = { draw, ultra thick, ->, shorten >=2pt },	
+		particle/.style = { circle, draw=black, ultra thick, fill=dida, text width=8em, text centered, minimum height=5em },
+		plus/.style = { circle, draw=black, ultra thick, fill=mars, text width=8em, text centered, minimum height=5em },
+		menus/.style = { circle, draw=black, ultra thick, fill=space, text width=8em, text centered, minimum height=5em },
+		neutro/.style = { circle, draw=black, ultra thick, fill=white, text width=8em, text centered, minimum height=5em },
+		opt/.style = { rectangle, draw=black, ultra thick, fill=earth!50!white, text width=12em, text centered, minimum height=5em },
+		notice/.style  = { draw, ellipse callout, callout relative pointer={#1} },
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth},my arrow/.style={decorate,decoration={markings,mark=at position 0.5 with {\arrow[scale=1.5]{>}};}}]
+		%title
+		\draw [black,ultra thick,fill=title] (0,2) rectangle (30,-2);
+		\node (example-textwidth-2) [right, align=center, text width=30cm, color=black, font=\fontsize{65pt}{66pt}\selectfont] at (0,0) {I raggi cosmici};
+		%
+		\begin{scope}[shift={(0,-7)}]
+			%\draw [ultra thick, fill=earth] (20.5,4) rectangle (25.5,-4);
+			\node at (23,0) {\includegraphics[width=5cm]{carl_sagan}};
+			\node (example-textwidth-2) [notice={(3,0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (1,-1) {L'esistenza di una radiazione altamente penetrante fu osservata sin dagli inizi del XX secolo quando numerosi ricercatori notarono che gli elettroscopi si scaricavano anche quando schermati.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-16)}]
+			\draw [fill=dida, ultra thick] (2,2) rectangle (28,-2);
+			\node (example-textwidth-2) [right, align=left, text width=25cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2.5,0) {I primi a dimostrare l'origine extraterrestre dei raggi cosmici furono \textbf{Victor Franz Hess} con il famoso esperimento della mongolfiera del 1912, e \textbf{Domenico Pacini}.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-22)}]
+			\node at (7,0) {\includegraphics[width=5cm]{carl_sagan}};
+			\node (example-textwidth-2) [notice={(-3,0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (12,-1) {Per questa scoperta venne assegnato il Premio Nobel nel 1936 al solo Hess: Pacini era deceduto appena due anni prima.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-29)}]
+			\draw [fill=dida, ultra thick] (2,2.5) rectangle (28,-2.5);
+			\node (example-textwidth-2) [right, align=left, text width=25cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2.5,0) {I raggi cosmici primari, quelli che colpiscono l'atmosfera, sono particelle altamente energetiche, per lo piu' protoni, prodotte dai processi nucleari che avvengono all'interno delle stelle.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-35)}]
+			\draw [fill=space] (2,2) rectangle (28,-15);
+			\tkzDefPoint(25,0){S}
+			\tkzDefPoint(26,0){Rs}
+			\tkzDrawCircle[fill=white](S,Rs)
+			\tkzDefPoint(7,-10){E}
+			\tkzDefPoint(10,-10){Re}
+			\tkzDefPoint(10,-11){Ra}
+			\tkzDrawCircle[fill=earth!50!white](E,Ra)
+			\tkzDrawCircle[fill=earth](E,Re)
+			\tkzDefPoint(24,-1){I}
+			\tkzDefPoint(11,-9){F}
+			\draw[->,ultra thick,color=white] (I) -- (F);
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-54)}]
+			\draw [fill=dida, ultra thick] (2,2.5) rectangle (28,-2.5);
+			\node (example-textwidth-2) [right, align=left, text width=25cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2.5,0) {Questi protoni interagiscono con l'atmosfera terrestre e generano una vera e propria cascata di particelle, schematizzata secondo il diagramma qui sotto, che costituiscono i raggi cosmici secondari.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-60)}]
+			\tkzDefPoint(15,-10){N1}
+			\node (inizio) [plus, align=center, font=\fontsize{23pt}{24pt}\selectfont] at (15,0) {p};
+			\node (collisioni1) [opt, align=center, font=\fontsize{23pt}{24pt}\selectfont] at (15,-5) {Collisioni nucleari};
+			\node (neutrone) [neutro, align=center, font=\fontsize{23pt}{24pt}\selectfont] at (0,-15) {n};
+			\tkzDefPoint(0,-22){N6}
+			\node (protone1) [plus, align=center, font=\fontsize{23pt}{24pt}\selectfont] at (6,-15) {p};
+			\node (pione1) [neutro, align=center, font=\fontsize{23pt}{24pt}\selectfont] at (12,-15) {$\Pi^0$};
+			\tkzDefPoint(12,-19){N2}
+			\node (pione2) [plus, align=center, font=\fontsize{23pt}{24pt}\selectfont] at (18,-15) {$\Pi^+$};
+			\tkzDefPoint(18,-25){N4}
+			\node (pione3) [menus, align=center, font=\color{white}\fontsize{23pt}{24pt}\selectfont] at (24,-15) {$\Pi^-$};
+			\tkzDefPoint(24,-30){N5}
+			\node (antimateria) [opt, align=center, font=\fontsize{18pt}{19pt}\selectfont] at (30,-15) {Antimateria};
+			\tkzDefPoint(30,-22){N7}
+			\node (collisioni2) [opt, align=center, font=\fontsize{18pt}{19pt}\selectfont] at (6,-28) {Collisioni nucleari};
+			\tkzDefPoint(6,-30){N3}
+			\node (pione4) [neutro, align=center, font=\fontsize{23pt}{24pt}\selectfont] at (5,-33) {$\Pi^0$};
+			\node (pione5) [plus, align=center, font=\fontsize{23pt}{24pt}\selectfont] at (10,-33) {$\Pi^+$};
+			\node (pione6) [menus, align=center, font=\color{white}\fontsize{23pt}{24pt}\selectfont] at (15,-33) {$\Pi^-$};
+			\node (protone2) [plus, align=center, font=\fontsize{15pt}{16pt}\selectfont] at (0,-33) {p};
+			\node (gamma1) [particle, align=center, font=\fontsize{23pt}{24pt}\selectfont] at (8,-22) {$\gamma$};
+			\node (gamma2) [particle, align=center, font=\fontsize{23pt}{24pt}\selectfont] at (16,-22) {$\gamma$};
+			\node (coppia) [opt, align=center, font=\fontsize{18pt}{19pt}\selectfont] at (12,-26) {Produzione di coppia};
+			\node (muone1) [plus, align=center, font=\fontsize{23pt}{24pt}\selectfont] at (16,-28) {$\mu^+$};
+			\node (neutrino1) [neutro, align=center, font=\fontsize{23pt}{24pt}\selectfont] at (20,-28) {$\nu$};
+			\node (muone2) [menus, align=center, font=\color{white}\fontsize{23pt}{24pt}\selectfont] at (22,-33) {$\mu^-$};
+			\node (neutrino2) [neutro, align=center, font=\fontsize{23pt}{24pt}\selectfont] at (26,-33) {$\bar\nu$};
+			%
+			\begin{scope}[every path/.style=line]
+				\path (inizio) -- (collisioni1);
+				\path (collisioni1) -- (N1) -- (0,-10) -- (neutrone);
+				\path (collisioni1) -- (N1) -- (6,-10) -- (protone1);
+				\path (collisioni1) -- (N1) -- (12,-10) -- (pione1);
+				\path (collisioni1) -- (N1) -- (18,-10) -- (pione2);
+				\path (collisioni1) -- (N1) -- (24,-10) -- (pione3);
+				\path (collisioni1) -- (N1) -- (30,-10) -- (antimateria);
+				\path (protone1) -- (collisioni2);
+				\path (collisioni2) -- (N3) -- (5,-30) -- (pione4);
+				\path (collisioni2) -- (N3) -- (10,-30) -- (pione5);
+				\path (collisioni2) -- (N3) -- (15,-30) -- (pione6);
+				\path (collisioni2) -- (N3) -- (0,-30) -- (protone2);
+				\path (pione1) -- (N2) -- (8,-19) -- (gamma1);
+				\path (pione1) -- (N2) -- (16,-19) -- (gamma2);
+				\path (gamma1) -- (coppia);
+				\path (gamma2) -- (coppia);
+				\path (pione2) -- (N4) -- (16,-25) -- (muone1);
+				\path (pione2) -- (N4) -- (20,-25) -- (neutrino1);
+				\path (pione3) -- (N5) -- (22,-30) -- (muone2);
+				\path (pione3) -- (N5) -- (26,-30) -- (neutrino2);
+				\path [dashed] (neutrone) -- (N6);
+				\path [dashed] (antimateria) -- (N7);
+			\end{scope}
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-96)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+\end{document}
