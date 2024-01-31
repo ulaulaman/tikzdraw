@@ -1,0 +1,88 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,bending,arrows.meta}
+\usepackage{tkz-euclide}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{mercury}{HTML}{846549}
+\definecolor{venus}{HTML}{BB9765}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Incontri ravvicinati - parte 2}
+\begin{document}
+	\tikzset{
+		comet/.pic = {
+			\draw [rotate around={45:(0,-0.8)}, fill=white] (0.2,-1) to[out=180,in=270] (0,-0.8) to[out=90,in=180] (0.2,-0.6) -- (3.2,-0.6) -- (1.2,-0.8) -- (3.2,-1) -- (0.2,-1);
+		},
+		notice/.style  = { draw, ellipse callout, callout relative pointer={#1} },
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=black},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		\begin{scope}
+			\draw [black,ultra thick,fill=title] (0,2) rectangle (30,-2);
+			\node at (15,0) {\textcolor{black}{\fontsize{85}{86}\selectfont Incontri ravvicinati}};
+			\draw [black,ultra thick,fill=dida] (23,-1.5) rectangle (26.8,-2.5);
+			\node at (25,-2) {\textcolor{black}{\fontsize{20}{21}\selectfont parte 2}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-5)}]
+			\draw [ultra thick, fill=dida] (0.5,2) rectangle (29,-2);
+			\node (example-textwidth-2) [right, align=left, text width=28cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (1,0) {Le comete di lungo periodo sono quelle comete il cui periodo e' incluso tra i 200 e i 1000 anni. Qui sono raccolte le dieci comete di lungo periodo passate piu' vicino alla Terra.};
+			\draw [black,ultra thick,fill=title] (20,-1.5) rectangle (29.8,-2.5);
+			\node at (25,-2) {\textcolor{black}{\fontsize{20}{21}\selectfont 1 UA = 149597887.5 km}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(3.5,-27.5)}]
+			\tkzDefPoint(0,0){E}
+			\tkzDefPoint(0,0.25){L}
+			\tkzDrawCircle[fill=earth](E,L)
+			%
+			\pic at (1,0) {comet};
+			\node at (5,-1) {\textcolor{white}{\fontsize{12}{13}\selectfont Pereyra (1963): 0.005065 UA}};
+			\pic at (1.091,4) {comet};
+			\node at (6,3) {\textcolor{white}{\fontsize{12}{13}\selectfont Grande cometa del 1843: 0.005527 UA}};
+			\pic at (1.097,8) {comet};
+			\node at (5,7) {\textcolor{white}{\fontsize{12}{13}\selectfont Lovejoy (2011): 0.0055538 UA}};
+			\pic at (1.53,12) {comet};
+			\node at (6.2,11) {\textcolor{white}{\fontsize{12}{13}\selectfont Grande cometa del 1882: 0.00775 UA}};
+			\pic at (1.537,16) {comet};
+			\node at (5.8,15) {\textcolor{white}{\fontsize{12}{13}\selectfont Ikeya-Saki (1965): 0.007786 UA}};
+			%
+			\pic at (15,0) {comet};
+			\node at (18.7,-1) {\textcolor{white}{\fontsize{12}{13}\selectfont Nishimura (2023): 0.225 UA}};
+			\pic at (15.11,4) {comet};
+			\node at (18.5,3) {\textcolor{white}{\fontsize{12}{13}\selectfont ATLAS (2019): 0.25 UA}};
+			\pic at (15.20,8) {comet};
+			\node at (19,7) {\textcolor{white}{\fontsize{12}{13}\selectfont Brooks (1886): 0.269803 UA}};
+			\pic at (15.75,12) {comet};
+			\node at (19.4,11) {\textcolor{white}{\fontsize{12}{13}\selectfont Terasako (1987): 0.39302 UA}};
+			\pic at (15.99,16) {comet};
+			\node at (19.4,15) {\textcolor{white}{\fontsize{12}{13}\selectfont Borisov (2016): 0.4468 UA}};
+			%	
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-33)}]
+			\draw [ultra thick, fill=dida] (0.5,2) rectangle (29,-2);
+			\node (example-textwidth-2) [right, align=left, text width=28cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (1,0) {\textbf{Nota}: La Grande Cometa del 1882 si e' spaccata in 4 pezzi, ognuno di questi ha un periodo differente. Inoltre le distanze delle comete piu' lontane non e' in scala con le comete piu' piccole, ma sono in scala tra loro.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(5,-37)}]
+			\draw [ultra thick, fill=earth!50!white] (0.5,0.6) rectangle (24.5,-0.6);
+			\node (example-textwidth-2) [right, align=left, text width=24cm, color=black, font=\fontsize{15pt}{16pt}\selectfont] at (1,0) {Dati presi da Wikipedia: List of long-period comets};
+		\end{scope}
+		%
+		\begin{scope}[shift={(11,-39)}]
+			\node at (17,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node[left] at (15,0) {\textcolor{white}{\fontsize{14}{15}\selectfont Grafica: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
