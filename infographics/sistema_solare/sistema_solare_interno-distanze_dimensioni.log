@@ -1,0 +1,1118 @@
+This is LuaHBTeX, Version 1.16.1 (MiKTeX 23.4) (format=lualatex 2023.11.29)  18 SEP 2024 17:42
+ restricted system commands enabled.
+**sistema_solare_interno-distanze_dimensioni.tex
+(./sistema_solare_interno-distanze_dimensioni.tex
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-11-09>
+Lua module: luaotfload 2023-08-31 3.26 Lua based OpenType font support
+Lua module: lualibs 2023-07-13 2.76 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2023-07-13 2.76 ConTeXt Lua libraries -- extended c
+ollection.
+luaotfload | conf : Root cache directory is "/home/gianluigi/.miktex/texmfs/data
+/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2023-08-19.lua" from kpse-res
+olved path "/home/gianluigi/.miktex/texmfs/install/tex/luatex/luaotfload/fontloa
+der-2023-08-19.lua".
+Lua-only attribute luaotfload@noligature = 1
+luaotfload | init : Context OpenType loader version 3.133
+Inserting `luaotfload.node_processor' in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 2
+luaotfload | conf : Root cache directory is "/home/gianluigi/.miktex/texmfs/data
+/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
+Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
+Inserting `luaotfload.harf.glyphstream' in `glyph_stream_provider'.
+Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
+Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 3
+Inserting `luaotfload.aux.set_sscale_dimens' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_font_index' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.fixup_fontdata' in `luaotfload.patch_font_unsafe'.
+Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
+Inserting `tracingstacklevels' in `input_level_string'. (/home/gianluigi/.mikte
+x/texmfs/install/tex/latex/standalone/standalone.cls
+Document Class: standalone 2022/10/10 v1.3b Class to compile TeX sub-files stan
+dalone
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tools/shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/xkeyval/xkeyval.tex
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count184
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\sa@internal=\count185
+\c@sapage=\count186
+
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/standalone/standalone.cfg
+File: standalone.cfg 2022/10/10 v1.3b Default configuration file for 'standalon
+e' class
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from /home/gianluigi/.miktex/texmfs
+/data/luatex-cache/generic/names/luaotfload-names.luc.gz)
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen139
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/luatex85/luatex85.sty
+Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks19
+)
+\sa@box=\box51
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-commo
+n.tex
+\pgfutil@everybye=\toks20
+\pgfutil@tempdima=\dimen140
+\pgfutil@tempdimb=\dimen141
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-latex
+.def
+\pgfutil@abb=\box52
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfrcs.code.t
+ex (/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgfcore.sty
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 107.
+
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/graphics-def/luatex.def
+File: luatex.def 2022/09/22 v1.2d Graphics/color driver for luatex
+))
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/pgf/systemlayer/pgfsys.sty
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys.code
+.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.
+tex
+\pgfkeys@pathtoks=\toks21
+\pgfkeys@temptoks=\toks22
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeyslibrar
+yfiltered.code.tex
+\pgfkeys@tmptoks=\toks23
+))
+\pgf@x=\dimen144
+\pgf@y=\dimen145
+\pgf@xa=\dimen146
+\pgf@ya=\dimen147
+\pgf@xb=\dimen148
+\pgf@yb=\dimen149
+\pgf@xc=\dimen150
+\pgf@yc=\dimen151
+\pgf@xd=\dimen152
+\pgf@yd=\dimen153
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count195
+\c@pgf@countb=\count196
+\c@pgf@countc=\count197
+\c@pgf@countd=\count198
+\t@pgf@toka=\toks24
+\t@pgf@tokb=\toks25
+\t@pgf@tokc=\toks26
+\pgf@sys@id@count=\count199
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-luatex.def
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-luat
+ex.def
+File: pgfsys-luatex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-comm
+on-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsyssoftp
+ath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count266
+\pgfsyssoftpath@bigbuffer@items=\count267
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsysproto
+col.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 274.
+
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore.code
+.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathutil.code.t
+ex)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathparser.code
+.tex
+\pgfmath@dimen=\dimen154
+\pgfmath@count=\count268
+\pgfmath@box=\box53
+\pgfmath@toks=\toks27
+\pgfmath@stack@operand=\toks28
+\pgfmath@stack@operation=\toks29
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.c
+ode.tex)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.b
+asic.code.tex)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.t
+rigonometric.code.tex)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.r
+andom.code.tex)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.c
+omparison.code.tex)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.b
+ase.code.tex)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.r
+ound.code.tex)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.m
+isc.code.tex)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.i
+ntegerarithmetics.code.tex)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathcalc.code.t
+ex)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfloat.code.
+tex
+\c@pgfmathroundto@lastzeros=\count269
+))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfint.code.tex)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepoint
+s.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen155
+\pgf@picmaxx=\dimen156
+\pgf@picminy=\dimen157
+\pgf@picmaxy=\dimen158
+\pgf@pathminx=\dimen159
+\pgf@pathmaxx=\dimen160
+\pgf@pathminy=\dimen161
+\pgf@pathmaxy=\dimen162
+\pgf@xx=\dimen163
+\pgf@xy=\dimen164
+\pgf@yx=\dimen165
+\pgf@yy=\dimen166
+\pgf@zx=\dimen167
+\pgf@zy=\dimen168
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathc
+onstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen169
+\pgf@path@lasty=\dimen170
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathu
+sage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen171
+\pgf@shorten@start@additional=\dimen172
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorescope
+s.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box54
+\pgf@hbox=\box55
+\pgf@layerbox@main=\box56
+\pgf@picture@serial@count=\count270
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoregraph
+icstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen173
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretrans
+formations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen174
+\pgf@pt@y=\dimen175
+\pgf@pt@temp=\dimen176
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorequick
+.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreobjec
+ts.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathp
+rocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorearrow
+s.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen177
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreshade
+.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen178
+\pgf@sys@shading@range@num=\count271
+\pgf@shadingcount=\count272
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreimage
+.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreexter
+nal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box57
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorelayer
+s.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretrans
+parency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepatte
+rns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorerdf.c
+ode.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleshapes
+.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box58
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleplot.c
+ode.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-ver
+sion-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen179
+\pgf@nodesepend=\dimen180
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-ver
+sion-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/pgf/utilities/pgffor.sty
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfkeys.sty
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.
+tex)) (/home/gianluigi/.miktex/texmfs/install/tex/latex/pgf/math/pgfmath.sty
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.code.t
+ex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen181
+\pgffor@skip=\dimen182
+\pgffor@stack=\toks30
+\pgffor@toks=\toks31
+))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/tikz
+.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplo
+thandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count273
+\pgfplotmarksize=\dimen183
+)
+\tikz@lastx=\dimen184
+\tikz@lasty=\dimen185
+\tikz@lastxsaved=\dimen186
+\tikz@lastysaved=\dimen187
+\tikz@lastmovetox=\dimen188
+\tikz@lastmovetoy=\dimen189
+\tikzleveldistance=\dimen190
+\tikzsiblingdistance=\dimen191
+\tikz@figbox=\box59
+\tikz@figbox@bg=\box60
+\tikz@tempbox=\box61
+\tikz@tempbox@bg=\box62
+\tikztreelevel=\count274
+\tikznumberofchildren=\count275
+\tikznumberofcurrentchild=\count276
+\tikz@fig@count=\count277
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulematrix
+.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count278
+\pgfmatrixcurrentcolumn=\count279
+\pgf@matrix@numberofcolumns=\count280
+)
+\tikz@expandcount=\count281
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box63
+\pgf@layerboxsaved@background=\box64
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarybending.code.tex
+File: tikzlibrarybending.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulebendin
+g.code.tex
+File: pgfmodulebending.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulenonlin
+eartransformations.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgftransformnonlinearflatness=\dimen192
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibrarycur
+vilinear.code.tex
+File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@curvilinear@time@a=\dimen193
+\pgf@curvilinear@length@a=\dimen194
+\pgf@curvilinear@length@b=\dimen195
+\pgf@curvilinear@length@c=\dimen196
+\pgf@curvilinear@length@d=\dimen197
+)
+\pgf@arrows@the@rigidity=\dimen198
+))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryarr
+ows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen199
+\pgfarrowlength=\dimen256
+\pgfarrowwidth=\dimen257
+\pgfarrowlinewidth=\dimen258
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/tkz-euclide.sty
+2023/10/26 5.04c tkz-euclide.sty
+Package: tkz-euclide  2023/10/26 5.04c for pure Euclidean Geometry 
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryangles.code.tex
+File: tikzlibraryangles.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryarr
+ows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen259
+))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarydecorations.code.tex
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduledecora
+tions.code.tex
+\pgfdecoratedcompleteddistance=\dimen260
+\pgfdecoratedremainingdistance=\dimen261
+\pgfdecoratedinputsegmentcompleteddistance=\dimen262
+\pgfdecoratedinputsegmentremainingdistance=\dimen263
+\pgf@decorate@distancetomove=\dimen264
+\pgf@decorate@repeatstate=\count282
+\pgfdecorationsegmentamplitude=\dimen265
+\pgfdecorationsegmentlength=\dimen266
+)
+\tikz@lib@dec@box=\box65
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarydecorations.markings.code.tex
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/libraries/decorations/p
+gflibrarydecorations.markings.code.tex))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarydecorations.pathreplacing.code.tex
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/libraries/decorations/p
+gflibrarydecorations.pathreplacing.code.tex))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarydecorations.shapes.code.tex
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/libraries/decorations/p
+gflibrarydecorations.shapes.code.tex))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarydecorations.text.code.tex
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/libraries/decorations/p
+gflibrarydecorations.text.code.tex
+\pgf@lib@dec@text@box=\box66
+)
+\tikz@lib@dec@te@box=\box67
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarydecorations.pathmorphing.code.tex
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/libraries/decorations/p
+gflibrarydecorations.pathmorphing.code.tex))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryintersections.code.tex
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryint
+ersections.code.tex
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryfpu
+.code.tex)
+\pgf@intersect@solutions=\count283
+))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarymath.code.tex
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryfpu.code.tex)
+\tikz@math@for@depth=\count284
+\tikz@math@dimen=\dimen267
+\tikz@math@toks=\toks32
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplo
+tmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflib
+raryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarythrough.code.tex
+File: tikzlibrarythrough.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/l3packages/xfp/xfp.sty
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-11-09 L3 programming layer (loader) 
+
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/l3backend/l3backend-luatex.de
+f
+File: l3backend-luatex.def 2023-11-09 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count285
+Inserting `l3color' in `luaotfload.parse_color'.
+\l__pdf_internal_box=\box68
+))
+Package: xfp 2023-10-10 L3 Floating point unit
+) (/home/gianluigi/.miktex/texmfs/install/tex/latex/xpatch/xpatch.sty
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2023-10-10 L3 Experimental document command parser
+) (/home/gianluigi/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count286
+))
+\tkzRadius=\dimen268
+\tkzLength=\dimen269
+\tkz@radi=\dimen270
+\tkz@ax=\dimen271
+\tkz@ay=\dimen272
+\tkz@bx=\dimen273
+\tkz@by=\dimen274
+\tkz@cx=\dimen275
+\tkz@cy=\dimen276
+\tkz@dx=\dimen277
+\tkz@dy=\dimen278
+\tkz@cntmk=\count287
+
+Local configuration file tkz-euclide.cfg found and used
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/tkz-euclide.cfg
+2023/10/26 5.04c tkz-euclide.cfg
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/tools/tkz-tools-e
+u-base.tex
+2023/10/26 5.04c tkz-tools-eu-base.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/tools/tkz-tools-e
+u-utilities.tex
+2023/10/26 5.04c tkz-tools-eu-utilities.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/tools/tkz-tools-e
+u-BB.tex
+2023/10/26 5.04c tkz-obj-eu-BB.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/obj/tkz-obj-eu-gr
+ids.tex
+2023/10/26 5.04c tkz-obj-eu-grids.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/libs/tkz-lib-eu-m
+arks.tex
+2023/10/26 5.04c tkz-lib-eu-marks.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/tools/tkz-tools-e
+u-text.tex
+2023/10/26 5.04c tkz-tools-eu-text.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/libs/tkz-lib-eu-s
+hape.tex
+2023/10/26 5.04c tkz-lib-eu-shape.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/obj/tkz-obj-eu-ax
+esmin.tex
+2023/10/26 5.04c tkz-obj-eu-axesmin
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/tools/tkz-tools-e
+u-colors.tex
+2023/10/26 5.04c tkz-tools-eu-colors
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/obj/tkz-obj-eu-po
+ints.tex
+2023/10/26 5.04c tkz-obj-eu-points.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/drawings/tkz-draw
+-eu-points.tex
+2023/10/26 5.04c tkz-draw-eu-points.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/obj/tkz-obj-eu-po
+ints.tex
+2023/10/26 5.04c tkz-obj-eu-points.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/obj/tkz-obj-eu-po
+ints-by.tex
+2023/10/26 5.04c tkz-tools-eu-points-by.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/tools/tkz-tools-e
+u-math.tex
+2023/10/26 5.04c tkz-tools-eu-math.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/tools/tkz-tools-e
+u-intersections.tex
+2023/10/26 5.04c tkz-tools-eu-intersections.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/obj/tkz-obj-eu-po
+ints-with.tex
+2023/10/26 5.04c tkz-obj-eu-points-with.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/obj/tkz-obj-eu-po
+ints-spc.tex
+2023/10/26 5.04c tkz-obj-el-points.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/tools/tkz-tools-e
+u-angles.tex
+2023/10/26 5.04c tkz-tools-eu-angles.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/obj/tkz-obj-eu-ci
+rcles.tex
+2023/10/26 5.04c tkz-obj-eu-circles.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/obj/tkz-obj-eu-ci
+rcles-by.tex
+2023/10/26 5.04c tkz-obj-eu-circles.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/obj/tkz-obj-eu-po
+ints-rnd.tex
+2023/10/26 5.04c tkz-obj-eu-points-rnd.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/obj/tkz-obj-eu-li
+nes.tex
+2023/10/26 5.04c tkz-obj-eu-lines.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/obj/tkz-obj-eu-po
+lygons.tex
+2023/10/26 5.04c tkz-obj-eu-polygons.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/obj/tkz-obj-eu-tr
+iangles.tex
+2023/10/26 5.04c tkz-obj-eu-triangles.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/drawings/tkz-draw
+-eu-lines.tex
+2023/10/26 5.04c tkz-obj-eu-draw-lines.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/drawings/tkz-draw
+-eu-circles.tex
+2023/10/26 5.04c tkz-obj-eu-draw-circles.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/drawings/tkz-draw
+-eu-ellipses.tex
+2023/10/26 5.04c tkz-obj-eu-draw-ellipses.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/drawings/tkz-draw
+-eu-polygons.tex
+2023/10/26 5.04c tkz-obj-eu-polygons.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/drawings/tkz-draw
+-eu-angles.tex
+2023/10/26 5.04c tkz-tool-eu-angles.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/drawings/tkz-draw
+-eu-sectors.tex
+2023/10/26 5.04c tkz-obj-eu-sectors.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/drawings/tkz-draw
+-eu-compass.tex
+2023/10/26 5.04c tkz-obj-eu-compass.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/drawings/tkz-draw
+-eu-show.tex
+2023/10/26 5.04c tkz-obj-eu-show.tex
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/tkz-euclide/drawings/tkz-draw
+-eu-protractor.tex
+2023/10/26 5.04c tkz-obj-eu-protractor.tex
+)) (/home/gianluigi/.miktex/texmfs/install/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2022/01/15 2.8a Font selection for XeLaTeX and LuaLaTeX
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/fontspec/fontspec-luatex.sty
+Package: fontspec-luatex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaT
+eX
+\l__fontspec_script_int=\count288
+\l__fontspec_language_int=\count289
+\l__fontspec_strnum_int=\count290
+\l__fontspec_tmp_int=\count291
+\l__fontspec_tmpa_int=\count292
+\l__fontspec_tmpb_int=\count293
+\l__fontspec_tmpc_int=\count294
+\l__fontspec_em_int=\count295
+\l__fontspec_emdef_int=\count296
+\l__fontspec_strong_int=\count297
+\l__fontspec_strongdef_int=\count298
+\l__fontspec_tmpa_dim=\dimen279
+\l__fontspec_tmpb_dim=\dimen280
+\l__fontspec_tmpc_dim=\dimen281
+
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/fontspec/fontspec.cfg)))
+luaotfload | cache : Lookup cache loaded from /home/gianluigi/.miktex/texmfs/dat
+a/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
+luaotfload | aux : font no 23 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 24 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 25 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 26 (nil) does not define feature smcp for script latn
+ with language dflt
+
+Package fontspec Info: Font family 'OpenDyslexic(0)' created for font 'Open
+(fontspec)             Dyslexic' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"OpenDyslexic:mode=node;script=latn;language=dflt;+tl
+ig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"OpenDyslexic/B:mode=node;script=latn;language=dflt;+
+tlig;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"OpenDyslexic/I:mode=node;script=latn;language=dflt;+
+tlig;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"OpenDyslexic/BI:mode=node;script=latn;language=dflt;
++tlig;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+(./sistema_solare_interno-distanze_dimensioni.aux)
+\openout1 = sistema_solare_interno-distanze_dimensioni.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+8.
+
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+
+(/home/gianluigi/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count299
+\scratchdimen=\dimen282
+\scratchbox=\box69
+\nofMPsegments=\count300
+\nofMParguments=\count301
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count302
+\MPscratchDim=\dimen283
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
+\everyMPtoPDFconversion=\toks34
+)
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.st
+y
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/home/gianluigi/.miktex/texmfs/install/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.s
+ty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/home/gianluigi/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(/home/gianluigi/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 18.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 18.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 18.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 18.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 18.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 18.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 18.
+LaTeX Font Info:    Redeclaring math accent \check on input line 18.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 18.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 18.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 18.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 18.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 18.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 18.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 18.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 18.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 18.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 18.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 18.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 18.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 18.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 18.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 18.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 18.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 18.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 18.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/OpenDyslexic(0)/m/n on input line 18
+.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 18.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/OpenDyslexic(0)/m/n on input line 1
+8.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/OpenDyslexic(0)/m/n --> TU/OpenDyslexic(0)/m/n on in
+put line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/OpenDyslexic(0)/m/it on input line 
+18.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/OpenDyslexic(0)/b/n on input line 1
+8.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 18.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/OpenDyslexic(0)/m/n --> TU/OpenDyslexic(0)/b/n on in
+put line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/OpenDyslexic(0)/b/it on input line
+ 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 18.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 18.
+LaTeX Font Info:    Calculating math sizes for size <24> on input line 37.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <24> not available
+(Font)              size <24.88> substituted on input line 37.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16.79993> not available
+(Font)              size <17.28> substituted on input line 37.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <24> not available
+(Font)              size <24.88> substituted on input line 37.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16.79993> not available
+(Font)              size <17.28> substituted on input line 37.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <24> on input line 37.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <16.79993> on input line 37.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 37.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <24> not available
+(Font)              size <24.88> substituted on input line 37.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16.79993> not available
+(Font)              size <17.28> substituted on input line 37.
+
+
+! Package pgf Error: No shape named `0' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 ...cle[fill=mercury,R,ultra thick](M1,\rmer cm)
+                                                  
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/R' and I am going to igno
+re it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 ...cle[fill=mercury,R,ultra thick](M1,\rmer cm)
+                                                  
+(That was another \errmessage.)
+
+
+! Package pgf Error: No shape named `0' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 ...ircle[fill=venus,R,ultra thick](V1,\rven cm)
+                                                  
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/R' and I am going to igno
+re it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 ...ircle[fill=venus,R,ultra thick](V1,\rven cm)
+                                                  
+(That was another \errmessage.)
+
+
+! Package pgf Error: No shape named `0' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 ...Circle[fill=earth,R,ultra thick](E1,\ret cm)
+                                                  
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/R' and I am going to igno
+re it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 ...Circle[fill=earth,R,ultra thick](E1,\ret cm)
+                                                  
+(That was another \errmessage.)
+
+
+! Package pgf Error: No shape named `0' is known.
+
+See the pgf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 ...wCircle[fill=mars,R,ultra thick](M2,\rms cm)
+                                                  
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/R' and I am going to igno
+re it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 ...wCircle[fill=mars,R,ultra thick](M2,\rms cm)
+                                                  
+(That was another \errmessage.)
+
+
+! LaTeX Error: File `licenza' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 ...) () {\includegraphics[width=3.7cm]{licenza}
+                                                  };
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[1
+
+{/home/gianluigi/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
+(./sistema_solare_interno-distanze_dimensioni.aux)
+ ***********
+LaTeX2e <2023-11-01>
+L3 programming layer <2020/03/25>
+ ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.88pt have occurred.
+
+)
+
+Here is how much of LuaTeX's memory you used:
+ 21571 strings out of 476598
+ 100000,1977958 words of node,token memory allocated
+ 8923 words of node memory still in use:
+   140 hlist, 1 vlist, 1 rule, 12 disc, 2 math, 317 glue, 19 kern, 158 glyph, 64
+4 attribute, 48 glue_spec, 644 attribute_list, 2 write, 349 pdf_literal, 36 pdf_
+colorstack nodes
+   avail lists: 2:30,3:701,4:82,5:50,6:2,7:974,8:1,9:298,11:24
+ 42675 multiletter control sequences out of 65536+600000
+ 42 fonts using 2825951 bytes
+ 102i,7n,101p,1207b,1061s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/gianluigi/.local/share/fonts/Bitstream/OpenType/OpenDyslexic/OpenDyslexic
+_Regular.otf></home/gianluigi/.miktex/texmfs/install/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb>
+Output written on sistema_solare_interno-distanze_dimensioni.pdf (1 page, 15068
+ bytes).
+
+PDF statistics: 20 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+
