@@ -1,0 +1,66 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+%
+\usepackage{tkz-euclide}
+%
+\usepackage{dsfont}
+%
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+%
+\usepackage{amsmath}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Dissezionare e ricomporre quadrati}
+\begin{document}
+	\begin{tikzpicture}
+		\draw [use as bounding box,color=white] (-0.2,15.2) -| (30.2,15.2) |- (30.2,-55) -| (-0.2,-55);
+		%title
+		\draw [black,ultra thick,fill=title] (0,7) rectangle (30,15);
+		\node (example-textwidth-2) [right, align=center, text width=30cm, color=black, font=\fontsize{70pt}{71pt}\selectfont] at (0,11) {Dissezionare e ricomporre quadrati};
+		\def\a{5}
+		\def\b{9}
+		\begin{scope}[shift={(2,-11)},scale=2]
+			\draw [ultra thick] (0,0) -- (13,0) -- (13,1) -- (12,1) -- (12,4) -- (8,4) -- (8,8) -- (0,8) -- (0,0);
+			\draw [ultra thick,dashed,color=gray] (8,0) -- (8,4);
+			\draw [ultra thick,dashed,color=gray] (12,0) -- (12,1);
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-14)}]
+			\draw [fill=dida, thick] (1.8,2.1) rectangle (28.2,-2.1);
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,0) {Come sapete, 81 = 64 + 16 + 1. Quindi la figura formata affiancando tre quadrati di lato 8, 4 e 1, può essere dissezionata e ricomposta sotto forma di un quadrato di lato 9. In quante parti come minimo dobbiamo suddividerla?};
+		\end{scope}
+		%
+		\begin{scope}[shift={(2,-33)},scale=2]
+			\draw [ultra thick] (0,0) -- (13,0) -- (13,1) -- (12,1) -- (12,4) -- (8,4) -- (8,8) -- (0,8) -- (0,0);
+			\draw [ultra thick,dashed,color=gray] (8,0) -- (8,4);
+			\draw [ultra thick,dashed,color=red] (9,0) -- (9,4);
+			\draw [ultra thick,dashed,color=red] (10,0) -- (10,4);
+			\draw [ultra thick,dashed,color=red] (11,0) -- (11,4);
+			\draw [ultra thick,dashed,color=red] (12,0) -- (12,1);
+		\end{scope}
+		%
+		\begin{scope}[shift={(2,-52)},scale=2]
+			\draw [ultra thick] (0,0) rectangle (9,9);
+			\draw [ultra thick,dashed,color=red] (8,0) -- (8,8) -- (0,8);
+			\draw [ultra thick,dashed,color=gray] (8,0) -- (8,4);
+			\draw [ultra thick,dashed,color=red] (1,8) -- (1,9);
+			\draw [ultra thick,dashed,color=red] (5,8) -- (5,9);
+			\draw [ultra thick,dashed,color=red] (8,8) -- (9,8);
+			\draw [ultra thick,dashed,color=red] (8,4) -- (9,4);
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-54)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
