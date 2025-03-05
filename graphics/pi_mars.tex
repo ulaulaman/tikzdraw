@@ -1,0 +1,44 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{lmars}{HTML}{F16B46}
+\definecolor{cmars}{HTML}{E74F35}
+%
+\title{Pi over Mars}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=space},show background rectangle]
+		\draw [color=cmars, fill=mars, ultra thick] (6.5,0) circle (4.5cm);
+		\foreach \x in {1,...,5}
+			\draw [color=cmars, ultra thick, rotate around={72*\x:(6.5,0)}] (6.5,0) -- (6.5,2);
+		\foreach \x in {1,3,...,20}
+			\draw [color=cmars, ultra thick, rotate around={18*\x:(6.5,0)}] (6.5,0) -- (6.5,1.2);
+		\foreach \x in {2,6,...,18}
+			\draw [color=cmars, ultra thick, rotate around={18*\x:(6.5,0)}] (6.5,0) -- (6.5,0.9);
+		\draw[color=cmars, fill=lmars, ultra thick] (6.5,0) circle (0.5cm);
+		%down-sx
+		\draw (3.3,-2.5) [rotate around={-45:(3.3,-2.5)}, color=lmars,ultra thick,partial ellipse=20:160:1.5 and 0.5];
+		\foreach \x in {0.01,0.02,...,0.1}
+			\draw (3.3+\x,-2.5-\x) [rotate around={-45:(3.3,-2.5)}, color=cmars,ultra thick,partial ellipse=20:160:1.5 and 0.5];
+		%down-dx
+		\draw (9.7,-2.5) [rotate around={45:(9.7,-2.5)}, color=lmars,ultra thick,partial ellipse=20:160:1 and 0.3];
+		\foreach \x in {0.01,0.02,...,0.1}
+			\draw (9.7+\x,-2.5-\x) [rotate around={45:(9.7,-2.5)}, color=cmars,ultra thick,partial ellipse=20:160:1 and 0.3];
+		%up-sx
+		\draw (3.5,3.2) [rotate around={45:(3.5,3.2)}, color=lmars,ultra thick,partial ellipse=180:360:0.5 and 0.3];
+		\foreach \x in {0.01,0.02,...,0.1}
+		\draw (3.5+\x,3.2-\x) [rotate around={45:(3.5,3.2)}, color=cmars,ultra thick,partial ellipse=180:360:0.5 and 0.3];
+		%up-dx shadow
+		\draw (9.5,3) [rotate around={-50:(9.5,3)}, color=lmars,ultra thick,partial ellipse=180:360:0.9 and 0.7];
+		\foreach \x in {0.01,0.02,...,0.1}
+			\draw (9.5+\x,3-\x) [rotate around={-50:(9.5,3)}, color=cmars,ultra thick,partial ellipse=180:360:0.9 and 0.7];
+		%
+		\node (example-textwidth-2) [right, align=left, text width=5cm, color=space, font=\fontsize{23pt}{24pt}\selectfont] at (6.1,0) {$\pi$};
+	\end{tikzpicture}
+\end{document}
