@@ -1,0 +1,94 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{bending,arrows.meta}
+\usepackage{xcolor}
+%
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{moon}{HTML}{AFAFAF}
+\definecolor{craterm}{HTML}{616060}
+\definecolor{linem}{HTML}{DBDBDB}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{lmars}{HTML}{F16B46}
+\definecolor{cmars}{HTML}{E74F35}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{I crateri col pi greco}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\draw [black,ultra thick,fill=title] (0,9.8) rectangle (30,16.8);
+		\node at (15,14.8) {\textcolor{black}{\fontsize{90}{91}\selectfont I crateri}};
+		\node at (15,11.8) {\textcolor{black}{\fontsize{90}{91}\selectfont col pi greco}};
+		%
+		\begin{scope}[shift={(0,4)}]
+			\node (example-textwidth-2) [right, align=left, text width=18cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (1.5,0) {I crateri si formano quando un oggetto colpisce la superficie di un pianeta o di un altro corpo, come per esempio il nostro satellite, la Luna.\\L'impatto crea un'impronta rotonda circondata da materiale espulso dal cratere.\\Gli astronomi studiano tale materiale pioche' contiene indizi su quello che si trova sotto la superficie di un pianeta.};
+			\begin{scope}[shift={(18.5,0)}]
+				\draw[color=craterm, fill=moon, ultra thick] (6.5,0) circle (4.5cm);
+				\foreach \x in {1,...,5}
+				\draw [color=craterm, ultra thick, rotate around={72*\x:(6.5,0)}] (6.5,0) -- (6.5,2);
+				\foreach \x in {1,3,...,20}
+				\draw [color=craterm, ultra thick, rotate around={18*\x:(6.5,0)}] (6.5,0) -- (6.5,1.2);
+				\foreach \x in {2,6,...,18}
+				\draw [color=craterm, ultra thick, rotate around={18*\x:(6.5,0)}] (6.5,0) -- (6.5,0.9);
+				\draw[fill=craterm, ultra thick] (6.5,0) circle (0.5cm);
+				%down-sx
+				\draw (3.3,-2.5) [rotate around={-45:(3.3,-2.5)}, color=linem,ultra thick,partial ellipse=20:160:1.5 and 0.5];
+				\foreach \x in {0.01,0.02,...,0.1}
+				\draw (3.3+\x,-2.5-\x) [rotate around={-45:(3.3,-2.5)}, color=craterm,ultra thick,partial ellipse=20:160:1.5 and 0.5];
+				%down-dx
+				\draw (9.7,-2.5) [rotate around={45:(9.7,-2.5)}, color=linem,ultra thick,partial ellipse=20:160:1 and 0.3];
+				\foreach \x in {0.01,0.02,...,0.1}
+				\draw (9.7+\x,-2.5-\x) [rotate around={45:(9.7,-2.5)}, color=craterm,ultra thick,partial ellipse=20:160:1 and 0.3];
+				%up-sx
+				\draw (3.5,3.2) [rotate around={45:(3.5,3.2)}, color=linem,ultra thick,partial ellipse=180:360:0.5 and 0.3];
+				\foreach \x in {0.01,0.02,...,0.1}
+				\draw (3.5+\x,3.2-\x) [rotate around={45:(3.5,3.2)}, color=craterm,ultra thick,partial ellipse=180:360:0.5 and 0.3];
+				%up-dx shadow
+				\draw (9.5,3) [rotate around={-50:(9.5,3)}, color=linem,ultra thick,partial ellipse=180:360:0.9 and 0.7];
+				\foreach \x in {0.01,0.02,...,0.1}
+				\draw (9.5+\x,3-\x) [rotate around={-50:(9.5,3)}, color=craterm,ultra thick,partial ellipse=180:360:0.9 and 0.7];
+			\end{scope}
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-14)}]
+			\begin{scope}
+				\draw (0.5,-0.3) [fill=mars, partial ellipse=-90:90:12.4 and 12.4];
+				\draw (0.5,7.4) [fill=cmars, partial ellipse=-90:90:3.7 and 2.7];
+				\draw (2.6,10) [fill=cmars] ellipse (0.24 and 0.15);
+				\draw (11.7,1) [fill=cmars] ellipse (0.6 and 1.2);
+				\draw (6.3,4.5) [fill=cmars, rotate around={30:(6.3,4.5)}] ellipse (1.5 and 2);
+				\draw (10.2,-3.4) [fill=cmars, rotate around={-20:(10.2,-3.4)}] ellipse (1.2 and 2);
+				\draw (10.9,-4.6) [fill=lmars, rotate around={-25:(10.9,-4.6)}] ellipse (0.2 and 0.4);
+				\draw (0.5,12.1) -- (0.5,-12.7);
+			\end{scope}
+			%
+			\begin{scope}
+				\node (example-textwidth-2) [right, align=left, text width=14cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (14,0) {Andiamo su Marte.\\Quando un oggetto, come per esempio un asteroide, colpisce la sua superficie con un angolo inferiore ai 20 gradi, il cratere risulta meno circolare e il materiale espulso, depositandosi, crea una forma che ricorda una farfalla.\\Alcune volte, pero', intorno ai crateri non si trova materiale espulso.\\Trovare crateri che si sono formati in questo modo consente agli astronomi di comprendere come gli impatti dei meteoriti cambiano la superficie di un pianeta. Per farlo, misurano quello che viene detto \emph{rapporto di circolarita' di un cratere}.\\Se il rapporto e' inferiore a 0.925, l'asteroide ha molto pro\-babilmente colpito la superficie di Marte con un angolo inferiore a 20 gradi e ha creato un motivo a farfalla.};
+			\end{scope}
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-30.5)}]
+			\draw [fill=space, ultra thick] (1.9,3.2) rectangle (29.1,-3.2);
+			%
+			\node (example-textwidth-2) [right, align=left, text width=26cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (3,0) {Il rapporto di circolarita' e' dato dalla seguente formula\\\begin{displaymath}\frac{4 \pi A}{p^2}\end{displaymath}dove $A$ e' la superficie e $p$ il perimetro esterno del cratere, mentre $\pi$ e', ovviamente, il \emph{pi greco}.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-35)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,0) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e grafiche: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
