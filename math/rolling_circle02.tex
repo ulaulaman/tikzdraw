@@ -1,0 +1,30 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{bending,arrows.meta}
+\usepackage{tkz-euclide}
+%\usetkzobj{all}
+\usepackage{xcolor}
+\definecolor{earth}{HTML}{0089FA}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Rolling circle squares itself}
+\begin{document}
+	\begin{tikzpicture}[>={[inset=0,angle'=27]Stealth}]
+		\draw [use as bounding box] (-6,6) -| (6,6) |- (6,-6) -| (-6,-6);
+		%
+		\begin{scope}[decoration={markings,mark=at position 0 with {\arrow[scale=2]{<}};}]
+			%
+			\tkzDefPoint(0,0){A} \tkzDefPoint(0,-5){B} \tkzDefPoint(0,5.5){f}
+			%
+			\tkzDrawCircle[ultra thick](A,B)
+			%
+			\tkzDrawArc[rotate,postaction={decorate},color=black,ultra thick](A,f)(-30)
+			\tkzDrawPoints[fill=black](B)
+			%
+			\node [text width=10cm, color=black, font=\fontsize{15pt}{16pt}\selectfont] at (4.8,-5.5) {C};
+		\end{scope}
+	\end{tikzpicture}
+\end{document}
