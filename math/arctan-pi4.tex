@@ -3,7 +3,6 @@
 \usepackage{tikz}
 \usetikzlibrary{backgrounds,calc}
 \usepackage{tkz-euclide}
-\usetkzobj{all}
 %
 \usepackage{amsmath}
 %
@@ -20,8 +19,11 @@
 	\begin{scope}[scale=8]
 		\tkzDefPoint(0,0){O}
 		\tkzDefPoint(2,0){A}
+		\tkzDefPoint(2,2){A1}
+		\tkzDefPoint(0,2){A2}
 		\tkzDefPoint(2,1){B}
-		\tkzDrawSquare[fill=space](O,A)
+		%
+		\tkzDrawPolygon[fill=space](O,A,A1,A2)
 		%
 		\tkzDrawPolygon[fill=earth](O,A,B)
 		%
