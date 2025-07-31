@@ -1,0 +1,182 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,shapes.callouts}
+\usepackage{tkz-euclide}
+\usepackage{xcolor}
+%\usepackage{pgfplots}
+%\usepackage{freetikz}
+%\usetikzlibrary{shapes}
+%\definecolor{eduinafred}{HTML}{BB2D58}
+%\definecolor{eduinafblu}{HTML}{1D71B8}
+%
+\definecolor{space}{HTML}{0A2543}
+\definecolor{mercury}{HTML}{846549}
+\definecolor{venus}{HTML}{BB9765}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{mars}{HTML}{DC7B4E}
+\definecolor{jupiter}{HTML}{A79476}
+\definecolor{saturn}{HTML}{DBBD9B}
+\definecolor{saturnring}{HTML}{857C73}
+\definecolor{uranus}{HTML}{b1d8dd}
+\definecolor{neptune}{HTML}{799bc1}
+\definecolor{pluto}{HTML}{ceaa8a}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+%
+%\definecolor{glasses}{HTML}{08663D}
+\definecolor{moon}{HTML}{AFAFAF}
+%\definecolor{craterm}{HTML}{616060}
+%\definecolor{linem}{HTML}{DBDBDB}
+%\definecolor{core3}{HTML}{FFD016}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%\setmainfont{Montserrat Medium}
+%
+\title{Le leggi di Keplero}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+		notice/.style  = { draw, ellipse callout, callout relative pointer={#1} },
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		\draw [use as bounding box] (-20,20) -| (20,20) |- (20,-115) -| (-20,-115);
+		%title
+		\begin{scope}
+			\draw [black,ultra thick,fill=title] (-18,18.5) rectangle (18,11.5);
+			\node (example-textwidth-2) [align=center, text width=40cm, color=black, font=\fontsize{85pt}{86pt}\selectfont] at (0,15) {Le leggi di Keplero};
+		\end{scope}
+		%
+		\begin{scope}[shift={(-10,7)}]
+			\node at (23,0) {\includegraphics[width=5cm]{img/carl_sagan}};
+			\node (example-textwidth-2) [notice={(3,0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (1,-1) {Le tre leggi che portano il suo nome vennero formulate dall'astronomo \textbf{Johannes Kepler} in due momenti differenti: le prime due nel 1609 e la terza tra il 1619 e il 1620.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(-3,-15)}]
+			\draw [fill=space] (-15,11) rectangle (15,-9);
+			\tkzDefPoint(0,0){O}
+			\tkzDefPoint(-7,0){E}
+			\tkzDefPoint(-5,0){Er}
+			\tkzDefPoint(13,0){L}
+			\tkzDefPoint(14,0){Lr}
+			%
+			\draw (O) [color=white, ultra thick, partial ellipse=360:0:13 and 6.5];
+			%
+			\tkzDrawCircle[fill=white](E,Er)
+			\tkzDrawCircle[fill=earth](L,Lr)
+			%
+			\tkzDefPoint(0,6.5){L1}
+			\tkzDefPoint(1,6.5){Lr1}
+			\tkzDefPoint(0,8.5){V1}
+			\tkzDrawCircle[fill=earth](L1,Lr1)
+			%
+			\tkzDefPoint(-13,0){L2}
+			\tkzDefPoint(-14,0){Lr2}
+			\tkzDefPoint(-13,2){V2}
+			\tkzDrawCircle[fill=earth](L2,Lr2)
+			%
+			\tkzDefPoint(0,-6.5){L3}
+			\tkzDefPoint(1,-6.5){Lr3}
+			\tkzDefPoint(0,-4.5){V3}
+			\tkzDrawCircle[fill=earth](L3,Lr3)
+		\end{scope}
+		%
+		\begin{scope}[shift={(-15,-5)}]
+			\node at (5,0) {\includegraphics[width=8cm]{img/kepler}};
+			\node (example-textwidth-2) [notice={(-3,-1)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (8,2.5) {La prima legge afferma che l'orbita descritta da un pianeta e' un'ellisse, di cui il Sole occupa uno dei due fuochi.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(-3,-41)}]
+			\draw [fill=space] (-15,11) rectangle (15,-9);
+			\tkzDefPoint(0,0){O}
+			\tkzDefPoint(-7,0){E}
+			\tkzDefPoint(-5,0){Er}
+			%
+			\draw (O) [color=white, ultra thick, partial ellipse=360:0:13 and 6.5];
+			%
+			\draw (O) [fill=moon, opacity=0.5, partial ellipse=-18:18:13 and 6.5] -- (E);
+			\draw (O) [fill=moon, opacity=0.5, partial ellipse=143:217:13 and 6.5] -- (E);
+			\tkzDrawCircle[fill=white](E,Er)
+			%
+			\tkzDefPoint(12.5,2){L}
+			\tkzDefPoint(13.5,2){Lr}
+			\draw [-,color=white,ultra thick] (E) -- (L);
+			\tkzDrawCircle[fill=earth](L,Lr)
+			%
+			\tkzDefPoint(12.5,-2){L1}
+			\tkzDefPoint(13.5,-2){Lr1}
+			\draw [-,color=white,ultra thick] (E) -- (L1);
+			\tkzDrawCircle[fill=earth](L1,Lr1)
+			%
+			\tkzDefPoint(-10.5,4){L2}
+			\tkzDefPoint(-11.5,4){Lr2}
+			\draw [-,color=white,ultra thick] (E) -- (L2);
+			\tkzDrawCircle[fill=earth](L2,Lr2)
+			%
+			\tkzDefPoint(-10.5,-4){L3}
+			\tkzDefPoint(-11.5,-4){Lr3}
+			\draw [-,color=white,ultra thick] (E) -- (L3);
+			\tkzDrawCircle[fill=earth](L3,Lr3)
+		\end{scope}
+		%
+		\begin{scope}[shift={(-15,-31)}]
+			\node at (5,0) {\includegraphics[width=8cm]{img/kepler}};
+			\node (example-textwidth-2) [notice={(-3,-1)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (8,2.5) {La seconda legge afferma che il segmento che unisce il centro del Sole con il centro del pianeta descrive aree uguali in tempi uguali.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(-15,-52)}]
+			\draw [fill=green!20!space, thick] (3.5,0) rectangle (23,-8);
+			\draw [fill=dida, thick] (1.5,1.2) rectangle (19,-1.2);
+			\node [right, align=left, text width=18cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,0) {Dal punto di vista matematico la legge puo' essere espressa con la formula:};
+			\node [right, align=left, color=white, font=\fontsize{33pt}{34pt}\selectfont] at (4,-3) {$\frac{\Delta A}{\Delta t} = \frac{\pi ab}{T}$};
+			\node [right, align=left, text width=18cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (4,-5.5) {dove $A$ e' l'area, $t$ il tempo, $a$, $b$ i parametri dell'orbita, $T$ il periodo orbitale};
+		\end{scope}
+		%
+		\begin{scope}[shift={(-3,-75)}]
+			\draw [fill=space] (-15,11) rectangle (15,-9);
+			\tkzDefPoint(0,0){O}
+			\tkzDefPoint(-7,0){E}
+			\tkzDefPoint(-5,0){Er}
+			\tkzDefPoint(13,0){L}
+			\tkzDefPoint(14,0){Lr}
+			\tkzDefPoint(-13,0){L2}
+			%
+			\draw [color=white, ultra thick] (L) -- (L2);
+			\draw (O) [color=white, ultra thick, partial ellipse=360:0:13 and 6.5];
+			%
+			\tkzDrawCircle[fill=white](E,Er)
+			\tkzDrawCircle[fill=earth](L,Lr)
+		\end{scope}
+		%
+		\begin{scope}[shift={(-15,-65)}]
+			\node at (5,0) {\includegraphics[width=8cm]{img/kepler}};
+			\node (example-textwidth-2) [notice={(-3,-1)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (8,2.5) {La terza legge afferma che i quadrati dei tempi che i pianeti impiegano a percorrere le loro orbite sono proporzionali al cubo del semiasse maggiore.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(-15,-86)}]
+			\draw [fill=green!20!space, thick] (3.5,0) rectangle (23,-8);
+			\draw [fill=dida, thick] (1.5,1.2) rectangle (19,-1.2);
+			\node [right, align=left, text width=18cm, color=black, font=\fontsize{23pt}{24pt}\selectfont] at (2,0) {Dal punto di vista matematico la legge puo' essere espressa con la formula:};
+			\node [right, align=left, color=white, font=\fontsize{33pt}{34pt}\selectfont] at (4,-3) {$\frac{4 \pi^2}{T^2} = \frac{G m_1}{a^3}$};
+			\node [right, align=left, text width=18cm, color=white, font=\fontsize{23pt}{24pt}\selectfont] at (4,-5.5) {dove $G$ e' la costante di gravitazione universale, $m_1$ la massa del pianeta};
+		\end{scope}
+		%
+		\begin{scope}[shift={(-10,-96)}]
+			\node at (23,0) {\includegraphics[width=5cm]{img/carl_sagan}};
+			\node (example-textwidth-2) [notice={(2.3,0.2)}, ultra thick, right, align=center, text width=15cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (-1.5,-1) {La terza legge, infatti, si puo' ricavare a partire dalla legge di gravitazione di Newton. Grazie a queste leggi si puo' considerare il modello eliocentrico classico completo.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(-15,-107)}]
+			\node at (5,0) {\includegraphics[width=8cm]{img/kepler}};
+			\node (example-textwidth-2) [notice={(-3,-1)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (8,2.5) {Comunque sono un po' "nero": mi sembra che mi manchi qualcosa...};
+			\node (example-textwidth-2) [notice={(2.3,0.2)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (7,-2) {No, Johannes! I merletti intorno al colletto non te li disegno!};
+		\end{scope}
+		%
+		\begin{scope}[shift={(-10,-113)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{img/licenza}};
+			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
