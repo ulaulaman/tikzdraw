@@ -1,0 +1,73 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,shapes.callouts}
+\usepackage{tkz-euclide}
+\usepackage{xcolor}
+\usepackage{ifthen}
+%
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{moon}{HTML}{AFAFAF}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Leggere poesie sotto le stelle}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+		notice/.style  = { draw, ellipse callout, callout relative pointer={#1} },
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\draw [black,ultra thick] (1,1) rectangle (29,-1);
+		\node at (15,0) {\textcolor{black}{\fontsize{35}{36}\selectfont Quando leggevo poesie sotto le stelle}};
+		%\node at (15,11.8) {\textcolor{black}{\fontsize{90}{91}\selectfont del pioniere}};
+		%
+		\begin{scope}[shift={(0,-5)}]
+			\node at (3,0) {\includegraphics[width=5cm]{img-stelle_poesia/io_sx}};
+			\node (example-textwidth-2) [right, align=left, text width=22cm, color=black, font=\fontsize{18pt}{19pt}\selectfont] at (6,0) {Era un'estate di tanti anni fa. Probabilmente quella dopo il mio primo anno universitario.};
+		\end{scope}
+		% 
+		\begin{scope}[shift={(0,-14)}]
+			\node at (12,0) {\includegraphics[width=25cm]{img-stelle_poesia/domanico}};
+			\draw [fill=white,ultra thick] (19.5,5) rectangle (27.5,-1);
+			\node (example-textwidth-2) [right, align=left, text width=7cm, color=black, font=\fontsize{18pt}{19pt}\selectfont] at (20,2) {Nel paese di mia madre, Domanico, dove ci eravamo trasferiti alcuni anni prima, in estate si organizzavano un po' di eventi.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-22)}]
+			\node (example-textwidth-2) [right, align=left, text width=14cm, color=black, font=\fontsize{18pt}{19pt}\selectfont] at (2,0) {E quell'anno mi chiesero di contribuire a un evento serale leggendo alcune delle mie poesie};
+			\node at (23,-2) {\includegraphics[width=12cm]{img-stelle_poesia/raggi_di_sole-trasparenza}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-36)}]
+			\node at (10,0) {\includegraphics[width=14cm]{img-stelle_poesia/piperno}};
+			\node (example-textwidth-2) [right, align=left, text width=12cm, color=black, font=\fontsize{18pt}{19pt}\selectfont] at (15,1) {La serata prevedeva l'osservazione del cielo notturno, alternata a letture di questo genere. A guidare l'osservazione delle stelle era stato invitato \textbf{Franco Piperno}, uno dei professori del dipartimento di fisica della mia universita' (avrei seguito un suo corso, alcuni anni piu' tardi).};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-44)}]
+			\node at (23,0) {\includegraphics[width=5cm]{img-stelle_poesia/io_dx}};
+			\node (example-textwidth-2) [right, align=left, text width=18cm, color=black, font=\fontsize{18pt}{19pt}\selectfont] at (2,0) {Quella fu la mia terza osservazione guidata del cielo notturno, ma la prima in cui venivano raccontati i miti e le storie dietro le costellazioni.};
+			\node at (15,-9) {\includegraphics[width=25cm]{img-stelle_poesia/cielo_notturno}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-68)}]
+			\node at (10,0) {\includegraphics[width=14cm]{img-stelle_poesia/spettacolo_cosmico-cover_bn}};
+			\node (example-textwidth-2) [right, align=left, text width=8cm, color=black, font=\fontsize{18pt}{19pt}\selectfont] at (19,0) {La cosa bella, come scoprii anni dopo, era che Piperno \textbf{non} era un astronomo, ma aveva ben chiaro, uno dei pochi, il valore della divulgazione della scienza, motivo per cui accetto' l'invito a partecipare a quella serata.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-78)}]
+			\node at (3,0) {\includegraphics[width=5cm]{img-stelle_poesia/io_sx}};
+			\node (example-textwidth-2) [right, align=left, text width=22cm, color=black, font=\fontsize{18pt}{19pt}\selectfont] at (6,0) {Lo so! Avrei potuto ricordarlo in tanti altri modi, ma questo mi e' sembrato l'episodio migliore per onorarne la memoria come fisico e, soprattutto, come divulgatore.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-81)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (15.5,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni, esclusa la placca: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
