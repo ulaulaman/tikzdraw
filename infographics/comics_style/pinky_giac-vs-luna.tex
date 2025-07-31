@@ -1,0 +1,66 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,shapes.callouts}
+\usepackage{tkz-euclide}
+\usepackage{xcolor}
+\usepackage{ifthen}
+%
+\definecolor{sky}{HTML}{0065B7}
+%\definecolor{earth}{HTML}{0089FA}
+%\definecolor{dida}{HTML}{FFDE00}
+%\definecolor{title}{HTML}{FBA706}
+%\definecolor{moon}{HTML}{AFAFAF}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Giacomo, la Luna e l'influence}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+		notice/.style  = { draw, ellipse callout, callout relative pointer={#1} },
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%title
+		\draw [black,ultra thick] (1,1) rectangle (29,-1);
+		\node at (15,0) {\textcolor{black}{\fontsize{35}{36}\selectfont Giacomo, la Luna e l'influence}};
+		%
+		\begin{scope}[shift={(0,-7)}]
+			%\draw [fill=sky, ultra thick] (2,-45) rectangle (28,5);
+			\node at (15,-6) {\includegraphics[width=25cm]{img-pinky/skyline_roma}};
+			\node at (7,0) {\includegraphics[width=8cm]{img-pinky/luna_parla}};
+			\node at (21,-5) {\includegraphics[width=4cm]{img-pinky/pinky_giac-perplesso}};
+			\node at (15,2) {\includegraphics[width=8cm]{img-pinky/balloon02}};
+			\node (example-textwidth-2) [right, align=left, text width=12cm, color=black, font=\fontsize{21pt}{22pt}\selectfont] at (10,3.5) {Che fai, Giacomo, a Roma, dimmi, che fai?};
+			\node at (17,-2) {\includegraphics[width=8cm]{img-pinky/balloon01}};
+			\node (example-textwidth-2) [right, align=left, text width=10cm, color=black, font=\fontsize{21pt}{22pt}\selectfont] at (13,-0.5) {O bella! Ora e' la Luna a farmi domande?};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-24)}]
+			\node at (15,-6) {\includegraphics[width=25cm]{img-pinky/skyline_roma}};
+			\node at (7,0) {\includegraphics[width=8cm]{img-pinky/luna_parla}};
+			\node at (21,-5) {\includegraphics[width=4cm]{img-pinky/pinky_giac-perplesso}};
+			\node at (15,2) {\includegraphics[width=8cm]{img-pinky/balloon02}};
+			\node (example-textwidth-2) [right, align=left, text width=12cm, color=black, font=\fontsize{21pt}{22pt}\selectfont] at (10,3.5) {Eh, si', Giacomo! Si dice "curiosa come una Luna"!};
+			\node at (17,-2) {\includegraphics[width=8cm]{img-pinky/balloon01}};
+			\node (example-textwidth-2) [right, align=left, text width=10cm, color=black, font=\fontsize{21pt}{22pt}\selectfont] at (13,-0.5) {Curioso come un gatto, semmai! Ma dimmi... su cosa vuoi interrogarmi?};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-41)}]
+			\node at (15,-6) {\includegraphics[width=25cm]{img-pinky/skyline_roma}};
+			\node at (7,0) {\includegraphics[width=8cm]{img-pinky/luna_domanda}};
+			\node at (21,-5) {\includegraphics[width=4cm]{img-pinky/pinky_giac-sorriso}};
+			\node at (15,2) {\includegraphics[width=8cm]{img-pinky/balloon02}};
+			\node (example-textwidth-2) [right, align=left, text width=12cm, color=black, font=\fontsize{21pt}{22pt}\selectfont] at (10,4) {Una questione spinosa... Che vaccino devo prendere contro l'influenza Giubelli?};
+			\node at (17,-2) {\includegraphics[width=8cm]{img-pinky/balloon01}};
+			\node (example-textwidth-2) [right, align=left, text width=10cm, color=black, font=\fontsize{21pt}{22pt}\selectfont] at (13,-0.5) {Semplice! Uno "Zibaldone" ben fatto!};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-55)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
