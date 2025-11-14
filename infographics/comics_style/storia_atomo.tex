@@ -1,0 +1,98 @@
+\documentclass{standalone}
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,shapes.callouts}
+\usepackage{tkz-euclide}
+\usepackage{xcolor}
+\usepackage{ifthen}
+%
+\definecolor{space}{HTML}{1F2C4E}
+\definecolor{earth}{HTML}{0089FA}
+\definecolor{dida}{HTML}{FFDE00}
+\definecolor{title}{HTML}{FBA706}
+\definecolor{moon}{HTML}{AFAFAF}
+%
+\usepackage{fontspec}
+\setmainfont{Open Dyslexic}
+%
+\title{Storia di un atomo}
+\begin{document}
+	\tikzset{
+		partial ellipse/.style args = {#1:#2:#3}{insert path={+ (#1:#3) arc (#1:#2:#3)}},
+		notice/.style  = { draw, ellipse callout, callout relative pointer={#1} },
+	}
+	\begin{tikzpicture}[background rectangle/.style={fill=white},show background rectangle,>={[inset=0,angle'=27]Stealth}]
+		%
+		\begin{scope}[shift={(0,0)}]
+			\draw[color=black,fill=white,ultra thick] (1,2) rectangle (29,-2);
+			\node at (3,0) {\includegraphics[width=5cm]{img-storia_atomo/io_sx}};
+			\node (example-textwidth-2) [right, align=left, text width=22cm, color=black, font=\fontsize{21pt}{22pt}\selectfont] at (6,0) {Una volta \textbf{Stefano Benni} scrisse:};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-11)}]
+			\node at (21,0) {\includegraphics[width=8cm]{img-storia_atomo/stefano_benni}};
+			\node (example-textwidth-2) [notice={(1,-0.5)}, ultra thick, right, align=center, text width=10cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (3,0) {Un neutrone e un protone si annoiavano e si misero d'accordo per fare una reazione. Per strada incontrarono un elettrone. Si misero insieme e ci fu una gran confusione. Con loro grande emozione, seppero il giorno dopo che erano stati visti, e avevano dato luogo a una importante scoperta scientifica.};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-22)}]
+			\draw [black,ultra thick] (1,1) rectangle (29,-1);
+			\node at (15,0) {\textcolor{black}{\fontsize{35}{36}\selectfont Storia di un atomo}};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-27)}]
+			\node (example-textwidth-2) [notice={(1,-0.5)}, ultra thick, right, align=center, text width=6cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (10,0) {Ciao, amico neutrone!};
+			\node at (7,-5) {\includegraphics[width=8cm]{img-storia_atomo/neutrone}};
+			\node at (22,-1) {\includegraphics[width=8cm]{img-storia_atomo/protone}};
+			\node (example-textwidth-2) [notice={(-1,0.5)}, ultra thick, right, align=center, text width=6cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (8,-6) {Ciao a te...};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-40)}]
+			\node (example-textwidth-2) [notice={(1,-0.5)}, ultra thick, right, align=center, text width=7cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (9,0.5) {Sai una cosa? Oggi mi sto annoidando un po'...};
+			\node at (7,-5) {\includegraphics[width=8cm]{img-storia_atomo/neutrone}};
+			\node at (22,-1) {\includegraphics[width=8cm]{img-storia_atomo/protone}};
+			\node (example-textwidth-2) [notice={(-1,0.5)}, ultra thick, right, align=center, text width=6cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (10,-6) {Sai che c'e'? Io come sempre...};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-52)}]
+			\node (example-textwidth-2) [notice={(1,-0.5)}, ultra thick, right, align=center, text width=7cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (9,-0.5) {Allora potremmo fare qualcosa insieme! Che ne dici?};
+			\node at (7,-5) {\includegraphics[width=8cm]{img-storia_atomo/neutrone}};
+			\node at (22,-1) {\includegraphics[width=8cm]{img-storia_atomo/protone}};
+			\node (example-textwidth-2) [notice={(-1,0.5)}, ultra thick, right, align=center, text width=6cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (10,-6) {Ma si! Magari una bella reazione!};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-75)}]
+			\node at (15,0) {\includegraphics[width=20cm]{img-storia_atomo/reazione}};
+			\node at (7,-10) {\includegraphics[width=8cm]{img-storia_atomo/elettrone}};
+			\node (example-textwidth-2) [notice={(1,-0.5)}, ultra thick, right, align=center, text width=5cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (0,-5) {Ehi, ragazzi! Vengo anch'io!};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-95)}]
+			\node at (15,0) {\includegraphics[width=15cm]{img-storia_atomo/foto_atomo}};
+			\node (example-textwidth-2) [notice={(-1,0.5)}, ultra thick, right, align=center, text width=6cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (18,-3) {Ehi! Ci hanno scattato una foto! Dite \emph{fotoni}!};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-105)}]
+			\draw[color=black,fill=white,ultra thick] (1,2) rectangle (29,-2);
+			\node at (3,0) {\includegraphics[width=5cm]{img-tombino/io_sx}};
+			\node (example-textwidth-2) [right, align=left, text width=22cm, color=black, font=\fontsize{21pt}{22pt}\selectfont] at (6,0) {Questa e' la prima osservazione degli orbitali dell'atomo di idrogeno realizzata nel 2013 con un "microscopio quantistico".};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-110)}]
+			\draw[color=black,fill=white,ultra thick] (1.5,1) rectangle (20,-1);
+			\node (example-textwidth-2) [right, align=left, text width=22cm, color=black, font=\fontsize{21pt}{22pt}\selectfont] at (2,0) {Nel frattempo un gluone e un fotone...};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-114)}]
+			\node (example-textwidth-2) [notice={(-1,-0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (8,0) {Eccoli li'... Loro sulle copertine delle riviste e noi a consegnare messaggi...};
+			\node at (7,-4) {\includegraphics[width=8cm]{img-storia_atomo/gluone}};
+			\node at (22,-5) {\includegraphics[width=8cm]{img-storia_atomo/fotone}};
+			\node (example-textwidth-2) [notice={(1,0.5)}, ultra thick, right, align=center, text width=12cm, color=black, fill=white, font=\fontsize{23pt}{24pt}\selectfont] at (9,-9) {Te non ti vede nessuno, io almeno illumino tutto...};
+		\end{scope}
+		%
+		\begin{scope}[shift={(0,-126)}]
+			\node at (27,0) () {\includegraphics[width=3.7cm]{licenza}};
+			\node at (18,-0.1) {\textcolor{black}{\fontsize{14}{15}\selectfont Testo e illustrazioni: @ulaulaman - Gianluigi Filippelli}};
+		\end{scope}
+	\end{tikzpicture}
+%
+\end{document}
